@@ -84,8 +84,8 @@ function the_territory_setup() {
 	add_theme_support(
 		'custom-logo',
 		[
-			'height'      => 250,
-			'width'       => 500,
+			'height'      => 55,
+			'width'       => 180,
 			'flex-height' => true,
 			'flex-width'  => true,
 			'header-text' => [ 'site-title', 'site-description' ],
@@ -95,35 +95,38 @@ function the_territory_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	/**
+	 * Gutenberg support settings moved to `theme.json`
+	 */
 	// Gutenberg support for full-width/wide alignment of supported blocks.
-	add_theme_support( 'align-wide' );
+	// add_theme_support( 'align-wide' );
 
-	// Gutenberg defaults for font sizes.
-	add_theme_support(
-		'editor-font-sizes',
-		[
-			[
-				'name' => __( 'Small', 'the-territory' ),
-				'size' => 12,
-				'slug' => 'small',
-			],
-			[
-				'name' => __( 'Normal', 'the-territory' ),
-				'size' => 16,
-				'slug' => 'normal',
-			],
-			[
-				'name' => __( 'Large', 'the-territory' ),
-				'size' => 36,
-				'slug' => 'large',
-			],
-			[
-				'name' => __( 'Huge', 'the-territory' ),
-				'size' => 50,
-				'slug' => 'huge',
-			],
-		]
-	);
+	// // Gutenberg defaults for font sizes.
+	// add_theme_support(
+	// 	'editor-font-sizes',
+	// 	[
+	// 		[
+	// 			'name' => __( 'Small', 'the-territory' ),
+	// 			'size' => 12,
+	// 			'slug' => 'small',
+	// 		],
+	// 		[
+	// 			'name' => __( 'Normal', 'the-territory' ),
+	// 			'size' => 16,
+	// 			'slug' => 'normal',
+	// 		],
+	// 		[
+	// 			'name' => __( 'Large', 'the-territory' ),
+	// 			'size' => 36,
+	// 			'slug' => 'large',
+	// 		],
+	// 		[
+	// 			'name' => __( 'Huge', 'the-territory' ),
+	// 			'size' => 50,
+	// 			'slug' => 'huge',
+	// 		],
+	// 	]
+	// );
 
 	// Gutenberg editor styles support.
 	add_theme_support( 'editor-styles' );
@@ -132,7 +135,6 @@ function the_territory_setup() {
 	// Gutenberg responsive embed support.
 	add_theme_support( 'responsive-embeds' );
 }
-
 add_action( 'after_setup_theme', 'the_territory_setup' );
 
 /**
@@ -147,7 +149,6 @@ add_action( 'after_setup_theme', 'the_territory_setup' );
 function the_territory_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'the_territory_content_width', 640 );
 }
-
 add_action( 'after_setup_theme', 'the_territory_content_width', 0 );
 
 /**
@@ -180,5 +181,4 @@ function the_territory_widgets_init() {
 	}
 
 }
-
 add_action( 'widgets_init', 'the_territory_widgets_init' );
