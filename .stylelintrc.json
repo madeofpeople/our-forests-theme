@@ -1,0 +1,37 @@
+{
+	"extends": [
+		"@wordpress/stylelint-config/scss",
+		"stylelint-config-prettier"
+	],
+	"defaultSeverity": "warning",
+	"rules": {
+		"function-url-quotes": null,
+		"at-rule-empty-line-before": [
+			null,
+			{
+				"severity": "warning"
+			}
+		],
+		"max-empty-lines": 1,
+		"no-empty-source": null,
+		"declaration-colon-newline-after": null,
+		"declaration-no-important": true,
+		"function-parentheses-space-inside": null,
+		"no-descending-specificity": null,
+		"rule-empty-line-before": null,
+		"selector-pseudo-class-parentheses-space-inside": null,
+		"scss/at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": [
+					"apply",
+					"layer",
+					"variants",
+					"responsive",
+					"screen"
+				]
+			}
+		],
+		"string-quotes": "single"
+	}
+}
