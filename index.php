@@ -47,6 +47,12 @@ get_header(); ?>
 		endif;
 		?>
 
+		<?php
+		if ( is_active_sidebar( 'content-bottom' ) ) : 
+			get_sidebar( 'content-bottom' ); 
+		endif;
+		?>
+
 	</main><!-- #main -->
 
 <?php get_footer(); ?>

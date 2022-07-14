@@ -19,9 +19,13 @@ get_header(); ?>
 
 			the_post_navigation();
 
-			the_territory_display_comments();
-
 		endwhile; // End of the loop.
+		?>
+
+		<?php
+		if ( is_active_sidebar( 'content-bottom' ) ) : 
+			get_sidebar( 'content-bottom' ); 
+		endif;
 		?>
 
 	</main><!-- #main -->
