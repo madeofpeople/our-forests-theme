@@ -11,6 +11,8 @@
 
 ?>
 
+	<?php do_action( 'before_footer' ); ?>
+	
 	<footer class="site-footer">
 
 		<?php
