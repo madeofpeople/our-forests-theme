@@ -101,20 +101,20 @@ function the_territory_customize_social_icons( $wp_customize ) {
 		// Register a setting.
 		$wp_customize->add_setting(
 			'the_territory_' . $network . '_link',
-			[
+			array(
 				'default'           => '',
 				'sanitize_callback' => 'esc_url',
-			]
+			)
 		);
 
 		// Create the setting field.
 		$wp_customize->add_control(
 			'the_territory_' . $network . '_link',
-			[
+			array(
 				'label'   => /* translators: the social network name. */ sprintf( esc_attr__( '%s URL', 'the-territory' ), ucwords( $network ) ),
 				'section' => 'the_territory_social_links_section',
 				'type'    => 'text',
-			]
+			)
 		);
 	}
 }
@@ -132,10 +132,10 @@ function the_territory_customize_copyright_text( $wp_customize ) {
 	// Register a setting.
 	$wp_customize->add_setting(
 		'the_territory_copyright_text',
-		[
+		array(
 			'default'           => '',
 			'sanitize_callback' => 'wp_kses_post',
-		]
+		)
 	);
 
 	// Create the setting field.
@@ -143,12 +143,12 @@ function the_territory_customize_copyright_text( $wp_customize ) {
 		new Text_Editor_Custom_Control(
 			$wp_customize,
 			'the_territory_copyright_text',
-			[
+			array(
 				'label'       => esc_attr__( 'Copyright Text', 'the-territory' ),
 				'description' => esc_attr__( 'The copyright text will be displayed in the footer. Basic HTML tags allowed.', 'the-territory' ),
 				'section'     => 'the_territory_footer_section',
 				'type'        => 'textarea',
-			]
+			)
 		)
 	);
 }
