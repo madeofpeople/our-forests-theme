@@ -87,12 +87,13 @@ add_action( 'customize_register', 'the_territory_customize_additional_scripts' )
  */
 function the_territory_customize_social_icons( $wp_customize ) {
 	// Create an array of our social links for ease of setup.
-	$social_networks = [
+	$social_networks = array(
 		'facebook',
 		'instagram',
 		'twitter',
 		'linkedin',
-	];
+		'reddit',
+	);
 
 	// Loop through our networks to setup our fields.
 	foreach ( $social_networks as $network ) {
