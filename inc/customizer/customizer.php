@@ -14,8 +14,8 @@
 function the_territory_remove_default_customizer_sections( $wp_customize ) {
 
 	// Remove sections.
-	$wp_customize->remove_section( 'custom_css' );
-	$wp_customize->remove_section( 'static_front_page' );
+	// $wp_customize->remove_section( 'custom_css' );
+	// $wp_customize->remove_section( 'static_front_page' );
 	$wp_customize->remove_section( 'background_image' );
 	$wp_customize->remove_section( 'colors' );
 }
