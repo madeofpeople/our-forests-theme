@@ -20,8 +20,6 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				the_territory_display_comments();
-
 			endwhile; // End of the loop.
 			?>
 
