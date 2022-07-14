@@ -14,45 +14,49 @@
  */
 function the_territory_customize_additional_scripts( $wp_customize ) {
 	// Register a setting.
-	$wp_customize->add_setting(
-		'the_territory_header_scripts',
-		[
-			'default'           => '',
-			'sanitize_callback' => 'force_balance_tags',
-		]
-	);
+	// $wp_customize->add_setting(
+	// 'the_territory_header_scripts',
+	// [
+	// 'default'           => '',
+	// 'sanitize_callback' => 'force_balance_tags',
+	// ]
+	// );
 
 	// Create the setting field.
-	$wp_customize->add_control(
-		'the_territory_header_scripts',
-		[
-			'label'       => esc_attr__( 'Header Scripts', 'the-territory' ),
-			'description' => esc_attr__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'the-territory' ),
-			'section'     => 'the_territory_additional_scripts_section',
-			'type'        => 'textarea',
-		]
-	);
+	// $wp_customize->add_control(
+	// 'the_territory_header_scripts',
+	// [
+	// 'label'       => esc_attr__( 'Header Scripts', 'the-territory' ),
+	// 'description' => esc_attr__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'the-territory' ),
+	// 'section'     => 'the_territory_additional_scripts_section',
+	// 'type'        => 'textarea',
+	// ]
+	// );
 
 	// Register a setting.
-	$wp_customize->add_setting(
-		'the_territory_footer_scripts',
-		[
-			'default'           => '',
-			'sanitize_callback' => 'force_balance_tags',
-		]
-	);
+	// $wp_customize->add_setting(
+	// 'the_territory_footer_scripts',
+	// [
+	// 'default'           => '',
+	// 'sanitize_callback' => 'force_balance_tags',
+	// ]
+	// );
 
 	// Create the setting field.
-	$wp_customize->add_control(
-		'the_territory_footer_scripts',
-		[
-			'label'       => esc_attr__( 'Footer Scripts', 'the-territory' ),
-			'description' => esc_attr__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'the-territory' ),
-			'section'     => 'the_territory_additional_scripts_section',
-			'type'        => 'textarea',
-		]
+	// $wp_customize->add_control(
+	// 'the_territory_footer_scripts',
+	// [
+	// 'label'       => esc_attr__( 'Footer Scripts', 'the-territory' ),
+	// 'description' => esc_attr__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'the-territory' ),
+	// 'section'     => 'the_territory_additional_scripts_section',
+	// 'type'        => 'textarea',
+	// ]
+	// );
+	$wp_customize->add_setting(
 	);
-}
+
+	$wp_customize->add_control(
+	);
 
 add_action( 'customize_register', 'the_territory_customize_additional_scripts' );
 

@@ -14,14 +14,14 @@
 function the_territory_customize_sections( $wp_customize ) {
 
 	// Register additional scripts section.
-	$wp_customize->add_section(
-		'the_territory_additional_scripts_section',
-		[
-			'title'    => esc_html__( 'Additional Scripts', 'the-territory' ),
-			'priority' => 10,
-			'panel'    => 'site-options',
-		]
-	);
+	// $wp_customize->add_section(
+	// 	'the_territory_additional_scripts_section',
+	// 	[
+	// 		'title'    => esc_html__( 'Additional Scripts', 'the-territory' ),
+	// 		'priority' => 10,
+	// 		'panel'    => 'site-options',
+	// 	]
+	// );
 
 	// Register a social links section.
 	$wp_customize->add_section(
