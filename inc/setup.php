@@ -98,35 +98,6 @@ function the_territory_setup() {
 	/**
 	 * Gutenberg support settings moved to `theme.json`
 	 */
-	// Gutenberg support for full-width/wide alignment of supported blocks.
-	// add_theme_support( 'align-wide' );
-
-	// // Gutenberg defaults for font sizes.
-	// add_theme_support(
-	// 	'editor-font-sizes',
-	// 	[
-	// 		[
-	// 			'name' => __( 'Small', 'the-territory' ),
-	// 			'size' => 12,
-	// 			'slug' => 'small',
-	// 		],
-	// 		[
-	// 			'name' => __( 'Normal', 'the-territory' ),
-	// 			'size' => 16,
-	// 			'slug' => 'normal',
-	// 		],
-	// 		[
-	// 			'name' => __( 'Large', 'the-territory' ),
-	// 			'size' => 36,
-	// 			'slug' => 'large',
-	// 		],
-	// 		[
-	// 			'name' => __( 'Huge', 'the-territory' ),
-	// 			'size' => 50,
-	// 			'slug' => 'huge',
-	// 		],
-	// 	]
-	// );
 
 	// Gutenberg editor styles support.
 	add_theme_support( 'editor-styles' );
