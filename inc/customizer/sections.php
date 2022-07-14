@@ -44,6 +44,16 @@ function the_territory_customize_sections( $wp_customize ) {
 		]
 	);
 
+	// Register a default images
+	$wp_customize->add_section(
+		'media_defaults',
+		[
+			'title'    => esc_html__( 'Default Media Settings', 'debtcollective' ),
+			'priority' => 10,
+			'panel'    => 'site-options',
+		]
+	);
+
 	// Register a footer section.
 	$wp_customize->add_section(
 		'the_territory_footer_section',

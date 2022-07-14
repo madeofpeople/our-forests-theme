@@ -52,12 +52,30 @@ function the_territory_customize_additional_scripts( $wp_customize ) {
 	// 'type'        => 'textarea',
 	// ]
 	// );
+
 	$wp_customize->add_setting(
+		'default_featured_image',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+			'type'      => 'option',
+		)
 	);
 
 	$wp_customize->add_control(
+		new \WP_Customize_Image_Control(
+			$wp_customize,
+			'default_featured_image',
+			array(
+				'label'       => esc_html__( 'Add a default post image', 'debtcollective' ),
+				'description' => esc_html__( 'Page header image to display if a featured image isn\'t supplied.', 'debtcollective' ),
+				'section'     => 'media_defaults',
+				'settings'    => 'default_featured_image',
+			)
+		)
 	);
 
+}
 add_action( 'customize_register', 'the_territory_customize_additional_scripts' );
 
 /**
