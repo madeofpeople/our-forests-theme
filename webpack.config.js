@@ -17,6 +17,7 @@ module.exports = {
 	entry: {
 		index: './src/index.js',
 		critical: './src/critical.js',
+		blocks: './src/js/blocks/index.js',
 	},
 	module: {
 		rules: [
