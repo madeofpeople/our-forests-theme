@@ -64,11 +64,11 @@ const variations = [
             blockAttributes.className === variationAttributes.className
     },
     {
-        name: 'inline-bullet-list',
+        name: 'bullet-list-columns',
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Columned Bullet List', 'the-territory' ),
         description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A list displayed in 2 columns.', 'the-territory' ),
         attributes: {
-            className: 'inline-bullet-list',
+            className: 'bullet-list-columns',
             placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
         },
         icon: 'columns',

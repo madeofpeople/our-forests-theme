@@ -26,11 +26,11 @@ const variations = [
             blockAttributes.className === variationAttributes.className
     },
     {
-        name: 'inline-bullet-list',
+        name: 'bullet-list-columns',
         title: __( 'Columned Bullet List', 'the-territory' ),
         description: __( 'A list displayed in 2 columns.', 'the-territory' ),
         attributes: {
-            className: 'inline-bullet-list',
+            className: 'bullet-list-columns',
             placeholder: __( 'Add list items ...', 'the-territory' )
         },
         icon: 'columns',
