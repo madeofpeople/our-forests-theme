@@ -33,6 +33,33 @@ function the_territory_scripts() {
 add_action( 'wp_enqueue_scripts', 'the_territory_scripts' );
 
 /**
+ * Load Block Scripts
+ *
+ * @return void
+ */
+function the_territory_editor_assets() {
+	$asset_file_path = dirname( __DIR__ ) . '/build/blocks.asset.php';
+
+	if ( is_readable( $asset_file_path ) ) {
+		$asset_file = include $asset_file_path;
+	} else {
+		$asset_file = [
+			'version'      => '1.0.0',
+			'dependencies' => [ 'wp-polyfill' ],
+		];
+	}
+
+	wp_enqueue_script(
+		'the-territory',
+		get_template_directory_uri() . '/build/blocks.js',
+		$asset_file['dependencies'], 
+		$asset_file['version'], 
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'the_territory_editor_assets' );
+
+/**
  * Inline Critical CSS.
  *
  * @author Corey Collins
