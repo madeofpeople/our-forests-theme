@@ -3,3 +3,5 @@ node_modules
 vendor
 *.min.js
 !/.*.js
+src/js/blocks/variations
+src/js/blocks/patterns
