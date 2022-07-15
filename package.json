@@ -1,22 +1,14 @@
 {
-	"name": "wd_s",
-	"version": "2.1.0",
+	"name": "the-territory",
+	"version": "1.0.0",
 	"private": true,
-	"description": "A starter theme from WebDevStudios.",
-	"author": "WebDevStudios <contact@webdevstudios.com>",
+	"description": "A custom theme based on wd_s.",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
 		"WordPress",
 		"Theme"
 	],
-	"homepage": "https://github.com/WebDevStudios/wd_s/#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/WebDevStudios/wd_s.git"
-	},
-	"bugs": {
-		"url": "https://github.com/WebDevStudios/wd_s/issues"
-	},
+	"homepage": "https://github.com/madeofpeople/the-territory-theme",
 	"engines": {
 		"node": ">=14",
 		"npm": ">=7"
@@ -75,7 +67,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
 		"start": "cross-env NODE_ENV=development wp-scripts start",
-		"sync": "browser-sync start --https --proxy https://wdunderscores.test --no-open --files 'build/*.*, **/*.html, **/*.php, !node_modules/**/*.html'",
+		"sync": "browser-sync start --https --proxy http://the-territory.test/ --no-open --files 'build/*.*, **/*.html, **/*.php, !node_modules/**/*.html'",
 		"watch": "run-p start sync"
 	}
 }
