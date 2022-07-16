@@ -54,6 +54,21 @@ const variations = [
         ],
         isActive: ( blockAttributes, variationAttributes ) =>
             blockAttributes.className === variationAttributes.className
+    },
+    {
+        name: 'icon-list',
+        title: __( 'Icon List', 'the-territory' ),
+        description: __( 'A regular with icon.', 'the-territory' ),
+        icon: 'star-filled',
+        attributes: {
+            className: 'icon-list',
+            placeholder: __( 'Add list items ...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
     }
 ];
 
