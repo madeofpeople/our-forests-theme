@@ -18,7 +18,7 @@ function the_territory_post_date( $args = [] ) {
 
 	// Set defaults.
 	$defaults = [
-		'date_text'   => esc_html__( 'Posted on', 'the-territory' ),
+		'date_text'   => esc_html__( 'Published', 'the-territory' ),
 		'date_format' => get_option( 'date_format' ),
 	];
 
@@ -31,7 +31,6 @@ function the_territory_post_date( $args = [] ) {
 	</span>
 	<?php
 }
-
 
 /**
  * Prints HTML with author information for the current post.
