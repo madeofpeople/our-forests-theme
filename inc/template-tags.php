@@ -27,7 +27,7 @@ function the_territory_post_date( $args = [] ) {
 	?>
 	<span class="posted-on">
 		<?php echo esc_html( $args['date_text'] . ' ' ); ?>
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_time( $args['date_format'] ) ); ?></time></a>
+		<time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_time( $args['date_format'] ) ); ?></time>
 	</span>
 	<?php
 }
