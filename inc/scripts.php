@@ -23,6 +23,7 @@ function the_territory_scripts() {
 	}
 
 	// Register styles & scripts.
+	wp_enqueue_style( 'the-territory-google-fonts', esc_url( 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro&display=swap' ), [], $asset_file['version'] );
 	wp_enqueue_style( 'the-territory', get_stylesheet_directory_uri() . '/build/index.css', [], $asset_file['version'] );
 	wp_enqueue_script( 'the-territory-scripts', get_stylesheet_directory_uri() . '/build/index.js', $asset_file['dependencies'], $asset_file['version'], true );
 
