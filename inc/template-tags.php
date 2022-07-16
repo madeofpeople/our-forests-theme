@@ -61,6 +61,28 @@ function the_territory_post_author( $args = [] ) {
 }
 
 /**
+ * Prints HTML with date information for the current post.
+ *
+ * @author Pea
+ *
+ * @param array $args Configuration args.
+ */
+function the_territory_source( $args = [] ) {
+	$defaults = [];
+	$args = wp_parse_args( $args, $defaults );
+
+	if ( $source = get_post_meta( get_the_ID(), 'source', true ) ) :
+		printf(
+			'<div class="entry-meta post-source"><a href="%s"%s rel="author%s">%s</a></div><!-.post-source->',
+			esc_url( $source['url'] ),
+			( $target = $source['target'] ) ? ' target="' . $target . '"' : '',
+			( $target = $source['target'] ) ? ' nofollow noopener' : '',
+			esc_html( $source['title'] )
+		);
+	endif;
+}
+
+/**
  * Prints HTML with meta information for the categories, tags and comments.
  *
  * @author WebDevStudios
