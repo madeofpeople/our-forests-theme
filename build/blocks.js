@@ -92,6 +92,21 @@ const variations = [
         ],
         isActive: ( blockAttributes, variationAttributes ) =>
             blockAttributes.className === variationAttributes.className
+    },
+    {
+        name: 'icon-list',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Icon List', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A regular with icon.', 'the-territory' ),
+        icon: 'star-filled',
+        attributes: {
+            className: 'icon-list',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
     }
 ];
 
