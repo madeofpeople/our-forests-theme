@@ -63,13 +63,13 @@
 		<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
 			<?php
 			wp_nav_menu(
-				[
+				array(
 					'fallback_cb'    => false,
 					'theme_location' => 'primary',
 					'menu_id'        => 'primary-menu',
 					'menu_class'     => 'menu dropdown container',
 					'container'      => false,
-				]
+				)
 			);
 			?>
 		</nav><!-- #site-navigation-->
@@ -77,4 +77,3 @@
 	</header><!-- .site-header-->
 
 	<?php do_action( 'after_header' ); ?>
-
