@@ -20,6 +20,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lists__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lists */ "./src/js/blocks/variations/lists.js");
+/* harmony import */ var _paragraph__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./paragraph */ "./src/js/blocks/variations/paragraph.js");
+
 
 
 /***/ }),
@@ -116,6 +118,74 @@ variations.forEach( ( variation ) => {
         variation
     );
 } );
+
+/***/ }),
+
+/***/ "./src/js/blocks/variations/paragraph.js":
+/*!***********************************************!*\
+  !*** ./src/js/blocks/variations/paragraph.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const variations = [
+    {
+        name: 'paragraph',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Paragraph', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A standard paragraph.', 'the-territory' ),
+        isDefault: true,
+        category: 'text',
+        keywords: [
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'intro', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'paragraph', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'sentence', 'the-territory' )
+        ],
+        icon: 'editor-alignleft',
+        attributes: {
+            className: 'ptag',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add content...', 'the-territory' )
+        },
+        example: {
+            attributes: {
+                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'This is a bock for displaying the opening paragraph, the big idea, the tl;dr.', 'the-territory' )
+            },
+        },
+        scope: [
+            'block',
+            'inserter',
+            'transform'
+        ],
+    },
+    {
+        name: 'lede',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Lede', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add opening sentence or paragraph.', 'the-territory' ),
+        icon: 'editor-justify',
+        attributes: {
+            className: 'lede',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add content...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+    }
+];
+
+variations.forEach( ( variation ) => {
+    (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
+        'core/paragraph',
+        variation
+    );
+} );
+
 
 /***/ }),
 
