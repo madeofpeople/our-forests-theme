@@ -83,6 +83,64 @@ function the_territory_source( $args = [] ) {
 }
 
 /**
+ * Render Page Header
+ *
+ * @param array $args
+ * @return void
+ */
+function the_territory_header_image( $size = 'full', $args = array() ) {
+	if ( ! is_singular() ) {
+		return;
+	}
+	$post_id = ( array_key_exists( 'post_id', $args ) ) ? (int) $args['post_id'] : \get_the_ID();
+
+	$defaults = array(
+		'class' => 'page-header',
+	);
+	$args     = wp_parse_args( $args, $defaults );
+
+	if ( $image_id = The_Territory\get_header_image_id( $args = array( 'post_id' => $post_id ) ) ) :
+		?>
+		<?php echo wp_get_attachment_image( $image_id, $size, false, $args ); ?>
+		<?php
+	endif;
+}
+
+/**
+ * Render Page Navigation
+ *
+ * @param string $name
+ * @param string $content
+ * @return void
+ */
+function the_territory_page_nav( $name = 'core/navigation', $content = null ) {
+	global $post;
+	$content = ( $content ) ? $content : $post->post_content;
+	$block   = The_Territory\get_block( $name, $content );
+
+	echo render_block( $block );
+}
+
+/**
+ * Render Page Header
+ *
+ * @param array $args
+ * @return void
+ */
+function the_territory_header( $args = array() ) {
+	$defaults = array();
+	$args     = wp_parse_args( $args, $defaults );
+	?>
+
+	<div class="page-header">
+		<?php the_territory_header_image( 'full', $args ); ?>
+		<?php the_territory_page_nav(); ?>
+	</div>
+
+	<?
+}
+
+/**
  * Prints HTML with meta information for the categories, tags and comments.
  *
  * @author WebDevStudios
