@@ -19,11 +19,13 @@ function get_header_image_id( $args = [] ) {
 	if ( ! \is_singular() ) {
 		return $return;
 	}
-	$post_id = ( array_key_exists( 'post_id', $args ) ) ? (int) $args['post_id'] : \get_the_ID();
+	global $post;
+	$post_id = ( array_key_exists( 'post_id', $args ) ) ? (int) $args['post_id'] : $post->ID;
 	if ( \has_post_thumbnail( $post_id ) ) {
 		$return = \get_post_thumbnail_id( $post_id );
 	} elseif ( $image = \get_option( 'default_featured_image' ) ) {
-		$return = $image;
+		$image_id = \attachment_url_to_postid( $image );
+		$return = $image_id;
 	}
 	return $return;
 }

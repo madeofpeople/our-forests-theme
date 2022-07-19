@@ -92,7 +92,8 @@ function the_territory_header_image( $size = 'full', $args = array() ) {
 	if ( ! is_singular() ) {
 		return;
 	}
-	$post_id = ( array_key_exists( 'post_id', $args ) ) ? (int) $args['post_id'] : \get_the_ID();
+	global $post;
+	$post_id = ( array_key_exists( 'post_id', $args ) ) ? (int) $args['post_id'] : $post->ID;
 
 	$defaults = array(
 		'class' => 'page-header',
