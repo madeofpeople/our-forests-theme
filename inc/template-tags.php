@@ -113,7 +113,7 @@ function the_territory_header_image( $size = 'full', $args = array() ) {
  * @param string $content
  * @return void
  */
-function the_territory_page_nav( $name = 'core/navigation', $content = null ) {
+function the_territory_page_nav( $name = 'site-functionality/page-nav', $content = null ) {
 	global $post;
 	$content = ( $content ) ? $content : $post->post_content;
 	$block   = The_Territory\get_block( $name, $content );

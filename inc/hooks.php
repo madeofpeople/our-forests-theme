@@ -132,7 +132,7 @@ add_filter( 'the_content', 'the_territory_get_the_content', 20 );
  * @return string $content
  */
 function the_territory_remove_block( $content ) {
-	$name = 'core/navigation';
+	$name = 'site-functionality/page-nav';
 	if ( ! has_block( $name ) ) {
 		return $content;
 	}
