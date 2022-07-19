@@ -126,6 +126,31 @@ function the_territory_get_the_content( $content ) {
 add_filter( 'the_content', 'the_territory_get_the_content', 20 );
 
 /**
+ * Remove specific block
+ *
+ * @param string $content
+ * @return string $content
+ */
+function the_territory_remove_block( $content ) {
+	$name = 'core/navigation';
+	if ( ! has_block( $name ) ) {
+		return $content;
+	}
+	global $post;
+	$blocks = parse_blocks( $post->post_content );
+	$return = '';
+	foreach ( $blocks as $block ) {
+		if ( $name !== $block['blockName'] ) {
+            $return .= render_block( $block );
+        } else {
+			$return .= '<!--' . $name . '-->';
+		}
+	}
+	return $return;
+}
+add_filter( 'the_content', 'the_territory_remove_block', 20 );
+
+/**
  * Enable custom mime types.
  *
  * @author WebDevStudios
