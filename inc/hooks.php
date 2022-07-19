@@ -222,7 +222,7 @@ add_action( 'wp_footer', 'the_territory_display_customizer_footer_scripts', 999 
  */
 function the_territory_add_og_tags() {
 	// Bail if Yoast is installed, since it will handle things.
-	if ( class_exists( 'WPSEO_Options' ) ) {
+	if ( class_exists( 'WPSEO_Options' ) || defined( 'THE_SEO_FRAMEWORK_PRESENT' ) ) {
 		return '';
 	}
 
