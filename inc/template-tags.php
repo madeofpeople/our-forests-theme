@@ -116,9 +116,9 @@ function the_territory_header_image( $size = 'full', $args = array() ) {
 function the_territory_page_nav( $name = 'site-functionality/page-nav', $content = null ) {
 	global $post;
 	$content = ( $content ) ? $content : $post->post_content;
-	$block   = The_Territory\get_block( $name, $content );
-
-	echo render_block( $block );
+	if ( $block   = The_Territory\get_block( $name, $content ) ) {
+		echo render_block( $block );
+	}
 }
 
 /**
