@@ -18,6 +18,7 @@ function the_territory_get_theme_include_files() {
 		'inc/compat.php', // Backwards Compatibility.
 		'inc/customizer/customizer.php', // Customizer additions.
 		'inc/extras.php', // Custom functions that act independently of the theme templates.
+		'inc/helpers.php', // Custom helper functions for this theme.
 		'inc/hooks.php', // Load custom filters and hooks.
 		'inc/security.php', // WordPress hardening.
 		'inc/scripts.php', // Load styles and scripts.
