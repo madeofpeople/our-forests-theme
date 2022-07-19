@@ -58,21 +58,32 @@
 				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'the-territory' ); ?>"></button>
 			<?php endif; ?>
 
+			<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
+				<?php
+				wp_nav_menu(
+					array(
+						'fallback_cb'    => false,
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'menu dropdown container',
+						'container'      => false,
+					)
+				);
+				?>
+			</nav><!-- #site-navigation-->
+
 		</div><!-- .container -->
 
-		<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
-			<?php
-			wp_nav_menu(
-				array(
-					'fallback_cb'    => false,
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'menu dropdown container',
-					'container'      => false,
-				)
-			);
+		<?php
+		if ( ! is_front_page() ) :
 			?>
-		</nav><!-- #site-navigation-->
+				<div class="page-header">
+					<?php the_territory_header_image( 'full', $args ); ?>
+					<?php the_territory_page_nav(); ?>
+				</div>
+			<?php
+		endif;
+		?>
 
 	</header><!-- .site-header-->
 
