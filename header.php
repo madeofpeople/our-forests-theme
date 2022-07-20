@@ -75,12 +75,9 @@
 		</div><!-- .container -->
 
 		<?php
-		if ( ! is_front_page() ) :
+		if ( \has_block( 'site-functionality/page-header' ) ) :
 			?>
-				<div class="page-header">
-					<?php the_territory_header_image( 'full', $args ); ?>
-					<?php the_territory_page_nav(); ?>
-				</div>
+			<?php the_territory_header(); ?>
 			<?php
 		endif;
 		?>
