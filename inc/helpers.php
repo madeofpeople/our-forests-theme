@@ -39,13 +39,9 @@ function get_header_image_id( $args = [] ) {
  */
 function get_block( $name, $content = null ) {
 	global $post;
-	$return = false;
-	if ( ! \is_singular() || ! \has_block( $name, get_the_ID() ) ) {
-		return $return;
-	}
+	$return = false;		
 	if ( $post && ! is_wp_error( $post ) ) {
 		$blocks = \parse_blocks( $post->post_content );
-
 		foreach ( $blocks as $block ) {
 			if ( $name === $block['blockName'] ) {
 				$return = $block;

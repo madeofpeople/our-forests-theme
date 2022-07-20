@@ -128,17 +128,13 @@ function the_territory_page_nav( $name = 'site-functionality/page-nav', $content
  * @param array $args
  * @return void
  */
-function the_territory_header( $args = array() ) {
-	$defaults = array();
-	$args     = wp_parse_args( $args, $defaults );
-	?>
+function the_territory_header( $name = 'site-functionality/page-header', $content = null ) {
+	global $post;
+	$content = ( $content ) ? $content : $post->post_content;
 
-	<div class="page-header">
-		<?php the_territory_header_image( 'full', $args ); ?>
-		<?php the_territory_page_nav(); ?>
-	</div>
-
-	<?
+	if ( $block = The_Territory\get_block( $name, $content ) ) :
+		echo render_block( $block );
+	endif;
 }
 
 /**
