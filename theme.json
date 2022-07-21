@@ -4,9 +4,14 @@
         "color": {
             "palette": [
                 {
-                    "color": "#bacd80",
-                    "slug": "primary",
-                    "name": "Primary"
+                    "name": "Green",
+                    "slug": "green",
+                    "color": "#80AD6B"
+                },
+                {
+                    "name": "Dark Green",
+                    "slug": "green-dark",
+                    "color": "#263926"
                 },
                 {
                     "name": "Black",
