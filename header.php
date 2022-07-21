@@ -37,7 +37,7 @@
 		endif;
 		?>
 
-		<div class="container">
+		<div class="nav--primary">
 
 			<div class="site-branding">
 
