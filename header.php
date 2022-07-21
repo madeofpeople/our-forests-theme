@@ -31,6 +31,11 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'the-territory' ); ?></a>
 
 	<header class="site-header">
+		<?php
+		if ( is_active_sidebar( 'header-notice' ) ) :
+			dynamic_sidebar( 'header-notice' );
+		endif;
+		?>
 
 		<div class="container">
 

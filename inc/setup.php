@@ -121,9 +121,10 @@ function the_territory_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-1' => esc_html__( 'Sidebar', 'the-territory' ),
+		'header-notice'  => esc_html__( 'Header Notice', 'the-territory' ),
+		// 'sidebar-1'      => esc_html__( 'Sidebar', 'the-territory' ),
 		'content-bottom' => esc_html__( 'Content Bottom', 'the-territory' ),
-		'footer' => esc_html__( 'Footer', 'the-territory' ),
+		'footer'         => esc_html__( 'Footer', 'the-territory' ),
 	);
 
 	// Loop through each sidebar and register.
@@ -133,7 +134,7 @@ function the_territory_widgets_init() {
 				'name'          => $sidebar_name,
 				'id'            => $sidebar_id,
 				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'the-territory' ), $sidebar_name ),
-				'before_widget' => '<div class="widget %2$s">',
+				'before_widget' => 'header-notice' === $sidebar_id ? '<div class="header-notice %2$s">' : '<div class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
