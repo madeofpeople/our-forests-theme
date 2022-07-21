@@ -20,4 +20,4 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: rsync -avz --dry-run --exclude={.*,*.lock,node_modules,vendor} ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ti/theterritoryimpact.org/web/wp-content/themes/the-territory-theme/
+        run: rsync -avz --dry-run --exclude={.*,*.lock,phpcs.xml.dist,postcss.config.js,webpack.*.js,node_modules/,vendor/} --delete ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ti/theterritoryimpact.org/web/wp-content/themes/the-territory-theme/
