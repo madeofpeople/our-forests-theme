@@ -18,7 +18,7 @@ get_header(); ?>
 				the_title( '<h1 class="page-title">', '</h1>' );
 				?>
 				<div class="archive-description">
-					<?php the_content(); ?>
+					<?php the_territory_the_content( array( 'site-functionality/page-header' ) ); ?>
 				</div>
 			</header><!-- .page-header -->
 

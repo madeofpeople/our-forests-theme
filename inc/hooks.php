@@ -141,14 +141,14 @@ function the_territory_remove_block( $content ) {
 	$return = '';
 	foreach ( $blocks as $block ) {
 		if ( $name !== $block['blockName'] ) {
-            $return .= render_block( $block );
-        } else {
+			$return .= render_block( $block );
+		} else {
 			$return .= '<!--' . $name . '-->';
 		}
 	}
 	return $return;
 }
-add_filter( 'the_content', 'the_territory_remove_block', 20 );
+// add_filter( 'the_content', 'the_territory_remove_block', 20 );
 
 /**
  * Enable custom mime types.

@@ -23,7 +23,7 @@
 
 		<div class="entry-content">
 			<?php
-				the_content();
+				the_territory_the_content( array( 'site-functionality/page-header' ) );
 
 				wp_link_pages(
 					[

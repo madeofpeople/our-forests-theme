@@ -133,7 +133,7 @@ function the_territory_header( $name = 'site-functionality/page-header', $conten
 	$content = ( $content ) ? $content : $post->post_content;
 
 	if ( $block = The_Territory\get_block( $name, $content ) ) :
-		echo render_block( $block );
+		echo apply_filters( 'the_content', render_block( $block ) );
 	endif;
 }
 
@@ -177,6 +177,30 @@ function the_territory_entry_footer() {
 		'<span class="edit-link">',
 		'</span>'
 	);
+}
+
+/**
+ * Render the conent
+ *
+ * @param array $excluded_blocks
+ * @return void
+ */
+function the_territory_the_content( $excluded_blocks = array() ) {
+	global $post;
+	$content = $post->post_content;
+	$blocks = parse_blocks( $post->post_content );
+	if ( empty( $excluded_blocks ) || empty( $blocks ) ) {
+		echo apply_filters( 'the_content', $content );
+	}
+	$content = '';
+	foreach ( $blocks as $block ) {
+		if ( ! in_array( $block['blockName'], $excluded_blocks ) ) {
+			$content .= apply_filters( 'the_content', render_block( $block ) );
+		} else {
+			$content .= '<!--' . $block['blockName'] . '-->';
+		}
+	}
+	echo $content;
 }
 
 /**
