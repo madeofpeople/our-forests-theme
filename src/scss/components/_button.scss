@@ -1,0 +1,10 @@
+@use '../environment/colors';
+
+.btn-primary,
+.wp-block-button__link {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    color: colors.color('white');
+    background-color: colors.color(green-dark);
+}
