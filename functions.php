@@ -16,6 +16,7 @@ function the_territory_get_theme_include_files() {
 	return [
 		'inc/setup.php', // Theme set up. Should be included first.
 		'inc/compat.php', // Backwards Compatibility.
+		'inc/blocks/index.php', // Block functions.
 		'inc/customizer/customizer.php', // Customizer additions.
 		'inc/extras.php', // Custom functions that act independently of the theme templates.
 		'inc/helpers.php', // Custom helper functions for this theme.
