@@ -133,7 +133,7 @@ function the_territory_header( $name = 'site-functionality/page-header', $conten
 	$content = ( $content ) ? $content : $post->post_content;
 
 	if ( $block = The_Territory\get_block( $name, $content ) ) :
-		echo render_block( $block );
+		echo apply_filters( 'the_content', render_block( $block ) );
 	endif;
 }
 
