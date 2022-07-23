@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: pragmatica--bold;
+    src: url('../fonts/pragmatica--bold.woff2') format('woff2'),
+        url('../fonts/pragmatica--bold.woff') format('woff');
+}
+ 
+@font-face {
+    font-family: acumin-extra-condensed--bold;
+    src: url('../fonts/acumin-extra-condensed--bold.woff2') format('woff2'),
+        url('../fonts/acumin-extra-condensed--bold.woff') format('woff');
+}
+
+$body-font: 'Source Sans Pro', sans-serif;
+
+body {
+    font-family: $body-font, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: pragmatica--bold, sans-serif;
+}

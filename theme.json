@@ -14,6 +14,16 @@
                     "color": "#263926"
                 },
                 {
+                    "name": "Grey Dark",
+                    "slug": "grey-dark",
+                    "color": "#222"
+                },
+                {
+                    "name": "Grey Dark 60",
+                    "slug": "grey-dark-60",
+                    "color": "#222222aa"
+                },
+                {
                     "name": "Black",
                     "slug": "black",
                     "color": "#000"
@@ -42,7 +52,9 @@
             "style": false,
             "width": false
         },
-        "custom": {},
+        "custom": {
+            "spacing": "2.8125rem"
+        },
         "layout": {
             "contentSize": "938px",
             "wideSize": "1200px"
@@ -60,11 +72,6 @@
             "customFontSize": false,
             "fontFamilies": [
                 {
-                    "fontFamily": "Bebas Neue, sans-serif",
-                    "slug": "heading-primary",
-                    "name": "Primary Heading"
-                },
-                {
                     "fontFamily": "Pragmatica, sans-serif",
                     "slug": "heading-secondary",
                     "name": "Secondary Heading"
@@ -76,7 +83,7 @@
                 }
             ],
             "fontSizes": [],
-            "fontStyle": false,
+            "fontStyle": true,
             "fontWeight": false,
             "letterSpacing": false,
             "lineHeight": false,
