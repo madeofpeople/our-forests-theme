@@ -12,6 +12,7 @@
 				"severity": "warning"
 			}
 		],
+		"selector-class-pattern": null,
 		"max-empty-lines": 1,
 		"no-empty-source": null,
 		"declaration-colon-newline-after": null,

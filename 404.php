@@ -12,7 +12,7 @@ get_header(); ?>
 	<main id="main" class="container site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
+			<header class="site__header">
 				<h1 class="page-title"><?php esc_html_e( "Sorry, this page doesn't exist.", 'the-territory' ); ?></h1>
 			</header><!-- .page-header -->
 

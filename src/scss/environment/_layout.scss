@@ -1,0 +1,12 @@
+
+@use 'colors';
+
+body {
+    background-color: colors.color('grey-dark');
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: colors.color('white');
+}
