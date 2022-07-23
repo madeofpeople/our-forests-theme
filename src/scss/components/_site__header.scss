@@ -1,16 +1,20 @@
 @use '../environment/colors';
 
 .site-header {
+
+    box-sizing: border-box;
     position: relative;
 
     .nav--primary {
         display: flex;
         justify-content: space-between;
         position: absolute;
-        width: 100vw;
+        width: 100%;
         z-index: 10;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-sizing: border-box;
 
-     
         .main-navigation {
             ul {
                 margin: 0;
@@ -19,13 +23,41 @@
                     display: inline-block;
                     a {
                         display: block;
+                        font-family: acumin-extra-condensed--bold, sans-serif;
+                        text-transform: uppercase;
                         color: colors.color('white');
                         padding: 1rem;
+                        padding-top: 2.625rem;
+                        font-size: 1.5rem;
+                        text-decoration: none;
                     }
                 }
             }
         }
     }
 
+    .page-header {
+        .header-banner {
+            .wp-block-cover__inner-container {
+                position: absolute;
+                bottom: 0;
+                .menu {
+                    padding: calc( var(--wp--custom--spacing ) / 2);
+                    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
+                    .wp-block-button__link {
+                        background-color: colors.color(grey-dark-60);
+                        font-family: acumin-extra-condensed--bold, sans-serif;
+                        text-transform: uppercase;
+                        border: 1px colors.color('white') solid;
+                    }
+                }
+            }
+        }
+    }
 
+    .home & {
+        .header-content-title {
+            text-transform: uppercase;
+        }
+    }
 }

@@ -11,12 +11,14 @@
  *
  * @package The Territory
  */
-
-get_header(); ?>
+?>
 
 	<main id="main" class="container site-main">
 
 		<?php
+
+		get_header();
+
 		if ( have_posts() ) :
 			if ( is_home() && ! is_front_page() ) :
 				?>

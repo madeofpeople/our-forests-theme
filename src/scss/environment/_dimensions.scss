@@ -1,5 +1,5 @@
 $base: 2.826875rem;
 
-@getUnits($multiplier) {
+@function getUnits($multiplier) {
     @return $multiplier * $base;
 }

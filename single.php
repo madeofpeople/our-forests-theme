@@ -7,27 +7,29 @@
  * @package The Territory
  */
 
-get_header(); ?>
+?>
 
-	<main id="main" class="container site-main">
+<main id="main" class="container site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php get_header(); ?>
 
-			get_template_part( 'template-parts/content', get_post_format() );
+	<?php
+	while ( have_posts() ) :
+		the_post();
 
-			the_post_navigation();
+		get_template_part( 'template-parts/content', get_post_format() );
 
-		endwhile; // End of the loop.
-		?>
+		the_post_navigation();
 
-		<?php
-		if ( is_active_sidebar( 'content-bottom' ) ) : 
-			get_sidebar( 'content-bottom' ); 
-		endif;
-		?>
+	endwhile; // End of the loop.
+	?>
 
-	</main><!-- #main -->
+	<?php
+	if ( is_active_sidebar( 'content-bottom' ) ) : 
+		get_sidebar( 'content-bottom' ); 
+	endif;
+	?>
+	
+	<?php get_footer(); ?>
 
-<?php get_footer(); ?>
+</main><!-- #main -->
