@@ -402,3 +402,39 @@ function the_territory_disable_wpautop_for_gutenberg() {
 	}
 }
 add_filter( 'init', 'the_territory_disable_wpautop_for_gutenberg', 9 );
+
+/**
+ * Move Template Location for Getwid Custom Post Type
+ *
+ * @param string $template
+ * @return string $template
+ */
+function the_territory_getwid_get_template_part( $template ) {
+	$templates = array(
+		'instagram',
+		'post-carousel',
+	);
+	$mailchimp = array(
+		'mailchimp/mailchimp',
+		'mailchimp/field-email',
+		'mailchimp/field-first-name',
+		'mailchimp/field-last-name'
+	);
+	foreach ( $templates as $file ) {
+		if( strpos( $template, $file ) ) {
+			$template = get_template_directory() . "/template-parts/blocks/{$file}/post.php";
+		}
+	}
+	foreach ( $mailchimp as $file ) {
+		if( strpos( $template, $file ) ) {
+			$template = get_template_directory() . "/template-parts/blocks/{$file}.php";
+		}
+	}
+	return $template;
+}
+add_filter( 'getwid/core/get_template_part', 'the_territory_getwid_get_template_part' );
+
+/**
+ * apply_filters( 'sbi_use_theme_templates', $settings['customtemplates'] )
+ * /Users/pea/Development/Local Sites/the-territory/app/public/wp-content/plugins/instagram-feed/inc/if-functions.php
+ */
