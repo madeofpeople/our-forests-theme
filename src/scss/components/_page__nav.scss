@@ -11,4 +11,21 @@
 		text-transform: uppercase;
 		border: 1px colors.color('white') solid;
 	}
+
+	.site-header.out-of-view & {
+		position: fixed;
+		top: 0;
+		max-width: 1200px;
+		width: 100%;
+		padding: 0;
+		gap: 0;
+		.menu-item {
+			flex-grow: 1;
+			.wp-block-button__link  {
+				display: block;
+				background-color: colors.color(grey-dark);
+				border: none;
+			}
+		}
+	}
 }
