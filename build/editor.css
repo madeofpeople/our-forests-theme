@@ -1,0 +1,38 @@
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/editor.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/editor.scss (1) ***!
+  \*****************************************************************************************************************************************************************************************************************/
+@font-face {
+  font-family: pragmatica--bold;
+  src: url(fonts/pragmatica--bold.woff2) format("woff2"), url(fonts/pragmatica--bold.woff) format("woff");
+}
+@font-face {
+  font-family: acumin-extra-condensed--bold;
+  src: url(fonts/acumin-extra-condensed--bold.woff2) format("woff2"), url(fonts/acumin-extra-condensed--bold.woff) format("woff");
+}
+body {
+  font-family: "Source Sans Pro", sans-serif, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: pragmatica--bold, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+/*# sourceMappingURL=editor.css.map*/

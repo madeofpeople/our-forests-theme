@@ -1,9 +1,6 @@
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/critical.scss ***!
   \***************************************************************************************************************************************************************************************************************/
-.site-header {
-  @apply bg-black bg-opacity-10 py-12;
-}
 .site-header > .container {
   @apply flex justify-between my-0;
 }

@@ -14,6 +14,203 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/blocks/index.js":
+/*!********************************!*\
+  !*** ./src/js/blocks/index.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variations */ "./src/js/blocks/variations/index.js");
+/**
+ * Gutenberg Block JS
+ *
+ * Import JS for Gutenberg blocks.
+ */
+
+
+
+/***/ }),
+
+/***/ "./src/js/blocks/variations/index.js":
+/*!*******************************************!*\
+  !*** ./src/js/blocks/variations/index.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lists__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lists */ "./src/js/blocks/variations/lists.js");
+/* harmony import */ var _paragraph__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./paragraph */ "./src/js/blocks/variations/paragraph.js");
+
+
+
+/***/ }),
+
+/***/ "./src/js/blocks/variations/lists.js":
+/*!*******************************************!*\
+  !*** ./src/js/blocks/variations/lists.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const variations = [
+    {
+        name: 'list',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Basic List', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Display a basic list.', 'the-territory' ),
+        isDefault: true,
+        icon: 'editor-ul',
+        attributes: {
+            className: 'basic',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
+        },
+        example: {
+            attributes: {
+                className: 'basic',
+            },
+        },
+        scope: [
+            'block',
+            'inserter',
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
+    },
+    {
+        name: 'bullet-list-columns',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Columned Bullet List', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A list displayed in 2 columns.', 'the-territory' ),
+        attributes: {
+            className: 'bullet-list-columns',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
+        },
+        icon: 'columns',
+        scope: [
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
+    },
+    {
+        name: 'bullet-list',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Bullet List', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A regular list, with fancy bullets.', 'the-territory' ),
+        icon: 'list-view',
+        attributes: {
+            className: 'bullet-list',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
+    },
+    {
+        name: 'icon-list',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Icon List', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A regular with icon.', 'the-territory' ),
+        icon: 'star-filled',
+        attributes: {
+            className: 'icon-list',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add list items ...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+        isActive: ( blockAttributes, variationAttributes ) =>
+            blockAttributes.className === variationAttributes.className
+    }
+];
+
+variations.forEach( ( variation ) => {
+    (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
+        'core/list',
+        variation
+    );
+} );
+
+/***/ }),
+
+/***/ "./src/js/blocks/variations/paragraph.js":
+/*!***********************************************!*\
+  !*** ./src/js/blocks/variations/paragraph.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const variations = [
+    {
+        name: 'paragraph',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Paragraph', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A standard paragraph.', 'the-territory' ),
+        isDefault: true,
+        category: 'text',
+        keywords: [
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'intro', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'paragraph', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'sentence', 'the-territory' )
+        ],
+        icon: 'editor-alignleft',
+        attributes: {
+            className: 'ptag',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add content...', 'the-territory' )
+        },
+        example: {
+            attributes: {
+                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'This is a bock for displaying the opening paragraph, the big idea, the tl;dr.', 'the-territory' )
+            },
+        },
+        scope: [
+            'block',
+            'inserter',
+            'transform'
+        ],
+    },
+    {
+        name: 'lede',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Lede', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add opening sentence or paragraph.', 'the-territory' ),
+        icon: 'editor-justify',
+        attributes: {
+            className: 'lede',
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add content...', 'the-territory' )
+        },
+        scope: [
+            'transform'
+        ],
+    }
+];
+
+variations.forEach( ( variation ) => {
+    (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
+        'core/paragraph',
+        variation
+    );
+} );
+
+
+/***/ }),
+
 /***/ "./src/js/global/index.js":
 /*!********************************!*\
   !*** ./src/js/global/index.js ***!
@@ -97,6 +294,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _template_tags__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./template-tags */ "./src/js/template-tags/index.js");
 /* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./templates */ "./src/js/templates/index.js");
 /* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_templates__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _blocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks */ "./src/js/blocks/index.js");
 /**
  * Site JS
  */
@@ -104,7 +302,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import './blocks';
+
+
+function initScrollSpy( selectors ) {
+	const observedElements = document.querySelectorAll( selectors );
+	const options = {
+		threshold: 0.5,
+	};
+
+	const inViewCallback = ( entries ) => {
+		entries.forEach( ( entry ) => {
+			if ( entry.isIntersecting ) {
+				entry.target.classList.add( 'in-view' );
+				console.log( 'inView | »', entry.target );
+			} else {
+				console.log( 'outOfView | »', entry.target );
+				entry.target.classList.add( 'in-view' );
+			}
+		} );
+	};
+
+	const observer = new IntersectionObserver( inViewCallback, options );
+	observedElements.forEach( ( element ) => {
+		const dataDelay = element.getAttribute( 'data-delay' );
+		element.style.transitionDelay = dataDelay + 'ms';
+		observer.observe( element ); // run the observer
+	} );
+}
+
+document.addEventListener(
+	'DOMContentLoaded',
+	initScrollSpy( '.entry-content > section, .page__nav' )
+);
 
 
 /***/ }),
@@ -123,12 +352,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _navigation_primary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navigation-primary */ "./src/js/template-tags/navigation-primary.js");
 /* harmony import */ var _navigation_primary__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_navigation_primary__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _off_canvas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./off-canvas */ "./src/js/template-tags/off-canvas.js");
-/* harmony import */ var _off_canvas__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_off_canvas__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./table */ "./src/js/template-tags/table.js");
-/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_table__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _video__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./video */ "./src/js/template-tags/video.js");
-/* harmony import */ var _video__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_video__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./table */ "./src/js/template-tags/table.js");
+/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_table__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _video__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./video */ "./src/js/template-tags/video.js");
+/* harmony import */ var _video__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_video__WEBPACK_IMPORTED_MODULE_4__);
 /**
  * Template Tag JS
  *
@@ -138,7 +365,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+// import './off-canvas';
 
 
 
@@ -599,112 +826,6 @@ function wdsModals() {
 
 /***/ }),
 
-/***/ "./src/js/template-tags/off-canvas.js":
-/*!********************************************!*\
-  !*** ./src/js/template-tags/off-canvas.js ***!
-  \********************************************/
-/***/ (() => {
-
-/**
- * File: off-canvas.js
- *
- * Help deal with the off-canvas mobile menu.
- */
-
-// Make sure everything is loaded first.
-if (
-	( 'complete' === document.readyState ||
-		'loading' !== document.readyState ) &&
-	! document.documentElement.doScroll
-) {
-	wdsOffCanvas();
-} else {
-	document.addEventListener( 'DOMContentLoaded', wdsOffCanvas );
-}
-
-/**
- * Kick off our off canvas functions.
- *
- * @author Corey Collins
- * @since January 31, 2020
- */
-function wdsOffCanvas() {
-	const offCanvasScreen = document.querySelector( '.off-canvas-screen' );
-
-	if ( ! offCanvasScreen ) {
-		return;
-	}
-
-	const offCanvasContainer = document.querySelector(
-			'.off-canvas-container'
-		),
-		offCanvasOpen = document.querySelector( '.off-canvas-open' );
-
-	offCanvasOpen.addEventListener( 'click', toggleOffCanvas );
-	offCanvasScreen.addEventListener( 'click', closeOffCanvas );
-	document.body.addEventListener( 'keydown', closeOnEscape );
-
-	/**
-	 * Close everything when we hit the escape key.
-	 *
-	 * @author Corey Collins
-	 * @since January 31, 2020
-	 * @param {Object} event The event trigger.
-	 */
-	function closeOnEscape( event ) {
-		if ( 27 === event.keyCode ) {
-			closeOffCanvas();
-		}
-	}
-
-	/**
-	 * Handle closing the off-canvas overlay.
-	 *
-	 * @author Corey Collins
-	 * @since January 31, 2020
-	 */
-	function closeOffCanvas() {
-		offCanvasContainer.classList.remove( 'is-visible' );
-		offCanvasOpen.classList.remove( 'is-visible' );
-		offCanvasScreen.classList.remove( 'is-visible' );
-
-		offCanvasContainer.setAttribute( 'aria-hidden', true );
-		offCanvasOpen.setAttribute( 'aria-expanded', false );
-	}
-
-	/**
-	 * Toggle the display of the off-canvas overlay.
-	 *
-	 * @author Corey Collins
-	 * @since January 31, 2020
-	 */
-	function toggleOffCanvas() {
-		if ( 'true' === offCanvasOpen.getAttribute( 'aria-expanded' ) ) {
-			closeOffCanvas();
-		} else {
-			openOffCanvas();
-		}
-	}
-
-	/**
-	 * Handle opening the off-canvas overlay.
-	 *
-	 * @author Corey Collins
-	 * @since January 31, 2020
-	 */
-	function openOffCanvas() {
-		offCanvasContainer.classList.add( 'is-visible' );
-		offCanvasOpen.classList.add( 'is-visible' );
-		offCanvasScreen.classList.add( 'is-visible' );
-
-		offCanvasContainer.setAttribute( 'aria-hidden', false );
-		offCanvasOpen.setAttribute( 'aria-expanded', true );
-	}
-}
-
-
-/***/ }),
-
 /***/ "./src/js/template-tags/table.js":
 /*!***************************************!*\
   !*** ./src/js/template-tags/table.js ***!
@@ -808,6 +929,28 @@ function wdsOffCanvas() {
 
 // import './template-name';
 
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
 
 /***/ })
 
