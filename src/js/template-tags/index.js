@@ -7,6 +7,6 @@
 import './mobile-menu';
 import './modal';
 import './navigation-primary';
-import './off-canvas';
+// import './off-canvas';
 import './table';
 import './video';

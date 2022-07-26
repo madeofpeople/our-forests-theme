@@ -1,0 +1,14 @@
+@use '../environment/dimensions';
+
+.campaign-goals {
+
+	padding-bottom: dimensions.get-spacing();
+
+	.wp-block-media-text__media {
+
+		box-sizing: border-box;
+		padding-left: dimensions.get-spacing();
+		padding-right: dimensions.get-spacing();
+	}
+
+}

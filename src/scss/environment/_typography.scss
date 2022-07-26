@@ -5,7 +5,7 @@
     src: url('../fonts/pragmatica--bold.woff2') format('woff2'),
         url('../fonts/pragmatica--bold.woff') format('woff');
 }
- 
+
 @font-face {
     font-family: acumin-extra-condensed--bold;
     src: url('../fonts/acumin-extra-condensed--bold.woff2') format('woff2'),
@@ -24,4 +24,14 @@ h3,
 h4,
 h5 {
     font-family: pragmatica--bold, sans-serif;
+    text-transform: uppercase;
+	line-height: 1.2;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 32px;
 }

@@ -1,5 +1,5 @@
 $base: 2.826875rem;
 
-@function getUnits($multiplier) {
+@function get-spacing($multiplier: 1) {
     @return $multiplier * $base;
 }

@@ -4,7 +4,7 @@ module.exports = {
 		{
 			files: '*.scss',
 			options: {
-				singleQuote: true,
+				singleQuote: true
 			},
 		},
 	],

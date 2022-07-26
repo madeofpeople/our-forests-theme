@@ -73,10 +73,6 @@
 
 			</div><!-- .site-branding -->
 
-			<?php /* if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
-				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'the-territory' ); ?>"></button>
-			<?php endif; */ ?>
-
 			<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
 				<?php
 				wp_nav_menu(

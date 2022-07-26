@@ -89,7 +89,7 @@ function the_territory_setup() {
 
 	// Gutenberg editor styles support.
 	add_theme_support( 'editor-styles' );
-	add_editor_style( 'build/index.css' );
+	add_editor_style( 'build/editor.css' );
 
 	// Gutenberg responsive embed support.
 	add_theme_support( 'responsive-embeds' );
