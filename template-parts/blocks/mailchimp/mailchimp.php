@@ -12,7 +12,6 @@
 
 	<p class='<?php echo esc_attr( $extra_attr[ 'block_name' ] . '__result' ); ?>'></p>
 
-	hello
 	<div class='<?php echo esc_attr( $extra_attr[ 'block_name' ] . '__submit' ); ?>'>
 		<div class='wp-block-button'>
 			<button
