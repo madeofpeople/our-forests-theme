@@ -5,6 +5,7 @@ $space: dimensions.get-spacing();
 
 body {
     background-color: colors.color('grey-dark');
+    color: colors.color('green-dark');
 }
 
 main {
@@ -17,9 +18,17 @@ main {
     box-sizing: border-box;
 }
 
-section > h2 {
-    padding-left: $space;
+.section:not(.learn-more-message) > h2 {
+    // padding-left: $space;
     text-transform: uppercase;
+	font-size: 24px;
+	margin-top: $space * 0.5;
+	margin-bottom: $space * 0.5;
+	&::before {
+		content: '';
+		margin-right: $space;
+		border-left: 1rem colors.color('green-dark') solid;
+	}
 }
 
 .wp-block-media-text .wp-block-media-text__content {
@@ -34,3 +43,4 @@ section > h2 {
     display: none;
     @extend %screen-reader-text;
 }
+
