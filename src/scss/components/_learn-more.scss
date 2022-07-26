@@ -1,0 +1,17 @@
+@use '../environment/colors';
+@use '../environment/dimensions';
+
+$spacing: dimensions.get-spacing();
+
+.learn-more-message {
+	background-color: colors.color(green-dark) !important;
+	margin-top: 0;
+	margin-bottom: 0;
+	> h2 {
+		font-family: acumin-extra-condensed--bold, sans-serif;
+		color: colors.color('white');
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: $spacing;
+	}
+}
