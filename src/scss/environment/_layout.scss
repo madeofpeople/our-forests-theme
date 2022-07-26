@@ -1,12 +1,36 @@
-
 @use 'colors';
+@use 'dimensions';
+
+$space: dimensions.get-spacing();
 
 body {
     background-color: colors.color('grey-dark');
 }
 
 main {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: colors.color('white');
+}
+
+.wp-block-cover__inner-container {
+    box-sizing: border-box;
+}
+
+section > h2 {
+    padding-left: $space;
+    text-transform: uppercase;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    padding-left: $space;
+}
+
+.site-header {
+    box-sizing: border-box;
+}
+
+.entry-header {
+    display: none;
+    @extend %screen-reader-text;
 }

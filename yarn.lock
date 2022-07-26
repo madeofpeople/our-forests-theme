@@ -12264,6 +12264,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+vanillajs-scrollspy@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vanillajs-scrollspy/-/vanillajs-scrollspy-2.2.0.tgz#45f04d7f1c5f31754beefc2e9c6af269911da302"
+  integrity sha512-KWtruUzvvxAQAo1xGifBBfIsAK6ATe4j3cijIpTFL2kx7xrElMRLuujEHqkuEi7CGJPua+Nedxw/49/VASH+pA==
+
 vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"

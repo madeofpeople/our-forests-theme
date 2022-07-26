@@ -68,5 +68,8 @@
 		"start": "cross-env NODE_ENV=development wp-scripts start",
 		"sync": "browser-sync start --https --proxy http://the-territory.test/ --no-open --files 'build/*.*, **/*.html, **/*.php, !node_modules/**/*.html'",
 		"watch": "run-p start sync"
+	},
+	"dependencies": {
+		"vanillajs-scrollspy": "^2.2.0"
 	}
 }

@@ -53,8 +53,8 @@ function the_territory_editor_assets() {
 	wp_enqueue_script(
 		'the-territory',
 		get_template_directory_uri() . '/build/blocks.js',
-		$asset_file['dependencies'], 
-		$asset_file['version'], 
+		$asset_file['dependencies'],
+		$asset_file['version'],
 		true
 	);
 }
