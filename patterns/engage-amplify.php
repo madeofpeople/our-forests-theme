@@ -12,14 +12,9 @@
     <h2 id="engage-amplify"><?php esc_html_e( 'Engage &amp; Amplify', 'the-territory' ); ?></h2>
     <!-- /wp:heading -->
 
-    <!-- wp:site-functionality/tout {"className":"tout parallax-text-overlay impact-screening"} -->
-        <!-- wp:nk/awb {"type":"image","image":189,"imageTag":"%3Cimg%20src%3D%22<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>%22%20class%3D%22wp-image-189%20jarallax-img%22%20width%3D%222560%22%20height%3D%221708%22%20%2F%3E","backgroundColor":"rgba(128, 173, 107, 0.25)","ghostkitStyles":{},"ghostkitClassname":"nk-awb-GlDtB","ghostkitId":"GlDtB"} -->
-        <div class="wp-block-nk-awb nk-awb">
-            <div class="nk-awb-wrap" data-awb-type="image" data-awb-image-background-size="cover" data-awb-image-background-position="50% 50%">
-                <div class="nk-awb-inner">
-                    <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>" class="wp-image-189 jarallax-img" width="2560" height="1708" />
-                </div>
-            </div>
+<!-- wp:site-functionality/tout {"className":"tout parallax-text-overlay impact-screening"} -->
+<!-- wp:nk/awb {"type":"image","image":189,"imageTag":"%3Cimg%20src%3D%22<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>%22%20class%3D%22wp-image-189%20jarallax-img%22%20width%3D%222560%22%20height%3D%221708%22%20%2F%3E","backgroundColor":"rgba(128, 173, 107, 0.25)","ghostkitStyles":{},"ghostkitClassname":"nk-awb-Z1NurSD","ghostkitId":"Z1NurSD"} -->
+<div class="wp-block-nk-awb nk-awb"><div class="nk-awb-wrap" style="background-color:rgba(128, 173, 107, 0.25)" data-awb-type="image" data-awb-image-background-size="cover" data-awb-image-background-position="50% 50%"><div class="nk-awb-inner"><img src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>" class="wp-image-189 jarallax-img" width="2560" height="1708" /></div></div>
             <!-- wp:columns -->
             <div class="wp-block-columns">
                 <!-- wp:column -->
