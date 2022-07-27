@@ -11,7 +11,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:site-functionality/tout {"className":"tout parallax-text-overlay tout-indigenous-led"} -->
-<!-- wp:nk/awb {"type":"image","image":127,"imageTag":"%3Cimg%20src%3D%22<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>%22%20class%3D%22wp-image-127%20jarallax-img%22%20width%3D%224096%22%20height%3D%222160%22%20%2F%3E","ghostkitStyles":{},"ghostkitClassname":"nk-awb-S6r3B","ghostkitId":"S6r3B"} -->
+<!-- wp:nk/awb {"type":"image","image":127,"imageTag":"%3Cimg%20src%3D%22<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>%22%20class%3D%22wp-image-127%20jarallax-img%22%20width%3D%224096%22%20height%3D%222160%22%20%2F%3E","backgroundColor":"rgba(128, 173, 107, 0.25)","ghostkitStyles":{},"ghostkitClassname":"nk-awb-S6r3B","ghostkitId":"S6r3B"} -->
 <div class="wp-block-nk-awb nk-awb"><div class="nk-awb-wrap" data-awb-type="image" data-awb-image-background-size="cover" data-awb-image-background-position="50% 50%"><div class="nk-awb-inner"><img src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/parallax.jpg' ) ); ?>" class="wp-image-127 jarallax-img" width="4096" height="2160" /></div></div><!-- wp:group {"className":"content"} -->
 <div class="wp-block-group content"><!-- wp:paragraph {"align":"center","placeholder":"Add content"} -->
 <p class="has-text-align-center"><?php esc_html_e( 'To protect the Earth from climate catastrophe we need to fight back against deforestation. Stand with us to demand that national, regional and international politicians and businesses respect and protect the land and rights of Indigenous Peoples.', 'the-territory' ); ?></p>
