@@ -2,7 +2,7 @@
  /**
   * Title: Tout - Impact Screening
   * Slug: the-territory/impact-screening
-  * Categories: featured, header, tout
+  * Categories: featured, tout
   */
 ?>
 

@@ -2,7 +2,7 @@
  /**
   * Title: Actions Count
   * Slug: the-territory/action-count
-  * Categories: featured, layout
+  * Categories: featured, tout
   */
 ?>
 
