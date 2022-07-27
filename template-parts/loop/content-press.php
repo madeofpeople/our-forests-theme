@@ -6,42 +6,26 @@
  *
  * @package The Territory
  */
-
+$base_class = $args['base_class'];
 ?>
 
-	<article <?php post_class( 'post-container' ); ?>>
+	<article <?php post_class( 'post-container ' . $base_class ); ?>>
 
-		<header class="entry-header">
-			<?php
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-			?>
+		<header class="post-header">
+			<?php if ( has_post_thumbnail() ): ?>
+				<div class="<?php echo esc_attr( $base_class . '__post-thumbnail' ); ?>">
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+				</div>
+			<?php endif; ?>
+			<?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+		</header><!-- .post-header -->
 
-			<div class="entry-meta">
-				<?php the_territory_post_date(); ?>
-			</div><!-- .entry-meta -->
-		</header><!-- .entry-header -->
+		<div class="post-content">
+			<?php the_excerpt(); ?>
+		</div><!-- .post-content -->
 
-		<div class="entry-content">
-			<?php
-				the_content(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. */
-							esc_html__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the-territory' ),
-							[
-								'span' => [
-									'class' => [],
-								],
-							]
-						),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					)
-				);
-				?>
-		</div><!-- .entry-content -->
-
-		<footer class="entry-footer">
+		<footer class="post-footer">
 			<?php the_territory_source(); ?>
-		</footer><!-- .entry-footer -->
+		</footer><!-- .post-footer -->
 
 	</article><!-- #post-## -->
