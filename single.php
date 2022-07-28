@@ -9,9 +9,7 @@
 
 ?>
 
-<main id="main" class="container site-main">
-
-	<?php get_header(); ?>
+<?php get_header(); ?>
 
 	<?php
 	while ( have_posts() ) :
@@ -33,7 +31,5 @@
 		get_sidebar( 'content-bottom' ); 
 	endif;
 	?>
-	
-	<?php get_footer(); ?>
 
-</main><!-- #main -->
+<?php get_footer(); ?>
