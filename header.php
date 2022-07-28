@@ -62,6 +62,7 @@
 						<span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
 					</a>
 				</h1>
+	<main id="main" class="container site-main">
 
 				<?php
 

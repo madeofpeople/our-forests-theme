@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<main id="main" class="container site-main">
+	<!-- <main id="main" class="container site-main"> -->
 
 		<?php if ( have_posts() ) : ?>
 
@@ -92,6 +92,7 @@ get_header(); ?>
 		endif;
 		?>
 
-	</main><!-- #main -->
+	<!-- </main> -->
+	<!-- #main -->
 
 <?php get_footer(); ?>

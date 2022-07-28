@@ -11,11 +11,9 @@
  *
  * @package The Territory
  */
-?>
 
-	<main id="main" class="container site-main">
+ get_header();
 
-		<?php
 
 		get_header();
 
@@ -59,6 +57,10 @@
 		endif;
 		?>
 
-	</main><!-- #main -->
+	<?php
+	if ( is_active_sidebar( 'content-bottom' ) ) : 
+		get_sidebar( 'content-bottom' ); 
+	endif;
+	?>
 
 <?php get_footer(); ?>

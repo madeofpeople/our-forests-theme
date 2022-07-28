@@ -45,7 +45,7 @@
 			<?php the_territory_display_social_network_links(); ?>
 		</div><!-- .site-info -->
 
-	</footer><!-- .site-footer container-->
+	</main><!-- #main -->
 
 	<?php the_territory_display_mobile_menu(); ?>
 	<?php wp_footer(); ?>
