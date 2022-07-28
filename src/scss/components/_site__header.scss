@@ -1,6 +1,3 @@
-@use '../environment/colors';
-@use '../environment/dimensions';
-
 .site-header    {
 
     box-sizing: border-box;
@@ -12,8 +9,8 @@
         position: absolute;
         width: 100%;
         z-index: 10;
-        padding-left: dimensions.get-spacing();
-        padding-right: dimensions.get-spacing();
+        padding-left: get-spacing();
+        padding-right: get-spacing();
         box-sizing: border-box;
 
 		.navigation-menu {
@@ -29,7 +26,7 @@
 					display: block;
 					font-family: acumin-extra-condensed--bold, sans-serif;
 					text-transform: uppercase;
-					color: colors.color('white');
+					color: color('white');
 					padding: 3.5rem 0 0.5rem 0;
 					font-size: 1.5rem;
 					text-decoration: none;
@@ -39,7 +36,7 @@
 						bottom: 0;
 						left: 0;
 						width: 0;
-						border-bottom: 0.25rem colors.color('white') solid;
+						border-bottom: 0.25rem color('white') solid;
 						transition-duration: 0.25s;
 						transition-timing-function: ease-out;
 						transition-property: width;
@@ -74,7 +71,7 @@
             padding-left: $space;
             padding-right: $space;
             p {
-                color: colors.color('green');
+                color: color('green');
                 font-size: 24px;
             }
         }
@@ -87,9 +84,9 @@
                 .menu {
                     .menu-item {
                         a {
-                            color: colors.color('black');
+                            color: color('black');
                             &::after {
-                                border-color: colors.color('black');
+                                border-color: color('black');
                             }
                         }
                     }

@@ -1,17 +1,14 @@
-@use 'colors';
-@use 'dimensions';
-
-$space: dimensions.get-spacing();
+$space: get-spacing();
 
 body {
-    background-color: colors.color('grey-dark');
-    color: colors.color('green-dark');
+    background-color: color('grey-dark');
+    color: color('green-dark');
 }
 
 main {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: colors.color('white');
+    background-color: color('white');
 }
 
 .wp-block-cover__inner-container {
@@ -26,7 +23,7 @@ main {
 	&::before {
 		content: '';
 		margin-right: $space;
-		border-left: 1rem colors.color('green-dark') solid;
+		border-left: 1rem color('green-dark') solid;
 	}
 }
 
@@ -58,5 +55,23 @@ main {
 				color: white;
 			}
 		}
+	}
+}
+
+.grid-four {
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@media ( min-width: bp(sm) ) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media ( min-width: bp(md) ) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	> .social-card {
+		border: 1px #f00 solid;
 	}
 }
