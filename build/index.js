@@ -550,6 +550,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initScrollSpy( selectors ) {
+
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;
@@ -598,10 +599,12 @@ function initScrollSpy( selectors ) {
 	} );
 }
 
-document.addEventListener(
-	'DOMContentLoaded',
-	initScrollSpy( '.entry-content > section, .site-header' )
-);
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	if ( document.querySelector( '.site-header .page__nav' ) ) {
+		initScrollSpy( '.entry-content > section, .site-header' );
+	}
+} );
 
 
 /***/ }),
