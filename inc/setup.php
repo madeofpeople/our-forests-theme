@@ -69,16 +69,16 @@ function the_territory_setup() {
 	);
 
 	// Custom logo support.
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 55,
-			'width'       => 180,
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => array( 'site-title', 'site-description' ),
-		)
-	);
+	// add_theme_support(
+	// 	'custom-logo',
+	// 	array(
+	// 		'height'      => 55,
+	// 		'width'       => 180,
+	// 		'flex-height' => true,
+	// 		'flex-width'  => true,
+	// 		'header-text' => array( 'site-title', 'site-description' ),
+	// 	)
+	// );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
