@@ -10,24 +10,16 @@
 ?>
 	<article <?php post_class( 'post-container' ); ?>>
 
-		<header class="entry-header">
-			<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			elseif( ! is_front_page() && ! is_home() ) :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-
-			if ( 'post' === get_post_type() ) :
-				?>
-				<div class="entry-meta">
-					<?php the_territory_post_date(); ?>
-					<?php the_territory_post_author(); ?>
-				</div><!-- .entry-meta -->
+		<header class="post-header">
+			<?php if ( has_post_thumbnail() ): ?>
+				<div class="<?php echo esc_attr( $base_class . '__post-thumbnail' ); ?>">
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'full' ) ?></a>
+				</div>
 			<?php endif; ?>
-		</header><!-- .entry-header -->
+			<?php the_title( '<h2 class="post-title">', '</h2>' ); ?>
+		</header><!-- .post-header -->
 
-		<div class="entry-content">
+		<div class="post-content">
 			<?php
 				the_content(
 					sprintf(
@@ -51,10 +43,10 @@
 					]
 				);
 				?>
-		</div><!-- .entry-content -->
+		</div><!-- .post-content -->
 
-		<footer class="entry-footer">
+		<footer class="post-footer">
 			<?php the_territory_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		</footer><!-- .post-footer -->
 
 	</article><!-- #post-## -->
