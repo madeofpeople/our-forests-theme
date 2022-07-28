@@ -16,7 +16,6 @@ function initScrollSpy( selectors ) {
 	};
 
 	const updatePageNav = ( anEl ) => {
-		console.log('» updatePageNav »', anEl)
 		if ( anEl.tagName === 'SECTION' ) {
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
@@ -25,12 +24,6 @@ function initScrollSpy( selectors ) {
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
 			}
-
-			console.log(
-				'\t| updatePageNav | » |',
-				anEl,
-				anEl.querySelector( 'h2' )
-			);
 
 			activeItem = pageNav.querySelector(
 				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
@@ -45,12 +38,10 @@ function initScrollSpy( selectors ) {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				console.log( 'inView | »', entry.target, entry.target.tagName );
 				updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				console.log( 'outOfView | »', entry.target );
 			}
 		} );
 	};
