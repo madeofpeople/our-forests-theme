@@ -551,8 +551,35 @@ __webpack_require__.r(__webpack_exports__);
 
 function initScrollSpy( selectors ) {
 	const observedElements = document.querySelectorAll( selectors );
+	const pageNav = document.querySelector( '.site-header .page__nav' );
+	let activeItem = null;
 	const options = {
-		threshold: 0.5,
+		threshold: 0,
+	};
+
+	const updatePageNav = ( anEl ) => {
+		console.log('» updatePageNav »', anEl)
+		if ( anEl.tagName === 'SECTION' ) {
+			if ( activeItem ) {
+				activeItem.classList.remove( 'active' );
+			}
+
+			if ( activeItem ) {
+				activeItem.classList.remove( 'active' );
+			}
+
+			console.log(
+				'\t| updatePageNav | » |',
+				anEl,
+				anEl.querySelector( 'h2' )
+			);
+
+			activeItem = pageNav.querySelector(
+				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
+			);
+
+			activeItem.classList.add( 'active' );
+		}
 	};
 
 	const inViewCallback = ( entries ) => {
@@ -560,7 +587,8 @@ function initScrollSpy( selectors ) {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				console.log( 'inView | »', entry.target );
+				console.log( 'inView | »', entry.target, entry.target.tagName );
+				updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
