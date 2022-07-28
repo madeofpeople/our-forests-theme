@@ -572,7 +572,7 @@ function initScrollSpy( selectors ) {
 				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
 			);
 
-			activeItem.classList.add( 'active' );
+			if( activeItem ) activeItem.classList.add( 'active' );
 		}
 	};
 

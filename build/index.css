@@ -800,6 +800,7 @@ main {
 .site-header .page__nav .wp-block-button__link.active {
   background-color: var(--wp--preset--color--white);
   color: var(--wp--preset--color--black);
+  border-radius: 0;
 }
 .site-header.out-of-view .page__nav {
   position: fixed;
