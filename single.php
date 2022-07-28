@@ -9,17 +9,19 @@
 
 ?>
 
-<main id="main" class="container site-main">
-
-	<?php get_header(); ?>
+<?php get_header(); ?>
 
 	<?php
 	while ( have_posts() ) :
 		the_post();
 
-		get_template_part( 'template-parts/content', get_post_format() );
+		if( is_singular( array( 'post' ) ) ) {
+			get_template_part( 'template-parts/content', get_post_format() );
 
-		the_post_navigation();
+			the_post_navigation();
+		} else {
+			get_template_part( 'template-parts/content', get_post_type() );
+		}
 
 	endwhile; // End of the loop.
 	?>
@@ -29,7 +31,5 @@
 		get_sidebar( 'content-bottom' ); 
 	endif;
 	?>
-	
-	<?php get_footer(); ?>
 
-</main><!-- #main -->
+<?php get_footer(); ?>
