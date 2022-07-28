@@ -550,7 +550,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initScrollSpy( selectors ) {
-
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;
@@ -572,7 +571,7 @@ function initScrollSpy( selectors ) {
 				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
 			);
 
-			if( activeItem ) activeItem.classList.add( 'active' );
+			if ( activeItem ) activeItem.classList.add( 'active' );
 		}
 	};
 
@@ -598,7 +597,6 @@ function initScrollSpy( selectors ) {
 		observer.observe( element ); // run the observer
 	} );
 }
-
 
 document.addEventListener( 'DOMContentLoaded', function () {
 	if ( document.querySelector( '.site-header .page__nav' ) ) {
