@@ -13,6 +13,9 @@
 @import 'templates/index';
 @import 'wordpress-global/index';
 
+@import 'environment/dimensions';
+@import 'environment/breakpoints';
+@import 'environment/colors';
 @import 'environment/typography';
 @import 'environment/a11y';
 @import 'environment/layout';

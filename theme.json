@@ -52,12 +52,10 @@
             "style": false,
             "width": false
         },
-        "custom": {
-            "spacing": "2.8125rem"
-        },
         "layout": {
             "contentSize": "938px",
-            "wideSize": "1200px"
+            "wideSize": "1200px",
+			"spacing": "2.8125rem"
         },
         "spacing": {
             "blockGap": null,

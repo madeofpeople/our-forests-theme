@@ -1,14 +1,28 @@
-@use '../environment/colors';
-@use '../environment/dimensions';
-
 .page__nav {
-	padding: dimensions.get-spacing() * 0.5;
+	padding: get-spacing() * 0.5;
 	box-sizing: border-box;
 	background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
 	.wp-block-button__link {
-		background-color: colors.color(grey-dark-60);
+		background-color: color(grey-dark-60);
 		font-family: acumin-extra-condensed--bold, sans-serif;
 		text-transform: uppercase;
-		border: 1px colors.color('white') solid;
+		border: 1px color('white') solid;
+	}
+
+	.site-header.out-of-view & {
+		position: fixed;
+		top: 0;
+		max-width: 1200px;
+		width: 100%;
+		padding: 0;
+		gap: 0;
+		.menu-item {
+			flex-grow: 1;
+			.wp-block-button__link  {
+				display: block;
+				background-color: color(grey-dark);
+				border: none;
+			}
+		}
 	}
 }
