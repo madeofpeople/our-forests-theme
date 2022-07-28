@@ -550,9 +550,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initScrollSpy( selectors ) {
+
 	const observedElements = document.querySelectorAll( selectors );
+	const pageNav = document.querySelector( '.site-header .page__nav' );
+	let activeItem = null;
 	const options = {
-		threshold: 0.5,
+		threshold: 0,
+	};
+
+	const updatePageNav = ( anEl ) => {
+		if ( anEl.tagName === 'SECTION' ) {
+			if ( activeItem ) {
+				activeItem.classList.remove( 'active' );
+			}
+
+			if ( activeItem ) {
+				activeItem.classList.remove( 'active' );
+			}
+
+			activeItem = pageNav.querySelector(
+				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
+			);
+
+			activeItem.classList.add( 'active' );
+		}
 	};
 
 	const inViewCallback = ( entries ) => {
@@ -560,11 +581,10 @@ function initScrollSpy( selectors ) {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				console.log( 'inView | »', entry.target );
+				updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				console.log( 'outOfView | »', entry.target );
 			}
 		} );
 	};
@@ -579,10 +599,12 @@ function initScrollSpy( selectors ) {
 	} );
 }
 
-document.addEventListener(
-	'DOMContentLoaded',
-	initScrollSpy( '.entry-content > section, .site-header' )
-);
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	if ( document.querySelector( '.site-header .page__nav' ) ) {
+		initScrollSpy( '.entry-content > section, .site-header' );
+	}
+} );
 
 
 /***/ }),

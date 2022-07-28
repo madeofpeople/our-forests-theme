@@ -781,32 +781,47 @@ main {
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255) 80%);
 }
 
-.page__nav {
+.site-header .page__nav {
   padding: 1.4134375rem;
   box-sizing: border-box;
   background: linear-gradient(0deg, rgb(34, 34, 34) 0%, rgba(34, 34, 34, 0) 100%);
+  top: -500px;
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  transition-duration: 0.7s;
+  transition-delay: 0;
 }
-.page__nav .wp-block-button__link {
+.site-header .page__nav .wp-block-button__link {
   background-color: var(--wp--preset--color--grey-dark-60);
   font-family: acumin-extra-condensed--bold, sans-serif;
   text-transform: uppercase;
   border: 1px var(--wp--preset--color--white) solid;
 }
+.site-header .page__nav .wp-block-button__link.active {
+  background-color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--black);
+}
 .site-header.out-of-view .page__nav {
   position: fixed;
-  top: 0;
   max-width: 1200px;
   width: 100%;
   padding: 0;
   gap: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  top: 0;
+}
+.admin-bar .site-header.out-of-view .page__nav {
+  top: 32px;
 }
 .site-header.out-of-view .page__nav .menu-item {
   flex-grow: 1;
+  background-color: var(--wp--preset--color--black);
 }
 .site-header.out-of-view .page__nav .menu-item .wp-block-button__link {
   display: block;
-  background-color: var(--wp--preset--color--grey-dark);
   border: none;
+  font-size: 18px;
+  padding: 0.353359375rem;
 }
 
 .learn-more-message {
@@ -834,11 +849,6 @@ main {
   text-transform: uppercase;
   font-size: 24px;
   letter-spacing: 1px;
-}
-.btn-primary.active,
-.wp-block-button a.active,
-.wp-block-button__link.active {
-  border: 1px #f00 solid;
 }
 
 .campaign-goals {
