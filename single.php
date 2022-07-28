@@ -15,9 +15,13 @@
 	while ( have_posts() ) :
 		the_post();
 
-		get_template_part( 'template-parts/content', get_post_format() );
+		if( is_singular( array( 'post' ) ) ) {
+			get_template_part( 'template-parts/content', get_post_format() );
 
-		the_post_navigation();
+			the_post_navigation();
+		} else {
+			get_template_part( 'template-parts/content', get_post_type() );
+		}
 
 	endwhile; // End of the loop.
 	?>
