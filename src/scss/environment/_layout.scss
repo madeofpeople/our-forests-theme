@@ -50,9 +50,9 @@ main {
 			padding-top: 30rem;
 			.content {
 				padding: 0.5 * $space;
-				background-color: rgba(black, 0.8);
+				background-color: rgba( color( 'black' ), 0.8);
 				margin-bottom: 0.5 * $space;
-				color: white;
+				color:  color( 'white' );
 			}
 		}
 	}

@@ -7131,6 +7131,13 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jarallax@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/jarallax/-/jarallax-2.0.4.tgz#8ea760480119d0f0b3493c72d99dfce768a1b214"
+  integrity sha512-vvQXYiRsjhmuD6vmgnkbzFWUBTmOXUFK4ncD8bUQ74rUAaRHFAwE3m4pbOqmxecdljWXtufA4EYVu67+L8PKBA==
+  dependencies:
+    video-worker "^2.0.0"
+
 jest-changed-files@^27.5.1:
   version "27.5.1"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.5.1.tgz#a348aed00ec9bf671cc58a66fcbe7c3dfd6a68f5"
@@ -12273,6 +12280,11 @@ vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+video-worker@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/video-worker/-/video-worker-2.0.0.tgz#22bce64fa1a0b04f46f0066c37de72a3a8463241"
+  integrity sha512-hdah9eSOaxDgj8SSE82HQkj4yzgXVK91ceMqJc6/0Q+M2710LTy7J1Jxgw5RDSPRfgMc68YuFtgptnodsje5Fw==
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

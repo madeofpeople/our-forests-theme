@@ -1,0 +1,16 @@
+.laxxx {
+	position: relative;
+	z-index: 0;
+	border: 1rem #f00 solid;
+}
+
+.laxxx > img {
+	position: absolute;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	border: 2rem #0f0 solid;
+}
