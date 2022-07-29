@@ -70,6 +70,7 @@
 		"watch": "run-p start sync"
 	},
 	"dependencies": {
+		"jarallax": "^2.0.4",
 		"vanillajs-scrollspy": "^2.2.0"
 	}
 }

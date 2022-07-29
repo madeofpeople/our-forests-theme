@@ -6,3 +6,5 @@
 
 import './js-enabled';
 import './window-ready';
+import './scrollspy';
+import './parallax';
