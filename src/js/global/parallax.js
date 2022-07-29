@@ -9,29 +9,21 @@ const jarallaxParams = {
 	imgPosition: '50% 50%',
 };
 
-function initParallaxSections() {
-	const parallaxSections = document.querySelectorAll(
-		'.laxxx'
-		// '.wp-block-getwid-section.parallax'
-	);
+function initParallaxSections( parentSelector, imageSelector ) {
+	const parallaxSections = document.querySelectorAll( parentSelector );
 	parallaxSections.forEach( function ( el ) {
-		console.log( 'el', el );
 		el.classList.add( 'jarallax' );
-		el.querySelector( '.wp-block-cover__image-background' ).classList.add(
-			'jarallax-img'
-		);
+		el.querySelector( imageSelector ).classList.add( 'jarallax-img' );
 	} );
 	jarallax( parallaxSections, jarallaxParams );
 }
 
 document.addEventListener( 'DOMContentLoaded', function () {
-	// if ( document.querySelector( '.wp-block-getwid-section.parallax' ) ) {
-	// 	console.log( 'hello from domready jarallax' );
-	// 	initParallaxSections();
-	// }
-
-	if ( document.querySelector( '.laxxx' ) ) {
-		console.log( 'hello from domready jarallax' );
-		initParallaxSections();
+	// Core/Cover
+	if ( document.querySelector( '.wp-block-cover.lax' ) ) {
+		initParallaxSections(
+			'.wp-block-cover.lax',
+			'.wp-block-cover__image-background'
+		);
 	}
 } );
