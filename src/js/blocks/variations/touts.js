@@ -81,6 +81,85 @@ const variations = [
             'inserter',
             'transform'
         ],
+    },
+    {
+        name: 'button',
+        title: __( 'Button Tout', 'the-territory' ),
+        description: __('Button with Background Image and Text.', 'the-territory'),
+        category: 'media',
+        icon: 'button',
+        keywords: [
+            __( 'background', 'the-territory' ),
+            __( 'cta', 'the-territory' ),
+            __( 'button', 'the-territory' )
+        ],
+        attributes: {
+            className: 'tout button',
+        },
+        innerBlocks: [
+            [
+                'core/heading',
+                {
+                    level: 3,
+                    className: 'tout__title',
+                    placeholder: __( 'Add Heading...', 'the-territory' ),
+                },
+                
+            ],
+            [
+                'core/image',
+                {
+                    className: 'tout__image',
+                    sizeSlug: 'full',
+                },
+                
+            ],
+            [
+                'core/paragraph',
+                {
+                    className: 'tout__content',
+                    placeholder: __( 'Add content...', 'the-territory' ),
+                },
+                
+            ]
+        ],
+        example: {
+            attributes: {
+                "url": "#"
+            },
+            innerBlocks: [
+                {
+                    name: 'core/heading',
+                    attributes: {
+                        level: 3,
+                        className: 'tout__title',
+                        placeholder: __( 'Add Heading...', 'the-territory' ),
+                        content: __( 'Donate to the Uru-eu-WAU-WAU Association', 'the-territory' ),
+                    },
+                },
+                {
+                    name: 'core/image',
+                    attributes: {
+                        className: 'tout__image',
+                        sizeSlug: 'full',
+                        url: 'https://images.unsplash.com/photo-1617573211120-1165b16c2900',
+                    },
+                },
+                {
+                    name: 'core/paragraph',
+                    attributes: {
+                        className: 'tout__content',
+                        placeholder: __( 'Add content...', 'the-territory' ),
+                        content: __( 'The Uru-eu-wau-wau Association of the Jupaú people defends a critical area of over 6,000 square miles of pristine rainforest. Help support Bitaté and his community.', 'the-territory' ),
+                    },
+                }
+            ]
+        },
+        scope: [
+            'block',
+            'inserter',
+            'transform'
+        ],
     }
 ];
 variations.forEach( ( variation ) => {
