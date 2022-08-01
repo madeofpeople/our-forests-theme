@@ -195,7 +195,9 @@ function the_territory_the_content( $excluded_blocks = array() ) {
 	$content = '';
 	foreach ( $blocks as $block ) {
 		if ( ! in_array( $block['blockName'], $excluded_blocks ) ) {
+			remove_filter( 'the_content', 'wpautop' );
 			$content .= apply_filters( 'the_content', render_block( $block ) );
+			add_filter( 'the_content', 'wpautop' );
 		} else {
 			$content .= '<!--' . $block['blockName'] . '-->';
 		}
