@@ -2,7 +2,7 @@
  /**
   * Title: Mailchimp Signup
   * Slug: the-territory/signup
-  * Categories: featured
+  * Categories: the-territory
   */
 ?>
 

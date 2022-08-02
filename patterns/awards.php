@@ -2,7 +2,7 @@
  /**
   * Title: Awards
   * Slug: the-territory/awards
-  * Categories: featured, layout, gallery
+  * Categories: the-territory, gallery
   */
 ?>
 

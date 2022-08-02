@@ -2,7 +2,7 @@
  /**
   * Title: Page Header - Background Image
   * Slug: the-territory/page-header-image
-  * Categories: header
+  * Categories: the-territory, header
   */
 ?>
 

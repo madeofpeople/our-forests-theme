@@ -2,7 +2,7 @@
  /**
   * Title: Tout - Indigenous-led
   * Slug: the-territory/tout-indigenous-led
-  * Categories: featured, tout
+  * Categories: the-territory, tout
   */
 ?>
 

@@ -1,8 +1,8 @@
 <?php
  /**
-  * Title: Actions Count
-  * Slug: the-territory/action-count
-  * Categories: featured, tout
+  * Title: Testimonial
+  * Slug: the-territory/testimonial
+  * Categories: the-territory, text
   */
 ?>
 

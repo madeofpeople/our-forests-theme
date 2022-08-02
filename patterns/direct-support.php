@@ -2,7 +2,7 @@
  /**
   * Title: Direct Support
   * Slug: the-territory/direct-support
-  * Categories: featured, layout
+  * Categories: the-territory, layout
   */
 ?>
 
