@@ -216,76 +216,68 @@ __webpack_require__.r(__webpack_exports__);
 
 const variations = [
     {
-        name: 'testimonial',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Testimonial', 'debtcollective'),
-        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Large quote with background image.', 'the-territory'),
+        name: 'parallax',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Cover', 'debtcollective'),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Cover image with background image.', 'the-territory'),
         keywords: [
             (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('image', 'debtcollective'),
-            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('quote', 'debtcollective'),
-            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('callout', 'debtcollective')
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('background', 'debtcollective'),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('hero', 'debtcollective')
         ],
+        isDefault: true,
         category: 'media',
-        icon: 'format-quote',
         attributes: {
-            className: 'testimonial',
-            type: 'image',
-            parallax: 'scroll',
-            parallaxSpeed: 0.25,
-            parallaxMobile: true,
-            ghostkitClassname: 'testimonial-parallax',
+            isParallax: true,
+            dimRatio: 0,
+            url: 'https://images.unsplash.com/photo-1520991323542-c159d7282b9f',
             backgroundColor: 'rgba(128, 173, 108, 0.25)'
         },
         innerBlocks: [
             [
-                'core/quote',
+                'core/heading',
                 {
-                    className: 'content',
+                    className: 'cover__title',
+                    level: 2,
                     textColor: 'white'
                 },
             ]
         ],
         example: {
             attributes: {
-                type: 'image',
-                image: 129,
-                imageTag: '%3Cimg%20src%3D%22https%3A%2F%2Fthe-territory.test%2Fwp-content%2Fuploads%2F2022%2F07%2Fbackground-7.jpg%22%20class%3D%22wp-image-129%20jarallax-img%22%20width%3D%224096%22%20height%3D%222160%22%20%2F%3E',
-                parallax: 'scroll',
-                parallaxSpeed: 0.25,
-                parallaxMobile: true,
-                ghostkitStyles: {},
-                ghostkitClassname: 'testimonial-parallax',
+                isParallax: true,
+                dimRatio: 0,
+                url: 'https://images.unsplash.com/photo-1520991323542-c159d7282b9f',
                 backgroundColor: 'rgba(128, 173, 108, 0.25)'
             },
             innerBlocks: [
                 {
-                    name: 'core/quote',
+                    name: 'core/heading',
                     attributes: {
-                        className: 'content',
-                        citation: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Bitaté Uru-eu-wau-wau', 'the-territory' )
-                    },
-                    innerBlocks: [
-                        {
-                            name: 'core/paragraph',
-                            attributes: {
-                                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( '“historically, our existence has been marginalized and erased. through this film we\'re changing that.”', 'the-territory' ),
-                            },
-                        },
-                    ],
-
+                        className: 'cover__title',
+                        level: 2,
+                        textColor: 'white',
+                        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Indigenous-led Monitoring and Surveillance', 'the-territory' )
+                    }
+                },
+                {
+                    name: 'core/paragraph',
+                    attributes: {
+                        className: 'cover__content',
+                        textColor: 'white',
+                        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'the-territory' )
+                    }
                 }
             ]
         },
     },
 ];
 
-if ( (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.getBlockType)( 'nk/awb' ) ) {
-    variations.forEach((variation) => {
-        (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
-            'nk/awb',
-            variation
-        );
-    });
-}
+variations.forEach((variation) => {
+    (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
+        'core/cover',
+        variation
+    );
+});
 
 
 /***/ }),
@@ -306,28 +298,26 @@ __webpack_require__.r(__webpack_exports__);
 
 const variations = [
     {
-        name: 'parallax-text-overlay',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Tout - Parallax Background', 'the-territory' ),
-        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'A large tout with parallax background and text overlay.', 'the-territory' ),
-        category: 'design',
+        name: 'testimonial',
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Testimonial', 'the-territory' ),
+        description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Large quote with background image.', 'the-territory'),
+        category: 'media',
+        icon: 'format-quote',
         keywords: [
-            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'tout', 'the-territory' ),
-            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'image', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'quote', 'the-territory' ),
+            (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'blockquote', 'the-territory' ),
             (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'callout', 'the-territory' )
         ],
-        icon: 'format-image',
         attributes: {
-            className: 'tout parallax-text-overlay',
+            className: 'testimonial',
         },
         innerBlocks: [
             [
-                'nk/awb',
+                'core/cover',
                 {
-                    type: 'image',
-                    parallax: 'scroll',
-                    parallaxSpeed: 0.25,
-                    parallaxMobile: true,
-                    ghostkitClassname: 'testimonial-parallax',
+                    isParallax: true,
+                    dimRatio: 0,
+                    url: 'https://images.unsplash.com/photo-1437149853762-a9c0fe22c9d0',
                     backgroundColor: 'rgba(128, 173, 108, 0.25)'
                 },
                 [
@@ -338,29 +328,11 @@ const variations = [
                         },
                         [
                             [
-                                'core/heading',
+                                'core/quote',
                                 {
-                                    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add Heading...', 'the-territory' ),
-                                    level: 3
-                                }
-                            ],
-                            [
-                                'core/paragraph',
-                                {
-                                    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add content...', 'the-territory' )
-                                }
-                            ],
-                            [
-                                'core/buttons',
-                                {},
-                                [
-                                    [
-                                        'core/button',
-                                        {
-                                            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Add Button Text...', 'the-territory' )
-                                        }
-                                    ]
-                                ]
+                                    className: 'content',
+                                    textColor: 'white'
+                                },
                             ]
                         ]
                     ]
@@ -368,74 +340,50 @@ const variations = [
             ]
         ],
         example: {
-            attributes: {
-                type: 'image',
-                imageTag: '%3Cimg%20src%3D%22https%3A%2F%2Fthe-territory.test%2Fwp-content%2Fuploads%2F2022%2F07%2Fbackground-7.jpg%22%20class%3D%22wp-image-129%20jarallax-img%22%20width%3D%224096%22%20height%3D%222160%22%20%2F%3E',
-                parallax: 'scroll',
-                parallaxSpeed: 0.25,
-                parallaxMobile: true,
-                ghostkitClassname: 'testimonial-parallax',
-                backgroundColor: 'rgba(128, 173, 108, 0.25)',
-            },
+            attributes: {},
             innerBlocks: [
                 {
-                    name: 'core/group',
+                    name: 'core/cover',
                     attributes: {
-                        className: 'tout__content',
+                        isParallax: true,
+                        dimRatio: 0,
+                        url: 'https://images.unsplash.com/photo-1437149853762-a9c0fe22c9d0',
+                        backgroundColor: 'rgba(128, 173, 108, 0.25)'
                     },
                     innerBlocks: [
                         {
-                            name: 'core/paragraph',
+                            name: 'core/quote',
                             attributes: {
-                                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'To protect the Earth from climate catastrophe we need to fight back against deforestation. Stand with us to demand that national, regional and international politicians and businesses respect and protect the land and rights of Indigenous Peoples.', 'the-territory' )
-                            }
-                        },
-                        {
-                            name: 'core/heading',
-                            attributes: {
-                                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Indigenous-led Monitoring and Surveillance', 'the-territory' ),
-                                level: 3
-                            }
-                        },
-                        {
-                            name: 'core/paragraph',
-                            attributes: {
-                                content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'the-territory' )
-                            }
-                        },
-                        {
-                            name: 'core/buttons',
-                            attributes: {},
+                                className: 'content',
+                                citation: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Bitaté Uru-eu-wau-wau', 'the-territory' )
+                            },
                             innerBlocks: [
                                 {
-                                    name: 'core/button',
+                                    name: 'core/paragraph',
                                     attributes: {
-                                        text:  (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( 'Find Out More and Support Our Call for Action', 'the-territory' ),
-                                        url: '#'
-                                    }
-                                }
-                            ]
+                                        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)( '“historically, our existence has been marginalized and erased. through this film we\'re changing that.”', 'the-territory' ),
+                                    },
+                                },
+                            ],
+        
                         }
                     ]
                 }
-            ],
+            ]
         },
         scope: [
             'block',
             'inserter',
             'transform'
         ],
-    }
+    },
 ];
-if ( (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.getBlockType)( 'nk/awb' ) && (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.getBlockType)( 'site-functionality/tout' ) ) {
-    variations.forEach( ( variation ) => {
-        (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
-            'site-functionality/tout',
-            variation
-        );
-    } );
-}
-
+variations.forEach( ( variation ) => {
+    (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)(
+        'site-functionality/tout',
+        variation
+    );
+} );
 
 /***/ }),
 

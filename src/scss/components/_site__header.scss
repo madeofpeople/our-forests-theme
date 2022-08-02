@@ -31,7 +31,6 @@
 		}
 
 		.menu__toggle {
-			border: 3px #f00 solid;
 			position: absolute;
 			top: get-spacing();
 			right: get-spacing();
@@ -159,6 +158,9 @@
     }
 }
 
+.menu__inner-toggle {
+	display: none;
+}
 
 // Mobile Nav
 @media ( max-width: bp(sm) ) {
@@ -175,6 +177,9 @@
 			&.visible {
 				display: block;
 			}
+		}
+		.menu__inner-toggle {
+			display: block;
 		}
 		.nav--primary {
 			.main-navigation {
