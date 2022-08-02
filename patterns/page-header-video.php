@@ -2,7 +2,7 @@
  /**
   * Title: Page Header - Video
   * Slug: the-territory/page-header-video
-  * Categories: header
+  * Categories: the-territory, header
   */
 ?>
 

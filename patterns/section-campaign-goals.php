@@ -2,7 +2,7 @@
  /**
   * Title: Campaign Goals
   * Slug: the-territory/campaign-goals
-  * Categories: featured, layout
+  * Categories: the-territory, layout
   */
 ?>
 
