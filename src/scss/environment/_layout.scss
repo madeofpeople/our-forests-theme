@@ -1,9 +1,6 @@
+@use 'sass:map';
 $space: get-spacing();
 
-body {
-    background-color: color('grey-dark');
-    color: color('green-dark');
-}
 
 main {
     max-width: 1200px;
@@ -17,22 +14,19 @@ main {
 
 .entry-content > .section:not(.learn-more-message) > h2 {
     text-transform: uppercase;
-	font-size: 24px;
+	font-size: map.get($font-sizes, h4);
 	margin-top: $space * 0.5;
 	margin-bottom: $space * 0.5;
 	&::before {
 		content: '';
-		margin-right: $space;
-		border-left: 1rem color('green-dark') solid;
+		margin-right: $space * .75;
+		border-left: ($space * .25) color(green-mid) solid;
 	}
 }
 
+// page title?
 .home .section > h2 {
 	@extend %screen-reader-text;
-}
-
-.wp-block-media-text .wp-block-media-text__content {
-    padding-left: $space;
 }
 
 .site-header {
@@ -58,20 +52,12 @@ main {
 	}
 }
 
-.grid-four {
-
-	display: grid;
-	grid-template-columns: 1fr;
-
-	@media ( min-width: bp(sm) ) {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	@media ( min-width: bp(md) ) {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-
-	> .social-card {
-		border: 1px #f00 solid;
+.section {
+	> p,
+	> h3,
+	> h4,
+	> .lede {
+		padding-left: get-spacing();
+		padding-right: get-spacing();
 	}
 }

@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
@@ -12,14 +13,31 @@
         url('../fonts/acumin-extra-condensed--bold.woff') format('woff');
 }
 
+$font-sizes: (
+	'body': 1rem,
+	'h5': 1.2rem,
+	'h4': 1.44rem,
+	'h3': 1.728rem,
+	'h2': 2.074rem,
+	'h1': 2.448rem
+);
+
 $body-font: 'Source Sans Pro', sans-serif;
 
+html,
 body {
+	padding: 0;
+	margin: 0;
     font-family: $body-font, sans-serif;
+	font-size: map.get($font-sizes, body);
+	color: color(green-mid);
 }
 
+%h1,
 h1,
+%h2,
 h2,
+%h3,
 h3,
 h4,
 h5 {
@@ -29,9 +47,30 @@ h5 {
 }
 
 h2 {
-    font-size: 45px;
+	font-size: map.get($font-sizes, h2);
 }
 
 h3 {
-    font-size: 32px;
+	font-size: map.get($font-sizes, h3);
+}
+
+@mixin h2 {
+	font-size: map.get($font-sizes, h2);
+    font-family: pragmatica--bold, sans-serif;
+    text-transform: uppercase;
+	line-height: 1.2;
+}
+
+@mixin h3 {
+	font-size: map.get($font-sizes, h3);
+	font-family: pragmatica--bold, sans-serif;
+    text-transform: uppercase;
+	line-height: 1.2;
+}
+
+@mixin h4 {
+	font-size: map.get($font-sizes, h4);
+    font-family: pragmatica--bold, sans-serif;
+    text-transform: uppercase;
+	line-height: 1.2;
 }

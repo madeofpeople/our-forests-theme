@@ -9,6 +9,11 @@
                     "color": "#80AD6B"
                 },
                 {
+                    "name": "Mid Green",
+                    "slug": "green-mid",
+                    "color": "#3F682B"
+                },
+                {
                     "name": "Dark Green",
                     "slug": "green-dark",
                     "color": "#1B281B"

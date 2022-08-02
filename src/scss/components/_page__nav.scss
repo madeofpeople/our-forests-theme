@@ -1,3 +1,32 @@
+@use 'sass:map';
+
+@mixin page__nav--small {
+	max-width: 1200px;
+	width: 100%;
+	padding: 0;
+	gap: 0;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+	top: 0;
+
+	@media ( min-width: bp(sm) ) {
+		.admin-bar & {
+			top: 32px;
+		}
+	}
+
+	.menu-item {
+		flex-grow: 1;
+		background-color: color('black');
+		.wp-block-button__link  {
+			display: block;
+			border: none;
+			font-size: map.get($font-sizes, h4);
+			padding: get-spacing(0.125);
+		}
+	}
+}
+
+
 .site-header {
 
 	.page__nav {
@@ -26,26 +55,22 @@
 
 	&.out-of-view .page__nav {
 		position: fixed;
-		max-width: 1200px;
-		width: 100%;
-		padding: 0;
-		gap: 0;
-		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-		top: 0;
+		@include page__nav--small;
+	}
 
-		.admin-bar & {
-			top: 32px;
+	@media ( max-width: bp(md) ) {
+		.wp-block-cover__inner-container {
+			position: absolute;
+			bottom: 0;
+			.page__nav {
+				@include page__nav--small;
+			}
 		}
-
-		.menu-item {
-			flex-grow: 1;
-			background-color: color('black');
-			.wp-block-button__link  {
-				display: block;
-				border: none;
-				font-size: 18px;
-				padding: get-spacing(0.125);
+		&:not(.out-of-view) {
+			.page__nav {
+				position: static;
 			}
 		}
 	}
+
 }

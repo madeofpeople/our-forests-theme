@@ -1,0 +1,24 @@
+if (
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
+) {
+	tweakLinkedTouts();
+} else {
+	document.addEventListener( 'DOMContentLoaded', tweakLinkedTouts );
+}
+
+console.log( 'tout-wrangle' );
+
+function tweakLinkedTouts() {
+	const linkedTouts = document.querySelectorAll(
+		'.wp-block-site-functionality-tout-linked'
+	);
+	linkedTouts.forEach( ( tout ) => {
+		const title = tout.querySelector( '.tout__title' );
+		const wrapper = document.createElement( 'div' );
+		wrapper.classList.add( 'title__wrapper' );
+		tout.prepend( wrapper );
+		wrapper.append( title );
+	} );
+}

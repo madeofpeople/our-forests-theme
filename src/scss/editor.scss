@@ -6,4 +6,11 @@
 //----------------------------------------
 // Theme Styles.
 //----------------------------------------
+@import 'global';
 @import 'environment/typography';
+
+
+.is-root-container {
+	max-width: 938px;
+	margin: 0 auto;
+}

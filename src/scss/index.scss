@@ -9,22 +9,22 @@
 @import 'blocks/index';
 @import 'blocks/core/index';
 @import 'global/index';
-@import 'template-tags/index';
 @import 'templates/index';
 @import 'wordpress-global/index';
 
-@import 'environment/dimensions';
-@import 'environment/breakpoints';
-@import 'environment/colors';
-@import 'environment/typography';
-@import 'environment/a11y';
-@import 'environment/layout';
+@import 'global';
 
-@import 'components/notice';
-@import 'components/site__header';
-@import 'components/page__nav';
-@import 'components/learn-more';
-@import 'components/button';
 @import 'components/campaigns';
+@import 'components/notice';
 @import 'components/our-goals';
+@import 'components/demand-change';
+@import 'components/newsletter';
+@import 'components/page__nav';
 @import 'components/parallax';
+@import 'components/site__header';
+@import 'components/testimonial';
+@import 'components/tout';
+
+body {
+    background-color: color('grey-dark');
+}

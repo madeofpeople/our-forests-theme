@@ -1,0 +1,17 @@
+.content-bottom {
+
+	.yikes-mailchimp-container {
+	}
+
+	.wp-widget-group__inner-blocks {
+		display: grid;
+		background-color: color(green-mid);
+		color: color('white');
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		@media ( min-width: bp(xs) ) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+	}
+}

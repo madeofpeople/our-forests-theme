@@ -2,6 +2,8 @@
 // Off-Canvas Elements and Overlays
 //--------------------------------------------------------------
 .off-canvas {
+	padding: 2rem;
+	border: 3px #0f0 solid;
 	&-container {
 		@apply bg-white inset-y-0 h-full fixed;
 
