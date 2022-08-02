@@ -1,0 +1,33 @@
+@use 'sass:map';
+
+.testimonial {
+	text-align: center;
+
+	p:first-of-type {
+		@include h4;
+	}
+
+	cite {
+		@include h4;
+		&::before {
+			content: '—';
+			display: inline-block;
+		}
+	}
+
+	@media ( min-width: bp(sm) ) {
+		p:first-of-type {
+			@include h2;
+		}
+
+		cite {
+			font-size: map.get($font-sizes, h4);
+			@include h3;
+			&::before {
+				content: '—';
+				display: inline-block;
+			}
+		}
+	}
+
+}

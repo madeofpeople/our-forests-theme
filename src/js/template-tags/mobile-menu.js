@@ -5,6 +5,7 @@
  */
 
 // Make sure everything is loaded first.
+
 if (
 	( 'complete' === document.readyState ||
 		'loading' !== document.readyState ) &&
@@ -25,10 +26,8 @@ function wdsMobileMenu() {
 	const subMenuParentItem = document.querySelectorAll(
 		'.mobile-menu li.menu-item-has-children, .utility-navigation li.menu-item-has-children'
 	);
-
 	subMenuParentItem.forEach( ( subMenuParent ) => {
 		const menuItem = subMenuParent.querySelector( 'a' );
-
 		menuItem.innerHTML +=
 			'<button type="button" aria-expanded="false" class="parent-indicator caret-down" aria-label="Open submenu"><span class="down-arrow"></span></button>';
 

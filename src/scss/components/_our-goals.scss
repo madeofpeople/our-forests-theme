@@ -5,8 +5,10 @@
 	.wp-block-media-text__media {
 
 		box-sizing: border-box;
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-	}
 
+		@media ( min-width: bp(sm) ) {
+			padding-left: get-spacing();
+			padding-right: get-spacing();
+		}
+	}
 }

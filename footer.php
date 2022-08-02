@@ -12,7 +12,7 @@
 ?>
 
 		<?php do_action( 'before_footer' ); ?>
-		
+
 		<footer class="site-footer">
 
 			<?php
@@ -47,12 +47,9 @@
 
 		</footer><!-- .site-footer container-->
 
-		<?php the_territory_display_mobile_menu(); ?>
-
 	</main><!-- #main -->
 
 	<?php wp_footer(); ?>
-
 </body>
 
 </html>

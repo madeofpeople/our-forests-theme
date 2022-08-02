@@ -1,0 +1,26 @@
+@import 'environment/breakpoints';
+@import 'environment/dimensions';
+@import 'environment/colors';
+@import 'environment/typography';
+@import 'environment/a11y';
+@import 'environment/layout';
+
+@import 'components/button';
+@import 'components/connect';
+@import 'components/learn-more';
+@import 'components/our-goals';
+
+.grid-four {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: get-spacing();
+	grid-row-gap: get-spacing();
+
+	@media ( min-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media ( min-width: bp(sm) ) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}

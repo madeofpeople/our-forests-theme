@@ -1,7 +1,13 @@
+@use 'sass:map';
+
 .site-header    {
 
     box-sizing: border-box;
     position: relative;
+
+	.menu__underlay {
+		display: none;
+	}
 
     .nav--primary {
         display: flex;
@@ -13,23 +19,65 @@
         padding-right: get-spacing();
         box-sizing: border-box;
 
+		&::before {
+			content: '';
+			width: 100%;
+			height: 5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0));
+		}
+
+		.menu__toggle {
+			border: 3px #f00 solid;
+			position: absolute;
+			top: get-spacing();
+			right: get-spacing();
+			width: 2rem;
+			height: 2rem;
+			box-sizing: border-box;
+			padding: 0.25rem;
+			border: 8px color(green-mid) solid;
+			background-color: color(green-mid);
+			color: white;
+			outline: none;
+			@media ( min-width: bp(sm) ) {
+				display: none;
+			}
+		}
+
 		.navigation-menu {
-			margin: 0;
-			padding: 0;
+			.menu {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.menu-item {
+				a {
+					padding: 1.5rem 0 0.5rem 0;
+					position: relative;
+					display: block;
+					font-family: acumin-extra-condensed--bold, sans-serif;
+					text-transform: uppercase;
+					color: color('white');
+					font-size: map.get($font-sizes, h4);
+					text-decoration: none;
+				}
+			}
+		}
+
+		@media ( min-width: bp(sm) ) {
+
 			li:not(:first-child) {
 				margin-left: 2rem;
 			}
 			.menu-item {
 				display: inline-block;
 				a {
-					position: relative;
-					display: block;
-					font-family: acumin-extra-condensed--bold, sans-serif;
-					text-transform: uppercase;
-					color: color('white');
-					padding: 3.5rem 0 0.5rem 0;
-					font-size: 1.5rem;
-					text-decoration: none;
+
+					padding: 2.5rem 0 0.5rem 0;
 					&::after {
 						content: '';
 						position: absolute;
@@ -66,16 +114,31 @@
     .home & {
         .header-content-title {
             text-transform: uppercase;
+			color: color('white');
+			text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
         }
         .header-content {
             padding-left: $space;
             padding-right: $space;
             p {
                 color: color('green');
-                font-size: 24px;
+				font-size: map.get($font-sizes, body);
             }
         }
 
+		.header-banner {
+			min-height: 550px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			height: 10rem;
+			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 255) 80% );
+		}
     }
 
     .page-take-action & {
@@ -94,14 +157,54 @@
             }
         }
     }
+}
 
-    .home &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        bottom: 0;
-        height: 10rem;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 255) 80% );
-    }
+
+// Mobile Nav
+@media ( max-width: bp(sm) ) {
+	.site-header {
+		.menu__underlay {
+			display: none;
+			background-color: rgba(0, 0, 0, 0.8);
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			&.visible {
+				display: block;
+			}
+		}
+		.nav--primary {
+			.main-navigation {
+				background-color: color('white');
+				padding: get-spacing(0.5);
+				box-sizing: border-box;
+				width: 300px;
+				height: 100vh;
+				position: fixed;
+				z-index: 50;
+				top: 0;
+				right: -340px;
+				transition-property: right;
+				transition-timing-function: ease-out;
+				transition-duration:  0.25s;
+
+				.menu-item {
+					a {
+						color: color('black');
+					}
+				}
+
+				.admin-bar & {
+					top: 46px;
+				}
+
+				&.open {
+					right: 0;
+				}
+			}
+		}
+	}
 }
