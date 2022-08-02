@@ -7,11 +7,12 @@
 namespace The_Territory\Inc\Blocks\Patterns;
 
 \register_block_pattern_category(
-    'tout',
-    array( 'label' => __( 'Touts', 'the-territory' ) )
+    'the-territory',
+    array( 'label' => __( 'The Territory', 'the-territory' ) )
 );
 
 \register_block_pattern_category(
     'layout',
     array( 'label' => __( 'Layout', 'the-territory' ) )
 );
+

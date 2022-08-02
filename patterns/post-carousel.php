@@ -2,7 +2,7 @@
  /**
   * Title: Post Carousel
   * Slug: the-territory/post-carousel
-  * Categories: featured, query, layout
+  * Categories: the-territory, query
   */
 ?>
 
