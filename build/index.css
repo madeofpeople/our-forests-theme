@@ -817,7 +817,6 @@ main {
   background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0));
 }
 .site-header .nav--primary .menu__toggle {
-  border: 3px #f00 solid;
   position: absolute;
   top: 2.826875rem;
   right: 2.826875rem;
@@ -914,6 +913,10 @@ main {
   border-color: var(--wp--preset--color--black);
 }
 
+.menu__inner-toggle {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .site-header .menu__underlay {
     display: none;
@@ -926,6 +929,9 @@ main {
     left: 0;
   }
   .site-header .menu__underlay.visible {
+    display: block;
+  }
+  .site-header .menu__inner-toggle {
     display: block;
   }
   .site-header .nav--primary .main-navigation {

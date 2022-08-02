@@ -26,6 +26,7 @@ function initializeMobileMenu() {
 		mobileMenuUnderlay.classList.remove( 'visible' );
 	} );
 	mobileMenuUnderlay.addEventListener( 'click', () => {
+		console.log( 'clicked mobile menu underlay' );
 		mobileMenuUnderlay.classList.remove( 'visible' );
 		mobileMenu.classList.remove( 'open' );
 	} );

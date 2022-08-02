@@ -17,8 +17,9 @@ function tweakLinkedTouts() {
 	linkedTouts.forEach( ( tout ) => {
 		const title = tout.querySelector( '.tout__title' );
 		const wrapper = document.createElement( 'div' );
+		const link = tout.querySelector( '.tout__link' );
 		wrapper.classList.add( 'title__wrapper' );
-		tout.prepend( wrapper );
+		link.prepend( wrapper );
 		wrapper.append( title );
 	} );
 }
