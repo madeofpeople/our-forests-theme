@@ -12,10 +12,10 @@
   <h2 id="demand-change"><?php esc_html_e( 'Demand Change', 'the-territory' ); ?></h2>
   <!-- /wp:heading -->
 
-  <!-- wp:cover {"url":"<?php echo esc_url( 'https://images.unsplash.com/photo-1437149853762-a9c0fe22c9d0' ); ?>","id":127,"dimRatio":0,"isDark":false,"isParallax":true} -->
+  <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/demand.jpg' ) ); ?>","id":127,"dimRatio":0,"isDark":false,"isParallax":true} -->
   <div class="wp-block-cover is-light lax">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
-	<img class="wp-block-cover__image-background wp-image-127" alt="" src="<?php echo esc_url( 'https://images.unsplash.com/photo-1437149853762-a9c0fe22c9d0' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+	<img class="wp-block-cover__image-background wp-image-127" alt="" src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/demand.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 		<!-- wp:group {"className":"content overlay"} -->
 		<div class="wp-block-group content overlay">
 			<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
