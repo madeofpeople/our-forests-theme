@@ -14,7 +14,8 @@
 
     <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/cover.jpg' ) ); ?>","dimRatio":0,"isDark":false,"isParallax":true} -->
     <div class="wp-block-cover is-light lax">
-        <span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/cover.jpg' ) ); ?>" data-object-fit="cover"/>
+        <span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
+        <img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/cover.jpg' ) ); ?>" data-object-fit="cover"/>
         <div class="wp-block-cover__inner-container">
             <!-- wp:columns -->
             <div class="wp-block-columns">
