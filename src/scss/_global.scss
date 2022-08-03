@@ -9,8 +9,9 @@
 @import 'components/connect';
 @import 'components/learn-more';
 @import 'components/our-goals';
+@import 'components/social-grid';
 
-.grid-four {
+%grid-four {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-column-gap: get-spacing();
@@ -23,4 +24,19 @@
 	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
+}
+
+%grid-three {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: get-spacing();
+	grid-row-gap: get-spacing();
+
+	@media ( min-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.grid-four {
+	@extend %grid-three;
 }

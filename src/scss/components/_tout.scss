@@ -1,12 +1,15 @@
+@use 'sass:map';
+
 .wp-block-site-functionality-tout-linked {
 	position: relative;
 	display: block;
-	height: 370px;
 	width: 100%;
 	overflow: hidden;
+	aspect-ratio: 3/2;
 	box-sizing: border-box;
 
 	.title__wrapper {
+		// aspect-ratio: 3/2;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -26,11 +29,12 @@
 			position: absolute;
 			bottom: get-spacing(0.5);
 			z-index: 5;
-			color: color(green);
+			color: color('white');
 			letter-spacing: 1px;
 			font-weight: 400;
 			font-family: acumin-extra-condensed--bold, sans-serif;
-
+			font-size: map.get($font-sizes, h3);
+			margin-bottom: 0;
 			transition-property: box-shadow;
 			box-shadow: 0 0 0 rgba(color('black'), 0);
 			transition-timing-function: ease-out;
@@ -44,6 +48,7 @@
 			background-color: rgba(color(black), 0);
 		}
 		.tout__title {
+			text-decoration: underline;
 			text-shadow: 4px 4px 7px rgba( #000, 0.85);
 		}
 	}

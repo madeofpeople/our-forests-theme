@@ -123,6 +123,9 @@ main {
   margin-bottom: 0;
   margin-top: 0;
 }
+.section.pass-the-mic .wp-block-social-links {
+  gap: 0;
+}
 .section.pass-the-mic .social-cards {
   padding-left: 2.826875rem;
   padding-right: 2.826875rem;
@@ -170,20 +173,15 @@ main {
   }
 }
 
-.grid-four {
+.grid-four, .social-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2.826875rem;
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
-  .grid-four {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 760px) {
-  .grid-four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .grid-four, .social-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
