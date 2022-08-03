@@ -1,0 +1,38 @@
+.laurels {
+	margin: get-spacing(0.5);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	figure.wp-block-image {
+		width: auto;
+		flex: 0 0 calc(30.3333%);
+		margin: get-spacing(0.125);
+		height: 84px !important;
+		img {
+			display: block;
+			margin: 0 auto;
+			object-fit: scale-down;
+			height: 84px !important;
+			width: auto;
+			max-height: 84px;
+		}
+	}
+
+
+	@media ( min-width: bp(sm) ) {
+		flex-wrap: nowrap;
+		margin: get-spacing(0.5);
+		figure.wp-block-image {
+			flex: 0 0 calc(16.66% - 20px);
+		}
+	}
+
+	@media ( min-width: bp(md) ) {
+		justify-content: space-between;
+	}
+
+	@media ( min-width: bp(lg) ) {
+		margin: get-spacing();
+	}
+}

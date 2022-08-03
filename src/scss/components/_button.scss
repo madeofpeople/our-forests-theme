@@ -1,15 +1,24 @@
 @use 'sass:map';
 
 .btn-primary,
-.wp-block-button a,
 .wp-block-button__link {
     border: none;
     border-radius: 2px;
     outline: none;
     color: color('white');
-    background-color: color(green-dark);
     font-family: acumin-extra-condensed--bold, sans-serif;
     text-transform: uppercase;
     font-size: map.get($font-sizes, h3);
     letter-spacing: 1px;
+
+	&:hover,
+	&:focus {
+
+	}
+
+	.is-style-outline &,
+	&.is-style-outline {
+		border: color('green') 3px solid;
+		color: white;
+	}
 }
