@@ -569,17 +569,21 @@ main {
 }
 
 .btn-primary,
-.wp-block-button a,
 .wp-block-button__link {
   border: none;
   border-radius: 2px;
   outline: none;
   color: var(--wp--preset--color--white);
-  background-color: var(--wp--preset--color--green-dark);
   font-family: acumin-extra-condensed--bold, sans-serif;
   text-transform: uppercase;
   font-size: 1.728rem;
   letter-spacing: 1px;
+}
+.is-style-outline .btn-primary, .btn-primary.is-style-outline,
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+  border: var(--wp--preset--color--green) 3px solid;
+  color: white;
 }
 
 .section.pass-the-mic .social-card__title {
@@ -638,14 +642,31 @@ main {
   }
 }
 
-.grid-four, .social-grid {
+.grid-four, .section.pass-the-mic .social-cards, .social-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2.826875rem;
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
-  .grid-four, .social-grid {
+  .grid-four, .section.pass-the-mic .social-cards, .social-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 760px) {
+  .grid-four, .section.pass-the-mic .social-cards, .social-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2.826875rem;
+  grid-row-gap: 2.826875rem;
+}
+@media (min-width: 500px) {
+  .grid-three {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -671,9 +692,25 @@ main {
   position: relative;
   background-color: var(--wp--preset--color--black);
   color: var(--wp--preset--color--white);
-  top: -4rem;
+  top: -8rem;
   padding: 2.826875rem;
   margin: 0 2.826875rem;
+}
+.demand-change__content .wp-block-button {
+  margin: 2rem auto 0 auto;
+}
+.demand-change__content .wp-block-button__link {
+  display: block;
+  border: var(--wp--preset--color--green) 2px solid;
+  background-color: var(--wp--preset--color--green-dark);
+  color: var(--wp--preset--color--white);
+  transition-property: border-color, color, background-color;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.demand-change__content .wp-block-button__link:hover, .demand-change__content .wp-block-button__link:focus {
+  background-color: var(--wp--preset--color--green-mid);
+  color: var(--wp--preset--color--black);
 }
 
 .content-bottom .wp-widget-group__inner-blocks {
@@ -1052,8 +1089,162 @@ main {
   height: 1rem;
 }
 
+.laurels {
+  margin: 1.4134375rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.laurels figure.wp-block-image {
+  width: auto;
+  flex: 0 0 30.3333%;
+  margin: 0.353359375rem;
+  height: 84px !important;
+}
+.laurels figure.wp-block-image img {
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  height: 84px !important;
+  width: auto;
+  max-height: 84px;
+}
+@media (min-width: 760px) {
+  .laurels {
+    flex-wrap: nowrap;
+    margin: 1.4134375rem;
+  }
+  .laurels figure.wp-block-image {
+    flex: 0 0 calc(16.66% - 20px);
+  }
+}
+@media (min-width: 900px) {
+  .laurels {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1000px) {
+  .laurels {
+    margin: 2.826875rem;
+  }
+}
+
+.post-list.news .slick-slide .review .post-title,
+.post-list.news .slick-slide .press .post-title,
+.post-list.news .slick-slide .review .post-title,
+.post-list.news .slick-slide .press .post-title {
+  margin: 0;
+  font-family: acumin-extra-condensed--bold, sans-serif;
+}
+.post-list.news .slick-slide .review .post-title a,
+.post-list.news .slick-slide .press .post-title a,
+.post-list.news .slick-slide .review .post-title a,
+.post-list.news .slick-slide .press .post-title a {
+  color: var(--wp--preset--color--green-mid);
+  text-decoration: none;
+}
+.post-list.news .slick-arrow,
+.post-list.news .slick-arrow {
+  width: 8.480625rem;
+  height: 8.480625rem;
+  background-color: var(--wp--preset--color--grey-dark);
+  border-radius: 50%;
+  color: var(--wp--preset--color--white);
+}
+.post-list.news .slick-arrow::before,
+.post-list.news .slick-arrow::before {
+  content: "»";
+  font-family: acumin-extra-condensed--bold, sans-serif;
+  font-size: 4rem;
+  width: 4.2403125rem;
+  height: 4.2403125rem;
+  color: var(--wp--preset--color--white);
+  position: relative;
+  left: -1.4134375rem;
+}
+.post-list.news .slick-arrow.slick-next,
+.post-list.news .slick-arrow.slick-next {
+  right: -4.2403125rem;
+}
+.post-list.news .slick-arrow.slick-prev,
+.post-list.news .slick-arrow.slick-prev {
+  left: -4.2403125rem;
+}
+.post-list.news .slick-arrow.slick-prev::before,
+.post-list.news .slick-arrow.slick-prev::before {
+  content: "«";
+  left: 1.4134375rem;
+}
+@media (min-width: 900px) {
+  .post-list.news .slick-arrow::before,
+.post-list.news .slick-arrow::before {
+    content: "»";
+    font-family: acumin-extra-condensed--bold, sans-serif;
+    font-size: 4rem;
+    width: 8.480625rem;
+    height: 8.480625rem;
+    color: var(--wp--preset--color--white);
+    position: relative;
+    left: -1.4134375rem;
+  }
+  .post-list.news .slick-arrow.slick-next,
+.post-list.news .slick-arrow.slick-next {
+    right: -4.2403125rem;
+  }
+  .post-list.news .slick-arrow.slick-prev,
+.post-list.news .slick-arrow.slick-prev {
+    left: -4.2403125rem;
+  }
+  .post-list.news .slick-arrow.slick-prev::before,
+.post-list.news .slick-arrow.slick-prev::before {
+    content: "«";
+    left: 1.4134375rem;
+  }
+}
+
 body {
   background-color: var(--wp--preset--color--grey-dark);
+}
+
+body::before {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "—";
+  top: 0;
+  right: 0;
+  z-index: 1000000;
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border-radius: 0 0 0 0.25rem;
+}
+@media (min-width: 500px) {
+  body::before {
+    content: "xs";
+  }
+}
+@media (min-width: 760px) {
+  body::before {
+    content: "sm";
+  }
+}
+@media (min-width: 900px) {
+  body::before {
+    content: "md";
+  }
+}
+@media (min-width: 1000px) {
+  body::before {
+    content: "lg";
+  }
+}
+@media (min-width: 1400px) {
+  body::before {
+    content: "xl";
+  }
 }
 
 /*# sourceMappingURL=index.css.map*/
