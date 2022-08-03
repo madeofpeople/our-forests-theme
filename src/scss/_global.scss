@@ -38,5 +38,9 @@
 }
 
 .grid-four {
+	@extend %grid-four;
+}
+
+.grid-three {
 	@extend %grid-three;
 }
