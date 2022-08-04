@@ -35,7 +35,7 @@
 		&::before {
 			content: '';
 			width: 100%;
-			height: 5rem;
+			height: 10rem;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -187,6 +187,9 @@
 
 	.page-take-action & {
         .nav--primary {
+			&::before {
+				background: linear-gradient(4deg, rgba(255,255,255,0) 35%, rgba(255,255,255, 40));
+			}
             .main-navigation {
                 .menu {
                     .menu-item {
@@ -221,6 +224,12 @@
 				height: auto;
 				left: auto;
 				right: auto;
+			}
+
+			.navigation-menu {
+				.menu {
+					padding: 0 0 0 0;
+				}
 			}
 
 			.menu-item {
