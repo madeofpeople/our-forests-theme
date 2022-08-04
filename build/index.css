@@ -894,7 +894,7 @@ a {
 .site-header .nav--primary::before {
   content: "";
   width: 100%;
-  height: 5rem;
+  height: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -1028,6 +1028,9 @@ a {
   height: 10rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255) 80%);
 }
+.page-take-action .site-header .nav--primary::before {
+  background: linear-gradient(4deg, rgba(255, 255, 255, 0) 35%, rgb(255, 255, 255));
+}
 .page-take-action .site-header .nav--primary .main-navigation .menu .menu-item a {
   color: var(--wp--preset--color--black);
 }
@@ -1049,6 +1052,9 @@ a {
     height: auto;
     left: auto;
     right: auto;
+  }
+  .site-header .nav--primary .navigation-menu .menu {
+    padding: 0 0 0 0;
   }
   .site-header .nav--primary .menu-item {
     display: inline-block;
