@@ -21,7 +21,8 @@ function initializeMobileMenu() {
 		mobileMenu.classList.toggle( 'open' );
 		mobileMenuUnderlay.classList.toggle( 'visible' );
 	} );
-	mobileMenuInnerToggle.addEventListener( 'click', () => {
+	mobileMenuInnerToggle.addEventListener( 'click', ( e ) => {
+		e.preventDefault();
 		mobileMenu.classList.remove( 'open' );
 		mobileMenuUnderlay.classList.remove( 'visible' );
 	} );

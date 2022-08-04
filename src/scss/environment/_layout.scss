@@ -1,7 +1,9 @@
 @use 'sass:map';
 $space: get-spacing();
 
-
+.edit-link {
+	display: none;
+}
 main {
     max-width: 1200px;
     margin: 0 auto;

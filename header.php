@@ -33,11 +33,6 @@
 	<main id="main" class="container site-main">
 
 		<header class="site-header">
-			<?php
-			if ( is_active_sidebar( 'header-notice' ) ) :
-				dynamic_sidebar( 'header-notice' );
-			endif;
-			?>
 
 			<div class="nav--primary">
 

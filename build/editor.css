@@ -55,6 +55,10 @@ h3 {
   border: 0;
 }
 
+.edit-link {
+  display: none;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -105,14 +109,15 @@ main {
 
 .btn-primary,
 .wp-block-button__link {
+  font-family: acumin-extra-condensed--bold, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
   border: none;
   border-radius: 2px;
   outline: none;
   color: var(--wp--preset--color--white);
-  font-family: acumin-extra-condensed--bold, sans-serif;
   text-transform: uppercase;
   font-size: 1.728rem;
-  letter-spacing: 1px;
 }
 .is-style-outline .btn-primary, .btn-primary.is-style-outline,
 .is-style-outline .wp-block-button__link,
@@ -123,6 +128,8 @@ main {
 
 .section.pass-the-mic .social-card__title {
   font-family: acumin-extra-condensed--bold, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
   font-size: 1.728rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -159,6 +166,8 @@ main {
 }
 .learn-more-message > h2 {
   font-family: acumin-extra-condensed--bold, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: var(--wp--preset--color--white);
   margin-top: 0;
   margin-bottom: 0;

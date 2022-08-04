@@ -2,15 +2,13 @@
 
 .btn-primary,
 .wp-block-button__link {
+	@include acumin;
     border: none;
     border-radius: 2px;
     outline: none;
     color: color('white');
-    font-family: acumin-extra-condensed--bold, sans-serif;
     text-transform: uppercase;
     font-size: map.get($font-sizes, h3);
-    letter-spacing: 1px;
-
 	&:hover,
 	&:focus {
 
@@ -20,5 +18,21 @@
 	&.is-style-outline {
 		border: color('green') 3px solid;
 		color: white;
+	}
+}
+
+%green-button {
+
+	display: block;
+	border: color('green') 2px solid;
+	background-color: color(green-dark);
+	color: color(white);
+	transition-property: border-color, color, background-color;
+	transition-duration: .75s;
+	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+	&:hover,
+	&:focus {
+		background-color: color(green-mid);
+		color: color('black');
 	}
 }

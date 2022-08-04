@@ -1,16 +1,29 @@
 @use 'sass:map';
 
-.site-header    {
-
+.site-header {
     box-sizing: border-box;
     position: relative;
 
 	.menu__underlay {
 		display: none;
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		&.visible {
+			display: block;
+		}
 	}
 
-    .nav--primary {
-        display: flex;
+	.menu__inner-toggle {
+		display: block;
+	}
+
+	.nav--primary {
+		display: flex;
         justify-content: space-between;
         position: absolute;
         width: 100%;
@@ -30,59 +43,30 @@
 			background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0));
 		}
 
-		.menu__toggle {
-			position: absolute;
-			top: get-spacing();
-			right: get-spacing();
-			width: 2rem;
-			height: 2rem;
+		.main-navigation {
+			background-color: color('white');
+			padding: get-spacing(0.5);
 			box-sizing: border-box;
-			padding: 0.25rem;
-			border: 8px color(green-mid) solid;
-			background-color: color(green-mid);
-			color: white;
-			outline: none;
-			@media ( min-width: bp(sm) ) {
-				display: none;
-			}
-		}
+			width: 300px;
+			height: 100vh;
+			position: fixed;
+			z-index: 50;
+			top: 0;
+			right: -340px;
+			transition-property: right;
+			transition-timing-function: ease-out;
+			transition-duration:  0.25s;
 
-		.navigation-menu {
-			.menu {
-				margin: 0;
-				padding: 0;
-				list-style: none;
-			}
 			.menu-item {
 				a {
-					padding: 1.5rem 0 0.5rem 0;
-					position: relative;
-					display: block;
-					font-family: acumin-extra-condensed--bold, sans-serif;
-					text-transform: uppercase;
-					color: color('white');
-					font-size: map.get($font-sizes, h4);
-					text-decoration: none;
-				}
-			}
-		}
-
-		@media ( min-width: bp(sm) ) {
-
-			li:not(:first-child) {
-				margin-left: 2rem;
-			}
-			.menu-item {
-				display: inline-block;
-				a {
-
-					padding: 2.5rem 0 0.5rem 0;
+					color: color('black');
 					&::after {
 						content: '';
 						position: absolute;
 						bottom: 0;
 						left: 0;
 						width: 0;
+						color: color('black');
 						border-bottom: 0.25rem color('white') solid;
 						transition-duration: 0.25s;
 						transition-timing-function: ease-out;
@@ -93,37 +77,98 @@
 						width: 100%;
 					}
 				}
-				&.current_page_item {
-					a {
-						&::after {
-							width: 100%;
-						}
+			}
 
-					}
+			.admin-bar & {
+				top: 46px;
+			}
+
+			&.open {
+				right: 0;
+			}
+		}
+
+		.menu__inner-toggle,
+		.menu__toggle {
+			border: none;
+			position: absolute;
+			top: get-spacing(0.75);
+			right: get-spacing();
+			width: get-spacing();
+			height: get-spacing();
+			box-sizing: border-box;
+			padding: 0.25rem;
+			background-color: color(green-mid);
+			color: white;
+			outline: none;
+			cursor: pointer;
+			&:hover,
+			&:focus {
+				background-color: color(green-dark);
+			}
+			&::after {
+				content: '☰';
+				font-size: map.get($font-sizes, h3);
+				display: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				line-height: 0.5;
+			}
+
+			@media ( min-width: bp(sm) ) {
+				display: none;
+			}
+		}
+
+		.menu__inner-toggle {
+			top: get-spacing(0.5);
+			left: get-spacing(0.5);
+		    &::after {
+				content: '×'
+			}
+		}
+
+		.navigation-menu {
+			.menu {
+				margin: 0;
+				padding: get-spacing() 0 0 0;
+				list-style: none;
+			}
+			.menu-item {
+				a {
+					padding: 1.5rem 0 0.5rem 0;
+					position: relative;
+					display: block;
+					@include acumin;
+					text-transform: uppercase;
+					color: color('white');
+					font-size: map.get($font-sizes, h4);
+					text-decoration: none;
 				}
 			}
 		}
-    }
+	}
 
 	.wp-block-cover__inner-container {
 		position: absolute;
 		bottom: 0;
 	}
 
-    .home & {
-        .header-content-title {
-            text-transform: uppercase;
+	.home & {
+		.header-content-title {
+			text-transform: uppercase;
 			color: color('white');
 			text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
-        }
-        .header-content {
-            padding-left: $space;
-            padding-right: $space;
-            p {
-                color: color('green');
+		}
+		.header-content {
+			padding-left: $space;
+			padding-right: $space;
+			p {
+				color: color('green');
 				font-size: map.get($font-sizes, body);
-            }
-        }
+			}
+		}
 
 		.header-banner {
 			min-height: 550px;
@@ -138,9 +183,9 @@
 			height: 10rem;
 			background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 255) 80% );
 		}
-    }
+	}
 
-    .page-take-action & {
+	.page-take-action & {
         .nav--primary {
             .main-navigation {
                 .menu {
@@ -156,60 +201,42 @@
             }
         }
     }
-}
 
-.menu__inner-toggle {
-	display: none;
-}
+	@media ( min-width: bp(sm) ) {
 
-// Mobile Nav
-@media ( max-width: bp(sm) ) {
-	.site-header {
-		.menu__underlay {
-			display: none;
-			background-color: rgba(0, 0, 0, 0.8);
-			width: 100vw;
-			height: 100vh;
-			position: fixed;
-			z-index: 10;
-			top: 0;
-			left: 0;
-			&.visible {
-				display: block;
-			}
-		}
 		.menu__inner-toggle {
-			display: block;
+			display: none;
 		}
-		.nav--primary {
-			.main-navigation {
-				background-color: color('white');
-				padding: get-spacing(0.5);
-				box-sizing: border-box;
-				width: 300px;
-				height: 100vh;
-				position: fixed;
-				z-index: 50;
-				top: 0;
-				right: -340px;
-				transition-property: right;
-				transition-timing-function: ease-out;
-				transition-duration:  0.25s;
 
-				.menu-item {
+		.nav--primary {
+			li:not(:first-child) {
+				margin-left: 2rem;
+			}
+
+			.main-navigation {
+				display: block;
+				position: relative;
+				background-color: transparent;
+				width: auto;
+				height: auto;
+				left: auto;
+				right: auto;
+			}
+
+			.menu-item {
+				display: inline-block;
+				a {
+					padding: 2.5rem 0 0.5rem 0;
+				}
+				&.current_page_item {
 					a {
-						color: color('black');
+						&::after {
+							width: 100%;
+						}
+
 					}
 				}
-
-				.admin-bar & {
-					top: 46px;
-				}
-
-				&.open {
-					right: 0;
-				}
 			}
 		}
-	}
+    }
 }

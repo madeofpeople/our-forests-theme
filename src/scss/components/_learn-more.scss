@@ -4,7 +4,7 @@ $spacing: get-spacing();
 	margin-top: 0;
 	margin-bottom: 0;
 	> h2 {
-		font-family: acumin-extra-condensed--bold, sans-serif;
+		@include acumin;
 		color: color('white');
 		margin-top: 0;
 		margin-bottom: 0;

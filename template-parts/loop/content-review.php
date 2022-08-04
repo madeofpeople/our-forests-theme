@@ -21,7 +21,7 @@ $base_class = $args['base_class'];
 	</header><!-- .post-header -->
 
 	<div class="post-content">
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
