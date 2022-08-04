@@ -33,7 +33,7 @@
         <!-- wp:image {"id":390,"sizeSlug":"full","linkDestination":"custom","className":"campaign"} -->
         <figure class="wp-block-image size-full campaign">
             <a href="https://www.chooseearth.co" target="_blank" rel="noreferrer noopener">
-                <img src="https://the-territory.test/wp-content/themes/the-territory-theme/build/images/placeholders/choose-earth.png" alt="" class="wp-image-390"/>
+                <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/choose-earth.png' ) ); ?>" alt="" class="wp-image-390"/>
             </a>
             <figcaption><strong><?php esc_html_e( 'Choose Earth', 'the-territory' ); ?></strong><br><?php esc_html_e( 'Support Indigenous Peoples in Brazil to Reforest the Minds.', 'the-territory' ); ?></figcaption>
         </figure>
@@ -42,7 +42,7 @@
         <!-- wp:image {"id":392,"sizeSlug":"full","linkDestination":"custom","style":{"color":{}},"className":"campaign"} -->
         <figure class="wp-block-image size-full campaign">
             <a href="https://alianzaglobal.me/ncbs/" target="_blank" rel="noreferrer noopener">
-                <img src="https://the-territory.test/wp-content/themes/the-territory-theme/build/images/placeholders/guardians-of-forest.png" alt="" class="wp-image-392"/>
+                <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/cph-dox.png' ) ); ?>" alt="" class="wp-image-392"/>
             </a>
             <figcaption><strong><?php esc_html_e( 'Guardians of the Forest', 'the-territory' ); ?></strong><br><?php esc_html_e( 'From Nature-Based solutions to Nature and Community-Based Solutions.', 'the-territory' ); ?></figcaption>
         </figure>
@@ -51,7 +51,7 @@
         <!-- wp:image {"id":391,"sizeSlug":"full","linkDestination":"custom","className":"campaign"} -->
         <figure class="wp-block-image size-full campaign">
             <a href="https://apiboficial.org/luta-pela-vida/" target="_blank" rel="noreferrer noopener">
-                <img src="https://the-territory.test/wp-content/themes/the-territory-theme/build/images/placeholders/struggle-for-life.png" alt="" class="wp-image-391"/></a>
+                <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/struggle-for-life.png' ) ); ?>" alt="" class="wp-image-391"/></a>
             <figcaption><strong><?php esc_html_e( 'Struggle for Life', 'the-territory' ); ?> </strong><br><?php esc_html_e( 'Guarantee Indigenous Land Rights in Brazil.', 'the-territory' ); ?></figcaption>
         </figure>
         <!-- /wp:image -->
