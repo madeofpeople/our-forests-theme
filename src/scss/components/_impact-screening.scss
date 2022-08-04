@@ -9,6 +9,11 @@
 	.screening__content {
 		background-color: rgba( #000, 0.8);
 		padding: get-spacing(0.5);
+		.wp-block-button__link {
+			@extend %green-button;
+			color: color(white);
+		}
+
 		ul {
 			list-style: none;
 			margin: get-spacing(0.5) 0;

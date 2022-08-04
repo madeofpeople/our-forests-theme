@@ -403,6 +403,12 @@ pre {
 .site-footer .site-info {
   @apply mx-auto my-0 flex justify-between;
 }
+.site-footer .footer__logos {
+  text-align: right;
+}
+.site-footer .footer__logos .wp-block-image {
+  display: inline-block;
+}
 
 .entry-meta {
   @apply mb-16;
@@ -564,6 +570,7 @@ main {
   color: var(--wp--preset--color--white);
 }
 
+.section > .donate-touts,
 .section > p,
 .section > h3,
 .section > h4,
@@ -591,16 +598,16 @@ main {
   color: white;
 }
 
-.demand-change__content .wp-block-button__link {
+.screening .screening__content .wp-block-button__link, .demand-change__content .wp-block-button__link {
   display: block;
   border: var(--wp--preset--color--green) 2px solid;
   background-color: var(--wp--preset--color--green-dark);
-  color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--green-mid);
   transition-property: border-color, color, background-color;
   transition-duration: 0.75s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
-.demand-change__content .wp-block-button__link:hover, .demand-change__content .wp-block-button__link:focus {
+.screening .screening__content .wp-block-button__link:hover, .demand-change__content .wp-block-button__link:hover, .screening .screening__content .wp-block-button__link:focus, .demand-change__content .wp-block-button__link:focus {
   background-color: var(--wp--preset--color--green-mid);
   color: var(--wp--preset--color--black);
 }
@@ -736,6 +743,9 @@ a {
 .screening .screening__content {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1.4134375rem;
+}
+.screening .screening__content .wp-block-button__link {
+  color: var(--wp--preset--color--white);
 }
 .screening .screening__content ul {
   list-style: none;

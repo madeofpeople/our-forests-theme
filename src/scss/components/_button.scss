@@ -26,7 +26,7 @@
 	display: block;
 	border: color('green') 2px solid;
 	background-color: color(green-dark);
-	color: color(white);
+	color: color(green-mid);
 	transition-property: border-color, color, background-color;
 	transition-duration: .75s;
 	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
