@@ -1,3 +1,7 @@
 a {
-	color: white;
+	color: color('green-dark');
+}
+
+.site__footer a {
+	color: color('white');
 }

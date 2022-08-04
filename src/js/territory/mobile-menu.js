@@ -17,7 +17,8 @@ function initializeMobileMenu() {
 		'.menu__inner-toggle'
 	);
 	const mobileMenuUnderlay = document.querySelector( '.menu__underlay' );
-	mobileMenuToggle.addEventListener( 'click', () => {
+	mobileMenuToggle.addEventListener( 'click', ( e ) => {
+		e.preventDefault();
 		mobileMenu.classList.toggle( 'open' );
 		mobileMenuUnderlay.classList.toggle( 'visible' );
 	} );
@@ -26,8 +27,8 @@ function initializeMobileMenu() {
 		mobileMenu.classList.remove( 'open' );
 		mobileMenuUnderlay.classList.remove( 'visible' );
 	} );
-	mobileMenuUnderlay.addEventListener( 'click', () => {
-		console.log( 'clicked mobile menu underlay' );
+	mobileMenuUnderlay.addEventListener( 'click', ( e ) => {
+		e.preventDefault();
 		mobileMenuUnderlay.classList.remove( 'visible' );
 		mobileMenu.classList.remove( 'open' );
 	} );

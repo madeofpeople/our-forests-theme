@@ -5,4 +5,11 @@
 	.site-info {
 		@apply mx-auto my-0 flex justify-between;
 	}
+
+	.footer__logos {
+		text-align: right;
+		.wp-block-image {
+			display: inline-block;
+		}
+	}
 }

@@ -142,10 +142,13 @@
 					display: block;
 					@include acumin;
 					text-transform: uppercase;
-					color: color('white');
 					font-size: map.get($font-sizes, h4);
 					text-decoration: none;
+					@media ( min-width: bp(sm) ) {
+						color: color('white');
+					}
 				}
+
 			}
 		}
 	}
