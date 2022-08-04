@@ -3,8 +3,9 @@
 	background-color: color('black');
 	color: color('white');
 	top: -8rem;
-	padding: get-spacing();
 	margin: 0 get-spacing();
+	margin-bottom: -8rem;
+	padding: get-spacing();
 
 	.wp-block-button {
 		margin: 2rem auto 0 auto;
@@ -13,4 +14,9 @@
 	.wp-block-button__link {
 		@extend %green-button;
 	}
+}
+
+.demand-change__content + .post-amble {
+	padding: get-spacing();
+	padding-top: get-spacing(0.5);
 }
