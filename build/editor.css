@@ -99,6 +99,7 @@ main {
   color: var(--wp--preset--color--white);
 }
 
+.section > .learn-more__content,
 .section > .donate-touts,
 .section > p,
 .section > h3,

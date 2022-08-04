@@ -570,6 +570,7 @@ main {
   color: var(--wp--preset--color--white);
 }
 
+.section > .learn-more__content,
 .section > .donate-touts,
 .section > p,
 .section > h3,
@@ -783,7 +784,6 @@ a {
 .newsletter-subscribe .wp-block-group h2 {
   margin-top: 0;
 }
-
 .site-header .page__nav {
   padding: 1.4134375rem;
   box-sizing: border-box;
