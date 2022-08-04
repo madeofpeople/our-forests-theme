@@ -1,117 +1,122 @@
 {
-    "version": 2,
-    "settings": {
-        "color": {
-            "palette": [
-                {
-                    "name": "Green",
-                    "slug": "green",
-                    "color": "#80AD6B"
-                },
-                {
-                    "name": "Mid Green",
-                    "slug": "green-mid",
-                    "color": "#3F682B"
-                },
-                {
-                    "name": "Dark Green",
-                    "slug": "green-dark",
-                    "color": "#1B281B"
-                },
-                {
-                    "name": "Grey Dark",
-                    "slug": "grey-dark",
-                    "color": "#222"
-                },
-                {
-                    "name": "Grey Dark 60",
-                    "slug": "grey-dark-60",
-                    "color": "#222222aa"
-                },
-                {
-                    "name": "Black",
-                    "slug": "black",
-                    "color": "#000"
-                },
-                {
-                    "name": "White",
-                    "slug": "white",
-                    "color": "#fff"
-                }
-            ],
-            "background": true,
-            "text": true,
-            "custom": false,
-            "customDuotone": false,
-            "customGradient": false,
-            "defaultGradients": false,
-            "defaultPalette": false,
-            "duotone": [],
-            "gradients": [],
-            "link": false
-        },
-        "appearanceTools": false,
-        "border": {
-            "color": false,
-            "radius": false,
-            "style": false,
-            "width": false
-        },
-        "layout": {
-            "contentSize": "938px",
-            "wideSize": "1200px",
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"name": "Green",
+					"slug": "green",
+					"color": "#80AD6B"
+				},
+				{
+					"name": "Mid Green",
+					"slug": "green-mid",
+					"color": "#3F682B"
+				},
+				{
+					"name": "Dark Green",
+					"slug": "green-dark",
+					"color": "#2E462E"
+				},
+				{
+					"name": "Grey Dark",
+					"slug": "grey-dark",
+					"color": "#222"
+				},
+				{
+					"name": "Grey Light",
+					"slug": "grey-light",
+					"color": "#eee"
+				},
+				{
+					"name": "Grey Dark 60",
+					"slug": "grey-dark-60",
+					"color": "#222222aa"
+				},
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#000"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#fff"
+				}
+			],
+			"background": true,
+			"text": true,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false
+		},
+		"appearanceTools": false,
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+		"layout": {
+			"contentSize": "938px",
+			"wideSize": "1200px",
 			"spacing": "2.8125rem"
-        },
-        "spacing": {
-            "blockGap": null,
-            "margin": false,
-            "padding": false,
-            "width": false,
-            "units": []
-        },
-        "typography": {
-            "textTransform": true,
-            "dropCap": true,
-            "customFontSize": false,
-            "fontFamilies": [
-                {
-                    "fontFamily": "Pragmatica, sans-serif",
-                    "slug": "heading-secondary",
-                    "name": "Secondary Heading"
-                },
-                {
-                    "fontFamily": "Source Sans Pro, sans-serif",
-                    "slug": "body",
-                    "name": "Body"
-                }
-            ],
-            "fontSizes": [],
-            "fontStyle": true,
-            "fontWeight": false,
-            "letterSpacing": false,
-            "lineHeight": false,
-            "textDecoration": false
-        },
-        "blocks": {
-            "core/button": {
-                "border": {
-                    "radius": false
-                },
-                "typography": {
-                    "textTransform": true,
-                    "customFontSize": false,
-                    "fontSizes": [],
-                    "fontStyle": false,
-                    "fontWeight": false,
-                    "letterSpacing": false,
-                    "lineHeight": false,
-                    "textDecoration": false,
-                    "fontFamilies": []
-                }
-            }
-        }
-    },
-    "styles": {},
-    "customTemplates": {},
-    "templateParts": {}
+		},
+		"spacing": {
+			"blockGap": null,
+			"margin": false,
+			"padding": false,
+			"width": false,
+			"units": []
+		},
+		"typography": {
+			"textTransform": true,
+			"dropCap": true,
+			"customFontSize": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "Pragmatica, sans-serif",
+					"slug": "heading-secondary",
+					"name": "Secondary Heading"
+				},
+				{
+					"fontFamily": "Source Sans Pro, sans-serif",
+					"slug": "body",
+					"name": "Body"
+				}
+			],
+			"fontSizes": [],
+			"fontStyle": true,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": false
+				},
+				"typography": {
+					"textTransform": true,
+					"customFontSize": false,
+					"fontSizes": [],
+					"fontStyle": false,
+					"fontWeight": false,
+					"letterSpacing": false,
+					"lineHeight": false,
+					"textDecoration": false,
+					"fontFamilies": []
+				}
+			}
+		}
+	},
+	"styles": {},
+	"customTemplates": {},
+	"templateParts": {}
 }

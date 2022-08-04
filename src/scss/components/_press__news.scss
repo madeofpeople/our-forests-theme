@@ -1,13 +1,19 @@
 @use 'sass:map';
 
-.post-list.news,
+.wp-block-getwid-post-carousel {
+	padding-top: get-spacing(0.5);
+	padding-bottom: get-spacing(0.5);
+	background-color: color(grey-light);
+}
+
+.post-list.reviews,
 .post-list.news {
 	.slick-slide {
 		.review,
 		.press {
 			.post-title {
 				margin: 0;
-				font-family: acumin-extra-condensed--bold, sans-serif;
+				@include acumin;
 				a {
 					color: color('green-mid');
 					text-decoration: none;
@@ -24,14 +30,16 @@
 		color: color('white');
 		&::before {
 			content: "»";
-			font-family: acumin-extra-condensed--bold, sans-serif;
+			@include acumin;
 			font-size: map.get($font-sizes, huge);
 			width: get-spacing(1.5);
 			height: get-spacing(1.5);
 			color: color('white');
 			position: relative;
 			left: get-spacing(-0.5);
-
+		}
+		&.slick-disabled {
+			display: none;
 		}
 		&.slick-next {
 			right: get-spacing(-1.5);
@@ -47,7 +55,7 @@
 		@media ( min-width: bp(md) ) {
 			&::before {
 				content: "»";
-				font-family: acumin-extra-condensed--bold, sans-serif;
+				@include acumin;
 				font-size: map.get($font-sizes, huge);
 				width: get-spacing(3);
 				height: get-spacing(3);

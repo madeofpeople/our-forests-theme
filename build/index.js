@@ -3036,7 +3036,8 @@ function initializeMobileMenu() {
 		mobileMenu.classList.toggle( 'open' );
 		mobileMenuUnderlay.classList.toggle( 'visible' );
 	} );
-	mobileMenuInnerToggle.addEventListener( 'click', () => {
+	mobileMenuInnerToggle.addEventListener( 'click', ( e ) => {
+		e.preventDefault();
 		mobileMenu.classList.remove( 'open' );
 		mobileMenuUnderlay.classList.remove( 'visible' );
 	} );
@@ -3107,8 +3108,6 @@ if (
 } else {
 	document.addEventListener( 'DOMContentLoaded', tweakLinkedTouts );
 }
-
-console.log( 'tout-wrangle' );
 
 function tweakLinkedTouts() {
 	const linkedTouts = document.querySelectorAll(

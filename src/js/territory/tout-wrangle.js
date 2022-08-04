@@ -8,8 +8,6 @@ if (
 	document.addEventListener( 'DOMContentLoaded', tweakLinkedTouts );
 }
 
-console.log( 'tout-wrangle' );
-
 function tweakLinkedTouts() {
 	const linkedTouts = document.querySelectorAll(
 		'.wp-block-site-functionality-tout-linked'

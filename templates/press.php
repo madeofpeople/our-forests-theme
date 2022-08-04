@@ -57,7 +57,7 @@ get_header(); ?>
 			);
 			$query = new \WP_Query( $args );
 
-			if ( $query->have_posts() ) : 
+			if ( $query->have_posts() ) :
 				?>
 				<section class="section reviews">
 					<header class="section-header">
@@ -87,8 +87,8 @@ get_header(); ?>
 		?>
 
 		<?php
-		if ( is_active_sidebar( 'content-bottom' ) ) : 
-			get_sidebar( 'content-bottom' ); 
+		if ( is_active_sidebar( 'content-bottom' ) ) :
+			get_sidebar( 'content-bottom' );
 		endif;
 		?>
 

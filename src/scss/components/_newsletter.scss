@@ -1,17 +1,22 @@
-.content-bottom {
+.newsletter-subscribe {
+	display: grid;
+	background-color: color(green-dark);
+	color: color('white');
+	padding: get-spacing();
 
-	.yikes-mailchimp-container {
+	@media ( min-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr;
 	}
 
-	.wp-widget-group__inner-blocks {
-		display: grid;
-		background-color: color(green-mid);
-		color: color('white');
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		@media ( min-width: bp(xs) ) {
-			grid-template-columns: 1fr 1fr;
+	.wp-block-group {
+
+		h2 {
+			margin-top: 0;
 		}
-
 	}
+
+	// .yikes-mailchimp-container {
+	// 	padding-top: get-spacing();
+	// }
+
 }

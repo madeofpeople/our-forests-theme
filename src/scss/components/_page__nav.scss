@@ -42,7 +42,7 @@
 
 		.wp-block-button__link {
 			background-color: color(grey-dark-60);
-			font-family: acumin-extra-condensed--bold, sans-serif;
+			@include acumin;
 			text-transform: uppercase;
 			border: 1px color('white') solid;
 			&.active {
