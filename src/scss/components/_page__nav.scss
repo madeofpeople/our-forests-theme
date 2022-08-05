@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 @mixin page__nav--small {
+	z-index: 250;
 	max-width: 1200px;
 	width: 100%;
 	padding: 0;

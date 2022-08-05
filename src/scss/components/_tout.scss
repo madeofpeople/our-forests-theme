@@ -13,11 +13,9 @@
 	}
 
 	.title__wrapper {
-		// aspect-ratio: 3/2;
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 3;
 		padding: get-spacing(0.5);
 		background-color: rgba(black, 0.5);
 		border: 2px color(white) solid;
@@ -31,7 +29,6 @@
 		.tout__title {
 			position: absolute;
 			bottom: get-spacing(0.5);
-			z-index: 5;
 			color: color('white');
 			@include acumin;
 			font-size: map.get($font-sizes, h3);
