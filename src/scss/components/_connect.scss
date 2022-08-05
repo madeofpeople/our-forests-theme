@@ -2,6 +2,8 @@
 
 .section.pass-the-mic {
 
+	margin-bottom: 2rem;
+
 	.social-card__title {
 		@include acumin;
 		font-size: map.get($font-sizes, h3);
@@ -15,8 +17,7 @@
 
 	.social-cards {
 		@extend %grid-four;
-		padding-left: get-spacing();
-		padding-right: get-spacing();
+		padding: get-spacing();
 	}
 
 	.social-card {
@@ -34,10 +35,34 @@
 			text-align: center;
 		}
 
+		.social-card__avatar {
+			img {
+				max-width: 200px !important;
+				max-height: 200px !important;
+				border: 2px color(green-mid) solid;
+			}
+		}
+
 		a,
 		svg, {
 			display: inline-block;
 			vertical-align: middle;
+		}
+	}
+}
+
+.wp-block-social-links {
+	.wp-social-link {
+		span:not(.screen-reader-text) {
+			font-size: 1rem;
+		}
+	}
+	&.is-style-logos-only {
+		.wp-social-link {
+			svg {
+				width: 1.2rem;
+				height: 1.2rem;
+			}
 		}
 	}
 }

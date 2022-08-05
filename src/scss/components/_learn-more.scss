@@ -10,3 +10,72 @@ $spacing: get-spacing();
 		margin-bottom: 0;
 	}
 }
+
+.learn-more__content {
+	padding: get-spacing();
+}
+
+.supported-by,
+.collaboration-with {
+
+	.logos {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		justify-content: center;
+
+		.wp-block-image {
+			display: flex;
+			align-items: center;
+			vertical-align: middle;
+			width: auto;
+			flex: 0 0 calc(33.3333% - get-spacing(0.5));
+
+			img {
+				display: block;
+				max-width: 100%;
+				width: 100% !important;
+				height: auto;
+			}
+		}
+
+		@media ( min-width: bp(sm) ) {
+			margin: get-spacing(0.5);
+
+			.wp-block-image {
+				flex: 0 0 calc(16.66% - 20px);
+			}
+		}
+	}
+}
+
+.supported-by {
+	.logos {
+		justify-content: space-between;
+	}
+}
+
+.collaboration-with {
+
+	.logos {
+		justify-content: space-between;
+		padding: 0 get-spacing();
+
+		.wp-block-image {
+
+			img {
+				display: block;
+				width: 100%;
+			}
+
+			@media ( min-width: bp(sm) ) {
+				// margin: get-spacing(0.5);
+
+				.wp-block-image {
+					flex: 0 0 calc(16.66666% - get-spacing(0.5));
+				}
+			}
+		}
+	}
+}

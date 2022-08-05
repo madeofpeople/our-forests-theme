@@ -55,6 +55,10 @@ h3 {
   border: 0;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .edit-link {
   display: none;
 }
@@ -63,10 +67,6 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--wp--preset--color--white);
-}
-
-.wp-block-cover__inner-container {
-  box-sizing: border-box;
 }
 
 .entry-content > .section:not(.learn-more-message) > h2 {
@@ -81,12 +81,12 @@ main {
   border-left: 0.70671875rem var(--wp--preset--color--green-mid) solid;
 }
 
-.site-header {
-  box-sizing: border-box;
-}
-
 .entry-header {
   display: none;
+}
+
+.section.engage-amplify {
+  padding-bottom: 2.826875rem;
 }
 
 .section.demand-change .section.support .wp-block-cover {
@@ -128,6 +128,9 @@ main {
   color: white;
 }
 
+.section.pass-the-mic {
+  margin-bottom: 2rem;
+}
 .section.pass-the-mic .social-card__title {
   font-family: acumin-extra-condensed--bold, sans-serif;
   font-weight: 400;
@@ -140,8 +143,7 @@ main {
   gap: 0;
 }
 .section.pass-the-mic .social-cards {
-  padding-left: 2.826875rem;
-  padding-right: 2.826875rem;
+  padding: 2.826875rem;
 }
 .section.pass-the-mic .social-card {
   text-align: center;
@@ -156,30 +158,27 @@ main {
 .section.pass-the-mic .social-card .wp-block-social-link {
   text-align: center;
 }
+.section.pass-the-mic .social-card .social-card__avatar img {
+  max-width: 200px !important;
+  max-height: 200px !important;
+  border: 2px var(--wp--preset--color--green-mid) solid;
+}
 .section.pass-the-mic .social-card a,
 .section.pass-the-mic .social-card svg {
   display: inline-block;
   vertical-align: middle;
 }
 
-.learn-more-message {
-  margin-top: 0;
-  margin-bottom: 0;
+.wp-block-social-links .wp-social-link span:not(.screen-reader-text) {
+  font-size: 1rem;
 }
-.learn-more-message > h2 {
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: var(--wp--preset--color--white);
-  margin-top: 0;
-  margin-bottom: 0;
+.wp-block-social-links.is-style-logos-only .wp-social-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .campaign-goals {
   padding-bottom: 2.826875rem;
-}
-.campaign-goals .wp-block-media-text__media {
-  box-sizing: border-box;
 }
 @media (min-width: 760px) {
   .campaign-goals .wp-block-media-text__media {
