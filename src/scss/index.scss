@@ -15,21 +15,22 @@
 @import 'global';
 
 @import 'components/a';
+@import 'components/actions-count';
 @import 'components/campaigns';
-@import 'components/notice';
 @import 'components/our-goals';
 @import 'components/demand-change';
+@import 'components/donate-touts';
 @import 'components/impact-screening';
+@import 'components/laurels';
+@import 'components/learn-more';
 @import 'components/newsletter';
+@import 'components/notice';
 @import 'components/page__nav';
 @import 'components/parallax';
+@import 'components/press__news';
 @import 'components/site__header';
 @import 'components/testimonial';
-@import 'components/tout';
-@import 'components/laurels';
-@import 'components/press__news';
-@import 'components/learn-more';
-@import 'components/actions-count';
+@import './components/tout';
 
 body {
     background-color: color('grey-dark');
