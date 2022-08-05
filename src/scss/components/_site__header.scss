@@ -1,7 +1,6 @@
 @use 'sass:map';
 
 .site-header {
-    box-sizing: border-box;
     position: relative;
 
 	.menu__underlay {
@@ -30,7 +29,6 @@
         z-index: 10;
         padding-left: get-spacing();
         padding-right: get-spacing();
-        box-sizing: border-box;
 
 		&::before {
 			content: '';
@@ -46,7 +44,6 @@
 		.main-navigation {
 			background-color: color('white');
 			padding: get-spacing(0.5);
-			box-sizing: border-box;
 			width: 300px;
 			height: 100vh;
 			position: fixed;
@@ -96,7 +93,6 @@
 			right: get-spacing();
 			width: get-spacing();
 			height: get-spacing();
-			box-sizing: border-box;
 			padding: 0.25rem;
 			background-color: color(green-mid);
 			color: white;

@@ -32,7 +32,6 @@
 	.page__nav {
 
 		padding: get-spacing() * 0.5;
-		box-sizing: border-box;
 		background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
 		top: -500px;
 		transition-property: top;

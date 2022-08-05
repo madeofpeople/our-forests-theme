@@ -1,5 +1,10 @@
 @use 'sass:map';
+
 $space: get-spacing();
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 
 .edit-link {
 	display: none;
@@ -8,10 +13,6 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     background-color: color('white');
-}
-
-.wp-block-cover__inner-container {
-    box-sizing: border-box;
 }
 
 .entry-content > .section:not(.learn-more-message) > h2 {
@@ -31,13 +32,13 @@ main {
 	@extend %screen-reader-text;
 }
 
-.site-header {
-    box-sizing: border-box;
-}
-
 .entry-header {
     display: none;
     @extend %screen-reader-text;
+}
+
+.section.engage-amplify {
+	padding-bottom: get-spacing();
 }
 
 .section.demand-change {

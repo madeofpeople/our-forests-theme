@@ -6,7 +6,6 @@
 	width: 100%;
 	overflow: hidden;
 	aspect-ratio: 3/2;
-	box-sizing: border-box;
 
 	.title__wrapper {
 		// aspect-ratio: 3/2;
@@ -14,7 +13,6 @@
 		top: 0;
 		left: 0;
 		z-index: 3;
-		box-sizing: border-box;
 		padding: get-spacing(0.5);
 		background-color: rgba(black, 0.5);
 		border: 2px color(white) solid;
