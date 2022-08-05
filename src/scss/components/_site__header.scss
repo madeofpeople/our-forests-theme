@@ -223,26 +223,31 @@
 				height: auto;
 				left: auto;
 				right: auto;
+				padding: 0;
+
+				.admin-bar & {
+					top: 32px;
+				}
+
+				.menu-item {
+					display: inline-block;
+					a {
+						padding: 0.625rem 0 0.5rem 0;
+					}
+					&.current_page_item {
+						a {
+							&::after {
+								width: 100%;
+							}
+
+						}
+					}
+				}
 			}
 
 			.navigation-menu {
 				.menu {
 					padding: 0 0 0 0;
-				}
-			}
-
-			.menu-item {
-				display: inline-block;
-				a {
-					padding: 2.5rem 0 0.5rem 0;
-				}
-				&.current_page_item {
-					a {
-						&::after {
-							width: 100%;
-						}
-
-					}
 				}
 			}
 		}

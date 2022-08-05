@@ -3,11 +3,16 @@ $spacing: get-spacing();
 .learn-more-message {
 	margin-top: 0;
 	margin-bottom: 0;
+	padding: get-spacing();
+	padding-top: get-spacing(0.5);
+	padding-bottom: get-spacing(0.5);
+	background-color: color(green-dark) !important;
 	> h2 {
 		@include acumin;
 		color: color('white');
 		margin-top: 0;
 		margin-bottom: 0;
+		padding: 0;
 	}
 }
 
