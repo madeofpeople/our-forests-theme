@@ -409,6 +409,9 @@ pre {
 .site-footer .footer__logos .wp-block-image {
   display: inline-block;
 }
+.site-footer .btn-primary {
+  border-radius: 0;
+}
 
 .entry-meta {
   @apply mb-16;
@@ -580,17 +583,30 @@ main {
   padding-right: 2.826875rem;
 }
 
+.svg-sprite-wrapper {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+}
+
 .btn-primary,
 .wp-block-button__link {
   font-family: acumin-extra-condensed--bold, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 2px;
   outline: none;
   color: var(--wp--preset--color--white);
   text-transform: uppercase;
-  font-size: 1.728rem;
+  font-size: 1.44rem;
+  padding: 0.70671875rem 1.4134375rem;
+}
+.btn-primary:hover, .btn-primary:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+  background-color: white;
 }
 .is-style-outline .btn-primary, .btn-primary.is-style-outline,
 .is-style-outline .wp-block-button__link,
@@ -599,16 +615,18 @@ main {
   color: white;
 }
 
-.screening .screening__content .wp-block-button__link, .demand-change__content .wp-block-button__link {
+.home .site-header .header-content .wp-block-button__link, .screening .screening__content .wp-block-button__link, .demand-change__content .wp-block-button__link, .site-footer .btn-primary {
   display: block;
   border: var(--wp--preset--color--green) 2px solid;
   background-color: var(--wp--preset--color--green-dark);
-  color: var(--wp--preset--color--green-mid);
+  color: var(--wp--preset--color--white);
+  line-height: 1.75;
+  padding: 0.70671875rem 1.4134375rem;
   transition-property: border-color, color, background-color;
   transition-duration: 0.75s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
-.screening .screening__content .wp-block-button__link:hover, .demand-change__content .wp-block-button__link:hover, .screening .screening__content .wp-block-button__link:focus, .demand-change__content .wp-block-button__link:focus {
+.home .site-header .header-content .wp-block-button__link:hover, .screening .screening__content .wp-block-button__link:hover, .demand-change__content .wp-block-button__link:hover, .site-footer .btn-primary:hover, .home .site-header .header-content .wp-block-button__link:focus, .screening .screening__content .wp-block-button__link:focus, .demand-change__content .wp-block-button__link:focus, .site-footer .btn-primary:focus {
   background-color: var(--wp--preset--color--green-mid);
   color: var(--wp--preset--color--black);
 }
@@ -771,7 +789,7 @@ a {
   color: var(--wp--preset--color--green-dark);
 }
 
-.site__footer a {
+.site-footer a {
   color: var(--wp--preset--color--white);
 }
 
@@ -982,6 +1000,10 @@ a {
 .newsletter-subscribe .wp-block-group h2 {
   margin-top: 0;
 }
+.newsletter-subscribe .newsletter__content {
+  padding-right: 0.70671875rem;
+}
+
 .header-notice p {
   margin: 0;
 }
@@ -1331,8 +1353,9 @@ a {
   color: var(--wp--preset--color--green);
   font-size: 1rem;
 }
-.home .site-header .header-banner {
-  min-height: 550px;
+.home .site-header .header-content .wp-block-button__link {
+  font-family: pragmatica--bold, sans-serif;
+  font-size: 1.2rem;
 }
 .home .site-header::after {
   content: "";
@@ -1376,7 +1399,7 @@ a {
     display: inline-block;
   }
   .site-header .nav--primary .main-navigation .menu-item a {
-    padding: 0.625rem 0 0.5rem 0;
+    padding: 2.625rem 0 0.5rem 0;
   }
   .site-header .nav--primary .main-navigation .menu-item.current_page_item a::after {
     width: 100%;
@@ -1384,6 +1407,22 @@ a {
   .site-header .nav--primary .navigation-menu .menu {
     padding: 0 0 0 0;
   }
+}
+.home .site-header .wp-block-cover {
+  height: 600px;
+}
+.home .site-header .wp-block-cover p {
+  margin-top: 2.826875rem;
+  font-size: 1.728rem;
+}
+.home .site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 14rem;
+  background: linear-gradient(rgba(255, 255, 255, 0) 20%, rgb(255, 255, 255) 50%);
 }
 
 .testimonial {
@@ -1465,7 +1504,7 @@ a {
   transition-duration: 0.25s;
 }
 .wp-block-site-functionality-tout-linked:hover .title__wrapper, .wp-block-site-functionality-tout-linked:focus .title__wrapper {
-  background-color: rgba(var(--wp--preset--color--black), 0);
+  background-color: rgba(var(--wp--preset--color--#000), 0);
 }
 .wp-block-site-functionality-tout-linked:hover .tout__title, .wp-block-site-functionality-tout-linked:focus .tout__title {
   text-decoration: underline;

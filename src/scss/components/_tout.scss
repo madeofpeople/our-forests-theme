@@ -17,8 +17,8 @@
 		top: 0;
 		left: 0;
 		padding: get-spacing(0.5);
-		background-color: rgba(black, 0.5);
-		border: 2px color(white) solid;
+		background-color: rgba(#000, 0.5);
+		border: 2px color('white') solid;
 		margin: get-spacing(0.5);
 		width: calc( 100% - get-spacing());
 		height: calc( 100% - get-spacing());
@@ -43,7 +43,7 @@
 	&:hover,
 	&:focus {
 		.title__wrapper {
-			background-color: rgba(color(black), 0);
+			background-color: rgba(color(#000), 0);
 		}
 		.tout__title {
 			text-decoration: underline;

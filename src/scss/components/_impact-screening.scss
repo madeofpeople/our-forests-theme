@@ -10,7 +10,7 @@
 		background-color: rgba( #000, 0.8);
 		padding: get-spacing();
 		.wp-block-button__link {
-			@extend %green-button;
+			@extend %button-green;
 			color: color(white);
 		}
 

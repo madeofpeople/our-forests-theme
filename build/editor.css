@@ -109,17 +109,30 @@ main {
   padding-right: 2.826875rem;
 }
 
+.svg-sprite-wrapper {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+}
+
 .btn-primary,
 .wp-block-button__link {
   font-family: acumin-extra-condensed--bold, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 2px;
   outline: none;
   color: var(--wp--preset--color--white);
   text-transform: uppercase;
-  font-size: 1.728rem;
+  font-size: 1.44rem;
+  padding: 0.70671875rem 1.4134375rem;
+}
+.btn-primary:hover, .btn-primary:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+  background-color: white;
 }
 .is-style-outline .btn-primary, .btn-primary.is-style-outline,
 .is-style-outline .wp-block-button__link,

@@ -12,4 +12,9 @@
 			display: inline-block;
 		}
 	}
+
+	.btn-primary {
+		border-radius: 0;
+		@extend %button-green;
+	}
 }

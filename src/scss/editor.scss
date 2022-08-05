@@ -1,14 +1,5 @@
-// @layer base {
-// // Custom base styles if necessary.
-// // See https://tailwindcss.com/docs/adding-base-styles.
-// }
-
-//----------------------------------------
-// Theme Styles.
-//----------------------------------------
 @import 'global';
 @import 'environment/typography';
-
 
 .is-root-container {
 	max-width: 938px;
