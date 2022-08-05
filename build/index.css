@@ -672,31 +672,83 @@ main {
   }
 }
 
-.grid-four, .section.pass-the-mic .social-cards, .social-grid {
+.wp-block-site-functionality-social-cards {
+  padding-left: 2.826875rem;
+  padding-right: 2.826875rem;
+}
+.wp-block-site-functionality-social-cards ul {
+  list-style: none;
+  padding: 0;
+}
+.wp-block-site-functionality-social-cards .social-post {
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.wp-block-site-functionality-social-cards .social-post .image-group .slick-arrow {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+}
+.wp-block-site-functionality-social-cards .social-post .image-group .slick-arrow.slick-next {
+  right: 1rem;
+}
+.wp-block-site-functionality-social-cards .social-post .image-group .slick-arrow.slick-prev {
+  left: 1rem;
+}
+.wp-block-site-functionality-social-cards .social-post .wp-block-outermost-social-sharing {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--wp--preset--color--white);
+  padding: 0.70671875rem;
+  border-radius: 0.70671875rem;
+  transform: translate(-50%, -50%);
+  transition-property: top;
+  transition-duration: 0.325s;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.wp-block-site-functionality-social-cards .social-post .wp-block-outermost-social-sharing li:nth-child(2n) {
+  padding-left: 1.4134375rem;
+  padding-right: 1.4134375rem;
+}
+.wp-block-site-functionality-social-cards .social-post .wp-block-outermost-social-sharing svg {
+  width: 2rem;
+  height: 2rem;
+}
+.wp-block-site-functionality-social-cards .social-post:hover .wp-block-outermost-social-sharing, .wp-block-site-functionality-social-cards .social-post:focus .wp-block-outermost-social-sharing {
+  top: 90%;
+}
+
+.grid-four, .section.pass-the-mic .social-cards {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2.826875rem;
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
-  .grid-four, .section.pass-the-mic .social-cards, .social-grid {
+  .grid-four, .section.pass-the-mic .social-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 760px) {
-  .grid-four, .section.pass-the-mic .social-cards, .social-grid {
+  .grid-four, .section.pass-the-mic .social-cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-.grid-three {
+.grid-three, .wp-block-site-functionality-social-cards {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2.826875rem;
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
-  .grid-three {
+  .grid-three, .wp-block-site-functionality-social-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -1130,6 +1182,10 @@ a {
   width: 100%;
   overflow: hidden;
   aspect-ratio: 3/2;
+}
+.wp-block-site-functionality-tout-linked .tout__link > p,
+.wp-block-site-functionality-tout-linked > p {
+  display: none;
 }
 .wp-block-site-functionality-tout-linked .title__wrapper {
   position: absolute;
