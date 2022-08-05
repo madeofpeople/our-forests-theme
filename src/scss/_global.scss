@@ -36,6 +36,10 @@
 	grid-row-gap: get-spacing();
 
 	@media ( min-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }

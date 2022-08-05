@@ -195,6 +195,10 @@ main {
   list-style: none;
   padding: 0;
 }
+.wp-block-site-functionality-social-cards .slick-list img {
+  width: 100%;
+  height: auto;
+}
 .wp-block-site-functionality-social-cards .social-post {
   overflow: hidden;
   max-width: 100%;
@@ -268,6 +272,11 @@ main {
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
+  .grid-three, .wp-block-site-functionality-social-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 760px) {
   .grid-three, .wp-block-site-functionality-social-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
