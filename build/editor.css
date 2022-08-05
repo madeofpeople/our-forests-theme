@@ -142,7 +142,7 @@ main {
 .section.pass-the-mic .wp-block-social-links {
   gap: 0;
 }
-.section.pass-the-mic .social-cards {
+.section.pass-the-mic .connect-grid {
   padding: 2.826875rem;
 }
 .section.pass-the-mic .social-card {
@@ -239,19 +239,24 @@ main {
   top: 90%;
 }
 
-.grid-four, .section.pass-the-mic .social-cards {
+.grid-four, .section.pass-the-mic .connect-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2.826875rem;
   grid-row-gap: 2.826875rem;
 }
 @media (min-width: 500px) {
-  .grid-four, .section.pass-the-mic .social-cards {
+  .grid-four, .section.pass-the-mic .connect-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 760px) {
-  .grid-four, .section.pass-the-mic .social-cards {
+  .grid-four, .section.pass-the-mic .connect-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .grid-four, .section.pass-the-mic .connect-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
