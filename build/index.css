@@ -897,6 +897,10 @@ a {
 .learn-more-message {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 2.826875rem;
+  padding-top: 1.4134375rem;
+  padding-bottom: 1.4134375rem;
+  background-color: var(--wp--preset--color--green-dark) !important;
 }
 .learn-more-message > h2 {
   font-family: acumin-extra-condensed--bold, sans-serif;
@@ -905,6 +909,7 @@ a {
   color: var(--wp--preset--color--white);
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .learn-more__content {
@@ -1362,18 +1367,22 @@ a {
     height: auto;
     left: auto;
     right: auto;
+    padding: 0;
+  }
+  .admin-bar .site-header .nav--primary .main-navigation {
+    top: 32px;
+  }
+  .site-header .nav--primary .main-navigation .menu-item {
+    display: inline-block;
+  }
+  .site-header .nav--primary .main-navigation .menu-item a {
+    padding: 0.625rem 0 0.5rem 0;
+  }
+  .site-header .nav--primary .main-navigation .menu-item.current_page_item a::after {
+    width: 100%;
   }
   .site-header .nav--primary .navigation-menu .menu {
     padding: 0 0 0 0;
-  }
-  .site-header .nav--primary .menu-item {
-    display: inline-block;
-  }
-  .site-header .nav--primary .menu-item a {
-    padding: 2.5rem 0 0.5rem 0;
-  }
-  .site-header .nav--primary .menu-item.current_page_item a::after {
-    width: 100%;
   }
 }
 
