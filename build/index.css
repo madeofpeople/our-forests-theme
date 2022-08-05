@@ -1434,6 +1434,21 @@ a {
   }
 }
 
+.section.actions-count h3 {
+  margin-top: 0;
+}
+.section.actions-count .grid-four {
+  padding-top: 1.4134375rem;
+}
+.section.actions-count .content {
+  position: relative;
+  background-color: var(--wp--preset--color--white);
+  top: -8rem;
+  margin: 0 2.826875rem;
+  margin-bottom: -8rem;
+  padding: 2.826875rem;
+}
+
 body {
   background-color: var(--wp--preset--color--grey-dark);
 }
