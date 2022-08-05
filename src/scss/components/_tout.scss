@@ -7,6 +7,11 @@
 	overflow: hidden;
 	aspect-ratio: 3/2;
 
+	.tout__link > p,
+	> p {
+		display: none;
+	}
+
 	.title__wrapper {
 		// aspect-ratio: 3/2;
 		position: absolute;
