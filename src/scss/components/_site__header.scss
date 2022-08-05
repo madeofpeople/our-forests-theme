@@ -160,12 +160,19 @@
 			color: color('white');
 			text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
 		}
+
 		.header-content {
 			padding-left: $space;
 			padding-right: $space;
 			p {
 				color: color('green');
 				font-size: map.get($font-sizes, body);
+			}
+
+			.wp-block-button__link {
+				@extend %button-green;
+				font-family: pragmatica--bold, sans-serif;
+				font-size: map.get($font-sizes, h5);
 			}
 		}
 

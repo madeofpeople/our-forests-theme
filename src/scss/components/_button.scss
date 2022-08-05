@@ -3,12 +3,14 @@
 .btn-primary,
 .wp-block-button__link {
 	@include acumin;
+	font-size: map.get($font-sizes, h5);
     border: none;
     border-radius: 2px;
     outline: none;
     color: color('white');
     text-transform: uppercase;
-    font-size: map.get($font-sizes, h3);
+    font-size: map.get($font-sizes, h4);
+	padding: get-spacing(0.25) get-spacing(0.5);
 	&:hover,
 	&:focus {
 		background-color: white;
@@ -26,7 +28,10 @@
 	display: block;
 	border: color('green') 2px solid;
 	background-color: color(green-dark);
-	color: color(green-mid);
+	color: color('white');
+	line-height: 1.75;
+
+	padding: get-spacing(0.25) get-spacing(0.5);
 	transition-property: border-color, color, background-color;
 	transition-duration: .75s;
 	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
