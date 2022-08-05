@@ -169,9 +169,6 @@
 			}
 		}
 
-		.header-banner {
-			min-height: 550px;
-		}
 
 		&::after {
 			content: '';
@@ -232,7 +229,7 @@
 				.menu-item {
 					display: inline-block;
 					a {
-						padding: 0.625rem 0 0.5rem 0;
+						padding: 2.625rem 0 0.5rem 0;
 					}
 					&.current_page_item {
 						a {
@@ -252,4 +249,23 @@
 			}
 		}
     }
+	.home & {
+
+		.wp-block-cover {
+			height: 600px;
+			p {
+				margin-top: get-spacing();
+				font-size: map.get($font-sizes, h3);
+			}
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			height: 14rem;
+			background: linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 255) 50%);
+		}
+	}
 }

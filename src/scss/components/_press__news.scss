@@ -29,7 +29,7 @@
 		border-radius: 50%;
 		color: color('white');
 		&::before {
-			content: "»";
+			content: '»';
 			@include acumin;
 			font-size: map.get($font-sizes, huge);
 			width: get-spacing(1.5);
@@ -47,14 +47,14 @@
 		&.slick-prev {
 			left: get-spacing(-1.5);
 			&::before {
-				content: "«";
+				content: '«';
 				left: get-spacing(0.5);
 			}
 		}
 
 		@media ( min-width: bp(md) ) {
 			&::before {
-				content: "»";
+				content: '»';
 				@include acumin;
 				font-size: map.get($font-sizes, huge);
 				width: get-spacing(3);
@@ -70,7 +70,7 @@
 			&.slick-prev {
 				left: get-spacing(-1.5);
 				&::before {
-					content: "«";
+					content: '«';
 					left: get-spacing(0.5);
 				}
 			}

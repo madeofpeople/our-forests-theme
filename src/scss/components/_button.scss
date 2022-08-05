@@ -11,7 +11,7 @@
     font-size: map.get($font-sizes, h3);
 	&:hover,
 	&:focus {
-
+		background-color: white;
 	}
 
 	.is-style-outline &,
@@ -21,7 +21,7 @@
 	}
 }
 
-%green-button {
+%button-green {
 
 	display: block;
 	border: color('green') 2px solid;
