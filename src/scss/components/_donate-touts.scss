@@ -1,0 +1,8 @@
+.donate-touts {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@media ( min-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr !important;
+	}
+}
