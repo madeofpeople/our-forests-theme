@@ -1,3 +1,4 @@
+@use 'sass:map';
 
 .demand-change__content {
 	position: relative;
@@ -7,6 +8,12 @@
 	margin: 0 get-spacing();
 	margin-bottom: -8rem;
 	padding: get-spacing();
+
+	.ptag {
+		@extend h4;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
 
 	.wp-block-button {
 		margin: 2rem auto 0 auto;

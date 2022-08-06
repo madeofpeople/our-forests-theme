@@ -25,7 +25,7 @@
 .wp-block-heading h3 {
   @apply mb-20;
 }
-.wp-block-heading h4 {
+.wp-block-heading h4, .wp-block-heading .demand-change__content .ptag, .demand-change__content .wp-block-heading .ptag {
   @apply mb-16;
 }
 .wp-block-heading h5 {
@@ -190,7 +190,7 @@ li li li li li li {
 .wp-block-heading h3 {
   @apply mb-20;
 }
-.wp-block-heading h4 {
+.wp-block-heading h4, .wp-block-heading .demand-change__content .ptag, .demand-change__content .wp-block-heading .ptag {
   @apply mb-16;
 }
 .wp-block-heading h5 {
@@ -412,6 +412,9 @@ pre {
 .site-footer .btn-primary {
   border-radius: 0;
 }
+.site-footer .site-footer-navigation {
+  display: none;
+}
 
 .entry-meta {
   @apply mb-16;
@@ -504,6 +507,7 @@ h1,
 h2,
 h3,
 h4,
+.demand-change__content .ptag,
 h5 {
   font-family: pragmatica--bold, sans-serif;
   text-transform: uppercase;
@@ -578,6 +582,7 @@ main {
 .section > p,
 .section > h3,
 .section > h4,
+.demand-change__content .section > .ptag,
 .section > .lede {
   padding-left: 2.826875rem;
   padding-right: 2.826875rem;
@@ -862,6 +867,10 @@ a {
   margin: 0 2.826875rem;
   margin-bottom: -8rem;
   padding: 2.826875rem;
+}
+.demand-change__content .ptag {
+  text-transform: uppercase;
+  margin-top: 0;
 }
 .demand-change__content .wp-block-button {
   margin: 2rem auto 0 auto;
@@ -1587,46 +1596,6 @@ a {
 
 body {
   background-color: var(--wp--preset--color--grey-dark);
-}
-
-body::before {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  content: "—";
-  top: 0;
-  right: 0;
-  z-index: 1000000;
-  padding: 0.25rem 0.5rem;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  border-radius: 0 0 0 0.25rem;
-}
-@media (min-width: 500px) {
-  body::before {
-    content: "xs";
-  }
-}
-@media (min-width: 760px) {
-  body::before {
-    content: "sm";
-  }
-}
-@media (min-width: 900px) {
-  body::before {
-    content: "md";
-  }
-}
-@media (min-width: 1000px) {
-  body::before {
-    content: "lg";
-  }
-}
-@media (min-width: 1400px) {
-  body::before {
-    content: "xl";
-  }
 }
 
 /*# sourceMappingURL=index.css.map*/
