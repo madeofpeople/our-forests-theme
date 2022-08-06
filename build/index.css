@@ -720,6 +720,18 @@ main {
 .wp-block-site-functionality-social-cards .social-post .image-group .slick-arrow.slick-prev {
   left: 1rem;
 }
+.wp-block-site-functionality-social-cards .social-post.has-multiple-images::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 1.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEzIDM4cS0xLjIgMC0yLjEtLjktLjktLjktLjktMi4xVjdxMC0xLjIuOS0yLjEuOS0uOSAyLjEtLjloMjhxMS4yIDAgMi4xLjkuOS45LjkgMi4xdjI4cTAgMS4yLS45IDIuMS0uOS45LTIuMS45Wm0wLTNoMjhWN0gxM3YyOFptLTYgOXEtMS4yIDAtMi4xLS45UTQgNDIuMiA0IDQxVjEwaDN2MzFoMzF2M1ptNi0zN3YyOFY3WiIvPjwvc3ZnPgo=);
+  background-repeat: no-repeat;
+}
 .wp-block-site-functionality-social-cards .social-post .wp-block-outermost-social-sharing {
   position: absolute;
   top: 150%;
@@ -842,6 +854,9 @@ a {
 @media (min-width: 500px) {
   .donate-touts {
     grid-template-columns: 1fr 1fr !important;
+    row-gap: 1.4134375rem;
+    -moz-column-gap: 1.4134375rem;
+         column-gap: 1.4134375rem;
   }
 }
 
