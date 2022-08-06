@@ -16,6 +16,30 @@
 	}
 
 	.newsletter__content {
-		padding-right: get-spacing(0.25);
+		padding-right: get-spacing(1);
+	}
+
+	.yikes-easy-mc-form {
+		display: grid;
+		column-gap: 1rem;
+		row-gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		label {
+			display: block;
+			margin: 0;
+			input {
+				margin-bottom: 0;
+				display: block;
+			}
+		}
+		.btn-primary {
+			margin-top: 0;
+			background-color: color('black');
+			grid-column: 1 / span 2;
+			&:hover,
+			&:focus {
+				color: color('white');
+			}
+		}
 	}
 }
