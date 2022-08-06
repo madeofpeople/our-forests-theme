@@ -4,6 +4,9 @@
 	}
  	.grid-four {
 		padding-top: get-spacing(0.5);
+		@media ( max-width: bp(xs) ) {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 	.content {
 		position: relative;

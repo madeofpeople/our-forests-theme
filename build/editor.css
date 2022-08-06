@@ -144,6 +144,16 @@ main {
 .section.pass-the-mic {
   margin-bottom: 2rem;
 }
+.section.pass-the-mic .social-cards.grid-four {
+  padding-top: 2.826875rem;
+  padding-left: 2.826875rem;
+  padding-right: 2.826875rem;
+}
+@media (max-width: 500px) {
+  .section.pass-the-mic .social-cards.grid-four {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .section.pass-the-mic .social-card__title {
   font-family: acumin-extra-condensed--bold, sans-serif;
   font-weight: 400;
@@ -172,9 +182,13 @@ main {
   text-align: center;
 }
 .section.pass-the-mic .social-card .social-card__avatar img {
-  max-width: 200px !important;
-  max-height: 200px !important;
   border: 2px var(--wp--preset--color--green-mid) solid;
+}
+@media (min-width: 500px) {
+  .section.pass-the-mic .social-card .social-card__avatar img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+  }
 }
 .section.pass-the-mic .social-card a,
 .section.pass-the-mic .social-card svg {
