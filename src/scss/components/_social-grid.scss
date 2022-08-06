@@ -38,6 +38,21 @@
 			}
 		}
 
+		&.has-multiple-images {
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: 10;
+				top: 1.5rem;
+				right: 0.5rem;
+				width: 2rem;
+				height: 2rem;
+				background-size: contain;
+				background-image: url('../images/icons/stack.svg');
+				background-repeat: no-repeat;
+			}
+		}
+
 		.wp-block-outermost-social-sharing {
 			position: absolute;
 			top: 150%;

@@ -4,5 +4,7 @@
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr !important;
+		row-gap: get-spacing(0.5);
+		column-gap: get-spacing(0.5);
 	}
 }
