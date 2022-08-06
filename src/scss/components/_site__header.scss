@@ -214,6 +214,10 @@
 			display: none;
 		}
 
+		.admin-bar & {
+			top: 0;
+		}
+
 		.nav--primary {
 			li:not(:first-child) {
 				margin-left: 2rem;
@@ -228,10 +232,6 @@
 				left: auto;
 				right: auto;
 				padding: 0;
-
-				.admin-bar & {
-					top: 32px;
-				}
 
 				.menu-item {
 					display: inline-block;
