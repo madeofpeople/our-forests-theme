@@ -67,8 +67,3 @@ body {
 	}
   }
 
-body {
-	&::before {
-		@extend %breakpoint-indicator;
-	}
-}
