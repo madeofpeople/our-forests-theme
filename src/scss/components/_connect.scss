@@ -54,6 +54,9 @@
 
 		.social-card__avatar {
 			img {
+				transition-property: border;
+				transition-duration: 0.3s;
+				transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 				border: 2px color(green-mid) solid;
 				@media ( min-width: bp(xs) ) {
 					max-width: 200px !important;
@@ -66,6 +69,15 @@
 		svg, {
 			display: inline-block;
 			vertical-align: middle;
+		}
+
+		&:hover,
+		&:focus {
+			.social-card__avatar {
+				img {
+					border: 8px color(green-mid) solid;
+				}
+			}
 		}
 	}
 }
