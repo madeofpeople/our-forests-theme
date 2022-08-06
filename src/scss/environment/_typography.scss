@@ -76,6 +76,14 @@ h3 {
 	line-height: 1.2;
 }
 
+
+@mixin h5 {
+	font-size: map.get($font-sizes, h5);
+    font-family: pragmatica--bold, sans-serif;
+    text-transform: uppercase;
+	line-height: 1.2;
+}
+
 @mixin acumin {
 	font-family: acumin-extra-condensed--bold, sans-serif;
 	font-weight: 400;

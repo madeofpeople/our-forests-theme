@@ -3,26 +3,29 @@
 .testimonial {
 	text-align: center;
 
-	p:first-of-type {
+	.wp-block-cover__inner-container blockquote p {
 		@include h4;
+		font-style: italic;
 	}
 
 	cite {
-		@include h4;
+		@include h5;
+		font-style: normal;
 		&::before {
 			content: '—';
 			display: inline-block;
+			font-style: normal;
 		}
 	}
 
 	@media ( min-width: bp(sm) ) {
-		p:first-of-type {
-			@include h2;
+		.wp-block-cover__inner-container blockquote p {
+			@include h3;
 		}
 
 		cite {
 			font-size: map.get($font-sizes, h4);
-			@include h3;
+			@include h4;
 			&::before {
 				content: '—';
 				display: inline-block;
