@@ -8,6 +8,8 @@
 		padding-top: get-spacing();
 		padding-left: get-spacing();
 		padding-right: get-spacing();
+		padding-bottom: get-spacing();
+
 		@media ( max-width: bp(xs) ) {
 			grid-template-columns: 1fr 1fr;
 		}
@@ -31,6 +33,11 @@
 
 	.social-card {
 		text-align: center;
+		svg,
+		.wp-block-social-link-label {
+			color: color(green-mid);
+		}
+
 		.social-card__links {
 			margin: 0;
 			padding: 0;
