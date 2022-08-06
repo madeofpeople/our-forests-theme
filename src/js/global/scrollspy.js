@@ -22,6 +22,9 @@ function initScrollSpy( selectors ) {
 			);
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
+			const href = activeItem.href;
+			const hash = href.split( '#' )[ 1 ];
+			window.location.hash = hash;
 		}
 	};
 
