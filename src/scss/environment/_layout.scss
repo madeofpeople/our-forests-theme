@@ -72,3 +72,10 @@ main {
 	top: 0;
 	left: -100vw;
 }
+
+
+.lax {
+	@media ( min-width: bp(sm) ) {
+		min-height: 90vh;
+	}
+}
