@@ -412,7 +412,8 @@ pre {
 .site-footer .btn-primary {
   border-radius: 0;
 }
-.site-footer .site-footer-navigation {
+
+#site-footer-navigation {
   display: none;
 }
 
