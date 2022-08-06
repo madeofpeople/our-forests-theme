@@ -214,6 +214,10 @@
 			display: none;
 		}
 
+		.admin-bar & {
+			top: 0;
+		}
+
 		.nav--primary {
 			li:not(:first-child) {
 				margin-left: 2rem;
