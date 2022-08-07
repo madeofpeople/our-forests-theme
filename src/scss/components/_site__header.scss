@@ -215,7 +215,11 @@
 		}
 
 		.admin-bar & {
-			top: 0;
+			.nav--primary {
+				.main-navigation {
+					top: 0;
+				}
+			}
 		}
 
 		.nav--primary {
@@ -256,13 +260,20 @@
 			}
 		}
     }
+
+	.single-social & {
+		background-color: color(green-dark);
+		min-height: 100px;
+	}
+
 	.home & {
 
 		.wp-block-cover {
 			height: 600px;
 			p {
 				margin-top: get-spacing();
-				font-size: map.get($font-sizes, h3);
+				font-size: map.get($font-sizes, h5);
+				font-weight: bold;
 			}
 		}
 		&::after {

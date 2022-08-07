@@ -1,0 +1,18 @@
+.single-social {
+
+	.section {
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		margin-bottom: get-spacing(1);
+
+		> p {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.social-image-grid {
+			margin-top: get-spacing();
+			margin-bottom: get-spacing();
+			@extend %grid-four;
+		}
+	}
+}
