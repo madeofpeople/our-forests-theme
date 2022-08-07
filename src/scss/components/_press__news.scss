@@ -39,7 +39,7 @@
 			left: get-spacing(-0.5);
 		}
 		&.slick-disabled {
-			display: none;
+			display: none !important;
 		}
 		&.slick-next {
 			right: get-spacing(-1.5);
