@@ -14,5 +14,10 @@
 			margin-bottom: get-spacing();
 			@extend %grid-four;
 		}
+
+		.wp-block-button__link {
+			@extend %button-green;
+			display: inline-block;
+		}
 	}
 }
