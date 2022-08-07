@@ -271,7 +271,8 @@
 		.wp-block-cover {
 			height: 600px;
 			p {
-				margin-top: get-spacing();
+				margin-top: get-spacing(0.5);
+				margin-bottom: get-spacing();
 				font-size: map.get($font-sizes, h5);
 				font-weight: bold;
 			}
