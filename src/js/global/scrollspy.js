@@ -22,9 +22,6 @@ function initScrollSpy( selectors ) {
 			);
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
-			const href = activeItem.href;
-			const hash = href.split( '#' )[ 1 ];
-			window.location.hash = hash;
 		}
 	};
 
@@ -51,8 +48,18 @@ function initScrollSpy( selectors ) {
 	} );
 }
 
-document.addEventListener( 'DOMContentLoaded', function () {
+if (
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
+) {
 	if ( document.querySelector( '.site-header .page__nav' ) ) {
 		initScrollSpy( '.entry-content > section, .site-header' );
 	}
-} );
+} else {
+	document.addEventListener( 'DOMContentLoaded', function () {
+		if ( document.querySelector( '.site-header .page__nav' ) ) {
+			initScrollSpy( '.entry-content > section, .site-header' );
+		}
+	} );
+}

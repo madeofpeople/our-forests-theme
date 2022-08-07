@@ -12,6 +12,7 @@ $space: get-spacing();
 
 main {
     max-width: 1200px;
+	min-height: 50vh;
     margin: 0 auto;
     background-color: color('white');
 }
@@ -120,6 +121,24 @@ main {
 					}
 				}
 			}
+		}
+	}
+}
+
+.error404,
+.privacy-policy {
+	.error-404,
+	.entry-content {
+		padding-top: get-spacing();
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		h1,
+		h2,
+		h3 {
+			margin-top: 0;
+		}
+		p {
+			margin-bottom: get-spacing();
 		}
 	}
 }
