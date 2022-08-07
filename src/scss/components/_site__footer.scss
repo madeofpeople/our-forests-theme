@@ -1,7 +1,4 @@
 .site-footer {
-	.site-info {
-		@apply mx-auto my-0 flex justify-between;
-	}
 
 	.footer__logos {
 		text-align: right;
@@ -18,8 +15,34 @@
 	h3 {
 		margin-top: 0;
 	}
+	.wp-block-columns {
+		margin-bottom: 0;
+	}
+	.footer__content {
+		.wp-block-columns {
+			padding-left: get-spacing();
+			padding-right: get-spacing();
+		}
+	}
 }
 
 #site-footer-navigation {
-	display: none;
+	background-color: color('black');
+	padding-left: get-spacing();
+	padding-right: get-spacing();
+	padding-bottom: get-spacing(0.5);
+	font-size: 0.875rem;
+	nav {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+	}
 }
