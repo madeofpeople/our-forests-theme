@@ -53,12 +53,18 @@ if (
 		'loading' !== document.readyState ) &&
 	! document.documentElement.doScroll
 ) {
-	if ( document.querySelector( '.site-header .page__nav' ) ) {
+	if (
+		! document.body.classList.contains( 'is-mobile' ) &&
+		document.querySelector( '.site-header .page__nav' )
+	) {
 		initScrollSpy( '.entry-content > section, .site-header' );
 	}
 } else {
 	document.addEventListener( 'DOMContentLoaded', function () {
-		if ( document.querySelector( '.site-header .page__nav' ) ) {
+		if (
+			! document.body.classList.contains( 'is-mobile' ) &&
+			document.querySelector( '.site-header .page__nav' )
+		) {
 			initScrollSpy( '.entry-content > section, .site-header' );
 		}
 	} );
