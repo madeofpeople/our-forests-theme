@@ -1,5 +1,5 @@
 const options = {
-	threshold: 0,
+	threshold: 0.5,
 };
 
 function initScrollSpy( selectors ) {
