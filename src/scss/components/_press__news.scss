@@ -1,14 +1,28 @@
 @use 'sass:map';
 
-.wp-block-getwid-post-carousel {
-	padding: get-spacing(0.5);
-	padding-left: get-spacing();
-	padding-right: get-spacing();
-	background-color: color(grey-light);
-}
-
 .post-list.reviews,
 .post-list.news {
+
+	> .wp-block-getwid-post-carousel {
+		padding: get-spacing(0.5);
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		background-color: color(grey-light);
+	}
+
+	.wp-block-getwid-post-carousel__post-thumbnail {
+		padding-top: 0;
+		> a {
+			position: static;
+		}
+		img.size-post-thumbnail {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
 	.slick-slide {
 		&:hover,
 		&:focus {
