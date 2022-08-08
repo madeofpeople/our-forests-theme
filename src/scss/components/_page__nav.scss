@@ -2,7 +2,7 @@
 
 @mixin page__nav--small {
 	z-index: 250;
-	max-width: 1200px;
+	max-width: 1600px;
 	width: 100%;
 	padding: 0;
 	gap: 0;
@@ -69,6 +69,8 @@
 		&:not(.out-of-view) {
 			.page__nav {
 				position: static;
+				padding-left: get-spacing();
+				padding-right: get-spacing();
 			}
 		}
 	}
