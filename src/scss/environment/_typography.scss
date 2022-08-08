@@ -5,12 +5,14 @@
     font-family: pragmatica--bold;
     src: url('../fonts/pragmatica--bold.woff2') format('woff2'),
         url('../fonts/pragmatica--bold.woff') format('woff');
+	font-display: swap;
 }
 
 @font-face {
     font-family: acumin-extra-condensed--bold;
     src: url('../fonts/acumin-extra-condensed--bold.woff2') format('woff2'),
         url('../fonts/acumin-extra-condensed--bold.woff') format('woff');
+	font-display: swap;
 }
 
 $font-sizes: (
