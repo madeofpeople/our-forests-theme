@@ -11,7 +11,7 @@ $space: get-spacing();
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1600px;
 	min-height: 50vh;
     margin: 0 auto;
     background-color: color('white');
@@ -29,14 +29,26 @@ main {
 	}
 }
 
-// page title?
+.page-template-default .entry-header,
 .home .section > h2 {
 	@extend %screen-reader-text;
 }
 
-.entry-header {
-    display: none;
-    @extend %screen-reader-text;
+.error404,
+.page-template-template-base-page {
+	.page-title {
+		font-size: map.get($font-sizes, h1);
+		@include acumin;
+	}
+	.entry-header {
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		font-size: map.get($font-sizes, h1);
+		@include acumin;
+		.entry-title {
+			@include acumin;
+	}
+}
 }
 
 .section.engage-amplify {
@@ -78,7 +90,7 @@ main {
 
 .lax {
 	@media ( min-width: bp(sm) ) {
-		min-height: 90vh;
+		min-height: 550px;
 	}
 }
 
@@ -125,17 +137,24 @@ main {
 	}
 }
 
+
+.page-template-template-base-page,
 .error404,
 .privacy-policy {
+	.error-404 {
+		padding-top: get-spacing();
+	}
 	.error-404,
 	.entry-content {
-		padding-top: get-spacing();
 		padding-left: get-spacing();
 		padding-right: get-spacing();
 		h1,
 		h2,
 		h3 {
 			margin-top: 0;
+		}
+		h2 {
+			font-size: map.get($font-sizes, h4) !important;
 		}
 		p {
 			margin-bottom: get-spacing();
