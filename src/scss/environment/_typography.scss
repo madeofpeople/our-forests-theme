@@ -33,7 +33,6 @@ body {
 	margin: 0;
     font-family: $body-font, sans-serif;
 	font-size: map.get($font-sizes, body);
-	color: color(green-mid);
 }
 
 %h1,
@@ -51,6 +50,7 @@ h5 {
 
 h2 {
 	font-size: map.get($font-sizes, h2);
+	color: color(green-mid);
 }
 
 h3 {
@@ -90,4 +90,21 @@ h3 {
 	font-family: acumin-extra-condensed--bold, sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
+}
+
+.entry-content > .section:not(.learn-more-message) > h2 {
+    text-transform: uppercase;
+	font-size: map.get($font-sizes, h2);
+	margin-top: get-spacing() ;
+	margin-bottom: get-spacing(0.5);
+	&::before {
+		content: '';
+		margin-right: get-spacing() * .75;
+		border-left: (get-spacing() * .25) color(green-mid) solid;
+	}
+}
+
+.section > h3 {
+	color: color(green-mid);
+	margin-top: get-spacing();
 }
