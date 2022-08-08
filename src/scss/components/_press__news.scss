@@ -1,8 +1,9 @@
 @use 'sass:map';
 
 .wp-block-getwid-post-carousel {
-	padding-top: get-spacing(0.5);
-	padding-bottom: get-spacing(0.5);
+	padding: get-spacing(0.5);
+	padding-left: get-spacing();
+	padding-right: get-spacing();
 	background-color: color(grey-light);
 }
 

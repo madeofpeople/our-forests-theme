@@ -165,7 +165,7 @@
 			padding-left: $space;
 			padding-right: $space;
 			p {
-				color: color('green');
+				color: color('black');
 				font-size: map.get($font-sizes, body);
 			}
 
@@ -261,6 +261,7 @@
 		}
     }
 
+	.page-template-template-base-page &,
 	.privacy-policy &,
 	.error404 &,
 	.single-social & {
