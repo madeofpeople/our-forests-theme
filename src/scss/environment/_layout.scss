@@ -17,18 +17,6 @@ main {
     background-color: color('white');
 }
 
-.entry-content > .section:not(.learn-more-message) > h2 {
-    text-transform: uppercase;
-	font-size: map.get($font-sizes, h4);
-	margin-top: $space * 0.5;
-	margin-bottom: $space * 0.5;
-	&::before {
-		content: '';
-		margin-right: $space * .75;
-		border-left: ($space * .25) color(green-mid) solid;
-	}
-}
-
 .page-template-default .entry-header,
 .home .section > h2 {
 	@extend %screen-reader-text;
@@ -53,6 +41,12 @@ main {
 
 .section.engage-amplify {
 	padding-bottom: get-spacing();
+}
+
+.schedule-screening__intro {
+	@include acumin;
+	font-size: map.get($font-sizes, h4);
+	font-weight: 400;
 }
 
 .section.demand-change {

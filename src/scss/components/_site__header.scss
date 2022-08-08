@@ -158,7 +158,7 @@
 		.header-content-title {
 			text-transform: uppercase;
 			color: color('white');
-			text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
+			text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
 		}
 
 		.header-content {
@@ -175,7 +175,6 @@
 				font-size: map.get($font-sizes, h5);
 			}
 		}
-
 
 		&::after {
 			content: '';
@@ -272,7 +271,16 @@
 	.home & {
 
 		.wp-block-cover {
-			height: 600px;
+			min-height: 600px;
+
+			@media ( min-width: bp(lg) ) {
+				min-height: 650px;
+			}
+
+			@media ( min-width: bp(xl) ) {
+				min-height: 750px;
+			}
+
 			p {
 				margin-top: get-spacing(0.5);
 				margin-bottom: get-spacing();

@@ -10,15 +10,26 @@
 .post-list.reviews,
 .post-list.news {
 	.slick-slide {
+		&:hover,
+		&:focus {
+			a {
+				text-decoration: underline;
+			}
+		}
 		.review,
 		.press {
 			.post-title {
 				margin: 0;
 				@include acumin;
 				a {
-					color: color('green-mid');
+					color: color('black');
 					text-decoration: none;
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
 				}
+
 			}
 		}
 	}
