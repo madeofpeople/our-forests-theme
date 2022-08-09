@@ -5,13 +5,14 @@
 	margin-bottom: 2rem;
 
 	.social-cards.grid-four {
-		padding-top: get-spacing();
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		padding-bottom: get-spacing();
+
+		padding: get-spacing(0.25);
 
 		@media ( max-width: bp(xs) ) {
 			grid-template-columns: 1fr 1fr;
+		}
+		@media ( min-width: bp(sm) ) {
+			padding: get-spacing();
 		}
 	}
 
@@ -28,9 +29,11 @@
 
 	.connect-grid {
 		@extend %grid-four;
-		padding: get-spacing();
+		padding: get-spacing(0.5);
+		@media ( max-width: bp(sm) ) {
+			padding: get-spacing(0.5);
+		}
 	}
-
 	.social-card {
 		text-align: center;
 

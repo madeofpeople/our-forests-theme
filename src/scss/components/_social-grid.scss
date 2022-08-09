@@ -1,8 +1,12 @@
 .wp-block-site-functionality-social-cards {
 	@extend %grid-three;
-	padding-left: get-spacing();
-	padding-right: get-spacing();
 
+	padding-left: get-spacing(0.5);
+	padding-right: get-spacing(0.5);
+	@media ( min-width: bp(sm) ) {
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+	}
 	ul {
 		list-style: none;
 		padding: 0;

@@ -3,7 +3,6 @@
 		margin-top: 0;
 	}
  	.grid-four {
-		padding-top: get-spacing(0.5);
 		@media ( max-width: bp(xs) ) {
 			grid-template-columns: 1fr 1fr;
 		}
@@ -12,8 +11,13 @@
 		position: relative;
 		background-color: color('white');
 		top: -8rem;
-		margin: 0 get-spacing();
+		margin: 0 get-spacing(0.5);
 		margin-bottom: -8rem;
 		padding: get-spacing();
+		@media ( max-width: bp(sm) ) {
+			margin: 0 get-spacing(0.25);
+			padding: get-spacing(0.5);
+			margin-bottom: -8rem;
+		}
 	}
 }

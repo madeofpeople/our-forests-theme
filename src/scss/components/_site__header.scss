@@ -28,8 +28,12 @@
 		top: 0;
         width: 100%;
         z-index: 10;
-        padding-left: get-spacing();
-        padding-right: get-spacing();
+        padding-left: get-spacing(0.5);
+        padding-right: get-spacing(0.5);
+		@media ( min-width: bp(sm) ) {
+			padding-left: get-spacing();
+			padding-right: get-spacing();
+		}
 		transition-property: top;
 		transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 		transition-duration: 0.7s;

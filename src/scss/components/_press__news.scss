@@ -4,8 +4,11 @@
 .post-list.news {
 
 	> .wp-block-getwid-post-carousel {
-		padding: get-spacing();
+		padding: get-spacing(0.5);
 		background-color: color(grey-light);
+		@media ( min-width: bp(md) ) {
+			padding: get-spacing();
+		}
 	}
 
 	.wp-block-getwid-post-carousel__post-thumbnail {

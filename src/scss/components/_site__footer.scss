@@ -20,17 +20,26 @@
 	}
 	.footer__content {
 		.wp-block-columns {
-			padding-left: get-spacing();
-			padding-right: get-spacing();
+			padding-left: get-spacing(0.5);
+			padding-right: get-spacing(0.5);
+			@media ( min-width: bp(sm) ) {
+				padding-left: get-spacing();
+				padding-right: get-spacing();
+			}
 		}
 	}
 }
 
 #site-footer-navigation {
 	background-color: color('black');
-	padding-left: get-spacing();
-	padding-right: get-spacing();
-	padding-bottom: get-spacing(0.5);
+	padding-left: get-spacing(0.5);
+	padding-right: get-spacing(0.5);
+	padding-bottom: get-spacing(0.25);
+	@media ( min-width: bp(sm) ) {
+		padding-left: get-spacing();
+		padding-right: get-spacing();
+		padding-bottom: get-spacing(0.5);
+	}
 	font-size: 0.875rem;
 	nav {
 		margin-top: 0;

@@ -5,10 +5,13 @@
 	background-color: color('black');
 	color: color('white');
 	top: -8rem;
-	margin: 0 get-spacing();
 	margin-bottom: -8rem;
+	margin: 0 get-spacing();
 	padding: get-spacing();
-
+	@media ( max-width: bp(sm) ) {
+		margin: 0 get-spacing(0.5);
+		padding: get-spacing(0.5);
+	}
 	.ptag {
 		@extend h4;
 		text-transform: uppercase;
@@ -26,8 +29,11 @@
 
 .demand-change__content {
 	& + .post-amble {
-		padding: get-spacing();
+		padding: get-spacing(0.5);
 		padding-top: get-spacing(0.5);
+		@media ( max-width: bp(sm) ) {
+			padding: get-spacing();
+		}
 	}
 
 	p:first-of-type {

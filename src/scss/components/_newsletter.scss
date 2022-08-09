@@ -2,10 +2,11 @@
 	display: grid;
 	background-color: color(green-dark);
 	color: color('white');
-	padding: get-spacing();
+	padding: get-spacing(0.5);
 
-	@media ( min-width: bp(xs) ) {
+	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr;
+		padding: get-spacing();
 	}
 
 	.wp-block-group {
