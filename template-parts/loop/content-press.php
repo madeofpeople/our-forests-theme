@@ -14,7 +14,7 @@ $base_class = $args['base_class'];
 		<header class="post-header">
 			<?php if ( has_post_thumbnail() ): ?>
 				<div class="<?php echo esc_attr( $base_class . '__post-thumbnail' ); ?>">
-					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+					<a href="<?php echo esc_url( get_permalink() ); ?>" target="_blank"><?php the_post_thumbnail(); ?></a>
 				</div>
 			<?php endif; ?>
 			<?php the_title( '<h3 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>

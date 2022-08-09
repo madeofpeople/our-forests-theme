@@ -1,11 +1,12 @@
 const options = {
-	threshold: 0.5,
+	threshold: 0,
 };
 
 function initScrollSpy( selectors ) {
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;
+	console.log( 'hi hello' );
 
 	const updatePageNav = ( anEl ) => {
 		if ( anEl.tagName === 'SECTION' ) {
@@ -30,7 +31,7 @@ function initScrollSpy( selectors ) {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				updatePageNav( entry.target );
+				if ( pageNav ) updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
@@ -39,9 +40,10 @@ function initScrollSpy( selectors ) {
 	};
 
 	const observer = new IntersectionObserver( inViewCallback, options );
-
+	console.log( 'hi' );
 	observedElements.forEach( ( element ) => {
 		const dataDelay = element.getAttribute( 'data-delay' );
+		console.log( ':::: out of view :', element );
 		element.classList.add( 'out-of-view' );
 		element.style.transitionDelay = dataDelay + 'ms';
 		observer.observe( element ); // run the observer
@@ -53,18 +55,12 @@ if (
 		'loading' !== document.readyState ) &&
 	! document.documentElement.doScroll
 ) {
-	if (
-		! document.body.classList.contains( 'is-mobile' ) &&
-		document.querySelector( '.site-header .page__nav' )
-	) {
+	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
 		initScrollSpy( '.entry-content > section, .site-header' );
 	}
 } else {
 	document.addEventListener( 'DOMContentLoaded', function () {
-		if (
-			! document.body.classList.contains( 'is-mobile' ) &&
-			document.querySelector( '.site-header .page__nav' )
-		) {
+		if ( ! document.body.classList.contains( 'is-mobile' ) ) {
 			initScrollSpy( '.entry-content > section, .site-header' );
 		}
 	} );

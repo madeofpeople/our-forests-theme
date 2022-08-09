@@ -21,8 +21,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<!-- preload webfonts https://web.dev/codelab-preload-web-fonts/ -->
-	<link rel="preload" href="/acumin-extra-condensed--bold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="/pragmatica--bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/wp-content/themes/the-territory-theme/build/fonts/acumin-extra-condensed--bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/wp-content/themes/the-territory-theme/build/fonts/pragmatica--bold.woff2" as="font" type="font/woff2" crossorigin>
 
 	<?php wp_head(); ?>
 

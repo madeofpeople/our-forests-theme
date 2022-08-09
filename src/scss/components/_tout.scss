@@ -58,4 +58,19 @@
 		width: 1rem;
 		height: 1rem;
 	}
+
+	@media ( min-width: bp(xs) ) {
+		.title__wrapper {
+			margin: get-spacing(0.125);
+			width: calc( 100% - get-spacing(0.25));
+			height: calc( 100% - get-spacing(0.25));
+		}
+	}
+	@media ( min-width: bp(sm) ) {
+		.title__wrapper {
+			margin: get-spacing(0.5);
+			width: calc( 100% - get-spacing());
+			height: calc( 100% - get-spacing());
+		}
+	}
 }
