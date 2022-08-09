@@ -7,13 +7,6 @@
 	padding: 0;
 	gap: 0;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-	top: 0;
-
-	@media ( min-width: bp(sm) ) {
-		.admin-bar & {
-			top: 32px;
-		}
-	}
 
 	.menu-item {
 		flex-grow: 1;
@@ -56,6 +49,14 @@
 	&.out-of-view .page__nav {
 		position: fixed;
 		@include page__nav--small;
+		top: auto;
+		bottom: 0;
+		height: 32px;
+		.menu-item {
+			a {
+				font-size: map.get($font-sizes, h5) !important;
+			}
+		}
 	}
 
 	@media ( max-width: bp(md) ) {

@@ -21,9 +21,11 @@ function initParallaxSections() {
 	const parentSelector = '.wp-block-cover.lax';
 	const imageSelector = 'img';
 	const parallaxSections = document.querySelectorAll( parentSelector );
-	parallaxSections.forEach( function ( el ) {
-		el.classList.add( 'jarallax' );
-		el.querySelector( imageSelector ).classList.add( 'jarallax-img' );
-	} );
-	jarallax( parallaxSections, jarallaxParams );
+	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
+		parallaxSections.forEach( function ( el ) {
+			el.classList.add( 'jarallax' );
+			el.querySelector( imageSelector ).classList.add( 'jarallax-img' );
+		} );
+		jarallax( parallaxSections, jarallaxParams );
+	}
 }
