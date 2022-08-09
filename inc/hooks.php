@@ -456,7 +456,7 @@ function the_territory_social_block_services( array $services_data, string $serv
 	$services_data['facebook']['label'] = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
 	$services_data['twitter']['label'] = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
 	$services_data['instagram']['label'] = sprintf( __( 'View %s on Instagram', 'site-functionality' ), $card_title );
-	$services_data['download']['label'] = sprintf( __( 'Down %s images as a File', 'site-functionality' ), $card_title );
+	$services_data['download']['label'] = sprintf( __( 'Download %s images as a File', 'site-functionality' ), $card_title );
 
 	return $services_data;
 }
