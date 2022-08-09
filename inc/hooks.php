@@ -438,3 +438,26 @@ add_filter( 'getwid/core/get_template_part', 'the_territory_getwid_get_template_
  * apply_filters( 'sbi_use_theme_templates', $settings['customtemplates'] )
  * /Users/pea/Development/Local Sites/the-territory/app/public/wp-content/plugins/instagram-feed/inc/if-functions.php
  */
+
+ /**
+  * Filter services data
+  *
+  * @param array   $services_data
+  * @param string  $service
+  * @param integer $post_id
+  * @return array $services_data
+  */
+function the_territory_social_block_services( array $services_data, string $service, int $post_id ) {
+	$permalink  = rawurlencode( \get_post_meta( $post_id, 'link', true ) );
+	$card_title = esc_attr( get_the_title( $post_id ) );
+	$title      = rawurlencode( \get_post_meta( $post_id, 'message', true ) );
+	$message    = esc_attr( \get_post_meta( $post_id, 'message', true ) );
+
+	$services_data['facebook']['label'] = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
+	$services_data['twitter']['label'] = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
+	$services_data['instagram']['label'] = sprintf( __( 'View %s on Instagram', 'site-functionality' ), $card_title );
+	$services_data['download']['label'] = sprintf( __( 'Down %s images as a File', 'site-functionality' ), $card_title );
+
+	return $services_data;
+}
+add_filter( 'site_functionality/social_block/services', 'the_territory_social_block_services', 10, 3 );
