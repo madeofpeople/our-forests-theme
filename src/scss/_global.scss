@@ -27,6 +27,10 @@
 	@media ( min-width: bp(md) ) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
+
+	> a.wp-block-hyperlink-group {
+		display: block;
+	}
 }
 
 %grid-three {
@@ -41,6 +45,10 @@
 
 	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	> a.wp-block-hyperlink-group {
+		display: block;
 	}
 }
 
