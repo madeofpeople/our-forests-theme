@@ -37,7 +37,7 @@
 	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
 	&:hover,
 	&:focus {
-		background-color: color(green-mid);
+		background-color: color('green');
 		color: color('black');
 	}
 }
