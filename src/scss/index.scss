@@ -68,9 +68,3 @@ body {
 	  content: 'xl';
 	}
   }
-
-main {
-	&::after {
-		@extend %breakpoint-indicator;
-	}
-}
