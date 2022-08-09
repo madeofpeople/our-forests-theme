@@ -2,9 +2,12 @@
 	display: grid;
 	grid-template-columns: 1fr;
 
-	@media ( min-width: bp(xs) ) {
+	row-gap: get-spacing(0.5);
+	column-gap: get-spacing(0.5);
+
+	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr !important;
-		row-gap: get-spacing(0.5);
-		column-gap: get-spacing(0.5);
+		row-gap: get-spacing();
+		column-gap: get-spacing();
 	}
 }

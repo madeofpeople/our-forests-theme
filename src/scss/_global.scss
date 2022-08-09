@@ -13,8 +13,8 @@
 %grid-four {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-column-gap: get-spacing();
-	grid-row-gap: get-spacing();
+	grid-column-gap: get-spacing(0.5);
+	grid-row-gap: get-spacing(0.5);
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr;
@@ -22,7 +22,9 @@
 
 	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr 1fr;
-	}
+		grid-column-gap: get-spacing();
+		grid-row-gap: get-spacing();
+		}
 
 	@media ( min-width: bp(md) ) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -36,11 +38,13 @@
 %grid-three {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-column-gap: get-spacing();
-	grid-row-gap: get-spacing();
+	grid-column-gap: get-spacing(0.5);
+	grid-row-gap: get-spacing(0.5);
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr;
+		grid-column-gap: get-spacing();
+		grid-row-gap: get-spacing();
 	}
 
 	@media ( min-width: bp(sm) ) {

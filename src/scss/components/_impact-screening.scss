@@ -1,8 +1,18 @@
 @use 'sass:map';
 
 .screening {
+
 	padding-left: get-spacing();
 	padding-right: get-spacing();
+	padding: get-spacing();
+	padding-top: get-spacing(0.5);
+
+	@media ( max-width: bp(sm) ) {
+		padding-left: get-spacing(0.5);
+		padding-right: get-spacing(0.5);
+		padding: get-spacing(0.5);
+		padding-top: get-spacing(0.25);
+	}
 
 	h3 {
 		font-size: map.get($font-sizes, h4);

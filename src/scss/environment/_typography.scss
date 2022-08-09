@@ -94,9 +94,14 @@ h3 {
 
 .entry-content > .section:not(.learn-more-message) > h2 {
     text-transform: uppercase;
-	font-size: map.get($font-sizes, h2);
-	margin-top: get-spacing() ;
+	font-size: map.get($font-sizes, h3);
+	margin-top: get-spacing(0.5) ;
 	margin-bottom: get-spacing(0.5);
+	@media ( min-width: bp(sm) ) {
+		font-size: map.get($font-sizes, h2);
+		margin-top: get-spacing() ;
+		margin-bottom: get-spacing(0.5);
+	}
 	&::before {
 		content: '';
 		margin-right: get-spacing() * .75;
