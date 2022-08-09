@@ -418,15 +418,15 @@ function the_territory_getwid_get_template_part( $template ) {
 		'mailchimp/mailchimp',
 		'mailchimp/field-email',
 		'mailchimp/field-first-name',
-		'mailchimp/field-last-name'
+		'mailchimp/field-last-name',
 	);
 	foreach ( $templates as $file ) {
-		if( strpos( $template, $file ) ) {
+		if ( strpos( $template, $file ) ) {
 			$template = get_template_directory() . "/template-parts/blocks/{$file}/post.php";
 		}
 	}
 	foreach ( $mailchimp as $file ) {
-		if( strpos( $template, $file ) ) {
+		if ( strpos( $template, $file ) ) {
 			$template = get_template_directory() . "/template-parts/blocks/{$file}.php";
 		}
 	}
