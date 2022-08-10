@@ -25,4 +25,8 @@ $permalink =  esc_url( get_permalink() );
 			<?php the_content(); ?>
 		</div><!-- .post-content -->
 
+		<footer class="post-footer">
+			<?php the_territory_source(); ?>
+		</footer><!-- .post-footer -->
+
 	</article><!-- #post-## -->
