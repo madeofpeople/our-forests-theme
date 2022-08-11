@@ -1,5 +1,21 @@
 @use 'sass:map';
 
+
+.link-group {
+	display:block;
+	position: relative;
+	padding: 0.5rem;
+	&:hover,
+	&:focus {
+		border: 1px color(green) solid;
+	}
+
+	figure {
+		position: relative;
+	}
+}
+
+
 .donate-tout {
 	position: relative;
 	display: block;
@@ -7,11 +23,15 @@
 	overflow: hidden;
 	aspect-ratio: 3/2;
 
+	.link-group {
+		padding: 0;
+	}
 
 	.title__wrapper {
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 10;
 		padding: get-spacing(0.5);
 		background-color: rgba(#000, 0.5);
 		border: 2px color('white') solid;
@@ -38,12 +58,18 @@
 
 	&:hover,
 	&:focus {
+		.link-group {
+			border: none;
+		}
 		.title__wrapper {
 			background-color: rgba(#000, 0);
 		}
 		.tout__title {
 			text-decoration: underline;
 			text-shadow: 4px 4px 7px rgba( #000, 0.85);
+		}
+		img {
+			border: none;
 		}
 	}
 
@@ -76,34 +102,3 @@
 }
 
 
-
-.link-group {
-	.wp-block-image {
-		a {
-			aspect-ratio: 1/1;
-			display:block;
-			position: relative;
-			padding: 0.5rem;
-			&:hover,
-			&:focus {
-				border: 1px color(green) solid;
-			}
-
-			img {
-				display: block;
-				position: relative;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-	}
-
-	&:hover,
-	&:focus {
-		background-color: #fafafa;
-		figure {
-			border: 4px color(green) solid;
-		}
-	}
-}
