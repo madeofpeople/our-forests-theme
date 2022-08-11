@@ -6,7 +6,6 @@ function initScrollSpy( selectors ) {
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;
-	console.log( 'hi hello' );
 
 	const updatePageNav = ( anEl ) => {
 		if ( anEl.tagName === 'SECTION' ) {
@@ -40,10 +39,8 @@ function initScrollSpy( selectors ) {
 	};
 
 	const observer = new IntersectionObserver( inViewCallback, options );
-	console.log( 'hi' );
 	observedElements.forEach( ( element ) => {
 		const dataDelay = element.getAttribute( 'data-delay' );
-		console.log( ':::: out of view :', element );
 		element.classList.add( 'out-of-view' );
 		element.style.transitionDelay = dataDelay + 'ms';
 		observer.observe( element ); // run the observer
