@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-.wp-block-site-functionality-tout-linked {
+.donate-tout {
 	position: relative;
 	display: block;
 	width: 100%;
@@ -47,7 +47,7 @@
 		}
 	}
 
-	.tout__image {
+	.link-group__image {
 		width: 100%;
 		img {
 			width: 100%;
@@ -71,6 +71,39 @@
 			margin: get-spacing(0.5);
 			width: calc( 100% - get-spacing());
 			height: calc( 100% - get-spacing());
+		}
+	}
+}
+
+
+
+.link-group {
+	.wp-block-image {
+		a {
+			aspect-ratio: 1/1;
+			display:block;
+			position: relative;
+			padding: 0.5rem;
+			&:hover,
+			&:focus {
+				border: 1px color(green) solid;
+			}
+
+			img {
+				display: block;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #fafafa;
+		figure {
+			border: 4px color(green) solid;
 		}
 	}
 }
