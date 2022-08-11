@@ -2,11 +2,13 @@
 	h3 {
 		margin-top: 0;
 	}
+
  	.grid-four {
 		@media ( max-width: bp(xs) ) {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
+
 	.content {
 		position: relative;
 		background-color: color('white');
