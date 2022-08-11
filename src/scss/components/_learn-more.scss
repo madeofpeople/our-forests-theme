@@ -8,7 +8,7 @@ $spacing: get-spacing();
 	padding-bottom: get-spacing(0.25);
 	background-color: color(green-dark) !important;
 
-	@media ( max-width: bp(sm) ) {
+	@media ( min-width: bp(sm) ) {
 		padding: get-spacing();
 		padding-top: get-spacing(0.5);
 		padding-bottom: get-spacing(0.5);
@@ -25,7 +25,7 @@ $spacing: get-spacing();
 
 .learn-more__content {
 	padding: get-spacing(0.5);
-	@media ( max-width: bp(sm) ) {
+	@media ( min-width: bp(sm) ) {
 		padding: get-spacing();
 	}
 }
@@ -45,26 +45,14 @@ $spacing: get-spacing();
 			padding-right: get-spacing();
 		}
 
-		.wp-block-image {
-			display: flex;
-			align-items: center;
-			vertical-align: middle;
-			width: auto;
-			flex: 0 0 calc(45% - get-spacing(0.5));
-
-			img {
-				display: block;
-				max-width: 100%;
-				width: 100% !important;
-				height: auto;
-			}
+		.link-group {
+			display: block;
 		}
 
-		@media ( min-width: bp(sm) ) {
-			margin: get-spacing(0.5);
-			.wp-block-image {
-				flex: 0 0 calc(16.66% - 20px);
-			}
+		.wp-block-group {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }
@@ -73,34 +61,39 @@ $spacing: get-spacing();
 	.logos {
 		justify-content: space-between;
 	}
+
+	@media ( min-width: bp(xs) ) {
+		.link-group {
+			flex: 0 0 calc(50% - 20px);
+		}
+	}
+
+	@media ( min-width: bp(md) ) {
+		.link-group {
+			flex: 0 0 calc(16% - 20px);
+		}
+	}
 }
 
 .collaboration-with {
 
 	.logos {
-
 		justify-content: space-between;
-		padding: 0 get-spacing(0.5);
+	}
 
-		.wp-block-image {
+	.link-group {
+		flex: 0 0 calc(33.33333% - 20px);
+	}
 
-			img {
-				display: block;
-				width: 100%;
-			}
+	@media ( min-width: bp(sm) ) {
+		.link-group {
+			flex: 0 0 calc(25% - 20px);
+		}
+	}
 
-			.wp-block-image {
-				flex: 0 0 calc(45% - get-spacing(0.5));
-			}
-
-			@media ( min-width: bp(sm) ) {
-
-				padding: 0 get-spacing();
-
-				.wp-block-image {
-					flex: 0 0 calc(16.66666% - get-spacing(0.5));
-				}
-			}
+	@media ( min-width: bp(md) ) {
+		.link-group {
+			flex: 0 0 calc(16.66% - 20px);
 		}
 	}
 }
