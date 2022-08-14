@@ -129,7 +129,7 @@
 			top: get-spacing(0.5);
 			left: get-spacing(0.5);
 		    &::after {
-				content: '×'
+				content: '×';
 			}
 		}
 
@@ -229,6 +229,7 @@
 			}
 		}
 
+
 		.nav--primary {
 			li:not(:first-child) {
 				margin-left: 2rem;
@@ -266,6 +267,12 @@
 				}
 			}
 		}
+		&.has-notice {
+			.nav--primary {
+				top: 5rem;
+			}
+		}
+
     }
 
 	.page-template-template-base-page &,
