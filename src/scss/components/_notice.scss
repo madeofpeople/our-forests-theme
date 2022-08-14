@@ -1,5 +1,19 @@
 .header-notice {
-    p {
-        margin: 0;
-    }
+	background-color: color('green-dark');
+	height: 5rem;
+	h2 {
+		@include acumin;
+		text-align: center;
+		margin: 0;
+		padding-top: get-spacing(0.5);
+		padding-bottom: get-spacing(0.5);
+	}
+	a {
+		text-decoration: none;
+		color: white;
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

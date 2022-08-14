@@ -121,6 +121,7 @@ function the_territory_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
+		'header-notice'  => esc_html__( 'Header Notice', 'the-territory' ),
 		'content-bottom' => esc_html__( 'Content Bottom', 'the-territory' ),
 		'footer'         => esc_html__( 'Footer', 'the-territory' ),
 	);
