@@ -32,6 +32,7 @@
 			position: relative;
 			top: 50%;
 			left: 50%;
+			background-color: color('black');
 			transform: translate3d(-50%, -50%, 0);
 
 			.slick-arrow {
@@ -66,8 +67,7 @@
 
 		.wp-block-outermost-social-sharing {
 			position: absolute;
-			top: auto;
-			bottom: 0;
+			bottom: -2rem;
 			left: 50%;
 			display: flex;
 			justify-content: space-between;
@@ -104,7 +104,7 @@
 		&:hover,
 		&:focus {
 			.wp-block-outermost-social-sharing {
-				top: 90%;
+				bottom: 0;
 			}
 		}
 	}
