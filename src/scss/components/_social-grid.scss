@@ -89,7 +89,7 @@
 				height: 1.5rem;
 			}
 
-			@media ( min-width: bp(sm) ) {
+			@media ( min-width: bp(md) ) {
 				li:nth-child(2n) {
 					padding-left: get-spacing(0.5);
 					padding-right: get-spacing(0.5);
@@ -104,7 +104,7 @@
 		&:hover,
 		&:focus {
 			.wp-block-outermost-social-sharing {
-				bottom: 0;
+				bottom: -1.25rem;
 			}
 		}
 	}
