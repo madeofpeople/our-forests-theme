@@ -27,12 +27,12 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1/1;
+		background-color: color('black');
 
 		.image-group {
 			position: relative;
 			top: 50%;
 			left: 50%;
-			background-color: color('black');
 			transform: translate3d(-50%, -50%, 0);
 
 			.slick-arrow {
@@ -67,7 +67,7 @@
 
 		.wp-block-outermost-social-sharing {
 			position: absolute;
-			bottom: -2rem;
+			bottom: -12rem;
 			left: 50%;
 			display: flex;
 			justify-content: space-between;
@@ -75,7 +75,7 @@
 			padding: get-spacing(0.25);
 			border-radius: get-spacing(0.25);
 			transform: translate(-50%, -50%);
-			transition-property: top;
+			transition-property: bottom;
 			transition-duration: 0.325s;
 			transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
