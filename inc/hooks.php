@@ -86,6 +86,22 @@ add_action( 'delete_category', 'the_territory_category_transient_flusher' );
 add_action( 'save_post', 'the_territory_category_transient_flusher' );
 
 /**
+ * Filter social post content
+ * 
+ * @link https://developer.wordpress.org/reference/hooks/the_content/
+ *
+ * @param string $content
+ * @return string $content
+ */
+function the_territory_content( string $content ) {
+	if( 'social' === get_post_type() && ( $message = get_post_meta( get_the_id(), 'message', true ) ) ) {
+		$content = $message;
+	}
+	return $content;
+}
+add_filter( 'the_content', 'the_territory_content' );
+
+/**
  * Customize "Read More" string on <!-- more --> with the_content();
  *
  * @author WebDevStudios

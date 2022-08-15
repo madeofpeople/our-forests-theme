@@ -27,6 +27,7 @@ if ( ! empty( $images ) ) :
 	if ( The_Territory\has_video( $images ) ) {
 		$extra_classname .= ' has-video';
 	}
+	$size = 'full'; // (thumbnail, medium, large, full or custom size)
 	?>
 	<article id="post-<?php echo $post_id; ?>" class="social-post<?php echo esc_attr( $extra_classname ); ?>">
 
@@ -41,14 +42,16 @@ if ( ! empty( $images ) ) :
 				if ( The_Territory\is_video( $image_id, $video_formats ) ) :
 					$data_type = The_Territory\get_data_type( $image_id );
 					?>
-					<video>
-						<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
-						<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
-					</video>
+					<a href="<?php echo \esc_url( \wp_get_attachment_url( $image_id ) ); ?>" target="_blank">
+						<video poster="<?php echo \get_the_post_thumbnail_url( $image_id, $size ); ?>" height="450" width="450">
+							<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
+							<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
+						</video>
+					</a>
 					<?php
 				else :
 					?>
-					<?php echo \wp_get_attachment_image( $image_id, 'full' ); ?>
+					<?php echo \wp_get_attachment_image( $image_id, $size ); ?>
 					<?php
 				endif;
 				?>
