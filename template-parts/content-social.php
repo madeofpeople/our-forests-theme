@@ -6,7 +6,10 @@
  *
  * @package The Territory
  */
-
+$video_formats   = array(
+	'mp4',
+	'webm',
+);
 ?>
 	<article <?php post_class( 'post-container section' ); ?>>
 
@@ -15,13 +18,7 @@
 		</header><!-- .post-header -->
 
 		<div class="post-content">
-			<?php
-			if ( $message = get_post_meta( get_the_id(), 'message', true ) ) :
-				?>
-				<?php echo apply_filters( 'the_content', $message ); ?>
-				<?php
-			endif;
-			?>
+			<?php the_content(); ?>
 
 			<?php
 			$images = \get_post_meta( get_the_ID(), 'images', true );
@@ -33,15 +30,31 @@
 					foreach ( $images as $image_id ) :
 						?>
 						<div id="image-<?php echo $image_id; ?>" class="social-image-item">
-							<a href="<?php echo esc_url( wp_get_attachment_image_url( $image_id, $size ) ); ?>" target="_blank">
-								<?php echo \wp_get_attachment_image( $image_id, $size ); ?>
-							</a>
-						</div>
+							<?php
+							if ( The_Territory\is_video( $image_id, $video_formats ) ) :
+								$data_type = The_Territory\get_data_type( $image_id );
+								?>
+								<a href="<?php echo \esc_url( \wp_get_attachment_url( $image_id ) ); ?>" target="_blank">
+									<video poster="<?php echo \get_the_post_thumbnail_url( $image_id, $size ); ?>" height="300" width="300">
+										<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
+										<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
+									</video>
+								</a>
+								<?php
+							else :
+								?>
+								<a href="<?php echo \esc_url( \wp_get_attachment_image_url( $image_id, $size ) ); ?>" target="_blank">
+									<?php echo \wp_get_attachment_image( $image_id, $size ); ?>
+								</a>
+								<?php
+							endif;
+							?>
+						</div><!-- .social-image-item -->
 
 						<?php
 					endforeach;
 					?>
-				</div><!-- .social-image-item -->
+				</div><!-- .social-image-grid -->
 			<?php endif; ?>
 
 			<?php
