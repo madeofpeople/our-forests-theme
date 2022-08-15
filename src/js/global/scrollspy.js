@@ -32,8 +32,20 @@ function initScrollSpy( selectors ) {
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
+				if ( entry.target.classList.contains( 'site-header' ) ) {
+					console.log( ';;', entry );
+					entry.target
+						.querySelector( '.nav--primary' )
+						.classList.add( 'alt-top' );
+				}
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
+				if ( entry.target.classList.contains( 'site-header' ) ) {
+					console.log( ';;', entry );
+					entry.target
+						.querySelector( '.nav--primary' )
+						.classList.remove( 'alt-top' );
+				}
 			}
 		} );
 	};
