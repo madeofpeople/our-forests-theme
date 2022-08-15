@@ -4,17 +4,17 @@
  *
  * @package site-functionality
  */
-$post           = $data->post;
-$post_id        = $post->ID;
-$share_services = array(
+$post            = $data->post;
+$post_id         = $post->ID;
+$share_services  = array(
 	'twitter',
 	'facebook',
 );
-$services       = array(
+$services        = array(
 	'instagram',
 	'download',
 );
-$images         = \get_post_meta( $post_id, 'images', true );
+$images          = \get_post_meta( $post_id, 'images', true );
 $extra_classname = $images && count( $images ) > 1 ? ' has-multiple-images' : '';
 $video_formats   = array(
 	'mp4',
