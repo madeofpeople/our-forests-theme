@@ -2,11 +2,26 @@
 	background-color: color('green-dark');
 	height: 5rem;
 	h2 {
+		@include h4;
 		@include acumin;
+		height: 100%;
+		vertical-align: middle;
+		letter-spacing: 1px;
 		text-align: center;
 		margin: 0;
-		padding-top: get-spacing(0.5);
-		padding-bottom: get-spacing(0.5);
+		padding: get-spacing(0.75);
+		padding-top: get-spacing(0.325);
+		padding-bottom: get-spacing(0.25);
+		@media ( min-width: bp(xs) ) {
+			@include h3;
+			@include acumin;
+			line-height: 2;
+		}
+		@media ( min-width: bp(sm) ) {
+			@include h2;
+			@include acumin;
+			padding-top: get-spacing(0.5);
+		}
 	}
 	a {
 		text-decoration: none;
