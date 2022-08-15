@@ -32,39 +32,55 @@ if ( ! empty( $images ) ) :
 
 	<!-- theme override -->
 
-        <ul class="image-group">
-            <?php
-            foreach( $images as $image_id ) :
-                ?>
-                <li id="image-<?php echo $image_id; ?>"><?php echo \wp_get_attachment_image( $image_id, 'full' ); ?></li>
-                <?php
-            endforeach;
-            ?>
-        </ul><!-- .image-groupt -->
+		<ul class="image-group">
+			<?php
+			foreach ( $images as $image_id ) :
+				?>
+				<li id="image-<?php echo $image_id; ?>">
+				<?php
+				if ( The_Territory\is_video( $image_id, $video_formats ) ) :
+					$data_type = The_Territory\get_data_type( $image_id );
+					?>
+					<video>
+						<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
+						<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
+					</video>
+					<?php
+				else :
+					?>
+					<?php echo \wp_get_attachment_image( $image_id, 'full' ); ?>
+					<?php
+				endif;
+				?>
+				</li>
+				<?php
+			endforeach;
+			?>
+		</ul><!-- .image-group -->
 
-        <div class="share-actions">
-            <ul class="wp-block-outermost-social-sharing is-style-logos-only">
-                <?php
-                if ( \get_post_meta( $post_id, 'link', true ) || \get_post_meta( $post_id, 'message', true ) ) :
-                    foreach ( $share_services as $service ) :
-                        ?>
-                        <?php echo Site_Functionality\Blocks\SocialCards\render_block_social_sharing_link( $service, $post_id ); ?>
-                        <?php
-                    endforeach;
-                endif;
+		<div class="share-actions">
+			<ul class="wp-block-outermost-social-sharing is-style-logos-only">
+				<?php
+				if ( \get_post_meta( $post_id, 'link', true ) || \get_post_meta( $post_id, 'message', true ) ) :
+					foreach ( $share_services as $service ) :
+						?>
+						<?php echo Site_Functionality\Blocks\SocialCards\render_block_social_sharing_link( $service, $post_id ); ?>
+						<?php
+					endforeach;
+				endif;
 
-                foreach ( $services as $service ) :
-                    if ( \get_post_meta( $post_id, $service, true ) ) :
-                        ?>
-                        <?php echo Site_Functionality\Blocks\SocialCards\render_block_social_sharing_link( $service, $post_id ); ?>
-                        <?php
-                    endif;
-                endforeach;
-                ?>
-            </ul><!-- .wp-block-outermost-social-sharing -->
-        </div><!-- .share-actions -->
+				foreach ( $services as $service ) :
+					if ( \get_post_meta( $post_id, $service, true ) ) :
+						?>
+						<?php echo Site_Functionality\Blocks\SocialCards\render_block_social_sharing_link( $service, $post_id ); ?>
+						<?php
+					endif;
+				endforeach;
+				?>
+			</ul><!-- .wp-block-outermost-social-sharing -->
+		</div><!-- .share-actions -->
 
-    </article><!-- .social-post -->
+	</article><!-- .social-post -->
 
-    <?php
+	<?php
 endif;
