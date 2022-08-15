@@ -27,6 +27,7 @@ if ( ! empty( $images ) ) :
 	if ( The_Territory\has_video( $images ) ) {
 		$extra_classname .= ' has-video';
 	}
+	$size = 'full'; // (thumbnail, medium, large, full or custom size)
 	?>
 	<article id="post-<?php echo $post_id; ?>" class="social-post<?php echo esc_attr( $extra_classname ); ?>">
 
@@ -48,7 +49,7 @@ if ( ! empty( $images ) ) :
 					<?php
 				else :
 					?>
-					<?php echo \wp_get_attachment_image( $image_id, 'full' ); ?>
+					<?php echo \wp_get_attachment_image( $image_id, $size ); ?>
 					<?php
 				endif;
 				?>
