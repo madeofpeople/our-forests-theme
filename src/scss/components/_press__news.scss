@@ -63,19 +63,19 @@
 			height: get-spacing(1.5);
 			color: color('white');
 			position: relative;
-			left: get-spacing(-0.5);
+			left: get-spacing(-1);
 		}
 		&.slick-disabled {
 			display: none !important;
 		}
 		&.slick-next {
+			left: auto;
 			right: get-spacing(-1.5);
 		}
 		&.slick-prev {
-			left: get-spacing(-1.5);
+			left: get-spacing(-2);
 			&::before {
 				content: '«';
-				left: get-spacing(0.5);
 			}
 		}
 
@@ -88,14 +88,16 @@
 				height: get-spacing(3);
 				color: color('white');
 				position: relative;
-				left: get-spacing(-0.5);
-
 			}
 			&.slick-next {
-				right: get-spacing(-1.5);
+				right: get-spacing(-2.5);
+				&::before {
+					content: '»';
+					left: get-spacing(-0.5);
+				}
 			}
 			&.slick-prev {
-				left: get-spacing(-1.5);
+				left: get-spacing(-2.5);
 				&::before {
 					content: '«';
 					left: get-spacing(0.5);
