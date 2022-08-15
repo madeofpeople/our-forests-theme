@@ -22,12 +22,15 @@ $video_formats   = array(
 );
 
 if ( ! empty( $images ) ) :
-    $link = \get_post_meta( $post_id, 'link', true );
-    $message = \get_post_meta( $post_id, 'message', true );
-    ?>
-    <article id="post-<?php echo $post_id; ?>" class="social-post<?php echo esc_attr( $extra_classname ); ?>">
+	$link    = \get_post_meta( $post_id, 'link', true );
+	$message = \get_post_meta( $post_id, 'message', true );
+	if ( The_Territory\has_video( $images ) ) {
+		$extra_classname .= ' has-video';
+	}
+	?>
+	<article id="post-<?php echo $post_id; ?>" class="social-post<?php echo esc_attr( $extra_classname ); ?>">
 
-    <!-- theme override -->
+	<!-- theme override -->
 
         <ul class="image-group">
             <?php
