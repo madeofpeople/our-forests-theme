@@ -9,6 +9,7 @@
 $video_formats   = array(
 	'mp4',
 	'webm',
+	'm4v'
 );
 ?>
 	<article <?php post_class( 'post-container section' ); ?>>

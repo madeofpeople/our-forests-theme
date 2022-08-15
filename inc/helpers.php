@@ -62,7 +62,7 @@ function get_block( $name, $content = null ) {
  * @param array $formats
  * @return boolean
  */
-function has_video( array $media, $formats = array( 'mp4', 'webm' ) ) {
+function has_video( array $media, $formats = array( 'mp4', 'webm', 'm4v' ) ) {
 	$has_video = false;
 	foreach( $media as $media_id ) {
 		if( $has_video = is_video( $media_id, $formats ) ) {
@@ -79,7 +79,7 @@ function has_video( array $media, $formats = array( 'mp4', 'webm' ) ) {
  * @param array $formats
  * @return boolean
  */
-function is_video( int $media_id, $formats = array( 'mp4', 'webm' ) ) {
+function is_video( int $media_id, $formats = array( 'mp4', 'webm', 'm4v' ) ) {
 	$data_type = get_data_type( $media_id );
 	if( in_array( $data_type, $formats ) ) {
 		return true;
