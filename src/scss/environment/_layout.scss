@@ -17,8 +17,8 @@ main {
     background-color: color('white');
 }
 
-.page-template-default .entry-header,
-.home .section > h2 {
+.page-template-default .entry-title,
+.page-template-default .entry-header {
 	@extend %screen-reader-text;
 }
 

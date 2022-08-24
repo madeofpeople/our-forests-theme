@@ -1,13 +1,15 @@
 const options = {
-	threshold: 0,
+	threshold: 0.24,
 };
 
-function initScrollSpy( selectors ) {
+const initScrollSpy = () => {
+	const selectors = '.entry-content > section, .site-header';
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;
 
 	const updatePageNav = ( anEl ) => {
+		console.log( 'updatePageNav', anEl, anEl.tagName );
 		if ( anEl.tagName === 'SECTION' ) {
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
@@ -28,12 +30,12 @@ function initScrollSpy( selectors ) {
 	const inViewCallback = ( entries ) => {
 		entries.forEach( ( entry ) => {
 			if ( entry.isIntersecting ) {
+				console.log( '// ', entry.target.classList );
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
 				if ( entry.target.classList.contains( 'site-header' ) ) {
-					console.log( ';;', entry );
 					entry.target
 						.querySelector( '.nav--primary' )
 						.classList.add( 'alt-top' );
@@ -41,7 +43,6 @@ function initScrollSpy( selectors ) {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
 				if ( entry.target.classList.contains( 'site-header' ) ) {
-					console.log( ';;', entry );
 					entry.target
 						.querySelector( '.nav--primary' )
 						.classList.remove( 'alt-top' );
@@ -55,9 +56,9 @@ function initScrollSpy( selectors ) {
 		const dataDelay = element.getAttribute( 'data-delay' );
 		element.classList.add( 'out-of-view' );
 		element.style.transitionDelay = dataDelay + 'ms';
-		observer.observe( element ); // run the observer
+		observer.observe( element );
 	} );
-}
+};
 
 if (
 	( 'complete' === document.readyState ||
@@ -65,12 +66,12 @@ if (
 	! document.documentElement.doScroll
 ) {
 	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
-		initScrollSpy( '.entry-content > section, .site-header' );
+		initScrollSpy();
 	}
 } else {
 	document.addEventListener( 'DOMContentLoaded', function () {
 		if ( ! document.body.classList.contains( 'is-mobile' ) ) {
-			initScrollSpy( '.entry-content > section, .site-header' );
+			initScrollSpy();
 		}
 	} );
 }
