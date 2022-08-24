@@ -25,7 +25,6 @@
 		display: flex;
         justify-content: space-between;
         position: absolute;
-		top: 3rem;
         width: 100%;
         z-index: 50;
         padding-left: get-spacing(0.5);
@@ -162,7 +161,8 @@
 		bottom: 0;
 	}
 
-	.home & {
+	.page[class*=home] & {
+
 		.header-content-title {
 			text-transform: uppercase;
 			color: color('white');
@@ -177,9 +177,8 @@
 				font-size: map.get($font-sizes, body);
 			}
 
-			.wp-block-button__link {
+			.header-content-buttons .wp-block-button__link {
 				@extend %button-green;
-				font-family: pragmatica--bold, sans-serif;
 				font-size: map.get($font-sizes, h5);
 			}
 		}
@@ -268,11 +267,11 @@
 				}
 			}
 		}
-		&.has-notice.in-view {
-			.nav--primary {
-				top: 3rem;
-			}
-		}
+		// &.has-notice.in-view {
+		// 	.nav--primary {
+		// 		// top: 3rem;
+		// 	}
+		// }
 		&.has-notice.out-of-view {
 			.nav--primary {
 				top: 0;
@@ -289,8 +288,7 @@
 		min-height: 100px;
 	}
 
-	.home & {
-
+	.page[class*=home] & {
 		.wp-block-cover {
 			min-height: 600px;
 
@@ -351,7 +349,7 @@
 			z-index: -1;
 			background: none;
 			background-color: color('black');
-			box-shadow: 0 12px 24px rgba( #000, 0.7);
+			box-shadow: 0 6px 24px rgba( #000, 0.5);
 		}
 
 		.site-title {
