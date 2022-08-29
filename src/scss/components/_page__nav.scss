@@ -61,7 +61,10 @@
 			}
 		}
 		@media (min-width: bp(md) ) {
-			top: 6.5rem;
+			top: 4.5rem;
+			.admin-bar & {
+				top: 6.5rem;
+			}
 		}
 	}
 
