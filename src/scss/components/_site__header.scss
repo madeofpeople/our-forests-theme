@@ -3,6 +3,23 @@
 .site-header {
     position: relative;
 
+	.header-content {
+
+		padding-left: get-spacing(0.5);
+		padding-right: get-spacing(0.5);
+
+		@media ( min-width: bp(sm) ) {
+			padding-left: get-spacing();
+			padding-right: get-spacing();
+		}
+
+		.header-content-title {
+			text-transform: uppercase;
+			color: color('white');
+			text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+		}
+	}
+
 	.menu__underlay {
 		display: none;
 		background-color: rgba(0, 0, 0, 0.8);
@@ -163,15 +180,7 @@
 
 	.page[class*=home] & {
 
-		.header-content-title {
-			text-transform: uppercase;
-			color: color('white');
-			text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
-		}
-
 		.header-content {
-			padding-left: $space;
-			padding-right: $space;
 			p {
 				color: color('black');
 				font-size: map.get($font-sizes, body);
@@ -267,11 +276,7 @@
 				}
 			}
 		}
-		// &.has-notice.in-view {
-		// 	.nav--primary {
-		// 		// top: 3rem;
-		// 	}
-		// }
+
 		&.has-notice.out-of-view {
 			.nav--primary {
 				top: 0;

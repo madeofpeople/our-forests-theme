@@ -9,7 +9,6 @@ const initScrollSpy = () => {
 	let activeItem = null;
 
 	const updatePageNav = ( anEl ) => {
-		console.log( 'updatePageNav', anEl, anEl.tagName );
 		if ( anEl.tagName === 'SECTION' ) {
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
@@ -30,7 +29,6 @@ const initScrollSpy = () => {
 	const inViewCallback = ( entries ) => {
 		entries.forEach( ( entry ) => {
 			if ( entry.isIntersecting ) {
-				console.log( '// ', entry.target.classList );
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );

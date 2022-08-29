@@ -3,17 +3,25 @@
 .section.pass-the-mic {
 
 	margin-bottom: 2rem;
+}
 
-	.social-cards.grid-four {
+.connect-grid {
+	@extend %grid-four;
+	padding: get-spacing(0.5);
+	@media ( max-width: bp(sm) ) {
+		padding: get-spacing(0.5);
+	}
+}
 
-		padding: get-spacing(0.25);
+.social-cards.grid-four {
 
-		@media ( max-width: bp(xs) ) {
-			grid-template-columns: 1fr 1fr;
-		}
-		@media ( min-width: bp(sm) ) {
-			padding: get-spacing();
-		}
+	padding: get-spacing(0.25);
+
+	@media ( max-width: bp(xs) ) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media ( min-width: bp(sm) ) {
+		padding: get-spacing();
 	}
 
 	.social-card__title {
@@ -27,13 +35,6 @@
 		gap: 0;
 	}
 
-	.connect-grid {
-		@extend %grid-four;
-		padding: get-spacing(0.5);
-		@media ( max-width: bp(sm) ) {
-			padding: get-spacing(0.5);
-		}
-	}
 	.social-card {
 		text-align: center;
 

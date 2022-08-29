@@ -22,6 +22,7 @@ $font-sizes: (
 	'h3': 1.728rem,
 	'h2': 2.074rem,
 	'h1': 2.448rem,
+	'lede': 1.2rem,
 	'huge': 4rem
 );
 
@@ -112,4 +113,9 @@ h3 {
 .section > h3 {
 	color: color(green-mid);
 	margin-top: get-spacing();
+}
+
+.lede {
+	font-size: map.get($font-sizes, lede);
+	max-width: 60em;
 }
