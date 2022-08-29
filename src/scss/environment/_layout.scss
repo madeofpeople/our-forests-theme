@@ -22,6 +22,10 @@ main {
 	@extend %screen-reader-text;
 }
 
+.entry-content {
+	padding-bottom: get-spacing();
+}
+
 .error404,
 .page-template-template-base-page {
 	.page-title {
@@ -102,6 +106,8 @@ main {
 	.entry-content {
 		padding-left: get-spacing();
 		padding-right: get-spacing();
+		padding-bottom: get-spacing();
+
 		h1,
 		h2,
 		h3 {
