@@ -22,8 +22,18 @@ main {
 	@extend %screen-reader-text;
 }
 
-.entry-content {
-	padding-bottom: get-spacing();
+
+.page {
+	.entry-content {
+		padding-bottom: get-spacing();
+	}
+}
+
+.page-press,
+.page.home {
+	.entry-content {
+		padding-bottom: 0;
+	}
 }
 
 .error404,
@@ -124,4 +134,22 @@ main {
 
 article.type-page {
 	overflow: hidden;
+}
+
+
+.page-donate-to-kaninde,
+.page-donate-to-uru-eu-wau-wau {
+	.wp-block-buttons {
+
+		padding-left: 2.768rem;
+
+		.wp-block-button__link {
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: color(green-mid);
+			}
+		}
+	}
 }
