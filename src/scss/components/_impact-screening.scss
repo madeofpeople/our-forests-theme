@@ -54,20 +54,20 @@
 						background-repeat: no-repeat;
 					}
 				}
-				&:nth-child(1) {
-					a {
-						&::before {
-							background-image: url('../images/icons/checklist.svg');
-						}
-					}
-				}
-				&:nth-child(2) {
-					a {
-						&::before {
-							background-image: url('../images/icons/clipboard.svg');
-						}
-					}
-				}
+				// &:nth-child(1) {
+				// 	a {
+				// 		&::before {
+				// 			background-image: url('../images/icons/checklist.svg');
+				// 		}
+				// 	}
+				// }
+				// &:nth-child(2) {
+				// 	a {
+				// 		&::before {
+				// 			background-image: url('../images/icons/clipboard.svg');
+				// 		}
+				// 	}
+				// }
 			}
 		}
 	}
