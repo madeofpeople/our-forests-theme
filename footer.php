@@ -64,17 +64,16 @@
 				foreach ($array as $name => $item){
 					$post_slug = get_post_field( 'post_name', get_post() );
 					$item_url = $item['current_page_url'];
-					$current_is_tk = strpos($item_url, '/tk/');
+					$current_is_tup = strpos($item_url, '/tup/');
 					$lang = get_locale();
-					$is_current = $lang == $item['language_code'];
+					$is_current = ($lang == $item['language_code'] && !$current_is_tup) ;
 					$lang_name = $item['language_name'];
 					if ($item['language_name'] == "Português do Brasil") {
 						$lang_name = "Português";
 					}
 
-					// echo $lang . " | " . $item['language_code'] . " | " . $is_current;
-					if ($current_is_tk) {
-						$item_url = str_replace('-tk', '', str_replace('/tk/', '/', $item_url));
+					if ($current_is_tup) {
+						$item_url = str_replace('-tup', '', str_replace('/tup/', '/', $item_url));
 
 			?>
 						<li class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
@@ -94,20 +93,20 @@
 					};
 				}
 			?>
-			<li class="tk <?php if($is_current) echo 'current'; ?>">
+			<li class="tup <?php if($current_is_tup) echo 'current'; ?>">
 				<?php
 					// Here we handle some logic for the Tupi Kaninde link.
-					// It changes based on whether we're inside 'tk' or not.
-					// Also 'home', is just '/tk'
+					// It changes based on whether we're inside 'tup' or not.
+					// Also 'home', is just '/tup'
 					$post_slug = get_post_field( 'post_name', get_post() );
 
 					if ($post_slug == 'home') {
 						$post_slug = '';
-					} else if ( strpos( $post_slug,'-tk') < -1) {
-						$post_slug = $post_slug . '-tk';
+					} else if ( strpos( $post_slug,'-tup') < -1) {
+						$post_slug = $post_slug . '-tup';
 					}
 				?>
-				<a href="<?php echo '/tk/' . $post_slug; ?>">
+				<a href="<?php echo '/tup/' . $post_slug; ?>">
 					<span>Tupí Kanindé</span>
 				</a>
 			</li>
