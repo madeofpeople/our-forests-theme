@@ -50,6 +50,7 @@ function the_territory_setup() {
 			'primary' => esc_html__( 'Primary Menu', 'the-territory' ),
 			'footer'  => esc_html__( 'Footer Menu', 'the-territory' ),
 			'mobile'  => esc_html__( 'Mobile Menu', 'the-territory' ),
+			'primary' => esc_html__( 'Tupi Kaninde Menu', 'the-territory' ),
 		)
 	);
 

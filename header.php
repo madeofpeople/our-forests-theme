@@ -103,15 +103,29 @@
 				<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
 					<button type="button" class="menu__inner-toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
 					<?php
-					wp_nav_menu(
-						array(
-							'fallback_cb'    => false,
-							'theme_location' => 'primary',
-							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'menu dropdown container',
-							'container'      => false,
-						)
-					);
+					$current_url = home_url( add_query_arg( array(), $wp->request ) );
+					$current_is_tup = strpos($current_url, '/tup') > -1;
+					if ($current_is_tup) {
+						wp_nav_menu(
+							array(
+								'fallback_cb'    => false,
+								'theme_location' => 'primary',
+								'menu_id'        => '3',
+								'menu_class'     => 'menu dropdown container',
+								'container'      => false,
+							)
+						);
+					} else {
+						wp_nav_menu(
+							array(
+								'fallback_cb'    => false,
+								'theme_location' => 'primary',
+								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'menu dropdown container',
+								'container'      => false,
+							)
+						);
+					}
 					?>
 				</nav><!-- #site-navigation-->
 
