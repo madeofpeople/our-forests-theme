@@ -32,7 +32,8 @@
 @import 'components/site__footer';
 @import 'components/social_single';
 @import 'components/testimonial';
-@import './components/tout';
+@import 'components/tout';
+@import 'components/translate_menu';
 
 body {
     background-color: color('grey-dark');

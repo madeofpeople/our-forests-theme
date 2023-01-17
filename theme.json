@@ -29,6 +29,11 @@
 					"color": "#eee"
 				},
 				{
+					"name": "Grey Mid",
+					"slug": "grey-mid",
+					"color": "#777"
+				},
+				{
 					"name": "Grey Dark 60",
 					"slug": "grey-dark-60",
 					"color": "#222222aa"
