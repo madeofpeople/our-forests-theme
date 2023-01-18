@@ -109,8 +109,8 @@
 						wp_nav_menu(
 							array(
 								'fallback_cb'    => false,
-								'theme_location' => 'primary',
-								'menu_id'        => '3',
+								'theme_location' => 'tupi-kawahiva',
+								'menu_id'        => 'tupi-kawahiva-menu',
 								'menu_class'     => 'menu dropdown container',
 								'container'      => false,
 							)
