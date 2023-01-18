@@ -62,6 +62,7 @@
 				font-size: map.get($font-sizes, h5) !important;
 			}
 		}
+
 		@media (min-width: bp(md) ) {
 			top: 4.5rem;
 			.admin-bar & {

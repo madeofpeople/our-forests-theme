@@ -107,6 +107,7 @@
 					}
 				?>
 				<a href="<?php echo '/tup/' . $post_slug; ?>">
+					<?php esc_url( get_theme_file_uri('./') ); ?>
 					<span>Tupí Kawahiva</span>
 				</a>
 			</li>
