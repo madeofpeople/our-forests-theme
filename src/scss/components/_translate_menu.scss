@@ -38,7 +38,7 @@
 		border-top-right-radius: 3px;
 		border-top-left-radius: 3px;
 		width: 3.5rem;
-		height: 3.5rem;
+		height: 2.5rem;
 		padding: 1rem;
 	}
 
@@ -46,17 +46,27 @@
 		box-sizing: border-box;
 		background-color: color('black');
 		margin: 0;
-		padding: 1rem;
+		padding: 0;
+		padding-top: 0.5rem;
+		padding-bottom: 3rem;
 		border-top-right-radius: 3px;
 		list-style-position: outside;
-		padding-left: 3rem;
+		padding-left: 2.5rem;
 		display: grid;
 		gap: 0;
 
 		li {
-			padding-top: 0.25rem;
-			padding-bottom: 0.325rem;
 			white-space: nowrap;
+			a {
+				display: block;
+				padding: 0.5rem;
+				padding-top: 0.25rem;
+				padding-bottom: 0.325rem;
+				text-decoration: none;
+				&:hover {
+					background-color: #333;
+				}
+			}
 			&.current {
 				a {
 					color: #fff;
@@ -66,7 +76,7 @@
 				order: -1;
 			}
 			&.tup {
-				list-style-image: url('../images/tupi-kawahiva.gif');
+				list-style-image: url('../images/tupi-kawahiva.png');
 			}
 		}
 	}

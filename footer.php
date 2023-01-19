@@ -52,7 +52,7 @@
 	<?php wp_footer(); ?>
 
 
-<?php $array = trp_custom_language_switcher();  ?>
+<?php $trp_langs = trp_custom_language_switcher();  ?>
 <div class="translate_menu" id="translate_menu">
 <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->
 	<div class="layout_wrapper">
@@ -61,22 +61,26 @@
 		</a>
 		<ul data-no-translation class="translation-list">
 			<?php
-				foreach ($array as $name => $item){
+				foreach ($trp_langs as $name => $item){
 					$post_slug = get_post_field( 'post_name', get_post() );
 					$item_url = $item['current_page_url'];
 					$current_is_tup = strpos($item_url, '/tup/');
 					$lang = get_locale();
+					if ( $post_slug == "tup" ) {
+						$post_slug = "";
+					}
 					$is_current = ($lang == $item['language_code'] && !$current_is_tup) ;
 					$lang_name = $item['language_name'];
-					if ($item['language_name'] == "Português do Brasil") {
+					if ($item['language_code'] == "pt_BR") {
 						$lang_name = "Português";
+						$item_url = "/pt/" . $post_slug;
 					}
 
 					if ($current_is_tup) {
 						$item_url = str_replace('-tup', '', str_replace('/tup/', '/', $item_url));
 
 			?>
-						<li class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
+						<li data-item-url="<?php echo $item_url; ?>" data-item-url="<?php echo $item_url; ?>" class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
 							<a href="<?php echo $item_url; ?>">
 								<span><?php echo $lang_name;?></span>
 							</a>
@@ -102,12 +106,14 @@
 
 					if ($post_slug == 'home') {
 						$post_slug = '';
-					} else if ( strpos( $post_slug,'-tup') < -1) {
+					} else if (
+						strpos( $post_slug,'-tup') > -1 &&
+						$post_slug != 'tup'
+					) {
 						$post_slug = $post_slug . '-tup';
 					}
 				?>
 				<a href="<?php echo '/tup/' . $post_slug; ?>">
-					<?php esc_url( get_theme_file_uri('./') ); ?>
 					<span>Tupí Kawahiva</span>
 				</a>
 			</li>
