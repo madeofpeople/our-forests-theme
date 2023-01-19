@@ -109,7 +109,7 @@
 					}
 				?>
 				<a href="<?php echo '/tup/' . $post_slug; ?>">
-					<span>Tupí Kawahiva</span>
+					<span>Tupi Kawahiva</span>
 				</a>
 			</li>
 		</ul>
