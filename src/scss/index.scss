@@ -37,8 +37,9 @@
 
 body {
     background-color: color('grey-dark');
-	@extend %breakpoint-indicator;
+	//@extend %breakpoint-indicator;
 }
+
 
 %breakpoint-indicator {
 	&::before {
