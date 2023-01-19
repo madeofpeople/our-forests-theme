@@ -104,13 +104,8 @@
 					// Also 'home', is just '/tup'
 					$post_slug = get_post_field( 'post_name', get_post() );
 
-					if ($post_slug == 'home') {
+					if ( $post_slug == 'home' || $post_slug == 'tup' ) {
 						$post_slug = '';
-					} else if (
-						strpos( $post_slug,'-tup') > -1 &&
-						$post_slug != 'tup'
-					) {
-						$post_slug = $post_slug . '-tup';
 					}
 				?>
 				<a href="<?php echo '/tup/' . $post_slug; ?>">
