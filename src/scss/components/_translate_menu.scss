@@ -96,23 +96,21 @@
 	}
 }
 
-.newsletter__content {
-	p[data-tk-lang=""] {
-		display: none;
-		body.kawahiva [data-tk-lang=""] {
+*[data-lang-kawahiva] {
+	display: none;
+}
+body.kawahiva {
+	.newsletter__content {
+
+		h3[data-lang-kawahiva],
+		p[data-lang-kawahiva] {
 			display: block;
 		}
-	}
-	p.default {
-		body.kawahiva & {
+
+		h3,
+		p.default {
 			display: none;
 		}
-	}
 
-	h3 {
-		display: block;
-		body.kawahiva & {
-			border: red;
-		}
 	}
 }

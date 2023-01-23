@@ -186,6 +186,7 @@
 		bottom: 0;
 	}
 
+	.page[class*=page-urz] &,
 	.page[class*=home] & {
 
 		.header-content {
@@ -301,7 +302,8 @@
 		min-height: 100px;
 	}
 
-	.page[class*=home] & {
+		.page[class*=page-urz] &,
+		.page[class*=home] & {
 		.wp-block-cover {
 			min-height: 600px;
 
