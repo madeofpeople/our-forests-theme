@@ -9,9 +9,27 @@
  * @package The Territory
  */
 
+$currlang = get_locale();
+$page_url = get_permalink();
+$is_kawahiva = strpos( $page_url, '/urz' ) > -1;
+$lang_attributes = get_language_attributes();
+$body_class_appentions = array('site-wrapper');
+if( $is_kawahiva ) {
+	$body_class_appentions[] = 'kawahiva';
+}
+if( $currlang == 'en_US' ) {
+	$home_link =  esc_url( home_url( '/' ) );
+	if( $is_kawahiva ) {
+		$home_link = $home_link . 'urz/';
+	}
+}
 ?>
+
+
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+
+
+<html <?php if(!$is_kawahiva) { language_attributes(); } else { echo 'lang="urz" ';} ?>>
 
 <head>
 
@@ -28,7 +46,7 @@
 
 </head>
 
-<body <?php body_class( 'site-wrapper' ); ?>>
+<body <?php body_class( $body_class_appentions ); ?>>
 
 	<?php wp_body_open(); ?>
 
@@ -51,14 +69,7 @@
 					<h1 class="site-title">
 
 						<?php
-							$currlang = get_locale();
-							$page_url = get_permalink();
-
 							if( $currlang == 'en_US' ) {
-								$home_link =  esc_url( home_url( '/' ) );
-								if( strpos( $page_url, '/tup' ) > -1 ) {
-									$home_link = $home_link . 'tup/';
-								}
 						?>
 
 							<a href="<?php echo $home_link ?>" rel="home">
@@ -109,13 +120,13 @@
 					<button type="button" class="menu__inner-toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
 					<?php
 					$current_url = home_url( add_query_arg( array(), $wp->request ) );
-					$current_is_tup = strpos($current_url, '/tup') > -1;
-					if ($current_is_tup) {
+					$current_is_urz = strpos($current_url, '/urz') > -1;
+					if ($current_is_urz) {
 						wp_nav_menu(
 							array(
 								'fallback_cb'    => false,
-								'theme_location' => 'tupi-kawahiva',
-								'menu_id'        => 'tupi-kawahiva-menu',
+								'theme_location' => 'kawahiva',
+								'menu_id'        => 'kawahiva-menu',
 								'menu_class'     => 'menu dropdown container',
 								'container'      => false,
 							)

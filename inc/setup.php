@@ -50,7 +50,7 @@ function the_territory_setup() {
 			'primary' => esc_html__( 'Primary Menu', 'the-territory' ),
 			'footer'  => esc_html__( 'Footer Menu', 'the-territory' ),
 			'mobile'  => esc_html__( 'Mobile Menu', 'the-territory' ),
-			'tupi-kawahiva' => esc_html__( 'Tupi Kawahiva Menu', 'the-territory' ),
+			'kawahiva' => esc_html__( 'Kawahiva Menu', 'the-territory' ),
 		)
 	);
 

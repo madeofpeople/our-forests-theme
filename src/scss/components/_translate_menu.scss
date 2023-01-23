@@ -76,8 +76,8 @@
 			&.current {
 				order: -1;
 			}
-			&.tup {
-				list-style-image: url('../images/tupi-kawahiva.png');
+			&.urz {
+				list-style-image: url('../images/kawahiva.png');
 			}
 		}
 	}
@@ -92,6 +92,27 @@
 	&.open {
 		.layout_wrapper {
 			top: -7rem;
+		}
+	}
+}
+
+.newsletter__content {
+	p[data-tk-lang=""] {
+		display: none;
+		body.kawahiva [data-tk-lang=""] {
+			display: block;
+		}
+	}
+	p.default {
+		body.kawahiva & {
+			display: none;
+		}
+	}
+
+	h3 {
+		display: block;
+		body.kawahiva & {
+			border: red;
 		}
 	}
 }
