@@ -99,7 +99,7 @@
 			?>
 			<li class="tup <?php if($current_is_tup) echo 'current'; ?>">
 				<?php
-					// Here we handle some logic for the Tupi kawahiva link.
+					// Here we handle some logic for the kawahiva link.
 					// It changes based on whether we're inside 'tup' or not.
 					// Also 'home', is just '/tup'
 					$post_slug = get_post_field( 'post_name', get_post() );
@@ -109,7 +109,7 @@
 					}
 				?>
 				<a href="<?php echo '/tup/' . $post_slug; ?>">
-					<span>Tupi Kawahiva</span>
+					<span>Kawahiva</span>
 				</a>
 			</li>
 		</ul>
