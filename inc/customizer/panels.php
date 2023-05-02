@@ -25,5 +25,4 @@ function our_forests_customize_panels( $wp_customize ) {
 		]
 	);
 }
-
 add_action( 'customize_register', 'our_forests_customize_panels' );

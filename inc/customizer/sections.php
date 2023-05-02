@@ -12,17 +12,6 @@
  * @param object $wp_customize Instance of WP_Customize_Class.
  */
 function our_forests_customize_sections( $wp_customize ) {
-
-	// Register additional scripts section.
-	// $wp_customize->add_section(
-	// 	'our_forests_additional_scripts_section',
-	// 	[
-	// 		'title'    => esc_html__( 'Additional Scripts', 'our-forests' ),
-	// 		'priority' => 10,
-	// 		'panel'    => 'site-options',
-	// 	]
-	// );
-
 	// Register a social links section.
 	$wp_customize->add_section(
 		'our_forests_social_links_section',
