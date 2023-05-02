@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 $currlang = get_locale();
@@ -50,7 +50,7 @@ if( $currlang == 'en_US' ) {
 
 	<?php wp_body_open(); ?>
 
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'the-territory' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'our-forests' ); ?></a>
 
 	<main id="main" class="container site-main">
 
@@ -116,7 +116,7 @@ if( $currlang == 'en_US' ) {
 					<button type="button" class="menu__toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
 				<?php endif; ?>
 
-				<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'the-territory' ); ?>">
+				<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'our-forests' ); ?>">
 					<button type="button" class="menu__inner-toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
 					<?php
 					$current_url = home_url( add_query_arg( array(), $wp->request ) );
@@ -153,7 +153,7 @@ if( $currlang == 'en_US' ) {
 			<?php
 			if ( \has_block( 'site-functionality/page-header' ) ) :
 				?>
-				<?php the_territory_header(); ?>
+				<?php our_forests_header(); ?>
 				<?php
 			endif;
 			?>

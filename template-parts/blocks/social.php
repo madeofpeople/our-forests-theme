@@ -25,7 +25,7 @@ $video_formats   = array(
 if ( ! empty( $images ) ) :
 	$link    = \get_post_meta( $post_id, 'link', true );
 	$message = \get_post_meta( $post_id, 'message', true );
-	if ( The_Territory\has_video( $images ) ) {
+	if ( Our_Forests\has_video( $images ) ) {
 		$extra_classname .= ' has-video';
 	}
 	$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -40,13 +40,13 @@ if ( ! empty( $images ) ) :
 				?>
 				<li id="image-<?php echo $image_id; ?>">
 				<?php
-				if ( The_Territory\is_video( $image_id, $video_formats ) ) :
-					$data_type = The_Territory\get_data_type( $image_id );
+				if ( Our_Forests\is_video( $image_id, $video_formats ) ) :
+					$data_type = Our_Forests\get_data_type( $image_id );
 					?>
 					<a href="<?php echo \esc_url( \wp_get_attachment_url( $image_id ) ); ?>" target="_blank">
 						<video poster="<?php echo \get_the_post_thumbnail_url( $image_id, $size ); ?>" height="450" width="450">
 							<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
-							<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
+							<?php \esc_html_e( 'Video is not supported', 'our-forests' ); ?>
 						</video>
 					</a>
 					<?php

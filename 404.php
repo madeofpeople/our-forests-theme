@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 get_header(); ?>
@@ -13,12 +13,12 @@ get_header(); ?>
 
 		<section class="error-404 not-found">
 			<header class="site__header">
-				<h1 class="page-title"><?php esc_html_e( "Sorry, this page doesn't exist.", 'the-territory' ); ?></h1>
+				<h1 class="page-title"><?php esc_html_e( "Sorry, this page doesn't exist.", 'our-forests' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
 
-				<p><?php esc_html_e( "It seems we can't find what you're looking for. Perhaps searching can help.", 'the-territory' ); ?></p>
+				<p><?php esc_html_e( "It seems we can't find what you're looking for. Perhaps searching can help.", 'our-forests' ); ?></p>
 
 				<?php get_search_form(); ?>
 

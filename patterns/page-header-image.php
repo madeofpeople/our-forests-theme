@@ -16,15 +16,15 @@
 	<!-- wp:buttons {"className":"menu"} -->
 	<div class="wp-block-buttons menu">
 		<!-- wp:button {"placeholder":"Add Nav Item...","className":"menu-item"} -->
-		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#direct-support"><?php esc_html_e( 'Direct Support', 'the-territory' ); ?></a></div>
+		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#direct-support"><?php esc_html_e( 'Direct Support', 'our-forests' ); ?></a></div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"menu-item"} -->
-		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#engage-amplify"><?php esc_html_e( 'Engage &amp; Amplify', 'the-territory' ); ?></a></div>
+		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#engage-amplify"><?php esc_html_e( 'Engage &amp; Amplify', 'our-forests' ); ?></a></div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"menu-item"} -->
-		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#demand-change"<?php esc_html_e( 'Demand Change', 'the-territory' ); ?>></a></div>
+		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#demand-change"<?php esc_html_e( 'Demand Change', 'our-forests' ); ?>></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

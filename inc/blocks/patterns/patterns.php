@@ -2,17 +2,17 @@
 /**
  * Register Block Patterns.
  *
- * @package The Territory
+ * @package Our Forests
  */
-namespace The_Territory\Inc\Blocks\Patterns;
+namespace Our_Forests\Inc\Blocks\Patterns;
 
 \register_block_pattern_category(
-    'the-territory',
-    array( 'label' => __( 'The Territory', 'the-territory' ) )
+    'our-forests',
+    array( 'label' => __( 'The Territory', 'our-forests' ) )
 );
 
 \register_block_pattern_category(
     'layout',
-    array( 'label' => __( 'Layout', 'the-territory' ) )
+    array( 'label' => __( 'Layout', 'our-forests' ) )
 );
 

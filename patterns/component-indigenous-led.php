@@ -13,22 +13,22 @@
 		<!-- wp:group {"className":"content overlay"} -->
 		<div class="wp-block-group content overlay">
 			<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
-			<p class="has-text-align-center"><?php esc_html_e( 'To protect the Earth from climate catastrophe we need to fight back against deforestation. Stand with us to demand that national, regional and international politicians and businesses respect and protect the land and rights of Indigenous Peoples.', 'the-territory' ); ?></p>
+			<p class="has-text-align-center"><?php esc_html_e( 'To protect the Earth from climate catastrophe we need to fight back against deforestation. Stand with us to demand that national, regional and international politicians and businesses respect and protect the land and rights of Indigenous Peoples.', 'our-forests' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3} -->
-			<h3><?php esc_html_e( 'Indigenous-led Monitoring and Surveillance', 'the-territory' ); ?></h3>
+			<h3><?php esc_html_e( 'Indigenous-led Monitoring and Surveillance', 'our-forests' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php esc_html_e( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'the-territory' ); ?></p>
+			<p><?php esc_html_e( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'our-forests' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-outline"} -->
 				<div class="wp-block-button is-style-outline">
-				<a class="wp-block-button__link"><?php esc_html_e( 'Find Out More and Support Our Call for Action', 'the-territory' ); ?></a>
+				<a class="wp-block-button__link"><?php esc_html_e( 'Find Out More and Support Our Call for Action', 'our-forests' ); ?></a>
 				</div>
 				<!-- /wp:button -->
 			</div>

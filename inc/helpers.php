@@ -4,9 +4,9 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package The Territory
+ * @package Our Forests
  */
-namespace The_Territory;
+namespace Our_Forests;
 
 /**
  * Get Header Image ID

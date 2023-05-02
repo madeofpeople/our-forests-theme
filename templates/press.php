@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 				the_title( '<h1 class="page-title">', '</h1>' );
 				?>
 				<div class="archive-description">
-					<?php the_territory_the_content( array( 'site-functionality/page-header' ) ); ?>
+					<?php our_forests_the_content( array( 'site-functionality/page-header' ) ); ?>
 				</div>
 			</header><!-- .page-header -->
 
@@ -33,7 +33,7 @@ get_header(); ?>
 				<section class="section press">
 					<header class="section-header">
 						<h2 class="section-title">
-							<?php esc_html_e( 'Press Mentions', 'the-territory' ); ?>
+							<?php esc_html_e( 'Press Mentions', 'our-forests' ); ?>
 						</h2>
 					</header>
 					<div class="post-list">
@@ -62,7 +62,7 @@ get_header(); ?>
 				<section class="section reviews">
 					<header class="section-header">
 						<h2 class="section-title">
-							<?php esc_html_e( 'Film Reviews', 'the-territory' ); ?>
+							<?php esc_html_e( 'Film Reviews', 'our-forests' ); ?>
 						</h2>
 					</header>
 					<div class="post-list">

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 $video_formats   = array(
 	'mp4',
@@ -32,13 +32,13 @@ $video_formats   = array(
 						?>
 						<div id="image-<?php echo $image_id; ?>" class="social-image-item">
 							<?php
-							if ( The_Territory\is_video( $image_id, $video_formats ) ) :
-								$data_type = The_Territory\get_data_type( $image_id );
+							if ( Our_Forests\is_video( $image_id, $video_formats ) ) :
+								$data_type = Our_Forests\get_data_type( $image_id );
 								?>
 								<a href="<?php echo \esc_url( \wp_get_attachment_url( $image_id ) ); ?>" target="_blank">
 									<video poster="<?php echo \get_the_post_thumbnail_url( $image_id, $size ); ?>" height="300" width="300">
 										<source src="<?php echo \wp_get_attachment_url( $image_id ); ?>" type="video/<?php echo \esc_attr( $data_type ); ?>">
-										<?php \esc_html_e( 'Video is not supported', 'the-territory' ); ?>
+										<?php \esc_html_e( 'Video is not supported', 'our-forests' ); ?>
 									</video>
 								</a>
 								<?php
@@ -61,14 +61,14 @@ $video_formats   = array(
 			<?php
 			if ( $download = get_post_meta( get_the_ID(), 'download', true ) ) :
 				?>
-				<a class="wp-block-button__link" href="<?php echo esc_url( wp_get_attachment_url( $download ) ); ?>"><?php esc_html_e( 'Download Assets as a Zip File.', 'the-territory' ); ?></a>
+				<a class="wp-block-button__link" href="<?php echo esc_url( wp_get_attachment_url( $download ) ); ?>"><?php esc_html_e( 'Download Assets as a Zip File.', 'our-forests' ); ?></a>
 				<?php
 			endif;
 			?>
 		</div><!-- .post-content -->
 
 		<footer class="post-footer">
-			<?php the_territory_entry_footer(); ?>
+			<?php our_forests_entry_footer(); ?>
 		</footer><!-- .post-footer -->
 
 	</article><!-- #post-## -->

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 ?>
@@ -25,7 +25,7 @@
 			endif;
 			?>
 
-			<nav id="site-footer-navigation" class="footer-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Footer Navigation', 'the-territory' ); ?>">
+			<nav id="site-footer-navigation" class="footer-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Footer Navigation', 'our-forests' ); ?>">
 				<?php
 				wp_nav_menu(
 					array(
@@ -41,8 +41,8 @@
 			</nav><!-- #site-navigation-->
 
 			<div class="container site-info">
-				<?php the_territory_display_copyright_text(); ?>
-				<?php the_territory_display_social_network_links(); ?>
+				<?php our_forests_display_copyright_text(); ?>
+				<?php our_forests_display_social_network_links(); ?>
 			</div><!-- .site-info -->
 
 		</footer><!-- .site-footer container-->

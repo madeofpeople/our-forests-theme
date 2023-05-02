@@ -4,9 +4,9 @@
  *
  * @see https://developer.wordpress.org/block-editor/how-to-guides/javascript/loading-javascript/
  *
- * @package The Territory
+ * @package Our Forests
  */
-namespace The_Territory\Inc;
+namespace Our_Forests\Inc;
 
 function enqueue_block_editor_assets() {
 	\wp_enqueue_script(
