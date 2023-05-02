@@ -81,32 +81,17 @@
 				<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'our-forests' ); ?>">
 					<button type="button" class="menu__inner-toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
 					<?php
-					$current_url = home_url( add_query_arg( array(), $wp->request ) );
-					$current_is_urz = strpos($current_url, '/urz') > -1;
-					if ($current_is_urz) {
-						wp_nav_menu(
-							array(
-								'fallback_cb'    => false,
-								'theme_location' => 'kawahiva',
-								'menu_id'        => 'kawahiva-menu',
-								'menu_class'     => 'menu dropdown container',
-								'container'      => false,
-							)
-						);
-					} else {
-						wp_nav_menu(
-							array(
-								'fallback_cb'    => false,
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
-								'menu_class'     => 'menu dropdown container',
-								'container'      => false,
-							)
-						);
-					}
+					wp_nav_menu(
+						array(
+							'fallback_cb'    => false,
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'menu dropdown container',
+							'container'      => false,
+						)
+					);
 					?>
 				</nav><!-- #site-navigation-->
-
 
 				<div class="menu__underlay"></div>
 
