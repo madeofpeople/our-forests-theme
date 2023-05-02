@@ -82,6 +82,16 @@ function our_forests_setup() {
 
 	// Gutenberg responsive embed support.
 	add_theme_support( 'responsive-embeds' );
+
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 200,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'our_forests_setup' );
 
@@ -97,6 +107,7 @@ function our_forests_widgets_init() {
 	// Define sidebars.
 	$sidebars = array(
 		'header-notice'  => esc_html__( 'Header Notice', 'our-forests' ),
+		'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
 		'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
 		'footer'         => esc_html__( 'Footer', 'our-forests' ),
 	);

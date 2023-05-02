@@ -46,6 +46,19 @@
 							<?php dynamic_sidebar( 'header-logo' ); ?>
 
 							<?php
+						elseif( has_custom_logo() ) :
+							?>
+							
+							<?php the_custom_logo(); ?>
+
+							<?php
+						else :
+							?>
+
+							<?php bloginfo( 'name' ); ?>
+							<div class="site-description"></div>
+
+							<?php
 						endif;
 						?>
 					
