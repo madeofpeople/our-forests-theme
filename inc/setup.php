@@ -47,9 +47,9 @@ function our_forests_setup() {
 	// Register navigation menus.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'our-forests' ),
-			'footer'  => esc_html__( 'Footer Menu', 'our-forests' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'our-forests' ),
+			'primary'  => esc_html__( 'Primary Menu', 'our-forests' ),
+			'footer'   => esc_html__( 'Footer Menu', 'our-forests' ),
+			'mobile'   => esc_html__( 'Mobile Menu', 'our-forests' ),
 			'kawahiva' => esc_html__( 'Kawahiva Menu', 'our-forests' ),
 		)
 	);
