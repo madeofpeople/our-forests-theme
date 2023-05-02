@@ -316,15 +316,15 @@ function our_forests_get_svg( $args = array() ) {
 
 	<svg
 	<?php
-		echo our_forests_get_the_content( $height ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-		echo our_forests_get_the_content( $width ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-		echo our_forests_get_the_content( $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-		echo our_forests_get_the_content( $stroke_width ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $height ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $width ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $color ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $stroke_width ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 	?>
 		class="icon <?php echo esc_attr( $args['icon'] ); ?>"
 	<?php
-		echo our_forests_get_the_content( $aria_hidden ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-		echo our_forests_get_the_content( $aria_labelledby ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $aria_hidden ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+		echo Our_Forests\get_the_content( $aria_labelledby ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 	?>
 		role="img">
 		<title id="<?php echo esc_attr( $block_title_id ); ?>">
@@ -389,8 +389,6 @@ function our_forests_get_the_title( $args = array() ) {
  * @return string The excerpt.
  */
 function our_forests_get_the_excerpt( $args = array() ) {
-
-	// Set defaults.
 	$defaults = array(
 		'length' => 20,
 		'more'   => '...',
@@ -410,11 +408,8 @@ function our_forests_get_the_excerpt( $args = array() ) {
  * @author WebDevStudios
  */
 function our_forests_display_copyright_text() {
-	// Grab our customizer settings.
-	$copyright_text = get_theme_mod( 'our_forests_copyright_text' );
-
-	if ( $copyright_text ) {
-		echo our_forests_get_the_content( do_shortcode( $copyright_text ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
+	if ( $copyright_text = get_theme_mod( 'our_forests_copyright_text' ) ) {
+		echo Our_Forests\get_the_content( do_shortcode( $copyright_text ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 	}
 }
 

@@ -174,7 +174,7 @@ function display_customizer_header_scripts() {
 
 	// Otherwise, echo the scripts!
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-	echo our_forests_get_the_content( $scripts );
+	echo Our_Forests\get_the_content( $scripts );
 }
 add_action( 'wp_head', __NAMESPACE__ . '\display_customizer_header_scripts', 999 );
 
@@ -196,7 +196,7 @@ function display_customizer_footer_scripts() {
 
 	// Otherwise, echo the scripts!
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-	echo our_forests_get_the_content( $scripts );
+	echo Our_Forests\get_the_content( $scripts );
 }
 add_action( 'wp_footer', __NAMESPACE__ . '\display_customizer_footer_scripts', 999 );
 
