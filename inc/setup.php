@@ -69,18 +69,6 @@ function our_forests_setup() {
 		)
 	);
 
-	// Custom logo support.
-	// add_theme_support(
-	// 	'custom-logo',
-	// 	array(
-	// 		'height'      => 55,
-	// 		'width'       => 180,
-	// 		'flex-height' => true,
-	// 		'flex-width'  => true,
-	// 		'header-text' => array( 'site-title', 'site-description' ),
-	// 	)
-	// );
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -96,20 +84,6 @@ function our_forests_setup() {
 	add_theme_support( 'responsive-embeds' );
 }
 add_action( 'after_setup_theme', 'our_forests_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- *
- * @author WebDevStudios
- */
-function our_forests_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'our_forests_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'our_forests_content_width', 0 );
 
 /**
  * Register widget area.
