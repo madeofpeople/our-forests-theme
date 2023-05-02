@@ -2,7 +2,7 @@
 /**
  * Theme setup.
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
@@ -14,16 +14,16 @@
  *
  * @author WebDevStudios
  */
-function the_territory_setup() {
+function our_forests_setup() {
 	/**
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on The Territory, use a find and replace
-	 * to change 'the-territory' to the name of your theme in all the template files.
+	 * to change 'our-forests' to the name of your theme in all the template files.
 	 * You will also need to update the Gulpfile with the new text domain
 	 * and matching destination POT file.
 	 */
-	load_theme_textdomain( 'the-territory', get_template_directory() . '/build/languages' );
+	load_theme_textdomain( 'our-forests', get_template_directory() . '/build/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -47,10 +47,10 @@ function the_territory_setup() {
 	// Register navigation menus.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'the-territory' ),
-			'footer'  => esc_html__( 'Footer Menu', 'the-territory' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'the-territory' ),
-			'kawahiva' => esc_html__( 'Kawahiva Menu', 'the-territory' ),
+			'primary'  => esc_html__( 'Primary Menu', 'our-forests' ),
+			'footer'   => esc_html__( 'Footer Menu', 'our-forests' ),
+			'mobile'   => esc_html__( 'Mobile Menu', 'our-forests' ),
+			'kawahiva' => esc_html__( 'Kawahiva Menu', 'our-forests' ),
 		)
 	);
 
@@ -69,18 +69,6 @@ function the_territory_setup() {
 		)
 	);
 
-	// Custom logo support.
-	// add_theme_support(
-	// 	'custom-logo',
-	// 	array(
-	// 		'height'      => 55,
-	// 		'width'       => 180,
-	// 		'flex-height' => true,
-	// 		'flex-width'  => true,
-	// 		'header-text' => array( 'site-title', 'site-description' ),
-	// 	)
-	// );
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -94,22 +82,18 @@ function the_territory_setup() {
 
 	// Gutenberg responsive embed support.
 	add_theme_support( 'responsive-embeds' );
-}
-add_action( 'after_setup_theme', 'the_territory_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- *
- * @author WebDevStudios
- */
-function the_territory_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'the_territory_content_width', 640 );
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 200,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
-add_action( 'after_setup_theme', 'the_territory_content_width', 0 );
+add_action( 'after_setup_theme', 'our_forests_setup' );
 
 /**
  * Register widget area.
@@ -118,13 +102,14 @@ add_action( 'after_setup_theme', 'the_territory_content_width', 0 );
  *
  * @author WebDevStudios
  */
-function the_territory_widgets_init() {
+function our_forests_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'header-notice'  => esc_html__( 'Header Notice', 'the-territory' ),
-		'content-bottom' => esc_html__( 'Content Bottom', 'the-territory' ),
-		'footer'         => esc_html__( 'Footer', 'the-territory' ),
+		'header-notice'  => esc_html__( 'Header Notice', 'our-forests' ),
+		'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
+		'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
+		'footer'         => esc_html__( 'Footer', 'our-forests' ),
 	);
 
 	// Loop through each sidebar and register.
@@ -133,7 +118,7 @@ function the_territory_widgets_init() {
 			array(
 				'name'          => $sidebar_name,
 				'id'            => $sidebar_id,
-				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'the-territory' ), $sidebar_name ),
+				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'our-forests' ), $sidebar_name ),
 				'before_widget' => 'header-notice' === $sidebar_id ? '<div class="header-notice %2$s">' : '<div class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -143,4 +128,4 @@ function the_territory_widgets_init() {
 	}
 
 }
-add_action( 'widgets_init', 'the_territory_widgets_init' );
+add_action( 'widgets_init', 'our_forests_widgets_init' );

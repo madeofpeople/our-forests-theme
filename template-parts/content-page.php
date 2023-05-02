@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 ?>
@@ -23,11 +23,11 @@
 
 		<div class="entry-content">
 			<?php
-				the_territory_the_content( array( 'site-functionality/page-header' ) );
+				our_forests_the_content( array( 'site-functionality/page-header' ) );
 
 				wp_link_pages(
 					[
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-territory' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'our-forests' ),
 						'after'  => '</div>',
 					]
 				);
@@ -40,7 +40,7 @@
 					edit_post_link(
 						sprintf(
 							/* translators: %s: Name of current post */
-							esc_html__( 'Edit %s', 'the-territory' ),
+							esc_html__( 'Edit %s', 'our-forests' ),
 							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						),
 						'<span class="edit-link">',

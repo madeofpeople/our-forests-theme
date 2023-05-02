@@ -2,7 +2,7 @@
 /**
  * Backwards compatibility fills for older WP versions.
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
