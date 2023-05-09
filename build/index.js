@@ -2762,9 +2762,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./templates */ "./src/js/templates/index.js");
 /* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_templates__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _blocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks */ "./src/js/blocks/index.js");
-/* harmony import */ var _territory_mobile_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./territory/mobile-menu */ "./src/js/territory/mobile-menu.js");
-/* harmony import */ var _territory_mobile_menu__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_territory_mobile_menu__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _territory_parallax__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./territory/parallax */ "./src/js/territory/parallax.js");
+/* harmony import */ var _our_forests_translate_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./our-forests/translate-menu */ "./src/js/our-forests/translate-menu.js");
+/* harmony import */ var _our_forests_translate_menu__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_our_forests_translate_menu__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _our_forests_parallax__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./our-forests/parallax */ "./src/js/our-forests/parallax.js");
 /**
  * Site JS
  */
@@ -2774,7 +2774,87 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import './our-forests/mobile-menu';
 
+
+
+/***/ }),
+
+/***/ "./src/js/our-forests/parallax.js":
+/*!****************************************!*\
+  !*** ./src/js/our-forests/parallax.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jarallax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jarallax */ "./node_modules/jarallax/dist/jarallax.esm.js");
+
+
+if (
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
+) {
+	initParallaxSections();
+} else {
+	document.addEventListener( 'DOMContentLoaded', initParallaxSections );
+}
+
+const jarallaxParams = {
+	type: 'scroll',
+	speed: 0.85,
+	imgSize: 'cover',
+	imgPosition: '50% 50%',
+};
+
+function initParallaxSections() {
+	const parentSelector = '.wp-block-cover.lax';
+	const imageSelector = 'img';
+	const parallaxSections = document.querySelectorAll( parentSelector );
+	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
+		parallaxSections.forEach( function ( el ) {
+			el.classList.add( 'jarallax' );
+			el.querySelector( imageSelector ).classList.add( 'jarallax-img' );
+		} );
+		(0,jarallax__WEBPACK_IMPORTED_MODULE_0__.jarallax)( parallaxSections, jarallaxParams );
+	}
+}
+
+
+/***/ }),
+
+/***/ "./src/js/our-forests/translate-menu.js":
+/*!**********************************************!*\
+  !*** ./src/js/our-forests/translate-menu.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const initTranslateMenu = () => {
+	const tm = document.getElementById( 'translate_menu' );
+	document.body.addEventListener( 'click', ( e ) => {
+		const clickedElement = e.target;
+		if ( ! clickedElement.closest( '.translate_menu' ) ) {
+			tm.classList.remove( 'open' );
+		}
+	} );
+	tm.querySelector( '.open-lang-menu' ).addEventListener( 'click', ( e ) => {
+		e.preventDefault();
+		tm.classList.toggle( 'open' );
+	} );
+};
+
+if (
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
+) {
+	initTranslateMenu();
+} else {
+	document.addEventListener( 'DOMContentLoaded', function () {
+		initTranslateMenu();
+	} );
+}
 
 
 /***/ }),
@@ -3200,95 +3280,6 @@ function wdsModals() {
  */
 
 // import './template-name';
-
-
-/***/ }),
-
-/***/ "./src/js/territory/mobile-menu.js":
-/*!*****************************************!*\
-  !*** ./src/js/territory/mobile-menu.js ***!
-  \*****************************************/
-/***/ (() => {
-
-if (
-	( 'complete' === document.readyState ||
-		'loading' !== document.readyState ) &&
-	! document.documentElement.doScroll
-) {
-	initializeMobileMenu();
-} else {
-	document.addEventListener( 'DOMContentLoaded', initializeMobileMenu );
-}
-
-function initializeMobileMenu() {
-	const mobileMenu = document.querySelector(
-		'.nav--primary .main-navigation'
-	);
-	const mobileMenuToggle = document.querySelector( '.menu__toggle' );
-	const mobileMenuInnerToggle = mobileMenu.querySelector(
-		'.menu__inner-toggle'
-	);
-	const mobileMenuUnderlay = document.querySelector( '.menu__underlay' );
-	mobileMenuToggle.addEventListener( 'click', ( e ) => {
-		e.preventDefault();
-		mobileMenu.classList.toggle( 'open' );
-		mobileMenuUnderlay.classList.toggle( 'visible' );
-	} );
-	mobileMenuInnerToggle.addEventListener( 'click', ( e ) => {
-		e.preventDefault();
-		mobileMenu.classList.remove( 'open' );
-		mobileMenuUnderlay.classList.remove( 'visible' );
-	} );
-	mobileMenuUnderlay.addEventListener( 'click', ( e ) => {
-		e.preventDefault();
-		mobileMenuUnderlay.classList.remove( 'visible' );
-		mobileMenu.classList.remove( 'open' );
-	} );
-}
-
-
-/***/ }),
-
-/***/ "./src/js/territory/parallax.js":
-/*!**************************************!*\
-  !*** ./src/js/territory/parallax.js ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jarallax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jarallax */ "./node_modules/jarallax/dist/jarallax.esm.js");
-
-
-if (
-	( 'complete' === document.readyState ||
-		'loading' !== document.readyState ) &&
-	! document.documentElement.doScroll
-) {
-	initParallaxSections();
-} else {
-	document.addEventListener( 'DOMContentLoaded', initParallaxSections );
-}
-
-const jarallaxParams = {
-	type: 'scroll',
-	speed: 0.85,
-	imgSize: 'cover',
-	imgPosition: '50% 50%',
-};
-
-function initParallaxSections() {
-	const parentSelector = '.wp-block-cover.lax';
-	const imageSelector = 'img';
-	const parallaxSections = document.querySelectorAll( parentSelector );
-	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
-		parallaxSections.forEach( function ( el ) {
-			el.classList.add( 'jarallax' );
-			el.querySelector( imageSelector ).classList.add( 'jarallax-img' );
-		} );
-		(0,jarallax__WEBPACK_IMPORTED_MODULE_0__.jarallax)( parallaxSections, jarallaxParams );
-	}
-}
 
 
 /***/ }),

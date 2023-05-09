@@ -6,5 +6,6 @@ import './global';
 import './template-tags';
 import './templates';
 import './blocks';
-import './territory/mobile-menu';
-import './territory/parallax';
+import './our-forests/translate-menu';
+// import './our-forests/mobile-menu';
+import './our-forests/parallax';
