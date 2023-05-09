@@ -94,7 +94,7 @@
 
 				<div class="menu__underlay"></div>
 
-			</div><!-- .container -->
+			</div><!-- .nav--primary -->
 
 			<?php
 			if ( \has_block( 'site-functionality/page-header' ) ) :
@@ -105,6 +105,5 @@
 			?>
 
 		</header><!-- .site-header-->
-
 
 		<?php do_action( 'after_header' ); ?>
