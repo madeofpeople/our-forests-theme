@@ -3,7 +3,8 @@ const options = {
 };
 
 const initScrollSpy = () => {
-	const selectors = '.hero';
+	const selectors =
+		'.site-footer .widget_block > section, .entry-content > section';
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.page-nav' );
 	let activeItem = null;
@@ -18,11 +19,14 @@ const initScrollSpy = () => {
 				activeItem.classList.remove( 'active' );
 			}
 
-			activeItem = pageNav.querySelector(
-				`a[href="#${
-					el.querySelector( '.wp-block-button__link' ).id
-				}"]`
-			);
+			const heading = el.querySelector( 'h2' );
+
+			if ( heading ) {
+				console.log( '»»»»»»', heading.id );
+				activeItem = pageNav.querySelector(
+					`a[href="#${ heading.id }"]`
+				);
+			}
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
 		}
@@ -35,18 +39,8 @@ const initScrollSpy = () => {
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
-				if ( entry.target.classList.contains( 'page-nav' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.add( 'alt-top' );
-				}
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				if ( entry.target.classList.contains( 'page-nav' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.remove( 'alt-top' );
-				}
 			}
 		} );
 	};

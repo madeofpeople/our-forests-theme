@@ -1,13 +1,2 @@
 @import 'global';
 @import 'environment/typography';
-
-.is-root-container {
-	max-width: 938px;
-	margin: 0 auto;
-}
-
-.btn-primary,
-.wp-block-button__link {
-	color: white !important;
-	background-color:black !important;
-}

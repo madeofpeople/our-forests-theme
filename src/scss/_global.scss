@@ -6,15 +6,13 @@
 @import 'environment/layout';
 
 @import 'components/button';
-@import 'components/connect';
-@import 'components/our-goals';
 @import 'components/social-grid';
 
 %grid-four {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-column-gap: get-spacing(0.5);
-	grid-row-gap: get-spacing(0.5);
+	grid-column-gap: spacing(sm);
+	grid-row-gap: spacing(sm);
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr;
@@ -22,8 +20,8 @@
 
 	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-column-gap: get-spacing();
-		grid-row-gap: get-spacing();
+		grid-column-gap:  spacing(md);
+		grid-row-gap:  spacing(md);
 		}
 
 	@media ( min-width: bp(md) ) {
@@ -38,13 +36,13 @@
 %grid-three {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-column-gap: get-spacing(0.5);
-	grid-row-gap: get-spacing(0.5);
+	grid-column-gap:  spacing(sm);
+	grid-row-gap:  spacing(sm);
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr;
-		grid-column-gap: get-spacing();
-		grid-row-gap: get-spacing();
+		grid-column-gap:  spacing(md);
+		grid-row-gap:  spacing(md);
 	}
 
 	@media ( min-width: bp(sm) ) {

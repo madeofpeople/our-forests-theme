@@ -1,43 +1,17 @@
 @use 'sass:map';
 
-.btn-primary,
-.wp-block-button__link {
+:where(.wp-block-button__link) {
 	font-size: map.get($font-sizes, h5);
     border: none;
-    border-radius: 2px;
     outline: none;
-    color: color('white');
     text-transform: uppercase;
     font-size: map.get($font-sizes, h4);
-	padding: get-spacing(0.25) get-spacing(0.5);
+	padding: spacing(sm);
+	border-radius: 0;
 	&:hover,
 	&:focus {
 		background-color: white;
-	}
-
-	.is-style-outline &,
-	&.is-style-outline {
-		border: color('green') 3px solid;
-		color: white;
+		color: color('grey-dark');
+		border-radius: 0;
 	}
 }
-
-%button-green {
-
-	display: block;
-	border: color('green') 2px solid;
-	background-color: color(green-dark);
-	color: color('white');
-	line-height: 1.75;
-
-	padding: get-spacing(0.25) get-spacing(0.5);
-	transition-property: border-color, color, background-color;
-	transition-duration: .75s;
-	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
-	&:hover,
-	&:focus {
-		background-color: color('green');
-		color: color('black');
-	}
-}
-

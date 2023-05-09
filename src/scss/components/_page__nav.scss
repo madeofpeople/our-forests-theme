@@ -12,26 +12,16 @@
 		width: 100%;
 	}
 
-	.wp-block-button {
-
-	}
-
-	a {
+	.wp-element-button {
 		font-family: hauslan;
 		font-size: map.get($font-sizes, h5) !important;
 		letter-spacing: 0.0825rem;
 	}
 
-	// .menu-item {
-	// 	flex-grow: 1;
-	// 	background-color: color('black');
-	// 	.wp-block-button__link  {
-	// 		display: block;
-	// 		border: none;
-	// 		font-size: map.get($font-sizes, h4);
-	// 		padding: get-spacing(0.125);
-	// 	}
-	// }
+	.wp-element-button.active {
+		background-color: color('white');
+		color: color(grey-dark);
+	}
 }
 
 .hero {
@@ -49,24 +39,11 @@
 		}
 
 		.wp-block-button {
-
-		}
-
-		a {
 			font-family: hauslan;
-			font-size: map.get($font-sizes, h5) !important;
 			letter-spacing: 0.0825rem;
-			padding: 1rem 1rem;
 			border-radius: 0;
 			&:hover {
-				color: color(grey-dark);
-			}
-		}
-
-		@media (min-width: bp(md) ) {
-			top: 4.5rem;
-			.admin-bar & {
-				top: 6.5rem;
+				color: color(grey-dark) !important;
 			}
 		}
 	}
@@ -75,6 +52,10 @@
 		.page-nav .wp-block-buttons {
 			position: fixed;
 			top: 0;
+
+			.admin-bar & {
+				top: 2rem;
+			}
 		}
 	}
 
@@ -82,8 +63,6 @@
 		.page-nav .wp-block-buttons {
 			position: static;
 			top: 0;
-			padding-left: get-spacing(0.5);
-			padding-right: get-spacing(0.5);
 		}
 	}
 }

@@ -2,11 +2,11 @@
 	display: grid;
 	background-color: color(green-dark);
 	color: color('white');
-	padding: get-spacing(0.5);
+	padding: spacing(md);
 
 	@media ( min-width: bp(sm) ) {
 		grid-template-columns: 1fr 1fr;
-		padding: get-spacing();
+		padding:  spacing(md);
 	}
 
 	.wp-block-group {
@@ -17,7 +17,7 @@
 	}
 
 	.newsletter__content {
-		padding-right: get-spacing(1);
+		padding-right: spacing(lg);
 	}
 
 	.yikes-easy-mc-form {

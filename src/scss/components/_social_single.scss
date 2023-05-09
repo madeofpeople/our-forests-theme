@@ -1,23 +1,18 @@
 .single-social {
 
 	.section {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		margin-bottom: get-spacing(1);
+		padding-left: spacing(md);
+		padding-right: spacing(md);
+		margin-bottom: spacing(lg);
 
 		> p {
 			padding-left: 0;
 			padding-right: 0;
 		}
 		.social-image-grid {
-			margin-top: get-spacing();
-			margin-bottom: get-spacing();
+			margin-top: spacing(md);
+			margin-bottom: spacing(md);
 			@extend %grid-four;
-		}
-
-		.wp-block-button__link {
-			@extend %button-green;
-			display: inline-block;
 		}
 	}
 }

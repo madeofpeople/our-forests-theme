@@ -1,7 +1,5 @@
 @use 'sass:map';
 
-$space: get-spacing();
-
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -14,7 +12,7 @@ main {
     max-width: 1600px;
 	min-height: 50vh;
     margin: 0 auto;
-    background-color: color('white');
+    background-color: color('green-dark');
 }
 
 .page-template-default .entry-title,
@@ -22,17 +20,9 @@ main {
 	@extend %screen-reader-text;
 }
 
-
 .page {
 	.entry-content {
-		padding-bottom: get-spacing();
-	}
-}
-
-.page-press,
-.page.home {
-	.entry-content {
-		padding-bottom: 0;
+		padding-bottom: spacing('xl');
 	}
 }
 
@@ -42,75 +32,89 @@ main {
 		font-size: map.get($font-sizes, h1);
 	}
 	.entry-header {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
+		padding-left: spacing(md);
+		padding-right: spacing(md);
 		font-size: map.get($font-sizes, h1);
 	}
 }
 
-.section.engage-amplify {
-	padding-bottom: get-spacing();
+%forest {
+	max-width: 37rem;
+	background-color: color('grey-dark');
+	color: color('white');
+	figure {
+		margin-bottom: 0.5rem;
+	}
 }
 
-.schedule-screening__intro {
-	font-size: map.get($font-sizes, h4);
-	font-weight: 400;
+%defender-person {
+	width: 400px;
+	background-color: color('white');
+	figure {
+		margin-bottom: 0.5rem;
+	}
 }
 
-.section.demand-change {
-	.section.support {
-		.wp-block-cover {
-			padding-top: 30rem;
-			.content {
-				padding: 0.5 * $space;
-				background-color: rgba( color( 'black' ), 0.8);
-				margin-bottom: 0.5 * $space;
-				color:  color( 'white' );
-			}
+.entry-content > section {
+	min-height: 100vh;
+}
+
+.defender {
+	background-color: color('white');
+	padding: spacing(md);
+	> .wp-block-group {
+		display: flex;
+		justify-content: space-between;
+		> .wp-block-group {
+			padding: spacing(md);
 		}
 	}
 }
 
-.section {
-	> .learn-more__content,
-	> .donate-touts,
-	> p,
-	> h3,
-	> h4,
-	> .lede {
-		padding-left: get-spacing(0.5);
-		padding-right: get-spacing(0.5);
-		@media ( min-width: bp(sm) ) {
-			padding-left: get-spacing();
-			padding-right: get-spacing();
-		}
+.defender:nth-child(even) {
+	> .wp-block-group > .wp-block-group:nth-child(1) {
+		@extend %defender-person;
+	}
+	> .wp-block-group > .wp-block-group:nth-child(2) {
+		@extend %forest;
 	}
 }
 
-// .svg-sprite-wrapper {
-// 	position: fixed;
-// 	top: 0;
-// 	left: -100vw;
-// }
-
-
-.lax {
-	@media ( min-width: bp(sm) ) {
-		min-height: 550px;
+.defender:nth-child(odd) {
+	> .wp-block-group > .wp-block-group:nth-child(1) {
+		@extend %forest;
 	}
+	> .wp-block-group > .wp-block-group:nth-child(2) {
+		@extend %defender-person;
+	}
+}
+
+.hero {
+	.intro {
+		color: #fff;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+section#amplify,
+section#drive,
+section#support {
+	padding: spacing(xl);
+	background-color: color('white');
 }
 
 .page-template-template-base-page,
 .error404,
 .privacy-policy {
 	.error-404 {
-		padding-top: get-spacing();
+		padding-top: spacing(md);
 	}
 	.error-404,
 	.entry-content {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		padding-bottom: get-spacing();
+		padding-left: spacing(md);
+		padding-right: spacing(md);
+		padding-bottom: spacing(md);
 
 		h1,
 		h2,
@@ -121,30 +125,11 @@ main {
 			font-size: map.get($font-sizes, h4) !important;
 		}
 		p {
-			margin-bottom: get-spacing();
+			margin-bottom:  spacing(sm);
 		}
 	}
 }
 
 article.type-page {
 	overflow: hidden;
-}
-
-
-.page-donate-to-kaninde,
-.page-donate-to-the-uru-eu-wau-wau {
-
-	.wp-block-buttons {
-
-		padding-left: 2.768rem;
-
-		.wp-block-button__link {
-
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: color(green-mid);
-			}
-		}
-	}
 }

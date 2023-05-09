@@ -1,11 +1,11 @@
 .wp-block-site-functionality-social-cards {
 	@extend %grid-three;
 
-	padding-left: get-spacing(0.5);
-	padding-right: get-spacing(0.5);
+	padding-left: spacing(md);
+	padding-right: spacing(md);
 	@media ( min-width: bp(sm) ) {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
+		padding-left: spacing(md);
+		padding-right: spacing(md);
 	}
 
 	ul {
@@ -72,16 +72,16 @@
 			display: flex;
 			justify-content: space-between;
 			background-color: color('white');
-			padding: get-spacing(0.25);
-			border-radius: get-spacing(0.25);
+			padding:  spacing(sm);
+			border-radius: 0.25rem;
 			transform: translate(-50%, -50%);
 			transition-property: bottom;
 			transition-duration: 0.325s;
 			transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 			li:nth-child(2n) {
-				padding-left: get-spacing(0.25);
-				padding-right: get-spacing(0.25);
+				padding-left: spacing(sm);
+				padding-right:  spacing(sm);
 			}
 
 			svg {
@@ -91,8 +91,8 @@
 
 			@media ( min-width: bp(md) ) {
 				li:nth-child(2n) {
-					padding-left: get-spacing(0.5);
-					padding-right: get-spacing(0.5);
+					padding-left:  spacing(md);
+					padding-right:  spacing(md);
 				}
 				svg {
 					width: 2rem;

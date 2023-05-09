@@ -14,14 +14,7 @@ $font-sizes: (
 	'h4': 1.563rem,
 	'h3': 1.953rem,
 	'h2': 2.441rem,
-	'h1': 3.052rem,
-);
-
-$spacings: (
-	'sm': 22px,
-	'md': 33px,
-	'lg': 55px,
-	'xl': 66px,
+	'h1': 5.96rem,
 );
 
 $body-font: 'Source Sans Pro', sans-serif;
@@ -45,6 +38,12 @@ h5 {
     font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
+}
+
+h1 {
+	font-size: map.get($font-sizes, h1);
+	color: color(white);
+	margin-bottom: 1rem;
 }
 
 h2 {
@@ -88,23 +87,22 @@ h3 {
 .entry-content > .section:not(.learn-more-message) > h2 {
     text-transform: uppercase;
 	font-size: map.get($font-sizes, h3);
-	margin-top: get-spacing(0.5) ;
-	margin-bottom: get-spacing(0.5);
+	margin-top: spacing(md);
+	margin-bottom: spacing(md);
 	@media ( min-width: bp(sm) ) {
 		font-size: map.get($font-sizes, h2);
-		margin-top: get-spacing() ;
-		margin-bottom: get-spacing(0.5);
+		margin-top: spacing(md);
+		margin-bottom: spacing(md);
 	}
 	&::before {
 		content: '';
-		margin-right: get-spacing() * .75;
-		border-left: (get-spacing() * .25) color(green-mid) solid;
+		margin-right: spacing(md);
 	}
 }
 
 .section > h3 {
 	color: color(green-mid);
-	margin-top: get-spacing();
+	margin-top: spacing(md);
 }
 
 .lede {

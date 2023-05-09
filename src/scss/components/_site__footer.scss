@@ -7,51 +7,14 @@
 		}
 	}
 
-	.btn-primary {
-		border-radius: 0;
-		@extend %button-green;
-	}
-
 	h3 {
 		margin-top: 0;
 	}
+
 	.wp-block-columns {
 		margin-bottom: 0;
 	}
-	.footer__content {
-		.wp-block-columns {
-			padding-left: get-spacing(0.5);
-			padding-right: get-spacing(0.5);
-			@media ( min-width: bp(sm) ) {
-				padding-left: get-spacing();
-				padding-right: get-spacing();
-			}
-		}
-	}
-}
 
-#site-footer-navigation {
-	background-color: color('black');
-	padding-left: get-spacing(0.5);
-	padding-right: get-spacing(0.5);
-	padding-bottom: get-spacing(0.25);
-	@media ( min-width: bp(sm) ) {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		padding-bottom: get-spacing(0.5);
-	}
-	font-size: 0.875rem;
-	nav {
-		margin-top: 0;
-		padding-top: 0;
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-			margin: 0;
-			padding: 0;
-			display: inline-block;
-		}
+	.footer__content {
 	}
 }
