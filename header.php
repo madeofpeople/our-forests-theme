@@ -48,7 +48,7 @@
 							<?php
 						elseif( has_custom_logo() ) :
 							?>
-							
+
 							<?php the_custom_logo(); ?>
 
 							<?php
@@ -61,11 +61,12 @@
 							<?php
 						endif;
 						?>
-					
+
 					</h1>
 
 					<?php
-					if ( $description || is_customize_preview() ) :
+	 					$description = get_bloginfo( 'description', 'display' );
+	 					if ( $description || is_customize_preview() ) :
 						?>
 						<p class="site-description"><?php echo esc_html( $description ); ?></p>
 					<?php endif; ?>
