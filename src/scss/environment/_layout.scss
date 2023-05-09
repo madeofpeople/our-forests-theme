@@ -59,31 +59,60 @@ main {
 	min-height: 100vh;
 }
 
-.defender {
-	background-color: color('white');
-	padding: spacing(md);
-	> .wp-block-group {
+.wp-block-site-functionality-defender {
+	display: flex;
+	justify-content: space-between;
+
+	.row {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		padding: spacing(md);
+	}
+
+	.defender__profile {
+		padding: spacing(md);
+	}
+
+	.defender__forest {
+		padding: spacing(md);
+	}
+}
+
+
+.defender {
+
+	background-color: color('white');
+	padding: spacing(md);
+
+	> .wp-block-group {
+
+		display: flex;
+		justify-content: space-between;
+
 		> .wp-block-group {
 			padding: spacing(md);
 		}
 	}
 }
 
-.defender:nth-child(even) {
-	> .wp-block-group > .wp-block-group:nth-child(1) {
+.wp-block-site-functionality-defender:nth-child(even) {
+
+	.defender__profile {
 		@extend %defender-person;
 	}
-	> .wp-block-group > .wp-block-group:nth-child(2) {
+
+	.defender__forest {
 		@extend %forest;
 	}
 }
 
 .defender:nth-child(odd) {
+
 	> .wp-block-group > .wp-block-group:nth-child(1) {
 		@extend %forest;
 	}
+
 	> .wp-block-group > .wp-block-group:nth-child(2) {
 		@extend %defender-person;
 	}
