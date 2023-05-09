@@ -2,7 +2,6 @@
 
 .btn-primary,
 .wp-block-button__link {
-	@include acumin;
 	font-size: map.get($font-sizes, h5);
     border: none;
     border-radius: 2px;

@@ -2,28 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
-    font-family: pragmatica--bold;
-    src: url('../fonts/pragmatica--bold.woff2') format('woff2'),
-        url('../fonts/pragmatica--bold.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-    font-family: acumin-extra-condensed--bold;
-    src: url('../fonts/acumin-extra-condensed--bold.woff2') format('woff2'),
-        url('../fonts/acumin-extra-condensed--bold.woff') format('woff');
+    font-family: hauslan;
+    src: url('../fonts/hauslan.woff2') format('woff2'),
+        url('../fonts/hauslan.woff') format('woff');
 	font-display: swap;
 }
 
 $font-sizes: (
 	'body': 1rem,
-	'h5': 1.2rem,
-	'h4': 1.44rem,
-	'h3': 1.728rem,
-	'h2': 2.074rem,
-	'h1': 2.448rem,
-	'lede': 1.2rem,
-	'huge': 4rem
+	'h5': 1.25rem,
+	'h4': 1.563rem,
+	'h3': 1.953rem,
+	'h2': 2.441rem,
+	'h1': 3.052rem,
+);
+
+$spacings: (
+	'sm': 22px,
+	'md': 33px,
+	'lg': 55px,
+	'xl': 66px,
 );
 
 $body-font: 'Source Sans Pro', sans-serif;
@@ -44,7 +42,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: pragmatica--bold, sans-serif;
+    font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
 }
@@ -60,21 +58,21 @@ h3 {
 
 @mixin h2 {
 	font-size: map.get($font-sizes, h2);
-    font-family: pragmatica--bold, sans-serif;
+    font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
 }
 
 @mixin h3 {
 	font-size: map.get($font-sizes, h3);
-	font-family: pragmatica--bold, sans-serif;
+	font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
 }
 
 @mixin h4 {
 	font-size: map.get($font-sizes, h4);
-    font-family: pragmatica--bold, sans-serif;
+    font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
 }
@@ -82,15 +80,9 @@ h3 {
 
 @mixin h5 {
 	font-size: map.get($font-sizes, h5);
-    font-family: pragmatica--bold, sans-serif;
+    font-family: hauslan, sans-serif;
     text-transform: uppercase;
 	line-height: 1.2;
-}
-
-@mixin acumin {
-	font-family: acumin-extra-condensed--bold, sans-serif;
-	font-weight: 400;
-	letter-spacing: 1px;
 }
 
 .entry-content > .section:not(.learn-more-message) > h2 {

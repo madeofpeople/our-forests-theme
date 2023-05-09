@@ -46,7 +46,6 @@
 			position: absolute;
 			bottom: get-spacing(0.5);
 			color: color('white');
-			@include acumin;
 			font-size: map.get($font-sizes, h3);
 			margin-bottom: 0;
 			transition-property: box-shadow;

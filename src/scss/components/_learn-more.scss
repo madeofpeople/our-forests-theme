@@ -15,7 +15,6 @@ $spacing: get-spacing();
 	}
 
 	> h2 {
-		@include acumin;
 		color: color('white');
 		margin-top: 0;
 		margin-bottom: 0;

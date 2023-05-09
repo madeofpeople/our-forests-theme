@@ -35,7 +35,6 @@
 		.press {
 			.post-title {
 				margin: 0;
-				@include acumin;
 				a {
 					color: color('black');
 					text-decoration: none;
@@ -57,7 +56,6 @@
 		color: color('white');
 		&::before {
 			content: '»';
-			@include acumin;
 			font-size: map.get($font-sizes, h4);
 			width: get-spacing(0.75);
 			height: get-spacing(0.75);

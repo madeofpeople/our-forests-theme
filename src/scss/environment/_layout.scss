@@ -40,17 +40,12 @@ main {
 .page-template-template-base-page {
 	.page-title {
 		font-size: map.get($font-sizes, h1);
-		@include acumin;
 	}
 	.entry-header {
 		padding-left: get-spacing();
 		padding-right: get-spacing();
 		font-size: map.get($font-sizes, h1);
-		@include acumin;
-		.entry-title {
-			@include acumin;
 	}
-}
 }
 
 .section.engage-amplify {
@@ -58,7 +53,6 @@ main {
 }
 
 .schedule-screening__intro {
-	@include acumin;
 	font-size: map.get($font-sizes, h4);
 	font-weight: 400;
 }

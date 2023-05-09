@@ -2,60 +2,64 @@
 
 @mixin page__nav--small {
 	z-index: 250;
-	// max-width: 1600px;
 	width: 100%;
 	padding: 0;
 	gap: 0;
-	// box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-	background-color: color(green-dark);
-	.menu-item {
-		flex-grow: 1;
-		background-color: color('black');
-		.wp-block-button__link  {
-			display: block;
-			border: none;
-			font-size: map.get($font-sizes, h4);
-			padding: get-spacing(0.125);
-		}
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+
+	.wp-block-buttons {
+		display: flex;
+		width: 100%;
 	}
-}
 
-	// .page__nav {
-	// 	border: 2px #f00 solid;
-	// 	display: flex;
-	// 	padding: get-spacing(0.5);
-	// 	// background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
-	// 	transition-property: top;
-	// 	transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-	// 	transition-duration: 0.7s;
-	// 	transition-delay: 0;
+	.wp-block-button {
 
-	// 	.wp-block-button__link {
-	// 		background-color: color('green-dark');
-	// 		@include acumin;
-	// 		text-transform: uppercase;
-	// 		border: 1px color('white') solid;
-	// 		&.active {
-	// 			background-color: color('green');
-	// 			color: color('black');
-	// 			border-radius: 0;
-	// 		}
+	}
+
+	a {
+		font-family: hauslan;
+		font-size: map.get($font-sizes, h5) !important;
+		letter-spacing: 0.0825rem;
+	}
+
+	// .menu-item {
+	// 	flex-grow: 1;
+	// 	background-color: color('black');
+	// 	.wp-block-button__link  {
+	// 		display: block;
+	// 		border: none;
+	// 		font-size: map.get($font-sizes, h4);
+	// 		padding: get-spacing(0.125);
 	// 	}
 	// }
-
+}
 
 .hero {
 
-	.page__nav {
+	.page-nav {
 
+		background-color: transparent !important;
+		height: 53px;
 		@include page__nav--small;
-		z-index: 50000;
-		background-color: #333;
 
-		.menu-item {
-			a {
-				@include acumin;
-				font-size: map.get($font-sizes, h5) !important;
+		.wp-block-buttons {
+			display: flex;
+			background-color: color(grey-dark);
+			z-index: 50000;
+		}
+
+		.wp-block-button {
+
+		}
+
+		a {
+			font-family: hauslan;
+			font-size: map.get($font-sizes, h5) !important;
+			letter-spacing: 0.0825rem;
+			padding: 1rem 1rem;
+			border-radius: 0;
+			&:hover {
+				color: color(grey-dark);
 			}
 		}
 
@@ -68,27 +72,19 @@
 	}
 
 	&.out-of-view {
-		.page__nav {
+		.page-nav .wp-block-buttons {
 			position: fixed;
-			top: 2rem;
+			top: 0;
 		}
 	}
 
 	&.in-view {
-		.page__nav {
+		.page-nav .wp-block-buttons {
 			position: static;
 			top: 0;
 			padding-left: get-spacing(0.5);
 			padding-right: get-spacing(0.5);
 		}
-	}
-}
-
-.wp-block-cover__inner-container {
-	border: 1rem #fc0 solid;
-	position: absolute;
-	.page__nav {
-		@include page__nav--small;
 	}
 }
 

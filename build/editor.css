@@ -10,13 +10,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/editor.scss (2) ***!
   \*****************************************************************************************************************************************************************************************************************/
 @font-face {
-  font-family: pragmatica--bold;
-  src: url(fonts/pragmatica--bold.woff2) format("woff2"), url(fonts/pragmatica--bold.woff) format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: acumin-extra-condensed--bold;
-  src: url(fonts/acumin-extra-condensed--bold.woff2) format("woff2"), url(fonts/acumin-extra-condensed--bold.woff) format("woff");
+  font-family: hauslan;
+  src: url(fonts/hauslan.woff2) format("woff2"), url(fonts/hauslan.woff) format("woff");
   font-display: swap;
 }
 html,
@@ -32,29 +27,29 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: pragmatica--bold, sans-serif;
+  font-family: hauslan, sans-serif;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.074rem;
+  font-size: 2.441rem;
   color: var(--wp--preset--color--green-mid);
 }
 
 h3 {
-  font-size: 1.728rem;
+  font-size: 1.953rem;
 }
 
 .entry-content > .section:not(.learn-more-message) > h2 {
   text-transform: uppercase;
-  font-size: 1.728rem;
+  font-size: 1.953rem;
   margin-top: 1.4134375rem;
   margin-bottom: 1.4134375rem;
 }
 @media (min-width: 750px) {
   .entry-content > .section:not(.learn-more-message) > h2 {
-    font-size: 2.074rem;
+    font-size: 2.441rem;
     margin-top: 2.826875rem;
     margin-bottom: 1.4134375rem;
   }
@@ -71,7 +66,6 @@ h3 {
 }
 
 .lede {
-  font-size: 1.2rem;
   max-width: 60em;
 }
 
@@ -113,25 +107,13 @@ main {
 
 .error404 .page-title,
 .page-template-template-base-page .page-title {
-  font-size: 2.448rem;
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 3.052rem;
 }
 .error404 .entry-header,
 .page-template-template-base-page .entry-header {
   padding-left: 2.826875rem;
   padding-right: 2.826875rem;
-  font-size: 2.448rem;
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-.error404 .entry-header .entry-title,
-.page-template-template-base-page .entry-header .entry-title {
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 3.052rem;
 }
 
 .section.engage-amplify {
@@ -139,10 +121,7 @@ main {
 }
 
 .schedule-screening__intro {
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 1.44rem;
+  font-size: 1.563rem;
   font-weight: 400;
 }
 
@@ -224,7 +203,7 @@ main {
 .error404 .entry-content h2,
 .privacy-policy .error-404 h2,
 .privacy-policy .entry-content h2 {
-  font-size: 1.44rem !important;
+  font-size: 1.563rem !important;
 }
 .page-template-template-base-page .error-404 p,
 .page-template-template-base-page .entry-content p,
@@ -252,16 +231,13 @@ article.type-page {
 
 .btn-primary,
 .wp-block-button__link {
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   border: none;
   border-radius: 2px;
   outline: none;
   color: var(--wp--preset--color--white);
   text-transform: uppercase;
-  font-size: 1.44rem;
+  font-size: 1.563rem;
   padding: 0.70671875rem 1.4134375rem;
 }
 .btn-primary:hover, .btn-primary:focus,
@@ -303,10 +279,7 @@ article.type-page {
   }
 }
 .social-cards.grid-four .social-card__title {
-  font-family: acumin-extra-condensed--bold, sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 1.728rem;
+  font-size: 1.953rem;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -515,13 +488,8 @@ article.type-page {
 }
 
 @font-face {
-  font-family: pragmatica--bold;
-  src: url(fonts/pragmatica--bold.woff2) format("woff2"), url(fonts/pragmatica--bold.woff) format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: acumin-extra-condensed--bold;
-  src: url(fonts/acumin-extra-condensed--bold.woff2) format("woff2"), url(fonts/acumin-extra-condensed--bold.woff) format("woff");
+  font-family: hauslan;
+  src: url(fonts/hauslan.woff2) format("woff2"), url(fonts/hauslan.woff) format("woff");
   font-display: swap;
 }
 html,
@@ -537,29 +505,29 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: pragmatica--bold, sans-serif;
+  font-family: hauslan, sans-serif;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.074rem;
+  font-size: 2.441rem;
   color: var(--wp--preset--color--green-mid);
 }
 
 h3 {
-  font-size: 1.728rem;
+  font-size: 1.953rem;
 }
 
 .entry-content > .section:not(.learn-more-message) > h2 {
   text-transform: uppercase;
-  font-size: 1.728rem;
+  font-size: 1.953rem;
   margin-top: 1.4134375rem;
   margin-bottom: 1.4134375rem;
 }
 @media (min-width: 750px) {
   .entry-content > .section:not(.learn-more-message) > h2 {
-    font-size: 2.074rem;
+    font-size: 2.441rem;
     margin-top: 2.826875rem;
     margin-bottom: 1.4134375rem;
   }
@@ -576,7 +544,6 @@ h3 {
 }
 
 .lede {
-  font-size: 1.2rem;
   max-width: 60em;
 }
 

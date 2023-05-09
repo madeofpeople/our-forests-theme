@@ -5,11 +5,11 @@ const options = {
 const initScrollSpy = () => {
 	const selectors = '.hero';
 	const observedElements = document.querySelectorAll( selectors );
-	const pageNav = document.querySelector( '.site-header .page__nav' );
+	const pageNav = document.querySelector( '.page-nav' );
 	let activeItem = null;
 
-	const updatePageNav = ( anEl ) => {
-		if ( anEl.tagName === 'SECTION' ) {
+	const updatePageNav = ( el ) => {
+		if ( el.tagName === 'SECTION' ) {
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
 			}
@@ -19,7 +19,9 @@ const initScrollSpy = () => {
 			}
 
 			activeItem = pageNav.querySelector(
-				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
+				`a[href="#${
+					el.querySelector( '.wp-block-button__link' ).id
+				}"]`
 			);
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
@@ -33,14 +35,14 @@ const initScrollSpy = () => {
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
-				if ( entry.target.classList.contains( 'site-header' ) ) {
+				if ( entry.target.classList.contains( 'page-nav' ) ) {
 					entry.target
 						.querySelector( '.nav--primary' )
 						.classList.add( 'alt-top' );
 				}
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				if ( entry.target.classList.contains( 'site-header' ) ) {
+				if ( entry.target.classList.contains( 'page-nav' ) ) {
 					entry.target
 						.querySelector( '.nav--primary' )
 						.classList.remove( 'alt-top' );
