@@ -3,7 +3,7 @@ const options = {
 };
 
 const initScrollSpy = () => {
-	const selectors = '.entry-content > section, .site-header';
+	const selectors = '.hero';
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.site-header .page__nav' );
 	let activeItem = null;

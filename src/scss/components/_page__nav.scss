@@ -2,11 +2,11 @@
 
 @mixin page__nav--small {
 	z-index: 250;
-	max-width: 1600px;
+	// max-width: 1600px;
 	width: 100%;
 	padding: 0;
 	gap: 0;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+	// box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 	background-color: color(green-dark);
 	.menu-item {
 		flex-grow: 1;
@@ -20,42 +20,38 @@
 	}
 }
 
+	// .page__nav {
+	// 	border: 2px #f00 solid;
+	// 	display: flex;
+	// 	padding: get-spacing(0.5);
+	// 	// background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
+	// 	transition-property: top;
+	// 	transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+	// 	transition-duration: 0.7s;
+	// 	transition-delay: 0;
 
-.site-header {
+	// 	.wp-block-button__link {
+	// 		background-color: color('green-dark');
+	// 		@include acumin;
+	// 		text-transform: uppercase;
+	// 		border: 1px color('white') solid;
+	// 		&.active {
+	// 			background-color: color('green');
+	// 			color: color('black');
+	// 			border-radius: 0;
+	// 		}
+	// 	}
+	// }
 
-	z-index: 50000;
+
+.hero {
 
 	.page__nav {
 
-		display: flex;
-		position: fixed;
-		top: -5rem;
-		padding: get-spacing(0.5);
-		background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
-		transition-property: top;
-		transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-		transition-duration: 0.7s;
-		transition-delay: 0;
-
-		.wp-block-button__link {
-			background-color: color('green-dark');
-			@include acumin;
-			text-transform: uppercase;
-			border: 1px color('white') solid;
-			&.active {
-				background-color: color('green');
-				color: color('black');
-				border-radius: 0;
-			}
-		}
-	}
-
-	&.out-of-view .page__nav {
-		position: fixed;
 		@include page__nav--small;
-		top: 4.5rem;
-		left: 0;
-		height: 32px;
+		z-index: 50000;
+		background-color: #333;
+
 		.menu-item {
 			a {
 				@include acumin;
@@ -71,19 +67,28 @@
 		}
 	}
 
-	.wp-block-cover__inner-container {
-		position: absolute;
+	&.out-of-view {
 		.page__nav {
-			@include page__nav--small;
+			position: fixed;
+			top: 2rem;
 		}
 	}
-	&:not(.out-of-view) {
+
+	&.in-view {
 		.page__nav {
-			display: none;
 			position: static;
+			top: 0;
 			padding-left: get-spacing(0.5);
 			padding-right: get-spacing(0.5);
 		}
 	}
-
 }
+
+.wp-block-cover__inner-container {
+	border: 1rem #fc0 solid;
+	position: absolute;
+	.page__nav {
+		@include page__nav--small;
+	}
+}
+

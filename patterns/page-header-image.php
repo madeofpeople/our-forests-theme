@@ -6,6 +6,7 @@
   */
 ?>
 
+<!-- PAGE HEADER IMAGE -->
 <!-- wp:site-functionality/page-header -->
 <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/cover.jpg' ) ); ?>","id":114,"useFeaturedImage":true,"dimRatio":0,"className":"header-banner"} -->
 <div class="wp-block-cover header-banner">
@@ -14,7 +15,7 @@
 	<div class="wp-block-cover__inner-container">
 	<!-- wp:site-functionality/page-nav -->
 	<!-- wp:buttons {"className":"menu"} -->
-	<div class="wp-block-buttons menu">
+	<div class="wp-block-buttons menu WATWATWAT">
 		<!-- wp:button {"placeholder":"Add Nav Item...","className":"menu-item"} -->
 		<div class="wp-block-button menu-item"><a class="wp-block-button__link" href="#direct-support"><?php esc_html_e( 'Direct Support', 'the-territory' ); ?></a></div>
 		<!-- /wp:button -->

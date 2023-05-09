@@ -7,7 +7,7 @@
 ?>
 
 <!-- wp:group {"className":"signup"} -->
-<div class="wp-block-group signup">
+<div class="wp-block-group signup WATWAT">
     <!-- wp:heading -->
     <h2><?php esc_html_e( 'Let\'s Work Together', 'the-territory' ); ?></h2>
     <!-- /wp:heading -->
