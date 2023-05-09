@@ -1,4 +1,4 @@
-# the-territory-theme <!-- omit in toc -->
+#our-forests-theme <!-- omit in toc -->
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwebdevstudios%2Fwd_s%2Fbadge%3Fref%3Dmain&style=flat)](https://github.com/WebDevStudios/wd_s/actions)
 

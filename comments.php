@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="container comments-area">
-	<h2 class="screen-reader-text"><?php esc_html_e( 'Comment section', 'the-territory' ); ?></h2>
+	<h2 class="screen-reader-text"><?php esc_html_e( 'Comment section', 'our-forests' ); ?></h2>
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 			<?php
 			printf(
 				/* translators: the number of comments */
-				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'the-territory' ) ),
+				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'our-forests' ) ),
 				number_format_i18n( get_comments_number() ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 				'<span>' . wp_kses_post( get_the_title() ) . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 			);
@@ -42,11 +42,11 @@ if ( post_password_required() ) {
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
 			?>
 			<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-				<h3 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'the-territory' ); ?></h3>
+				<h3 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'our-forests' ); ?></h3>
 				<div class="nav-links">
 
-					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'the-territory' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'the-territory' ) ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'our-forests' ) ); ?></div>
+					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'our-forests' ) ); ?></div>
 
 				</div><!-- .nav-links -->
 			</nav><!-- #comment-nav-above -->
@@ -68,11 +68,11 @@ if ( post_password_required() ) {
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
 			?>
 			<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'the-territory' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'our-forests' ); ?></h2>
 				<div class="nav-links">
 
-					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'the-territory' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'the-territory' ) ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'our-forests' ) ); ?></div>
+					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'our-forests' ) ); ?></div>
 
 				</div><!-- .nav-links -->
 			</nav><!-- #comment-nav-below -->
@@ -84,7 +84,7 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'the-territory' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'our-forests' ); ?></p>
 	<?php endif; ?>
 
 	<?php

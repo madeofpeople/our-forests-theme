@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 ?>
@@ -12,7 +12,7 @@
 	<section class="no-results not-found">
 
 		<header class="site__header">
-			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'the-territory' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'our-forests' ); ?></h1>
 		</header><!-- .page-header -->
 
 		<div class="page-content">
@@ -22,7 +22,7 @@
 				printf(
 					wp_kses(
 						/* translators: the edit post url */
-						esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'the-territory' ),
+						esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'our-forests' ),
 						[
 							'a' => [
 								'href' => [],
@@ -34,10 +34,10 @@
 				?>
 				</p>
 			<?php elseif ( is_search() ) : ?>
-				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'the-territory' ); ?></p>
+				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'our-forests' ); ?></p>
 				<?php get_search_form(); ?>
 			<?php else : ?>
-				<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'the-territory' ); ?></p>
+				<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'our-forests' ); ?></p>
 				<?php get_search_form(); ?>
 			<?php endif; ?>
 		</div><!-- .page-content -->

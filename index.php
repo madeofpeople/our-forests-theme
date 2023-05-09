@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package Our Forests
  */
 
  get_header();
@@ -41,7 +41,7 @@
 
 		endwhile;
 
-		the_territory_display_numeric_pagination();
+		our_forests_display_numeric_pagination();
 
 	else :
 		get_template_part( 'template-parts/content', 'none' );

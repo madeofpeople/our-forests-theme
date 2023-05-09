@@ -4,7 +4,7 @@
  *
  * Enable or disable certain functionality to harden WordPress.
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
@@ -29,7 +29,7 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
  * @author WebDevStudios
  * @see https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null
  */
-function the_territory_cors_control() {
+function our_forests_cors_control() {
 	header( 'Access-Control-Allow-Origin: *' );
 }
-add_action( 'rest_api_init', 'the_territory_cors_control' );
+add_action( 'rest_api_init', 'our_forests_cors_control' );

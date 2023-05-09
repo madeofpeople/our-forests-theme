@@ -9,7 +9,7 @@
 <!-- wp:group {"tagName":"section","className":"section engage-amplify"} -->
 <section class="wp-block-group section engage-amplify">
     <!-- wp:heading -->
-    <h2 id="engage-amplify"><?php esc_html_e( 'Engage &amp; Amplify', 'the-territory' ); ?></h2>
+    <h2 id="engage-amplify"><?php esc_html_e( 'Engage &amp; Amplify', 'our-forests' ); ?></h2>
     <!-- /wp:heading -->
 
     <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'build/images/backgrounds/cover.jpg' ) ); ?>","dimRatio":0,"isDark":false,"isParallax":true} -->
@@ -22,7 +22,7 @@
                 <!-- wp:column -->
                 <div class="wp-block-column">
                     <!-- wp:heading {"level":3,"textColor":"white"} -->
-                    <h3 class="has-white-color has-text-color"><?php esc_html_e( 'Schedule an Impact Screening', 'the-territory' ); ?></h3>
+                    <h3 class="has-white-color has-text-color"><?php esc_html_e( 'Schedule an Impact Screening', 'our-forests' ); ?></h3>
                     <!-- /wp:heading -->
                 </div>
                 <!-- /wp:column -->
@@ -34,15 +34,15 @@
                         <!-- wp:buttons -->
                         <div class="wp-block-buttons">
                             <!-- wp:button -->
-                            <div class="wp-block-button"><a class="wp-block-button__link" href="#host-screening-form"><?php esc_html_e( 'Enroll to Host a Screening', 'the-territory' ); ?></a></div>
+                            <div class="wp-block-button"><a class="wp-block-button__link" href="#host-screening-form"><?php esc_html_e( 'Enroll to Host a Screening', 'our-forests' ); ?></a></div>
                             <!-- /wp:button -->
                         </div>
                         <!-- /wp:buttons -->
 
                         <!-- wp:list {"placeholder":"Add list items ...","className":"icon-list"} -->
                         <ul class="icon-list">
-                            <li><a href="#"><?php esc_html_e( 'Download the Checklist', 'the-territory' ); ?></a></li>
-                            <li><a href="#"><?php esc_html_e( 'Download the Discussion Guide', 'the-territory' ); ?></a></li>
+                            <li><a href="#"><?php esc_html_e( 'Download the Checklist', 'our-forests' ); ?></a></li>
+                            <li><a href="#"><?php esc_html_e( 'Download the Discussion Guide', 'our-forests' ); ?></a></li>
                         </ul>
                         <!-- /wp:list -->
                     </div>

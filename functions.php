@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @author WebDevStudios
  */
-function the_territory_get_theme_include_files() {
+function our_forests_get_theme_include_files() {
 	return [
 		'inc/setup.php', // Theme set up. Should be included first.
 		'inc/compat.php', // Backwards Compatibility.
@@ -27,6 +27,6 @@ function the_territory_get_theme_include_files() {
 	];
 }
 
-foreach ( the_territory_get_theme_include_files() as $include ) {
+foreach ( our_forests_get_theme_include_files() as $include ) {
 	require trailingslashit( get_template_directory() ) . $include;
 }

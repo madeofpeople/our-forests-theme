@@ -2,9 +2,9 @@
 /**
  * Register Block Patterns.
  *
- * @package The Territory
+ * @package Our Forests
  */
-namespace The_Territory\Inc\Blocks;
+namespace Our_Forests\Inc\Blocks;
 
 function include_files() {
 	return array(
