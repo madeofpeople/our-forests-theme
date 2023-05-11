@@ -24,46 +24,38 @@
 	}
 }
 
-.hero {
+.page-nav {
 
-	.page-nav {
+	background-color: color(grey-dark);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	height: 53px;
+	@include page__nav--small;
 
-		background-color: transparent !important;
-		height: 53px;
-		@include page__nav--small;
+	.wp-block-buttons {
+		display: flex;
+		background-color: color(grey-dark);
+		left: 0;
+		right: 0;
+		z-index: 50000;
+	}
 
-		.wp-block-buttons {
-			display: flex;
-			background-color: color(grey-dark);
-			z-index: 50000;
-		}
-
-		.wp-block-button {
-			font-family: hauslan;
-			letter-spacing: 0.0825rem;
-			border-radius: 0;
-			&:hover {
-				color: color(grey-dark) !important;
-			}
+	.wp-block-button {
+		font-family: hauslan;
+		letter-spacing: 0.0825rem;
+		border-radius: 0;
+		&:hover {
+			color: color(grey-dark) !important;
 		}
 	}
 
-	&.out-of-view {
-		.page-nav .wp-block-buttons {
-			position: fixed;
-			top: 0;
+	&.out-of-view .wp-block-buttons {
+		position: fixed;
+		top: 0;
 
-			.admin-bar & {
-				top: 2rem;
-			}
+		.admin-bar & {
+			top: 2rem;
 		}
 	}
 
-	&.in-view {
-		.page-nav .wp-block-buttons {
-			position: static;
-			top: 0;
-		}
-	}
 }
 

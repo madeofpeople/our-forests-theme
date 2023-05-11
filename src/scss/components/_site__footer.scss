@@ -1,5 +1,12 @@
 .site-footer {
 
+	padding: spacing(xl);
+	background-color: color('black');
+
+	footer > .row {
+		margin-bottom: 2rem;
+	}
+
 	.footer__logos {
 		text-align: right;
 		.wp-block-image {
@@ -9,6 +16,12 @@
 
 	h3 {
 		margin-top: 0;
+	}
+
+	p {
+		font-size: 0.875rem;
+		color: color(grey-mid);
+		font-weight: lighter;
 	}
 
 	.wp-block-columns {

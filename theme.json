@@ -9,13 +9,18 @@
 					"color": "#80AD6B"
 				},
 				{
-					"name": "Mid Green",
-					"slug": "green-mid",
-					"color": "#3F682B"
+					"name": "Green Light",
+					"slug": "green-light",
+					"color": "#B7D9A6"
 				},
 				{
 					"name": "Dark Green",
 					"slug": "green-dark",
+					"color": "#14250C"
+				},
+				{
+					"name": "Darker Green",
+					"slug": "green-darker",
 					"color": "#0F2D00"
 				},
 				{

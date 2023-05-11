@@ -14,11 +14,14 @@
 
 @import 'global';
 
-@import 'components/a';
-@import 'components/newsletter';
+@import 'components/site__header';
+@import 'components/defenders';
+@import 'components/watch';
+@import 'components/section-header';
 @import 'components/page__nav';
 @import 'components/parallax';
-@import 'components/site__header';
+@import 'components/support';
+@import 'components/newsletter';
 @import 'components/site__footer';
 @import 'components/translate_menu';
 

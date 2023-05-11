@@ -17,6 +17,11 @@ $font-sizes: (
 	'h1': 5.96rem,
 );
 
+@function fs($key) {
+    @return map.get($font-sizes, $key);
+}
+
+
 $body-font: 'Source Sans Pro', sans-serif;
 
 html,

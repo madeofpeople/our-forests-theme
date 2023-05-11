@@ -22,7 +22,6 @@ const initScrollSpy = () => {
 			const heading = el.querySelector( 'h2' );
 
 			if ( heading ) {
-				console.log( '»»»»»»', heading.id );
 				activeItem = pageNav.querySelector(
 					`a[href="#${ heading.id }"]`
 				);
@@ -34,6 +33,7 @@ const initScrollSpy = () => {
 
 	const inViewCallback = ( entries ) => {
 		entries.forEach( ( entry ) => {
+			console.log( '»|»»', entry );
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );

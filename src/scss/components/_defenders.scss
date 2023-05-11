@@ -1,0 +1,50 @@
+.defenders {
+	padding-bottom: 0;
+}
+
+.wp-block-site-functionality-defender {
+
+	> .wp-block-group {
+		display: flex;
+		justify-content: space-between;
+		max-width: bp(xl);
+		margin: 0 auto;
+	}
+
+	.wp-social-link {
+		span {
+			color: color(grey-dark);
+		}
+		svg path {
+			fill: color(grey-dark);
+		}
+	}
+
+	.row {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: spacing(md);
+	}
+
+	.defender__profile {
+		box-sizing: border-box;
+		padding: spacing(md);
+		width: 300px;
+		background-color: color('white');
+		color: color(grey-dark);
+		figure {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.defender__forest {
+		padding: spacing(md);
+		max-width: 33.4875rem;
+		background-color: color('grey-dark');
+		color: color('white');
+		figure {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
