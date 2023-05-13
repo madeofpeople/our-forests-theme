@@ -27,7 +27,9 @@
 
 body {
     background-color: color('grey-dark');
-	//@extend %breakpoint-indicator;
+	main {
+		@extend %breakpoint-indicator;
+	}
 }
 
 

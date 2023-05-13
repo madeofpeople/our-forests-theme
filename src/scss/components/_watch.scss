@@ -1,7 +1,9 @@
 #watch-teaser {
 	max-width: bp(lg);
 	margin: 0 auto;
-	padding: spacing(lg);
+	@media (min-width: bp(med)) {
+		padding: spacing(lg);
+	}
 }
 
 .trailer {

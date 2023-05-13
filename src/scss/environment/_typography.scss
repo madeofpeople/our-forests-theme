@@ -9,6 +9,7 @@
 }
 
 $font-sizes: (
+	'small': 0.875rem,
 	'body': 1rem,
 	'h5': 1.25rem,
 	'h4': 1.563rem,
@@ -46,9 +47,12 @@ h5 {
 }
 
 h1 {
-	font-size: map.get($font-sizes, h1);
+	font-size: map.get($font-sizes, h2);
 	color: color(white);
 	margin-bottom: 1rem;
+	@media (min-width: bp(md)) {
+		font-size: map.get($font-sizes, h1);
+	}
 }
 
 h2 {

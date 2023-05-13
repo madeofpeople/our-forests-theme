@@ -12,16 +12,6 @@
 		width: 100%;
 	}
 
-	.wp-element-button {
-		font-family: hauslan;
-		font-size: map.get($font-sizes, h5) !important;
-		letter-spacing: 0.0825rem;
-	}
-
-	.wp-element-button.active {
-		background-color: color('white');
-		color: color(grey-dark);
-	}
 }
 
 .page-nav {
@@ -40,17 +30,30 @@
 	}
 
 	.wp-block-button {
-		font-family: hauslan;
-		letter-spacing: 0.0825rem;
 		border-radius: 0;
+		font-family: "Source Sans Pro", sans-serif, sans-serif;
+		text-transform: none;
 		&:hover {
 			color: color(grey-dark) !important;
+		}
+		&:hover,
+		&.active {
+			background-color: color('white');
+			color: color(grey-dark);
+		}
+		@media (min-width: bp(md)) {
+			text-transform: uppercase;
+			font-family: hauslan;
+			font-size: fs(h5);
+			letter-spacing: 0.0825rem;
 		}
 	}
 
 	&.out-of-view .wp-block-buttons {
-		position: fixed;
-		top: 0;
+		@media (min-width: bp (sm)) {
+			position: fixed;
+			top: 0;
+		}
 
 		.admin-bar & {
 			top: 2rem;

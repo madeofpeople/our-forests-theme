@@ -3,37 +3,32 @@ const options = {
 };
 
 const initScrollSpy = () => {
-	const selectors =
-		'.site-footer .widget_block > section, .entry-content > section';
+	const selectors = '.entry-content > section';
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.page-nav' );
 	let activeItem = null;
 
 	const updatePageNav = ( el ) => {
-		if ( el.tagName === 'SECTION' ) {
-			if ( activeItem ) {
-				activeItem.classList.remove( 'active' );
-			}
-
-			if ( activeItem ) {
-				activeItem.classList.remove( 'active' );
-			}
-
-			const heading = el.querySelector( 'h2' );
-
-			if ( heading ) {
-				activeItem = pageNav.querySelector(
-					`a[href="#${ heading.id }"]`
-				);
-			}
-
-			if ( activeItem ) activeItem.classList.add( 'active' );
+		if ( activeItem ) {
+			activeItem.classList.remove( 'active' );
 		}
+
+		if ( activeItem ) {
+			activeItem.classList.remove( 'active' );
+		}
+
+		const heading = el.querySelector( 'h2' );
+
+		if ( heading ) {
+			activeItem = pageNav.querySelector( `a[href="#${ heading.id }"]` );
+			console.log( '»»»»»', heading.textNode );
+		}
+
+		if ( activeItem ) activeItem.classList.add( 'active' );
 	};
 
 	const inViewCallback = ( entries ) => {
 		entries.forEach( ( entry ) => {
-			console.log( '»|»»', entry );
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );

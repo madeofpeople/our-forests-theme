@@ -17,6 +17,17 @@ article.page {
 
 	max-width: bp(xl);
 	margin: 0 auto;
+	position: relative;
+	flex-wrap: no-wrap;
+
+	.wp-block-gallery {
+		position: relative;
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
+		margin-left: 0;
+		margin-right: 0;
+		flex-wrap: nowrap;
+	}
 
 	p {
 		text-align: center;
@@ -30,8 +41,14 @@ article.page {
 .is-layout-constrained {
 	max-width: bp(lg);
 	margin: 0 auto;
+	padding: spacing(md);
 	padding-top: spacing(xs);
-	padding-bottom: spacing(md);
+	@media (min-width: bp(md)) {
+		padding-top: 0;
+		padding-bottom: spacing(md);
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 #amplify,
