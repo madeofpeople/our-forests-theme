@@ -42,7 +42,20 @@ function our_forests_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+
 	add_image_size( 'full-width', 1920, 1080, false );
+
+	add_image_size( 'defender-large', 800, 1200, true ); // 2:3 aspect ratio
+	add_image_size( 'defender-medium', 400, 600, true ); // 2:3 aspect ratio
+	add_image_size( 'defender-thumbnail', 200, 300, true ); // 2:3 aspect ratio
+
+	add_image_size( 'forest-large', 1080, 1080, true ); // 1:1 aspect ratio
+	add_image_size( 'forest-medium', 720, 720, true ); // 1:1 aspect ratio
+	add_image_size( 'forest-thumbnail', 480, 480, true ); // 1:1 aspect ratio
+
+	add_image_size( 'social-large', 800, 450, true ); // 16:9 aspect ratio
+	add_image_size( 'social-medium', 400, 225, true ); // 16:9 aspect ratio
+	add_image_size( 'social-thumbnail', 256, 144, true ); // 16:9 aspect ratio
 
 	// Register navigation menus.
 	register_nav_menus(
@@ -89,7 +102,7 @@ function our_forests_setup() {
 		'flex-height'          => true,
 		'flex-width'           => true,
 		'header-text'          => array( 'site-title', 'site-description' ),
-		'unlink-homepage-logo' => true, 
+		'unlink-homepage-logo' => true,
 	);
 	add_theme_support( 'custom-logo', $defaults );
 }
