@@ -8,6 +8,12 @@ body {
 	background-color: color('grey-dark');
 }
 
+main {
+	max-width: 1512px;
+	margin: 0 auto;
+	background-color: color('green-dark');
+}
+
 .site-branding,
 article.page {
 	background-color: color('green-dark');
