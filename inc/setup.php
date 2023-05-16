@@ -45,9 +45,9 @@ function our_forests_setup() {
 
 	add_image_size( 'full-width', 1920, 1080, false );
 
-	add_image_size( 'defender-large', 800, 1200, true ); // 2:3 aspect ratio
-	add_image_size( 'defender-medium', 400, 600, true ); // 2:3 aspect ratio
-	add_image_size( 'defender-thumbnail', 200, 300, true ); // 2:3 aspect ratio
+	add_image_size( 'defender-large', 600, 750, true ); // 5:5 aspect ratio
+	add_image_size( 'defender-medium', 400, 500, true ); // 4:5 aspect ratio
+	add_image_size( 'defender-thumbnail', 252, 315, true ); // 4:5 aspect ratio
 
 	add_image_size( 'forest-large', 1080, 1080, true ); // 1:1 aspect ratio
 	add_image_size( 'forest-medium', 720, 720, true ); // 1:1 aspect ratio

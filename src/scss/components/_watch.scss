@@ -1,10 +1,18 @@
 #watch-teaser {
 	max-width: bp(lg);
 	margin: 0 auto;
-	@media (min-width: bp(med)) {
+	@media (min-width: bp(md)) {
 		padding: spacing(lg);
 	}
 }
 
 .trailer {
+	figcaption {
+		position: fixed;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		top: 100vh;
+		left: 100vw;
+	}
 }
