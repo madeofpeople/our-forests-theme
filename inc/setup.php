@@ -145,10 +145,10 @@ function our_forests_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'header-notice'  => esc_html__( 'Header Notice', 'our-forests' ),
+		'header-notice' => esc_html__( 'Header Notice', 'our-forests' ),
 		// 'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
 		// 'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
-		'footer'         => esc_html__( 'Footer', 'our-forests' ),
+		'footer'        => esc_html__( 'Footer', 'our-forests' ),
 	);
 
 	// Loop through each sidebar and register.
