@@ -21,12 +21,11 @@ article.page {
 
 .hero {
 
-	max-width: bp(xl);
-	margin: 0 auto;
 	position: relative;
 	flex-wrap: no-wrap;
 
 	.wp-block-gallery {
+		max-width: 100%;
 		position: relative;
 		left: 50%;
 		transform: translate3d(-50%, 0, 0);
