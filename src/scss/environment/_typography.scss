@@ -56,8 +56,11 @@ h1 {
 }
 
 h2 {
-	font-size: map.get($font-sizes, h2);
+	font-size: map.get($font-sizes, h3);
 	color: color(green-mid);
+	@media screen and (min-wdith: bp(md)) {
+		font-size: map.get($font-sizes, h2);
+	}
 }
 
 h3 {
@@ -109,10 +112,10 @@ h3 {
 	}
 }
 
-.section > h3 {
-	color: color(green-mid);
-	margin-top: spacing(md);
-}
+// .section > h3 {
+// 	color: color(green-mid);
+// 	margin-top: spacing(md);
+// }
 
 .lede {
 	font-size: map.get($font-sizes, lede);
