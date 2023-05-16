@@ -53,6 +53,10 @@ function our_forests_setup() {
 	add_image_size( 'forest-medium', 720, 720, true ); // 1:1 aspect ratio
 	add_image_size( 'forest-thumbnail', 480, 480, true ); // 1:1 aspect ratio
 
+	add_image_size( 'defenderbg-large', 1920, 1080, true ); // 16:9 aspect ratio
+	add_image_size( 'defenderbg-medium', 1080, 720, true ); // 16:9 aspect ratio
+	add_image_size( 'defenderbg-small', 720, 480, true ); // 16:9 aspect ratio
+
 	add_image_size( 'social-large', 800, 450, true ); // 16:9 aspect ratio
 	add_image_size( 'social-medium', 400, 225, true ); // 16:9 aspect ratio
 	add_image_size( 'social-thumbnail', 256, 144, true ); // 16:9 aspect ratio
@@ -120,8 +124,8 @@ function our_forests_widgets_init() {
 	// Define sidebars.
 	$sidebars = array(
 		'header-notice'  => esc_html__( 'Header Notice', 'our-forests' ),
-		'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
-		'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
+		// 'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
+		// 'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
 		'footer'         => esc_html__( 'Footer', 'our-forests' ),
 	);
 
