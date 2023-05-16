@@ -113,6 +113,28 @@ function our_forests_setup() {
 add_action( 'after_setup_theme', 'our_forests_setup' );
 
 /**
+ * Display Custom Images
+ * 
+ * @link https://developer.wordpress.org/reference/functions/add_image_size/#for-media-library-images-admin
+ *
+ * @param array $sizes
+ * @return array $sizes
+ */
+function our_forests_image_sizes( $sizes ) : array {
+	return array_merge(
+		$sizes,
+		array(
+			'full-width'       => __( 'Full Width', 'our-forest' ),
+			'defenderbg-large' => __( 'Defender Background', 'our-forest' ),
+			'defender-large'   => __( 'Defender', 'our-forest' ),
+			'forest-large'     => __( 'Forest', 'our-forest' ),
+			'social-large'     => __( 'Social', 'our-forest' ),
+		)
+	);
+}
+add_filter( 'image_size_names_choose', 'our_forests_image_sizes' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -123,10 +145,10 @@ function our_forests_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'header-notice'  => esc_html__( 'Header Notice', 'our-forests' ),
+		'header-notice' => esc_html__( 'Header Notice', 'our-forests' ),
 		// 'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
 		// 'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
-		'footer'         => esc_html__( 'Footer', 'our-forests' ),
+		'footer'        => esc_html__( 'Footer', 'our-forests' ),
 	);
 
 	// Loop through each sidebar and register.
