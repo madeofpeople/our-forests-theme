@@ -113,6 +113,28 @@ function our_forests_setup() {
 add_action( 'after_setup_theme', 'our_forests_setup' );
 
 /**
+ * Display Custom Images
+ * 
+ * @link https://developer.wordpress.org/reference/functions/add_image_size/#for-media-library-images-admin
+ *
+ * @param array $sizes
+ * @return array $sizes
+ */
+function our_forests_image_sizes( $sizes ) : array {
+	return array_merge(
+		$sizes,
+		array(
+			'full-width'       => __( 'Full Width', 'our-forest' ),
+			'defenderbg-large' => __( 'Defender Background', 'our-forest' ),
+			'defender-large'   => __( 'Defender', 'our-forest' ),
+			'forest-large'     => __( 'Forest', 'our-forest' ),
+			'social-large'     => __( 'Social', 'our-forest' ),
+		)
+	);
+}
+add_filter( 'image_size_names_choose', 'our_forests_image_sizes' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
