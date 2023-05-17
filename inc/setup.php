@@ -49,9 +49,9 @@ function our_forests_setup() {
 	add_image_size( 'defender-medium', 400, 500, false ); // 5:4 aspect ratio
 	add_image_size( 'defender-thumbnail', 252, 315, false ); // 5:4 aspect ratio
 
-	add_image_size( 'social-large', 1080, 1080, true ); // 1:1 aspect ratio
-	add_image_size( 'social-medium', 720, 720, true ); // 1:1 aspect ratio
-	add_image_size( 'social-thumbnail', 480, 480, true ); // 1:1 aspect ratio
+	add_image_size( 'social-large', 1080, 1080, false ); // 1:1 aspect ratio
+	add_image_size( 'social-medium', 720, 720, false ); // 1:1 aspect ratio
+	add_image_size( 'social-thumbnail', 480, 480, false ); // 1:1 aspect ratio
 
 	add_image_size( 'defenderbg-large', 1920, 1080, true ); // 16:9 aspect ratio
 	add_image_size( 'defenderbg-medium', 1080, 720, true ); // 16:9 aspect ratio
@@ -114,7 +114,7 @@ add_action( 'after_setup_theme', 'our_forests_setup' );
 
 /**
  * Display Custom Images
- * 
+ *
  * @link https://developer.wordpress.org/reference/functions/add_image_size/#for-media-library-images-admin
  *
  * @param array $sizes

@@ -67,7 +67,19 @@ article.page {
 }
 
 
+#drive {
+	padding: 0;
+	color: color(grey-dark);
+	> .wp-block-group {
+		margin: spacing(md) auto;
+		padding: spacing(md);
 
+		@media (min-width: bp(md)) {
+			margin: spacing(lg) auto;
+			padding: spacing(lg);
+		}
+	}
+}
 
 .svg-sprite-wrapper {
     overflow: hidden;

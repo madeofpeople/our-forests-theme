@@ -4,18 +4,13 @@
 		"color": {
 			"palette": [
 				{
-					"name": "Green",
-					"slug": "green",
-					"color": "#80AD6B"
-				},
-				{
 					"name": "Green Light",
 					"slug": "green-light",
 					"color": "#B7D9A6"
 				},
 				{
-					"name": "Dark Green",
-					"slug": "green-dark",
+					"name": "Mid Green",
+					"slug": "green-mid",
 					"color": "#14250C"
 				},
 				{
@@ -26,7 +21,7 @@
 				{
 					"name": "Grey Dark",
 					"slug": "grey-dark",
-					"color": "#333"
+					"color": "#222"
 				},
 				{
 					"name": "Grey Light",

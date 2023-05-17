@@ -1,16 +1,27 @@
 @use 'sass:map';
 
-:where(.wp-block-button__link) {
-	font-size: map.get($font-sizes, h5);
+.wp-block-button {
+	padding: spacing(xs);
+	background-color: color('black');
+	border-radius: 0.5rem;
+}
+.wp-block-button__link {
     border: none;
     outline: none;
+	border-radius: 0.25rem;
     font-size: map.get($font-sizes, h4);
+	font-weight: bold;
 	padding: spacing(sm);
+	background-color: color('black');
+	color: color('white');
+	border-bottom: 2px color(green-light) solid;
 	border-radius: 0;
+
 	&:hover,
 	&:focus {
-		background-color: white;
-		color: color('grey-dark');
-		border-radius: 0;
+		background-color: color('green-dark');
+		color: color('green-light');
+		border-bottom: 6px color(green-light) solid;
+		padding-bottom: calc( spacing(sm) - 4px);
 	}
 }
