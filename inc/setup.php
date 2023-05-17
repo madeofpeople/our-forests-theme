@@ -49,17 +49,17 @@ function our_forests_setup() {
 	add_image_size( 'defender-medium', 400, 500, false ); // 5:4 aspect ratio
 	add_image_size( 'defender-thumbnail', 252, 315, false ); // 5:4 aspect ratio
 
-	add_image_size( 'forest-large', 1080, 1080, true ); // 1:1 aspect ratio
-	add_image_size( 'forest-medium', 720, 720, true ); // 1:1 aspect ratio
-	add_image_size( 'forest-thumbnail', 480, 480, true ); // 1:1 aspect ratio
+	add_image_size( 'social-large', 1080, 1080, true ); // 1:1 aspect ratio
+	add_image_size( 'social-medium', 720, 720, true ); // 1:1 aspect ratio
+	add_image_size( 'social-thumbnail', 480, 480, true ); // 1:1 aspect ratio
 
 	add_image_size( 'defenderbg-large', 1920, 1080, true ); // 16:9 aspect ratio
 	add_image_size( 'defenderbg-medium', 1080, 720, true ); // 16:9 aspect ratio
 	add_image_size( 'defenderbg-small', 720, 480, true ); // 16:9 aspect ratio
 
-	add_image_size( 'social-large', 800, 450, true ); // 16:9 aspect ratio
-	add_image_size( 'social-medium', 400, 225, true ); // 16:9 aspect ratio
-	add_image_size( 'social-thumbnail', 256, 144, true ); // 16:9 aspect ratio
+	add_image_size( 'forest-large', 800, 450, true ); // 16:9 aspect ratio
+	add_image_size( 'forest-medium', 400, 225, true ); // 16:9 aspect ratio
+	add_image_size( 'forest-thumbnail', 256, 144, true ); // 16:9 aspect ratio
 
 	// Register navigation menus.
 	register_nav_menus(
