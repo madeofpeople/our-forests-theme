@@ -34,7 +34,7 @@
 		display: block;
 		position: absolute;
 		top: -2.5rem;
-		background-color: color('black');
+		background-color: color('white');
 		border-top-right-radius: 3px;
 		border-top-left-radius: 3px;
 		width: 3.5rem;
@@ -44,7 +44,7 @@
 
 	.translation-list {
 		box-sizing: border-box;
-		background-color: color('black');
+		background-color: color('white');
 		margin: 0;
 		padding: 0;
 		padding-top: 0.5rem;
@@ -64,20 +64,19 @@
 				padding-bottom: 0.325rem;
 				padding-right: 1rem;
 				text-decoration: none;
+				color: #666;
 				&:hover {
-					background-color: #333;
+					background-color: color(grey-dark);
 				}
 			}
 			&.current {
 				a {
-					color: #fff;
+					color: color('black');
+					font-weight: bold;
 				}
 			}
 			&.current {
 				order: -1;
-			}
-			&.urz {
-				list-style-image: url('../images/kawahiva.png');
 			}
 		}
 	}
@@ -85,7 +84,7 @@
 	svg {
 		width: 1.5rem;
 		path {
-			fill: color('white');
+			fill: color('black');
 		}
 	}
 
@@ -93,24 +92,5 @@
 		.layout_wrapper {
 			top: -7rem;
 		}
-	}
-}
-
-*[data-lang-kawahiva] {
-	display: none;
-}
-body.kawahiva {
-	.newsletter__content {
-
-		h3[data-lang-kawahiva],
-		p[data-lang-kawahiva] {
-			display: block;
-		}
-
-		h3,
-		p.default {
-			display: none;
-		}
-
 	}
 }

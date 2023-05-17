@@ -61,25 +61,45 @@ article.page {
 #support {
 	color: color(white);
 
-	.is-layout-constrained {
+	> .is-layout-constrained {
 		padding-top: spacing(md);
 	}
 }
 
+%blurry-bg {
+	margin: spacing(md) auto;
+	padding: spacing(md);
+	background-color: rgba( #fff, 0.8) !important;
+	backdrop-filter: blur(spacing(xs));
+}
 
+#support,
 #drive {
 	padding: 0;
 	color: color(grey-dark);
-	> .wp-block-group {
-		margin: spacing(md) auto;
-		padding: spacing(md);
-
+	.content {
+		@extend %blurry-bg;
 		@media (min-width: bp(md)) {
 			margin: spacing(lg) auto;
 			padding: spacing(lg);
 		}
 	}
 }
+
+#support {
+	.content {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		section,
+		.yikes-mailchimp-container,
+		.yikes-easy-mc-form {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+
+	}
+}
+
 
 .svg-sprite-wrapper {
     overflow: hidden;

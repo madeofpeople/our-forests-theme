@@ -1,14 +1,25 @@
 @use 'sass:map';
 
+#campaign-goals .wp-block-column,
 .wp-block-button {
 	padding: spacing(xs);
 	background-color: color('black');
 	border-radius: 0.5rem;
 }
+
+.yikes-easy-mc-submit-button {
+	font-family: hauslan, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#support .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+#campaign-goals .wp-block-tiptip-hyperlink-group-block,
 .wp-block-button__link {
     border: none;
     outline: none;
 	border-radius: 0.25rem;
+	letter-spacing: 1px;
     font-size: map.get($font-sizes, h4);
 	font-weight: bold;
 	padding: spacing(sm);
