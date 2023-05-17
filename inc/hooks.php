@@ -427,3 +427,15 @@ function social_block_services( array $services_data, string $service, int $post
 	return $services_data;
 }
 add_filter( 'site_functionality/social_block/services', __NAMESPACE__ . '\social_block_services', 10, 3 );
+
+/**
+ * Enable for attachment pages
+ *
+ * @param array $post_types
+ * @return array $post_types
+ */
+function add_page_links_to_support( $post_types ) : array {
+	$post_types[] = 'attachment';
+	return $post_types;
+}
+add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_support', 10 );
