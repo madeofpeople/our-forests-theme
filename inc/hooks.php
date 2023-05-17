@@ -10,9 +10,9 @@ namespace Our_Forests;
 
 /**
  * Adds custom classes to the array of body classes.
- * 
+ *
  * @link https://developer.wordpress.org/reference/hooks/body_class/
- * 
+ *
  * @param array $classes
  */
 function body_classes( $classes ) : array {
@@ -67,14 +67,14 @@ add_action( 'save_post', __NAMESPACE__ . '\category_transient_flusher' );
 
 /**
  * Filter social post content
- * 
+ *
  * @link https://developer.wordpress.org/reference/hooks/the_content/
  *
  * @param string $content
  * @return string $content
  */
 function content( string $content ) : string {
-	if( 'social' === get_post_type() && ( $message = get_post_meta( get_the_id(), 'message', true ) ) ) {
+	if ( 'social' === get_post_type() && ( $message = get_post_meta( get_the_id(), 'message', true ) ) ) {
 		$content = $message;
 	}
 	return $content;
@@ -419,10 +419,10 @@ function social_block_services( array $services_data, string $service, int $post
 	$title      = rawurlencode( \get_post_meta( $post_id, 'message', true ) );
 	$message    = esc_attr( \get_post_meta( $post_id, 'message', true ) );
 
-	$services_data['facebook']['label'] = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
-	$services_data['twitter']['label'] = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
+	$services_data['facebook']['label']  = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
+	$services_data['twitter']['label']   = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
 	$services_data['instagram']['label'] = sprintf( __( 'View %s on Instagram', 'site-functionality' ), $card_title );
-	$services_data['download']['label'] = sprintf( __( 'Download %s images as a File', 'site-functionality' ), $card_title );
+	$services_data['download']['label']  = sprintf( __( 'Download %s images as a File', 'site-functionality' ), $card_title );
 
 	return $services_data;
 }
