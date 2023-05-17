@@ -3,4 +3,55 @@
 @import 'environment/layout';
 @import 'components/defenders';
 
-body {}
+%language-indicator {
+	content: "i18n";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background-color: #0af;
+	color: #000;
+	padding: 0.25rem;
+
+}
+
+.social .i18n,
+.trailer .i18n {
+
+	.wp-block-site-functionality-social-cards,
+	.wp-block-embed__wrapper {
+		position: relative;
+		border: 3px #0af solid;
+
+		&::after {
+			@extend %language-indicator;
+		}
+	}
+
+	&.en {
+		.wp-block-site-functionality-social-cards,
+		.wp-block-embed__wrapper {
+			&::after {
+				content: 'EN';
+			}
+		}
+	}
+
+	&.fr {
+		.wp-block-site-functionality-social-cards,
+		.wp-block-embed__wrapper {
+			&::after {
+				content: 'FR';
+			}
+		}
+	}
+
+	&.de {
+		.wp-block-site-functionality-social-cards,
+		.wp-block-embed__wrapper {
+			&::after {
+				content: 'DE';
+			}
+		}
+	}
+}

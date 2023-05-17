@@ -35,6 +35,10 @@
 			left: 50%;
 			transform: translate3d(-50%, -50%, 0);
 
+			img {
+				width: 100%;
+				height: auto;
+			}
 			.slick-arrow {
 				z-index: 10;
 				position: absolute;
