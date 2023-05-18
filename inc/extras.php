@@ -18,7 +18,7 @@ function our_forests_categorized_blog() {
 	$category_count = get_transient( 'our_forests_categories' );
 
 	if ( false === $category_count ) {
-		$category_count_query = get_categories( [ 'fields' => 'count' ] );
+		$category_count_query = get_categories( array( 'fields' => 'count' ) );
 
 		$category_count = isset( $category_count_query[0] ) ? (int) $category_count_query[0] : 0;
 
@@ -81,10 +81,10 @@ function our_forests_get_attachment_id_from_url( $attachment_url = '' ) {
 function our_forests_copyright_year( $atts ) {
 	// Setup defaults.
 	$args = shortcode_atts(
-		[
+		array(
 			'starting_year' => '',
 			'separator'     => ' - ',
-		],
+		),
 		$atts
 	);
 
@@ -119,4 +119,46 @@ function our_forests_get_custom_logo_url() {
 	}
 
 	return $custom_logo_image[0];
+}
+
+/**
+ * Get Service URL
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string
+ */
+function our_forests_get_url( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_url' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_url( $service, $attributes );
+}
+
+/**
+ * Get Service Icon
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string SVG
+ */
+function our_forests_get_icon( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_icon' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_icon( $service, $attributes );
+}
+
+/**
+ * Get Service Label
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string
+ */
+function our_forests_get_label( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_label' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_label( $service, $attributes );
 }

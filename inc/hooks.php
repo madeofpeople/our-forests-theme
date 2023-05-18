@@ -364,6 +364,60 @@ function remove_archive_title_prefix( $block_title ) {
 add_filter( 'get_the_archive_title', __NAMESPACE__ . '\remove_archive_title_prefix' );
 
 /**
+ * Modify content on attachment pages
+ * Make content act like normal page
+ *
+ * @link https://developer.wordpress.org/reference/hooks/the_content/
+ *
+ * @param string $content
+ * @return string $content
+ */
+function modify_attachment_content( $content ) {
+	if ( 'attachment' === get_post_type() ) {
+		$content = do_blocks( $content );
+		$content = wptexturize( $content );
+		$content = wpautop( $content );
+		$content = shortcode_unautop( $content );
+		$content = wp_filter_content_tags( $content );
+	}
+	return $content;
+}
+remove_filter( 'the_content', 'prepend_attachment' );
+add_filter( 'the_content', __NAMESPACE__ . '\modify_attachment_content' );
+
+/**
+ * Fix Editor Content
+ *
+ * @param string $content
+ * @return string $content
+ */
+function editor_content( $content ) {
+	remove_filter( 'the_editor_content', 'format_for_editor' );
+	return $content;
+}
+
+/**
+ * Add editor for attachments
+ *
+ * @param array $settings
+ * @return array $settings
+ */
+function editor_support( $settings ) {
+	if ( is_admin() && get_post_type() == 'attachment' ) {
+		$settings = array(
+			'wpautop'       => true,
+			'textarea_name' => 'content',
+			'textarea_rows' => 10,
+			'media_buttons' => false,
+			'tinymce'       => true,
+		);
+		add_filter( 'the_editor_content', __NAMESPACE__ . '\editor_content', 1 );
+		return $settings;
+	}
+}
+add_filter( 'wp_editor_settings', __NAMESPACE__ . '\editor_support', 10 );
+
+/**
  * Disables wpautop to remove empty p tags in rendered Gutenberg blocks.
  *
  * @author Corey Collins
@@ -445,8 +499,8 @@ add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_supp
 /**
  * Modify image used for seo meta
  *
- * @param array $params
- * @param array $args
+ * @param array  $params
+ * @param array  $args
  * @param string $context
  * @return array $params
  */
