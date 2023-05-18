@@ -3,7 +3,7 @@ const options = {
 };
 
 const initScrollSpy = () => {
-	const selectors = '.entry-content > section';
+	const selectors = '.entry-content > section:not(.social)';
 	const observedElements = document.querySelectorAll( selectors );
 	const pageNav = document.querySelector( '.page-nav' );
 	let activeItem = null;
@@ -20,8 +20,10 @@ const initScrollSpy = () => {
 		const heading = el.querySelector( 'h2' );
 
 		if ( heading ) {
-			activeItem = pageNav.querySelector( `a[href="#${ heading.id }"]` );
-			console.log( '»»»»»', heading.textNode );
+			activeItem = pageNav.querySelector(
+				`.wp-block-tiptip-hyperlink-group-block[href="#${ heading.id }"]`
+			);
+			console.log( activeItem, heading.textContent );
 		}
 
 		if ( activeItem ) activeItem.classList.add( 'active' );

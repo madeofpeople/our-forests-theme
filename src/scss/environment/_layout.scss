@@ -66,6 +66,13 @@ article.page {
 	}
 }
 
+#social {
+	padding-bottom: spacing(md);
+	> p {
+		margin-top: 2rem;
+		margin-bottom: 3rem;
+	}
+}
 %blurry-bg {
 	margin: spacing(md) auto;
 	padding: spacing(md);
