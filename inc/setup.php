@@ -49,7 +49,7 @@ function our_forests_setup() {
 	add_image_size( 'defender-medium', 400, 500, false ); // 5:4 aspect ratio
 	add_image_size( 'defender-thumbnail', 252, 315, false ); // 5:4 aspect ratio
 
-	add_image_size( 'social-meta',	1200, 630, array( 'center', 'top' ) ); // 1.91:1 aspect ratio
+	add_image_size( 'social-meta', 1200, 630, array( 'center', 'top' ) ); // 1.91:1 aspect ratio
 	add_image_size( 'social-large', 1080, 1080, false ); // 1:1 aspect ratio
 	add_image_size( 'social-medium', 720, 720, false ); // 1:1 aspect ratio
 	add_image_size( 'social-thumbnail', 480, 480, false ); // 1:1 aspect ratio
@@ -125,11 +125,17 @@ function our_forests_image_sizes( $sizes ) : array {
 	return array_merge(
 		$sizes,
 		array(
-			'full-width'       => __( 'Full Width', 'our-forest' ),
-			'defenderbg-large' => __( 'Defender Background', 'our-forest' ),
-			'defender-large'   => __( 'Defender', 'our-forest' ),
-			'forest-large'     => __( 'Forest', 'our-forest' ),
-			'social-large'     => __( 'Social', 'our-forest' ),
+			'full-width'         => __( 'Full Width', 'our-forest' ),
+			'defenderbg-large'   => __( 'Defender Background', 'our-forest' ),
+			'defender-large'     => __( 'Defender Large', 'our-forest' ),
+			'defender-medium'    => __( 'Defender', 'our-forest' ),
+			'defender-thumbnail' => __( 'Defender Small', 'our-forest' ),
+			'forest-large'       => __( 'Forest Large', 'our-forest' ),
+			'forest-medium'      => __( 'Forest', 'our-forest' ),
+			'forest-thumbnail'   => __( 'Forest Small', 'our-forest' ),
+			'social-large'       => __( 'Social Large', 'our-forest' ),
+			'social-medium'      => __( 'Social', 'our-forest' ),
+			'social-thumbnail'   => __( 'Social Small', 'our-forest' ),
 		)
 	);
 }
