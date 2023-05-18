@@ -54,8 +54,17 @@
 							<?php
 						else :
 							?>
-
-							<?php bloginfo( 'name' ); ?>
+							<?php
+							if( is_front_page() && ! is_paged() ) :
+								?>
+								<?php echo esc_html( bloginfo( 'name' ) ); ?>
+								<?php
+							else :
+								?>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( bloginfo( 'name' ) ); ?></a>
+							<?php
+							endif;
+							?>
 							<div class="site-description"></div>
 
 							<?php
