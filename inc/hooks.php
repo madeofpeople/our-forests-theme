@@ -384,6 +384,39 @@ function modify_attachment_content( $content ) {
 }
 remove_filter( 'the_content', 'prepend_attachment' );
 add_filter( 'the_content', __NAMESPACE__ . '\modify_attachment_content' );
+
+/**
+ * Fix Editor Content
+ *
+ * @param string $content
+ * @return string $content
+ */
+function editor_content( $content ) {
+	remove_filter( 'the_editor_content', 'format_for_editor' );
+	return $content;
+}
+
+/**
+ * Add editor for attachments
+ *
+ * @param array $settings
+ * @return array $settings
+ */
+function editor_support( $settings ) {
+	if ( is_admin() && get_post_type() == 'attachment' ) {
+		$settings = array(
+			'wpautop'       => true,
+			'textarea_name' => 'content',
+			'textarea_rows' => 10,
+			'media_buttons' => false,
+			'tinymce'       => true,
+		);
+		add_filter( 'the_editor_content', __NAMESPACE__ . '\editor_content', 1 );
+		return $settings;
+	}
+}
+add_filter( 'wp_editor_settings', __NAMESPACE__ . '\editor_support', 10 );
+
 /**
  * Disables wpautop to remove empty p tags in rendered Gutenberg blocks.
  *
