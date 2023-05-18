@@ -499,8 +499,8 @@ add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_supp
 /**
  * Modify image used for seo meta
  *
- * @param array $params
- * @param array $args
+ * @param array  $params
+ * @param array  $args
  * @param string $context
  * @return array $params
  */
