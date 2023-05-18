@@ -125,11 +125,17 @@ function our_forests_image_sizes( $sizes ) : array {
 	return array_merge(
 		$sizes,
 		array(
-			'full-width'       => __( 'Full Width', 'our-forest' ),
-			'defenderbg-large' => __( 'Defender Background', 'our-forest' ),
-			'defender-large'   => __( 'Defender', 'our-forest' ),
-			'forest-large'     => __( 'Forest', 'our-forest' ),
-			'social-large'     => __( 'Social', 'our-forest' ),
+			'full-width'         => __( 'Full Width', 'our-forest' ),
+			'defenderbg-large'   => __( 'Defender Background', 'our-forest' ),
+			'defender-large'     => __( 'Defender Large', 'our-forest' ),
+			'defender-medium'    => __( 'Defender', 'our-forest' ),
+			'defender-thumbnail' => __( 'Defender Small', 'our-forest' ),
+			'forest-large'       => __( 'Forest Large', 'our-forest' ),
+			'forest-medium'      => __( 'Forest', 'our-forest' ),
+			'forest-thumbnail'   => __( 'Forest Small', 'our-forest' ),
+			'social-large'       => __( 'Social Large', 'our-forest' ),
+			'social-medium'      => __( 'Social', 'our-forest' ),
+			'social-thumbnail'   => __( 'Social Small', 'our-forest' ),
 		)
 	);
 }
