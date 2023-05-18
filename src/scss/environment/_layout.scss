@@ -73,6 +73,7 @@ article.page {
 		margin-bottom: 3rem;
 	}
 }
+
 %blurry-bg {
 	margin: spacing(md) auto;
 	padding: spacing(md);
@@ -122,4 +123,22 @@ article.page {
         top: 0;
         width: 100%;
     }
+}
+
+.entry-content {
+	p {
+		line-height: 175%;
+	}
+}
+
+.wp-block-column ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-bottom: 2px color(grey-mid) solid;
+
+	li {
+		padding: 0.75rem 0;
+		border-top: 1px color(grey-mid) solid;
+	}
 }

@@ -17,6 +17,14 @@
 		font-size: 16px;
 	}
 
+	form {
+		.EMAIL-label,
+		.COUNTRY-label {
+			display: inline-block;
+			width:46%;
+			box-sizing: border-box;
+		}
+	}
 	.yikes-easy-mc-form input[type="email"],
 	.yikes-easy-mc-form select {
 		display: inline-block;
