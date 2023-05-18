@@ -49,7 +49,7 @@ function our_forests_setup() {
 	add_image_size( 'defender-medium', 400, 500, false ); // 5:4 aspect ratio
 	add_image_size( 'defender-thumbnail', 252, 315, false ); // 5:4 aspect ratio
 
-	add_image_size( 'social-opengraph',	1200, 630, array( 'center', 'top' ) ); // 1.91:1 aspect ratio
+	add_image_size( 'social-meta',	1200, 630, array( 'center', 'top' ) ); // 1.91:1 aspect ratio
 	add_image_size( 'social-large', 1080, 1080, false ); // 1:1 aspect ratio
 	add_image_size( 'social-medium', 720, 720, false ); // 1:1 aspect ratio
 	add_image_size( 'social-thumbnail', 480, 480, false ); // 1:1 aspect ratio

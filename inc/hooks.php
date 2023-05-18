@@ -218,6 +218,8 @@ function add_og_tags() {
 		global $post;
 	}
 
+	$image_size = 'social-meta';
+
 	// Get the post content.
 	$post_content = ! empty( $post ) ? $post->post_content : '';
 
@@ -323,7 +325,7 @@ function add_og_tags() {
 	// Media page.
 	if ( is_attachment() ) {
 		$attachment_id = get_the_ID();
-		$card_image    = ( wp_attachment_is_image( $attachment_id ) ) ? wp_get_attachment_image_url( $attachment_id, 'full' ) : $card_image;
+		$card_image    = ( wp_attachment_is_image( $attachment_id ) ) ? wp_get_attachment_image_url( $attachment_id, $image_size ) : $card_image;
 	}
 
 	?>
@@ -439,3 +441,17 @@ function add_page_links_to_support( $post_types ) : array {
 	return $post_types;
 }
 add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_support', 10 );
+
+/**
+ * Modify image used for seo meta
+ *
+ * @param array $params
+ * @param array $args
+ * @param string $context
+ * @return array $params
+ */
+function seo_framework_image_params( $params, $args, $context ) : array {
+	$params['size'] = 'social-meta';
+	return $params;
+}
+add_filter( 'the_seo_framework_image_generation_params', __NAMESPACE__ . '\seo_framework_image_params', 10, 3 );
