@@ -22,7 +22,6 @@ $font-sizes: (
     @return map.get($font-sizes, $key);
 }
 
-
 $body-font: 'Source Sans Pro', sans-serif;
 
 html,
@@ -111,11 +110,6 @@ h3 {
 		margin-right: spacing(md);
 	}
 }
-
-// .section > h3 {
-// 	color: color(green-mid);
-// 	margin-top: spacing(md);
-// }
 
 .lede {
 	font-size: map.get($font-sizes, lede);

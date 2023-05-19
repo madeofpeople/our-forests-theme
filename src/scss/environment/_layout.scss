@@ -28,7 +28,7 @@ article.page {
 		max-width: 100%;
 		position: relative;
 		left: 50%;
-		transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0) !important;
 		margin-left: 0;
 		margin-right: 0;
 		flex-wrap: nowrap;
@@ -56,6 +56,53 @@ article.page {
 	}
 }
 
+.wp-block-column {
+	margin-top: spacing(md);
+
+}
+
+#campaign-goals {
+
+	background-color: color(grey-dark);
+	margin: 0;
+
+	> .wp-block-columns {
+		padding: spacing(sm);
+		margin: 0;
+	}
+
+	.wp-block-tiptip-hyperlink-group-block {
+
+		text-decoration: none;
+
+		h3 {
+			font-size: fs(h5);
+			margin-top: 0;
+		}
+		p {
+			font-size: fs(body);
+			font-weight: normal;
+		}
+	}
+
+	@media (min-width: bp(md)) {
+
+		> .wp-block-columns {
+			padding: spacing(md);
+		}
+
+		.wp-block-tiptip-hyperlink-group-block {
+			h3 {
+				font-size: fs(h4);
+			}
+			p {
+
+			}
+		}
+	}
+
+}
+
 #amplify,
 #drive,
 #support {
@@ -74,19 +121,16 @@ article.page {
 	}
 }
 
-%blurry-bg {
-	margin: spacing(md) auto;
-	padding: spacing(md);
-	background-color: rgba( #fff, 0.8) !important;
-	backdrop-filter: blur(spacing(xs));
-}
-
 #support,
 #drive {
 	padding: 0;
 	color: color(grey-dark);
 	.content {
-		@extend %blurry-bg;
+		margin: spacing(sm);
+		padding: spacing(md);
+		background-color: rgba( #fff, 0.8) !important;
+		backdrop-filter: blur(spacing(xs));
+
 		@media (min-width: bp(md)) {
 			margin: spacing(lg) auto;
 			padding: spacing(lg);
@@ -127,7 +171,7 @@ article.page {
 
 .entry-content {
 	p {
-		line-height: 175%;
+		line-height: 165%;
 	}
 }
 

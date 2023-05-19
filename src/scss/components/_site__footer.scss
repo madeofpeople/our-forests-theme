@@ -1,7 +1,21 @@
 .site-footer {
 
-	padding: spacing(xl);
+	padding: spacing(sm);
 	background-color: color('black');
+	figure {
+		max-width: 250px;
+	}
+
+	@media (min-width: bp(sm)) {
+		padding: spacing(lg);
+		figure {
+			max-width: auto;
+		}
+	}
+
+	@media (min-width: bp(md)) {
+		padding: spacing(xl);
+	}
 
 	footer > .row {
 		margin-bottom: 2rem;

@@ -1,12 +1,13 @@
 #watch-teaser {
 	max-width: bp(lg);
 	margin: 0 auto;
-	@media (min-width: bp(md)) {
-		padding: spacing(lg);
-	}
 }
 
 .trailer {
+	.wp-block-group {
+		padding: 0;
+	}
+
 	figcaption {
 		position: fixed;
 		width: 0;
