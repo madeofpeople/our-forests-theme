@@ -56,6 +56,15 @@ article.page {
 	}
 }
 
+section p {
+	padding-left: spacing(xs);
+	padding-right: spacing(xs);
+	@media (min-width: bp(md)) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 .wp-block-column {
 	margin-top: spacing(md);
 

@@ -7,7 +7,11 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	padding-bottom: spacing(md);
+	padding: spacing(sm);
+
+	@media screen and (min-width: bp(sm)) {
+		padding: spacing(md);
+	}
 
 	&::after {
 		content: '';
@@ -39,7 +43,9 @@
 	.row {
 		width: 100%;
 		display: grid;
-		@media screen and (min-width: bp(sm)) {
+
+		@media screen and (min-width: bp(md)) {
+
 			flex-direction: row;
 			display: flex;
 			justify-content: space-between;
@@ -54,13 +60,30 @@
 		color: color(grey-dark);
 		grid-row: 1;
 		padding: spacing(sm);
-		figure {
-			margin-bottom: 0.5rem;
+		display: flex;
+		flex-wrap: nowrap !important;
+		flex-direction: column !important;
+
+		img {
+			display: block;
+		}
+
+		@media screen and (min-width: bp(sm)) {
+			flex-direction: row !important;
 		}
 
 		@media screen and (min-width: bp(md)) {
+
+			flex-direction: column !important;
 			width: 300px;
 			padding: spacing(md);
+			flex-wrap: wrap;
+			max-width: none;
+
+			figure {
+				width: 100%;
+				margin-bottom: 0.5rem;
+			}
 		}
 	}
 

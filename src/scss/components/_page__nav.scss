@@ -1,34 +1,52 @@
 @use 'sass:map';
 
-
 .wp-block-site-functionality-page-nav {
 
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 	background-color: color(grey-dark);
 	z-index: 250;
 	width: 100%;
 	padding: 0;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 	display: none;
 
 	.wp-block-buttons {
+
 		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
 		justify-content: space-around;
 		width: 100%;
 		max-width: bp(xl);
 		margin: 0 auto;
 
 		.wp-block-button {
+
 			padding: 0;
 			border-radius: 0;
 			background-color: transparent !important;
+			max-width: 32%;
+
 			.wp-block-button__link {
 				background-color: transparent !important;
 				border-bottom: 0;
+				font-size: 16px;
+				padding: 0;
+
 			}
-		}
+
+			@media (min-width: bp(sm)) {
+
+				max-width: auto;
+
+				.wp-block-button__link {
+					font-size: fs(h5);
+				}
+			}
+	}
 	}
 
 	.out-of-view > & {
+
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -41,16 +59,9 @@
 		box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
 
 		&.active {
+
 			background-color: color('white');
 			color: color(grey-dark);
-			p {
-				position: fixed;
-				top: 100vh;
-				left: 100vw;
-				width: 0;
-				height: 0;
-				overflow: hidden;
-			}
 		}
 	}
 }
