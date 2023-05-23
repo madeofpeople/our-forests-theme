@@ -4,6 +4,27 @@
 	box-sizing: border-box;
 }
 
+%grid-three {
+
+	grid-column-gap:  spacing(sm);
+	grid-row-gap:  spacing(sm);
+
+	@media ( min-width: bp(xs) ) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap:  spacing(md);
+		grid-row-gap:  spacing(md);
+	}
+
+	@media ( min-width: bp(sm) ) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	> a.wp-block-hyperlink-group {
+		display: block;
+	}
+}
+
 body {
 	background-color: color('grey-dark');
 }

@@ -1,8 +1,11 @@
+.grid-three {
+	@extend %grid-three;
+}
+
 #social {
 
 	> .wp-block-group {
 
-		@extend %grid-three;
 		padding-left: spacing(md);
 		padding-right: spacing(md);
 
