@@ -13,7 +13,7 @@
 
 		display: flex;
 		flex-wrap: nowrap;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: space-around;
 		width: 100%;
 		max-width: bp(xl);
@@ -27,22 +27,22 @@
 			max-width: 32%;
 
 			.wp-block-button__link {
+
 				background-color: transparent !important;
 				border-bottom: 0;
 				font-size: 16px;
-				padding: 0;
-
+				padding: 0.25rem 0;
 			}
 
-			@media (min-width: bp(sm)) {
+			@media (min-width: bp(md)) {
 
 				max-width: auto;
 
 				.wp-block-button__link {
-					font-size: fs(h5);
+					font-size: 19px;
 				}
 			}
-	}
+		}
 	}
 
 	.out-of-view > & {
@@ -62,6 +62,27 @@
 
 			background-color: color('white');
 			color: color(grey-dark);
+		}
+	}
+
+	.admin-bar & {
+
+		top: 3.5rem;
+
+		.wp-block-button__link {
+			max-width: 8rem;
+		}
+		@media (min-width: bp(sm)) {
+			.wp-block-button__link {
+				max-width: none;
+			}
+		}
+
+		@media (min-width: bp(lg)) {
+			top: 2rem;
+			.wp-block-button__link {
+				max-width: none;
+			}
 		}
 	}
 }
