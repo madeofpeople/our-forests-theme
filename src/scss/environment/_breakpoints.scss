@@ -1,11 +1,11 @@
 @use 'sass:map';
 
 $bps : (
-	'xs': '400px',
-	'sm': '750px',
-	'md': '900px',
-	'lg': '1000px',
-	'xl': '1400px'
+	'xs': 400px,
+	'sm': 650px,
+	'md': 800px,
+	'lg': 900px,
+	'xl': 1200px
 );
 
 @function bp($bp) {

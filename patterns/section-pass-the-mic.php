@@ -9,11 +9,11 @@
 <!-- wp:group {"tagName":"section","className":"section pass-the-mic"} -->
 <section class="wp-block-group section pass-the-mic">
 	<!-- wp:heading {"level":3} -->
-<h3><?php esc_html_e( 'Pass the Mic: Connect With the Earth Defenders From "The Territory"', 'the-territory' ); ?></h3>
+<h3><?php esc_html_e( 'Pass the Mic: Connect With the Earth Defenders From "The Territory"', 'our-forests' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><?php esc_html_e( 'We believe in the power of storytelling: Help amplify the powerful messages of Indigenous storytellers.', 'the-territory' ); ?></p>
+<p><?php esc_html_e( 'We believe in the power of storytelling: Help amplify the powerful messages of Indigenous storytellers.', 'our-forests' ); ?></p>
 <!-- /wp:paragraph -->
 
 	<!-- wp:group {"className":"social-cards grid"} -->
@@ -28,7 +28,7 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4,"className":"social-card__title"} -->
-			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'the-territory' ); ?></h4>
+			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'our-forests' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:social-links {"iconColor":"black","iconColorValue":"#000","openInNewTab":true,"showLabels":true,"size":"has-normal-icon-size","className":"is-style-logos-only social-card__links","layout":{"type":"flex","orientation":"vertical"}} -->
@@ -52,7 +52,7 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4,"className":"social-card__title"} -->
-			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'the-territory' ); ?></h4>
+			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'our-forests' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:social-links {"iconColor":"black","iconColorValue":"#000","openInNewTab":true,"showLabels":true,"size":"has-normal-icon-size","className":"is-style-logos-only social-card__links","layout":{"type":"flex","orientation":"vertical"}} -->
@@ -76,7 +76,7 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4,"className":"social-card__title"} -->
-			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'the-territory' ); ?></h4>
+			<h4 class="social-card__title"><?php esc_html_e( 'Bitate Juma', 'our-forests' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:social-links {"iconColor":"black","iconColorValue":"#000","openInNewTab":true,"showLabels":true,"size":"has-normal-icon-size","className":"is-style-logos-only social-card__links","layout":{"type":"flex","orientation":"vertical"}} -->

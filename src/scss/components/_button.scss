@@ -1,44 +1,42 @@
 @use 'sass:map';
 
-.btn-primary,
+#campaign-goals .wp-block-column,
+.wp-block-button {
+	padding: spacing(xs);
+	background-color: color('black');
+	border-radius: 0.5rem;
+}
+
+.yikes-easy-mc-submit-button {
+	font-family: hauslan, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#support .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+#campaign-goals .wp-block-tiptip-hyperlink-group-block,
 .wp-block-button__link {
-	@include acumin;
-	font-size: map.get($font-sizes, h5);
     border: none;
-    border-radius: 2px;
     outline: none;
-    color: color('white');
-    text-transform: uppercase;
-    font-size: map.get($font-sizes, h4);
-	padding: get-spacing(0.25) get-spacing(0.5);
-	&:hover,
-	&:focus {
-		background-color: white;
-	}
-
-	.is-style-outline &,
-	&.is-style-outline {
-		border: color('green') 3px solid;
-		color: white;
-	}
-}
-
-%button-green {
-
-	display: block;
-	border: color('green') 2px solid;
-	background-color: color(green-dark);
+	border-radius: 0.25rem;
+	letter-spacing: 1px;
+    font-size: map.get($font-sizes, body);
+	font-weight: bold;
+	padding: spacing(sm);
+	background-color: color('black');
 	color: color('white');
-	line-height: 1.75;
+	border-bottom: 2px color(green-light) solid;
+	border-radius: 0;
 
-	padding: get-spacing(0.25) get-spacing(0.5);
-	transition-property: border-color, color, background-color;
-	transition-duration: .75s;
-	transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
 	&:hover,
 	&:focus {
-		background-color: color('green');
-		color: color('black');
+		background-color: color('green-dark');
+		color: color('green-light');
+		border-bottom: 6px color(green-light) solid;
+		padding-bottom: calc( spacing(sm) - 4px);
 	}
-}
 
+	// @media (min-width: bp(md)) {
+	// 	font-size: map.get($font-sizes, h4);
+	// }
+}

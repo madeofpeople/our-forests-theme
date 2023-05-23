@@ -3,27 +3,30 @@ const options = {
 };
 
 const initScrollSpy = () => {
-	const selectors = '.entry-content > section, .site-header';
+	const selectors = '.entry-content > section:not(.social)';
 	const observedElements = document.querySelectorAll( selectors );
-	const pageNav = document.querySelector( '.site-header .page__nav' );
+	const pageNav = document.querySelector( '.page-nav' );
 	let activeItem = null;
 
-	const updatePageNav = ( anEl ) => {
-		if ( anEl.tagName === 'SECTION' ) {
-			if ( activeItem ) {
-				activeItem.classList.remove( 'active' );
-			}
-
-			if ( activeItem ) {
-				activeItem.classList.remove( 'active' );
-			}
-
-			activeItem = pageNav.querySelector(
-				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
-			);
-
-			if ( activeItem ) activeItem.classList.add( 'active' );
+	const updatePageNav = ( el ) => {
+		if ( activeItem ) {
+			activeItem.classList.remove( 'active' );
 		}
+
+		if ( activeItem ) {
+			activeItem.classList.remove( 'active' );
+		}
+
+		const heading = el.querySelector( 'h2' );
+
+		if ( heading ) {
+			activeItem = pageNav.querySelector(
+				`.wp-block-tiptip-hyperlink-group-block[href="#${ heading.id }"]`
+			);
+			console.log( activeItem, heading.textContent );
+		}
+
+		if ( activeItem ) activeItem.classList.add( 'active' );
 	};
 
 	const inViewCallback = ( entries ) => {
@@ -33,18 +36,8 @@ const initScrollSpy = () => {
 				entry.target.classList.remove( 'out-of-view' );
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
-				if ( entry.target.classList.contains( 'site-header' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.add( 'alt-top' );
-				}
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				if ( entry.target.classList.contains( 'site-header' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.remove( 'alt-top' );
-				}
 			}
 		} );
 	};

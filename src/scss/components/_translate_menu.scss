@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 	top: 100vh;
 	right: 3rem;
-	height: 12rem;
+	height: 8rem;
 	z-index: 50000;
 	padding: 0;
 	border-radius: 0.125rem;
@@ -17,7 +17,7 @@
 		color: color('grey-mid');
 		font-size: 0.925rem;
 		&:hover {
-			color: color('grey-light');
+			color: color('white');
 		}
 	}
 
@@ -34,7 +34,7 @@
 		display: block;
 		position: absolute;
 		top: -2.5rem;
-		background-color: color('black');
+		background-color: color('white');
 		border-top-right-radius: 3px;
 		border-top-left-radius: 3px;
 		width: 3.5rem;
@@ -44,19 +44,24 @@
 
 	.translation-list {
 		box-sizing: border-box;
-		background-color: color('black');
+		background-color: color('white');
 		margin: 0;
 		padding: 0;
 		padding-top: 0.5rem;
-		padding-bottom: 3rem;
+		padding-bottom: 1rem;
 		border-top-right-radius: 3px;
-		list-style-position: outside;
-		padding-left: 2.5rem;
+		list-style-position: inside;
+		// padding-left: 2.5rem;
 		display: grid;
 		gap: 0;
 
 		li {
 			white-space: nowrap;
+
+			&::marker {
+				content: '';
+			}
+
 			a {
 				display: block;
 				padding: 0.5rem;
@@ -65,19 +70,22 @@
 				padding-right: 1rem;
 				text-decoration: none;
 				&:hover {
-					background-color: #333;
+					background-color: color('black');
+					color: #fff
 				}
 			}
 			&.current {
 				a {
-					color: #fff;
+					color: color('black');
+					font-weight: bold;
+					&:hover {
+						background-color: color('black');
+						color: #fff;
+					}
 				}
 			}
 			&.current {
 				order: -1;
-			}
-			&.urz {
-				list-style-image: url('../images/kawahiva.png');
 			}
 		}
 	}
@@ -85,32 +93,13 @@
 	svg {
 		width: 1.5rem;
 		path {
-			fill: color('white');
+			fill: color('black');
 		}
 	}
 
 	&.open {
 		.layout_wrapper {
-			top: -7rem;
+			top: -5rem;
 		}
-	}
-}
-
-*[data-lang-kawahiva] {
-	display: none;
-}
-body.kawahiva {
-	.newsletter__content {
-
-		h3[data-lang-kawahiva],
-		p[data-lang-kawahiva] {
-			display: block;
-		}
-
-		h3,
-		p.default {
-			display: none;
-		}
-
 	}
 }

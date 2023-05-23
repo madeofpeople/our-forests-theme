@@ -21,11 +21,11 @@
     <!-- /wp:cover -->
 
     <!-- wp:heading -->
-    <h2><?php esc_html_e( 'Everyone\'s Actions Count', 'the-territory' ); ?></h2>
+    <h2><?php esc_html_e( 'Everyone\'s Actions Count', 'our-forests' ); ?></h2>
     <!-- /wp:heading -->
 
     <!-- wp:paragraph -->
-    <p><?php esc_html_e( 'We are working together with many partners globally to protect the Amazon from the range of threats that it faces. Click here to find out what our partners are doing and support their efforts', 'the-territory' ); ?>.</p>
+    <p><?php esc_html_e( 'We are working together with many partners globally to protect the Amazon from the range of threats that it faces. Click here to find out what our partners are doing and support their efforts', 'our-forests' ); ?>.</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:gallery {"columns":3,"linkTo":"none","sizeSlug":"full","className":"campaign-grid"} -->
@@ -35,7 +35,7 @@
             <a href="https://www.chooseearth.co" target="_blank" rel="noreferrer noopener">
                 <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/choose-earth.png' ) ); ?>" alt="" class="wp-image-390"/>
             </a>
-            <figcaption><strong><?php esc_html_e( 'Choose Earth', 'the-territory' ); ?></strong><br><?php esc_html_e( 'Support Indigenous Peoples in Brazil to Reforest the Minds.', 'the-territory' ); ?></figcaption>
+            <figcaption><strong><?php esc_html_e( 'Choose Earth', 'our-forests' ); ?></strong><br><?php esc_html_e( 'Support Indigenous Peoples in Brazil to Reforest the Minds.', 'our-forests' ); ?></figcaption>
         </figure>
         <!-- /wp:image -->
 
@@ -44,7 +44,7 @@
             <a href="https://alianzaglobal.me/ncbs/" target="_blank" rel="noreferrer noopener">
                 <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/cph-dox.png' ) ); ?>" alt="" class="wp-image-392"/>
             </a>
-            <figcaption><strong><?php esc_html_e( 'Guardians of the Forest', 'the-territory' ); ?></strong><br><?php esc_html_e( 'From Nature-Based solutions to Nature and Community-Based Solutions.', 'the-territory' ); ?></figcaption>
+            <figcaption><strong><?php esc_html_e( 'Guardians of the Forest', 'our-forests' ); ?></strong><br><?php esc_html_e( 'From Nature-Based solutions to Nature and Community-Based Solutions.', 'our-forests' ); ?></figcaption>
         </figure>
         <!-- /wp:image -->
 
@@ -52,7 +52,7 @@
         <figure class="wp-block-image size-full campaign">
             <a href="https://apiboficial.org/luta-pela-vida/" target="_blank" rel="noreferrer noopener">
                 <img src="<?php echo esc_url( get_theme_file_uri( 'build/images/placeholders/struggle-for-life.png' ) ); ?>" alt="" class="wp-image-391"/></a>
-            <figcaption><strong><?php esc_html_e( 'Struggle for Life', 'the-territory' ); ?> </strong><br><?php esc_html_e( 'Guarantee Indigenous Land Rights in Brazil.', 'the-territory' ); ?></figcaption>
+            <figcaption><strong><?php esc_html_e( 'Struggle for Life', 'our-forests' ); ?> </strong><br><?php esc_html_e( 'Guarantee Indigenous Land Rights in Brazil.', 'our-forests' ); ?></figcaption>
         </figure>
         <!-- /wp:image -->
     </figure>

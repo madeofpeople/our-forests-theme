@@ -1,13 +1,66 @@
 @import 'global';
 @import 'environment/typography';
+@import 'environment/layout';
+@import 'components/defenders';
+@import 'components/social-grid';
 
-.is-root-container {
-	max-width: 938px;
-	margin: 0 auto;
+@mixin language-indicator ($beforeOrAfter: 'before'){
+	position: relative;
+	border: 2px #0af solid;
+	&::#{$beforeOrAfter} {
+		content: "i18n";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999999;
+		display: inline-block;
+		background-color: #0af;
+		color: #000;
+		padding: 0.25rem;
+	}
 }
 
-.btn-primary,
-.wp-block-button__link {
-	color: white !important;
-	background-color:black !important;
+.social {
+	.i18n {
+		@include language-indicator (before);
+
+		&.en::before {
+			content: 'EN';
+		}
+
+		&.fr::before {
+			content: 'FR';
+		}
+
+		&.de::before {
+			content: 'DE';
+		}
+	}
+}
+
+.trailer {
+	.i18n {
+
+		.wp-block-embed__wrapper {
+			@include language-indicator (after);
+		}
+
+		&.en {
+			.wp-block-embed__wrapper::after {
+				content: 'EN';
+			}
+		}
+
+		&.fr {
+			.wp-block-embed__wrapper::after {
+				content: 'FR';
+			}
+		}
+
+		&.de {
+			.wp-block-embed__wrapper::after {
+				content: 'DE';
+			}
+		}
+	}
 }

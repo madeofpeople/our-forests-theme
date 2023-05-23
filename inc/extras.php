@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package The Territory
+ * @package Our Forests
  */
 
 /**
@@ -14,15 +14,15 @@
  *
  * @return bool Whether the blog has more than one category.
  */
-function the_territory_categorized_blog() {
-	$category_count = get_transient( 'the_territory_categories' );
+function our_forests_categorized_blog() {
+	$category_count = get_transient( 'our_forests_categories' );
 
 	if ( false === $category_count ) {
-		$category_count_query = get_categories( [ 'fields' => 'count' ] );
+		$category_count_query = get_categories( array( 'fields' => 'count' ) );
 
 		$category_count = isset( $category_count_query[0] ) ? (int) $category_count_query[0] : 0;
 
-		set_transient( 'the_territory_categories', $category_count );
+		set_transient( 'our_forests_categories', $category_count );
 	}
 
 	return $category_count > 1;
@@ -37,7 +37,7 @@ function the_territory_categorized_blog() {
  *
  * @return int    The attachment ID.
  */
-function the_territory_get_attachment_id_from_url( $attachment_url = '' ) {
+function our_forests_get_attachment_id_from_url( $attachment_url = '' ) {
 	global $wpdb;
 
 	$attachment_id = false;
@@ -78,13 +78,13 @@ function the_territory_get_attachment_id_from_url( $attachment_url = '' ) {
  *
  * @return string Copyright year text.
  */
-function the_territory_copyright_year( $atts ) {
+function our_forests_copyright_year( $atts ) {
 	// Setup defaults.
 	$args = shortcode_atts(
-		[
+		array(
 			'starting_year' => '',
 			'separator'     => ' - ',
-		],
+		),
 		$atts
 	);
 
@@ -97,15 +97,14 @@ function the_territory_copyright_year( $atts ) {
 
 	return esc_html( $args['starting_year'] . $args['separator'] . $current_year );
 }
-
-add_shortcode( 'the_territory_copyright_year', 'the_territory_copyright_year', 15 );
+add_shortcode( 'our_forests_copyright_year', 'our_forests_copyright_year', 15 );
 
 /**
  * Retrieve the URL of the custom logo uploaded, if one exists.
  *
  * @author Corey Collins
  */
-function the_territory_get_custom_logo_url() {
+function our_forests_get_custom_logo_url() {
 
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 
@@ -120,4 +119,46 @@ function the_territory_get_custom_logo_url() {
 	}
 
 	return $custom_logo_image[0];
+}
+
+/**
+ * Get Service URL
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string
+ */
+function our_forests_get_url( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_url' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_url( $service, $attributes );
+}
+
+/**
+ * Get Service Icon
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string SVG
+ */
+function our_forests_get_icon( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_icon' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_icon( $service, $attributes );
+}
+
+/**
+ * Get Service Label
+ *
+ * @param string $service
+ * @param array $attributes
+ * @return string
+ */
+function our_forests_get_label( $service, $attributes ) {
+	if ( ! function_exists( 'Site_Functionality\Blocks\SocialCard\get_label' ) ) {
+		return false;
+	}
+	return Site_Functionality\Blocks\SocialCard\get_label( $service, $attributes );
 }

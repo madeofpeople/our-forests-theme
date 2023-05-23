@@ -4,102 +4,82 @@
  *
  * A place to put hooks and filters that aren't necessarily template tags.
  *
- * @package The Territory
+ * @package Our Forests
  */
+namespace Our_Forests;
 
 /**
  * Adds custom classes to the array of body classes.
  *
- * @author WebDevStudios
+ * @link https://developer.wordpress.org/reference/hooks/body_class/
  *
- * @param array $classes Classes for the body element.
- *
- * @return array Body classes.
+ * @param array $classes
  */
-function the_territory_body_classes( $classes ) {
-	// Allows for incorrect snake case like is_IE to be used without throwing errors.
+function body_classes( $classes ) : array {
 	global $is_IE, $is_edge, $is_safari;
 
-	// If it's IE, add a class.
 	if ( $is_IE ) {
 		$classes[] = 'ie';
 	}
-
-	// If it's Edge, add a class.
 	if ( $is_edge ) {
 		$classes[] = 'edge';
 	}
-
-	// If it's Safari, add a class.
 	if ( $is_safari ) {
 		$classes[] = 'safari';
 	}
-
-	// Are we on mobile?
 	if ( wp_is_mobile() ) {
 		$classes[] = 'mobile';
 	}
 
-	// Give all pages a unique class.
 	if ( is_page() ) {
 		$classes[] = 'page-' . basename( get_permalink() );
 	}
-
-	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	// Adds "no-js" class. If JS is enabled, this will be replaced (by javascript) to "js".
 	$classes[] = 'no-js';
 
-	// Add a `has-sidebar` class if we're using the sidebar template.
 	if ( is_page_template( 'template-sidebar-right.php' ) ) {
 		$classes[] = 'has-sidebar';
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'the_territory_body_classes' );
+add_filter( 'body_class', __NAMESPACE__ . '\body_classes' );
 
 /**
- * Flush out the transients used in the_territory_categorized_blog.
+ * Flush out the transients used in our_forests_categorized_blog.
  *
  * @author WebDevStudios
  *
  * @return bool Whether or not transients were deleted.
  */
-function the_territory_category_transient_flusher() {
+function category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return false;
 	}
 
 	// Like, beat it. Dig?
-	return delete_transient( 'the_territory_categories' );
+	return delete_transient( 'our_forests_categories' );
 }
-add_action( 'delete_category', 'the_territory_category_transient_flusher' );
-add_action( 'save_post', 'the_territory_category_transient_flusher' );
+add_action( 'delete_category', __NAMESPACE__ . '\category_transient_flusher' );
+add_action( 'save_post', __NAMESPACE__ . '\category_transient_flusher' );
 
 /**
  * Filter social post content
- * 
+ *
  * @link https://developer.wordpress.org/reference/hooks/the_content/
  *
  * @param string $content
  * @return string $content
  */
-function the_territory_content( string $content ) {
-	if( 'social' === get_post_type() && ( $message = get_post_meta( get_the_id(), 'message', true ) ) ) {
+function content( string $content ) : string {
+	if ( 'social' === get_post_type() && ( $message = get_post_meta( get_the_id(), 'message', true ) ) ) {
 		$content = $message;
 	}
 	return $content;
 }
-add_filter( 'the_content', 'the_territory_content' );
+add_filter( 'the_content', __NAMESPACE__ . '\content' );
 
 /**
  * Customize "Read More" string on <!-- more --> with the_content();
@@ -108,10 +88,10 @@ add_filter( 'the_content', 'the_territory_content' );
  *
  * @return string Read more link.
  */
-function the_territory_content_more_link() {
-	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'the-territory' ) . '...</a>';
+function content_more_link() {
+	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'our-forests' ) . '...</a>';
 }
-add_filter( 'the_content_more_link', 'the_territory_content_more_link' );
+add_filter( 'the_content_more_link', 'content_more_link' );
 
 /**
  * Customize the [...] on the_excerpt();
@@ -122,10 +102,10 @@ add_filter( 'the_content_more_link', 'the_territory_content_more_link' );
  *
  * @return string Read more link.
  */
-function the_territory_excerpt_more( $more ) {
-	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'the-territory' ) );
+function excerpt_more( $more ) : string {
+	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'our-forests' ) );
 }
-add_filter( 'excerpt_more', 'the_territory_excerpt_more' );
+add_filter( 'excerpt_more', __NAMESPACE__ . '\excerpt_more' );
 
 /**
  * Filters WYSIWYG content with the_content filter.
@@ -136,35 +116,10 @@ add_filter( 'excerpt_more', 'the_territory_excerpt_more' );
  *
  * @return string|bool Content string if content exists, else empty.
  */
-function the_territory_get_the_content( $content ) {
+function get_the_content( $content ) {
 	return ! empty( $content ) ? $content : false;
 }
-add_filter( 'the_content', 'the_territory_get_the_content', 20 );
-
-/**
- * Remove specific block
- *
- * @param string $content
- * @return string $content
- */
-function the_territory_remove_block( $content ) {
-	$name = 'site-functionality/page-header';
-	if ( ! has_block( $name ) ) {
-		return $content;
-	}
-	global $post;
-	$blocks = parse_blocks( $post->post_content );
-	$return = '';
-	foreach ( $blocks as $block ) {
-		if ( $name !== $block['blockName'] ) {
-			$return .= render_block( $block );
-		} else {
-			$return .= '<!--' . $name . '-->';
-		}
-	}
-	return $return;
-}
-// add_filter( 'the_content', 'the_territory_remove_block', 20 );
+add_filter( 'the_content', __NAMESPACE__ . '\get_the_content', 20 );
 
 /**
  * Enable custom mime types.
@@ -175,20 +130,20 @@ function the_territory_remove_block( $content ) {
  *
  * @return array Mime types.
  */
-function the_territory_custom_mime_types( $mimes ) {
+function custom_mime_types( $mimes ) {
 	$mimes['svg']  = 'image/svg+xml';
 	$mimes['svgz'] = 'image/svg+xml';
 
 	return $mimes;
 }
-add_filter( 'upload_mimes', 'the_territory_custom_mime_types' );
+add_filter( 'upload_mimes', __NAMESPACE__ . '\custom_mime_types' );
 
 /**
  * Add SVG definitions to footer.
  *
  * @author WebDevStudios
  */
-function the_territory_include_svg_icons() {
+function include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_template_directory() . '/build/images/icons/sprite.svg';
 
@@ -199,7 +154,7 @@ function the_territory_include_svg_icons() {
 		echo '</div>';
 	}
 }
-add_action( 'wp_footer', 'the_territory_include_svg_icons', 9999 );
+add_action( 'wp_footer', __NAMESPACE__ . '\include_svg_icons', 9999 );
 
 /**
  * Display the customizer header scripts.
@@ -208,9 +163,9 @@ add_action( 'wp_footer', 'the_territory_include_svg_icons', 9999 );
  *
  * @return string Header scripts.
  */
-function the_territory_display_customizer_header_scripts() {
+function display_customizer_header_scripts() {
 	// Check for header scripts.
-	$scripts = get_theme_mod( 'the_territory_header_scripts' );
+	$scripts = get_theme_mod( 'our_forests_header_scripts' );
 
 	// None? Bail...
 	if ( ! $scripts ) {
@@ -219,9 +174,9 @@ function the_territory_display_customizer_header_scripts() {
 
 	// Otherwise, echo the scripts!
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-	echo the_territory_get_the_content( $scripts );
+	echo Our_Forests\get_the_content( $scripts );
 }
-add_action( 'wp_head', 'the_territory_display_customizer_header_scripts', 999 );
+add_action( 'wp_head', __NAMESPACE__ . '\display_customizer_header_scripts', 999 );
 
 /**
  * Display the customizer footer scripts.
@@ -230,9 +185,9 @@ add_action( 'wp_head', 'the_territory_display_customizer_header_scripts', 999 );
  *
  * @return string Footer scripts.
  */
-function the_territory_display_customizer_footer_scripts() {
+function display_customizer_footer_scripts() {
 	// Check for footer scripts.
-	$scripts = get_theme_mod( 'the_territory_footer_scripts' );
+	$scripts = get_theme_mod( 'our_forests_footer_scripts' );
 
 	// None? Bail...
 	if ( ! $scripts ) {
@@ -241,9 +196,9 @@ function the_territory_display_customizer_footer_scripts() {
 
 	// Otherwise, echo the scripts!
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
-	echo the_territory_get_the_content( $scripts );
+	echo Our_Forests\get_the_content( $scripts );
 }
-add_action( 'wp_footer', 'the_territory_display_customizer_footer_scripts', 999 );
+add_action( 'wp_footer', __NAMESPACE__ . '\display_customizer_footer_scripts', 999 );
 
 /**
  * Adds OG tags to the head for better social sharing.
@@ -252,7 +207,7 @@ add_action( 'wp_footer', 'the_territory_display_customizer_footer_scripts', 999 
  *
  * @return string An empty string if Yoast is not found, otherwise a block of meta tag HTML.
  */
-function the_territory_add_og_tags() {
+function add_og_tags() {
 	// Bail if Yoast is installed, since it will handle things.
 	if ( class_exists( 'WPSEO_Options' ) || defined( 'THE_SEO_FRAMEWORK_PRESENT' ) ) {
 		return '';
@@ -262,6 +217,8 @@ function the_territory_add_og_tags() {
 	if ( is_singular() ) {
 		global $post;
 	}
+
+	$image_size = 'social-meta';
 
 	// Get the post content.
 	$post_content = ! empty( $post ) ? $post->post_content : '';
@@ -276,7 +233,7 @@ function the_territory_add_og_tags() {
 	$default_url = get_permalink();
 
 	// Set our base description.
-	$default_base_description = ( get_bloginfo( 'description' ) ) ? get_bloginfo( 'description' ) : esc_html__( 'Visit our website to learn more.', 'the-territory' );
+	$default_base_description = ( get_bloginfo( 'description' ) ) ? get_bloginfo( 'description' ) : esc_html__( 'Visit our website to learn more.', 'our-forests' );
 
 	// Set the card type.
 	$default_type = 'article';
@@ -316,13 +273,13 @@ function the_territory_add_og_tags() {
 
 		$term_name      = single_term_title( '', false );
 		$card_title     = $term_name . ' - ' . $default_title;
-		$specify        = ( is_category() ) ? esc_html__( 'categorized in', 'the-territory' ) : esc_html__( 'tagged with', 'the-territory' );
+		$specify        = ( is_category() ) ? esc_html__( 'categorized in', 'our-forests' ) : esc_html__( 'tagged with', 'our-forests' );
 		$queried_object = get_queried_object();
 		$card_url       = get_term_link( $queried_object );
 		$card_type      = 'website';
 
 		// Translators: get the term name.
-		$card_long_description = sprintf( esc_html__( 'Posts %1$s %2$s.', 'the-territory' ), $specify, $term_name );
+		$card_long_description = sprintf( esc_html__( 'Posts %1$s %2$s.', 'our-forests' ), $specify, $term_name );
 		$card_description      = $card_long_description;
 	}
 
@@ -335,7 +292,7 @@ function the_territory_add_og_tags() {
 		$card_type   = 'website';
 
 		// Translators: get the search term.
-		$card_long_description = sprintf( esc_html__( 'Search results for %s.', 'the-territory' ), $search_term );
+		$card_long_description = sprintf( esc_html__( 'Search results for %s.', 'our-forests' ), $search_term );
 		$card_description      = $card_long_description;
 	}
 
@@ -368,7 +325,7 @@ function the_territory_add_og_tags() {
 	// Media page.
 	if ( is_attachment() ) {
 		$attachment_id = get_the_ID();
-		$card_image    = ( wp_attachment_is_image( $attachment_id ) ) ? wp_get_attachment_image_url( $attachment_id, 'full' ) : $card_image;
+		$card_image    = ( wp_attachment_is_image( $attachment_id ) ) ? wp_get_attachment_image_url( $attachment_id, $image_size ) : $card_image;
 	}
 
 	?>
@@ -383,7 +340,7 @@ function the_territory_add_og_tags() {
 	<meta name="description" content="<?php echo esc_attr( $card_long_description ); ?>" />
 	<?php
 }
-add_action( 'wp_head', 'the_territory_add_og_tags' );
+add_action( 'wp_head', __NAMESPACE__ . '\add_og_tags' );
 
 /**
  * Removes or Adjusts the prefix on category archive page titles.
@@ -394,7 +351,7 @@ add_action( 'wp_head', 'the_territory_add_og_tags' );
  *
  * @return string The updated $block_title.
  */
-function the_territory_remove_archive_title_prefix( $block_title ) {
+function remove_archive_title_prefix( $block_title ) {
 	// Get the single category title with no prefix.
 	$single_cat_title = single_term_title( '', false );
 
@@ -404,20 +361,74 @@ function the_territory_remove_archive_title_prefix( $block_title ) {
 
 	return $block_title;
 }
-add_filter( 'get_the_archive_title', 'the_territory_remove_archive_title_prefix' );
+add_filter( 'get_the_archive_title', __NAMESPACE__ . '\remove_archive_title_prefix' );
+
+/**
+ * Modify content on attachment pages
+ * Make content act like normal page
+ *
+ * @link https://developer.wordpress.org/reference/hooks/the_content/
+ *
+ * @param string $content
+ * @return string $content
+ */
+function modify_attachment_content( $content ) {
+	if ( 'attachment' === get_post_type() ) {
+		$content = do_blocks( $content );
+		$content = wptexturize( $content );
+		$content = wpautop( $content );
+		$content = shortcode_unautop( $content );
+		$content = wp_filter_content_tags( $content );
+	}
+	return $content;
+}
+remove_filter( 'the_content', 'prepend_attachment' );
+add_filter( 'the_content', __NAMESPACE__ . '\modify_attachment_content' );
+
+/**
+ * Fix Editor Content
+ *
+ * @param string $content
+ * @return string $content
+ */
+function editor_content( $content ) {
+	remove_filter( 'the_editor_content', 'format_for_editor' );
+	return $content;
+}
+
+/**
+ * Add editor for attachments
+ *
+ * @param array $settings
+ * @return array $settings
+ */
+function editor_support( $settings ) {
+	if ( is_admin() && get_post_type() == 'attachment' ) {
+		$settings = array(
+			'wpautop'       => true,
+			'textarea_name' => 'content',
+			'textarea_rows' => 10,
+			'media_buttons' => false,
+			'tinymce'       => true,
+		);
+		add_filter( 'the_editor_content', __NAMESPACE__ . '\editor_content', 1 );
+		return $settings;
+	}
+}
+add_filter( 'wp_editor_settings', __NAMESPACE__ . '\editor_support', 10 );
 
 /**
  * Disables wpautop to remove empty p tags in rendered Gutenberg blocks.
  *
  * @author Corey Collins
  */
-function the_territory_disable_wpautop_for_gutenberg() {
+function disable_wpautop_for_gutenberg() {
 	// If we have blocks in place, don't add wpautop.
 	if ( has_filter( 'the_content', 'wpautop' ) && has_blocks() ) {
 		remove_filter( 'the_content', 'wpautop' );
 	}
 }
-add_filter( 'init', 'the_territory_disable_wpautop_for_gutenberg', 9 );
+add_filter( 'init', __NAMESPACE__ . '\disable_wpautop_for_gutenberg', 9 );
 
 /**
  * Move Template Location for Getwid Custom Post Type
@@ -425,7 +436,7 @@ add_filter( 'init', 'the_territory_disable_wpautop_for_gutenberg', 9 );
  * @param string $template
  * @return string $template
  */
-function the_territory_getwid_get_template_part( $template ) {
+function getwid_get_template_part( $template ) {
 	$templates = array(
 		'instagram',
 		'post-carousel',
@@ -448,12 +459,7 @@ function the_territory_getwid_get_template_part( $template ) {
 	}
 	return $template;
 }
-add_filter( 'getwid/core/get_template_part', 'the_territory_getwid_get_template_part' );
-
-/**
- * apply_filters( 'sbi_use_theme_templates', $settings['customtemplates'] )
- * /Users/pea/Development/Local Sites/the-territory/app/public/wp-content/plugins/instagram-feed/inc/if-functions.php
- */
+add_filter( 'getwid/core/get_template_part', __NAMESPACE__ . '\getwid_get_template_part' );
 
  /**
   * Filter services data
@@ -463,17 +469,43 @@ add_filter( 'getwid/core/get_template_part', 'the_territory_getwid_get_template_
   * @param integer $post_id
   * @return array $services_data
   */
-function the_territory_social_block_services( array $services_data, string $service, int $post_id ) {
+function social_block_services( array $services_data, string $service, int $post_id ) {
 	$permalink  = rawurlencode( \get_post_meta( $post_id, 'link', true ) );
 	$card_title = esc_attr( get_the_title( $post_id ) );
 	$title      = rawurlencode( \get_post_meta( $post_id, 'message', true ) );
 	$message    = esc_attr( \get_post_meta( $post_id, 'message', true ) );
 
-	$services_data['facebook']['label'] = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
-	$services_data['twitter']['label'] = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
+	$services_data['facebook']['label']  = sprintf( __( 'Share %s on Facebook', 'site-functionality' ), $card_title );
+	$services_data['twitter']['label']   = sprintf( __( 'View %s on Twitter', 'site-functionality' ), $card_title );
 	$services_data['instagram']['label'] = sprintf( __( 'View %s on Instagram', 'site-functionality' ), $card_title );
-	$services_data['download']['label'] = sprintf( __( 'Download %s images as a File', 'site-functionality' ), $card_title );
+	$services_data['download']['label']  = sprintf( __( 'Download %s images as a File', 'site-functionality' ), $card_title );
 
 	return $services_data;
 }
-add_filter( 'site_functionality/social_block/services', 'the_territory_social_block_services', 10, 3 );
+add_filter( 'site_functionality/social_block/services', __NAMESPACE__ . '\social_block_services', 10, 3 );
+
+/**
+ * Enable for attachment pages
+ *
+ * @param array $post_types
+ * @return array $post_types
+ */
+function add_page_links_to_support( $post_types ) : array {
+	$post_types[] = 'attachment';
+	return $post_types;
+}
+add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_support', 10 );
+
+/**
+ * Modify image used for seo meta
+ *
+ * @param array  $params
+ * @param array  $args
+ * @param string $context
+ * @return array $params
+ */
+function seo_framework_image_params( $params, $args, $context ) : array {
+	$params['size'] = 'social-meta';
+	return $params;
+}
+add_filter( 'the_seo_framework_image_generation_params', __NAMESPACE__ . '\seo_framework_image_params', 10, 3 );

@@ -4,19 +4,19 @@
 		"color": {
 			"palette": [
 				{
-					"name": "Green",
-					"slug": "green",
-					"color": "#80AD6B"
+					"name": "Green Light",
+					"slug": "green-light",
+					"color": "#B7D9A6"
 				},
 				{
 					"name": "Mid Green",
 					"slug": "green-mid",
-					"color": "#3F682B"
+					"color": "#14250C"
 				},
 				{
-					"name": "Dark Green",
+					"name": "Darker Green",
 					"slug": "green-dark",
-					"color": "#2E462E"
+					"color": "#0F2D00"
 				},
 				{
 					"name": "Grey Dark",
@@ -95,7 +95,7 @@
 					"name": "Body"
 				}
 			],
-			"fontSizes": [],
+			"fontSizes": false,
 			"fontStyle": true,
 			"fontWeight": false,
 			"letterSpacing": false,

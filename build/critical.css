@@ -1,1 +1,1 @@
-.site-header .site-branding a,.site-header .site-description,.site-header>.container{@apply no-underline}
+.site-header .site-description{@apply no-underline}.site-header .site-branding{display:flex;justify-content:center;text-align:center}.site-header .site-branding a{@apply no-underline}

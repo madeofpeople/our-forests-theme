@@ -4,9 +4,9 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package The Territory
+ * @package Our Forests
  */
-namespace The_Territory;
+namespace Our_Forests;
 
 /**
  * Get Header Image ID
@@ -100,4 +100,62 @@ function get_data_type( int $media_id ) {
 	$media_attributes = \wp_get_attachment_url( $media_id );
 	$data_type = 'm4v' === pathinfo( $media_attributes, PATHINFO_EXTENSION ) ? 'mp4' : pathinfo( $media_attributes, PATHINFO_EXTENSION );
 	return $data_type;
+}
+
+/**
+ * Get the media item associated with attachment post
+ *
+ * @link https://developer.wordpress.org/reference/functions/attachment_url_to_postid/
+ * 
+ * @param int $post_id
+ * @return mixed int $attachment_id || bool false
+ */
+function get_attachment_media_id( $post_id = null ) {
+	global $post;
+	$post_id = $post_id ? (int) $post_id : get_the_ID();
+	if( $attachment_url = \wp_get_attachment_image_url( $post_id, 'full' ) ) {
+		return \attachment_url_to_postid( $attachment_url );
+	}
+	return false;
+}
+
+/**
+ * Modify kses rules for SVG
+ *
+ * @return array allowed_html
+ */
+function get_kses_svg_ruleset() {
+	$kses_defaults = \wp_kses_allowed_html( 'post' );
+
+	$svg_args = array(
+		'svg'   => array(
+			'class'           => true,
+			'aria-hidden'     => true,
+			'aria-labelledby' => true,
+			'role'            => true,
+			'xmlns'           => true,
+			'width'           => true,
+			'height'          => true,
+			'viewbox'         => true, // <= Must be lower case!
+			'color'           => true,
+			'stroke-width'    => true,
+			'focusable'       => true,
+			'style'           => true,
+			'fill'            => true,
+		),
+		'g'     => array( 'color' => true ),
+		'title' => array(
+			'title' => true,
+			'id'    => true,
+		),
+		'path'  => array(
+			'd'     => true,
+			'color' => true,
+		),
+		'use'   => array(
+			'xlink:href' => true,
+		),
+	);
+
+	return array_merge( $kses_defaults, $svg_args );
 }

@@ -1,110 +1,94 @@
-.wp-block-site-functionality-social-cards {
+.grid-three {
 	@extend %grid-three;
+}
 
-	padding-left: get-spacing(0.5);
-	padding-right: get-spacing(0.5);
-	@media ( min-width: bp(sm) ) {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-	}
+#social {
 
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
+	> .wp-block-group {
 
-	.slick-list {
-		img {
-			width: 100%;
-			height: auto;
+		padding-left: spacing(md);
+		padding-right: spacing(md);
+
+		@media ( min-width: bp(sm) ) {
+
+			padding-left: spacing(md);
+			padding-right: spacing(md);
 		}
-	}
 
-	.social-post {
-		overflow: hidden;
-		max-width: 100%;
-		position: relative;
-		height: 100%;
-		aspect-ratio: 1/1;
-		background-color: color('black');
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
 
-		.image-group {
+		.social-post {
+			max-width: 100%;
 			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate3d(-50%, -50%, 0);
+			height: 100%;
+			min-height: 100px;
+			aspect-ratio: 1/1;
+			background-color: color('black');
+			overflow: hidden;
 
-			.slick-arrow {
-				z-index: 10;
-				position: absolute;
+			.image-group {
+				position: relative;
 				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
 
-				&.slick-next {
-					right: 1rem;
+				img {
+					width: 100%;
+					height: auto;
 				}
+				.slick-arrow {
+					z-index: 10;
+					position: absolute;
+					top: 50%;
 
-				&.slick-prev {
-					left: 1rem;
-				}
-			}
-		}
+					&.slick-next {
+						right: 1rem;
+					}
 
-		&.has-multiple-images {
-			&::before {
-				content: '';
-				position: absolute;
-				z-index: 10;
-				top: 1.5rem;
-				right: 0.5rem;
-				width: 2rem;
-				height: 2rem;
-				background-size: contain;
-				background-image: url('../images/icons/stack.svg');
-				background-repeat: no-repeat;
-			}
-		}
-
-		.wp-block-outermost-social-sharing {
-			position: absolute;
-			bottom: -12rem;
-			left: 50%;
-			display: flex;
-			justify-content: space-between;
-			background-color: color('white');
-			padding: get-spacing(0.25);
-			border-radius: get-spacing(0.25);
-			transform: translate(-50%, -50%);
-			transition-property: bottom;
-			transition-duration: 0.325s;
-			transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-
-			li:nth-child(2n) {
-				padding-left: get-spacing(0.25);
-				padding-right: get-spacing(0.25);
-			}
-
-			svg {
-				width: 1.5rem;
-				height: 1.5rem;
-			}
-
-			@media ( min-width: bp(md) ) {
-				li:nth-child(2n) {
-					padding-left: get-spacing(0.5);
-					padding-right: get-spacing(0.5);
-				}
-				svg {
-					width: 2rem;
-					height: 2rem;
+					&.slick-prev {
+						left: 1rem;
+					}
 				}
 			}
-		}
 
-		&:hover,
-		&:focus {
 			.wp-block-outermost-social-sharing {
-				bottom: -1.25rem;
+				position: absolute;
+				bottom: -12rem;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: space-between;
+				background-color: color('white');
+				padding:  spacing(sm);
+				border-radius: 0.25rem;
+				transition-property: bottom;
+				transition-duration: 0.325s;
+				transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+				svg {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+
+				@media ( min-width: bp(md) ) {
+					svg {
+						width: 2rem;
+						height: 2rem;
+					}
+				}
+			}
+
+			&:hover,
+			&:focus {
+				.wp-block-outermost-social-sharing {
+					bottom: -1.25rem;
+				}
 			}
 		}
 	}

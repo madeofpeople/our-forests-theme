@@ -1,0 +1,16 @@
+section {
+	.wp-block-cover__inner-container > h2.wp-block-heading,
+	> h2.wp-block-heading {
+		color: color('white');
+		background-color: color('black');
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		padding: spacing(lg) spacing(lg) spacing(md);
+		font-size: fs(h4);
+
+		@media (min-width: bp(md)) {
+			font-size: fs(h2);
+		}
+	}
+}

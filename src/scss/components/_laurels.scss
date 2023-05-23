@@ -1,12 +1,12 @@
 .laurels {
-	margin: get-spacing(0.5);
+	margin: spacing(md);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 
 	figure.wp-block-image {
 		width: auto;
-		margin: get-spacing(0.25);
+		margin: spacing(md);
 		height: 84px;
 		img {
 			display: block;
@@ -20,10 +20,10 @@
 
 
 	@media ( min-width: bp(sm) ) {
-		margin: get-spacing(0.5);
+		margin:  spacing(md);
 	}
 
 	@media ( min-width: bp(lg) ) {
-		margin: get-spacing();
+		margin:  spacing(md);
 	}
 }

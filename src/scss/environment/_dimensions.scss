@@ -1,5 +1,13 @@
-$base: 2.826875rem;
+@use 'sass:map';
 
-@function get-spacing($multiplier: 1) {
-    @return $multiplier * $base;
+$spacings: (
+	'xs': 11px,
+	'sm': 22px,
+	'md': 33px,
+	'lg': 55px,
+	'xl': 66px,
+);
+
+@function spacing($key) {
+    @return map.get($spacings, $key);
 }
