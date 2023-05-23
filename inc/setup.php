@@ -45,9 +45,9 @@ function our_forests_setup() {
 
 	add_image_size( 'full-width', 1920, 1080, false );
 
-	add_image_size( 'defender-large', 600, 750, false ); // 5:4 aspect ratio
-	add_image_size( 'defender-medium', 400, 500, false ); // 5:4 aspect ratio
-	add_image_size( 'defender-thumbnail', 252, 315, false ); // 5:4 aspect ratio
+	add_image_size( 'defender-large', 600, 750, false ); // 4:5 aspect ratio
+	add_image_size( 'defender-medium', 400, 500, false ); // 4:5 aspect ratio
+	add_image_size( 'defender-thumbnail', 252, 315, false ); // 4:5 aspect ratio
 
 	add_image_size( 'social-meta', 1200, 630, array( 'center', 'top' ) ); // 1.91:1 aspect ratio
 	add_image_size( 'social-large', 1080, 1080, false ); // 1:1 aspect ratio
@@ -153,8 +153,6 @@ function our_forests_widgets_init() {
 	// Define sidebars.
 	$sidebars = array(
 		'header-notice' => esc_html__( 'Header Notice', 'our-forests' ),
-		// 'header-logo'    => esc_html__( 'Header Logo', 'our-forests' ),
-		// 'content-bottom' => esc_html__( 'Content Bottom', 'our-forests' ),
 		'footer'        => esc_html__( 'Footer', 'our-forests' ),
 	);
 
