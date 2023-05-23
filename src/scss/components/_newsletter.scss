@@ -1,6 +1,17 @@
 #support {
+
 	p {
 		margin-top: 0 !important;
+	}
+
+	padding-bottom: spacing(xs);
+
+	@media ( min-width: bp(sm) ) {
+		padding-bottom: spacing(sm);
+	}
+
+	@media ( min-width: bp(md) ) {
+		padding-bottom: spacing(md);
 	}
 }
 
