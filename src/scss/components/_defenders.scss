@@ -64,14 +64,20 @@
 		flex-wrap: nowrap !important;
 		flex-direction: column !important;
 
+		figure {
+			max-width: 200px;
+		}
 		img {
 			display: block;
 		}
 
 		@media screen and (min-width: bp(sm)) {
 			flex-direction: row !important;
+			figure {
+				min-width: 12rem;
+				max-width: auto;
+			}
 		}
-
 		@media screen and (min-width: bp(md)) {
 
 			flex-direction: column !important;
@@ -93,8 +99,15 @@
 		color: color('white');
 		grid-row: 2;
 		padding: spacing(sm);
+
 		figure {
+				display: block;
+				width: 100%;
 			margin-bottom: 0.5rem;
+			img {
+				display: block;
+				width: 100%;
+			}
 		}
 		@media (min-width: bp(md)) {
 			padding: spacing(md);
