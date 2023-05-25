@@ -6,7 +6,8 @@
  *
  * @package Our Forests
  */
-if( ! $attachment_id = Our_Forests\get_attachment_media_id( $post->ID ) ) {
+$post_id = $post->ID;
+if( ! $attachment_id = Our_Forests\get_attachment_media_id( $post_id ) ) {
 	return;
 }
 $attributes = array(
