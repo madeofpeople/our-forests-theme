@@ -17,6 +17,7 @@ $attributes = array(
 	'title'   => get_the_title( $post_id ),
 	'link'    => get_the_permalink( $post_id ),
 );
+$show_intro = Our_Forests\show_intro();
 ?>
 	<article <?php \post_class( 'social-card__page' ); ?>>
 
@@ -27,7 +28,7 @@ $attributes = array(
 
 		<div class="entry-content">
 			<?php
-			if( $intro_text = get_post_meta( $post_id, 'intro_text', true ) ) :
+			if ( $show_intro && ( $intro_text = get_option( 'options_intro_text' ) ) ) :
 				?>
 				<div class="intro lede">
 					<?php echo apply_filters( 'the_content', $intro_text ); ?>
