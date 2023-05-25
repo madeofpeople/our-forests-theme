@@ -53,6 +53,7 @@ $attributes = array(
 
 		</div><!-- .entry-content -->
 
+		<h3>Share</a>
 		<a class="backlink" href="/">Return to homepage</a>
 
 		<footer class="entry-footer">
