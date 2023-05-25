@@ -459,7 +459,7 @@ function getwid_get_template_part( $template ) {
 	}
 	return $template;
 }
-add_filter( 'getwid/core/get_template_part', __NAMESPACE__ . '\getwid_get_template_part' );
+// add_filter( 'getwid/core/get_template_part', __NAMESPACE__ . '\getwid_get_template_part' );
 
  /**
   * Filter services data
@@ -483,6 +483,18 @@ function social_block_services( array $services_data, string $service, int $post
 	return $services_data;
 }
 add_filter( 'site_functionality/social_block/services', __NAMESPACE__ . '\social_block_services', 10, 3 );
+
+/**
+ * Modify Checkbox Text
+ *
+ * @param string $checkbox_text
+ * @return string $checkbox_text
+ */
+function mailchimp_eu_compliance_text( $checkbox_text ) : string {
+	$checkbox_text = esc_html__( 'By checking this box I consent to the use of my information provided for email marketing purposes.', 'our-forests' );
+	return $checkbox_text;
+}
+add_filter( 'yikes-mailchimp-eu-compliance-checkbox-text', __NAMESPACE__ . '\mailchimp_eu_compliance_text' );
 
 /**
  * Enable for attachment pages
