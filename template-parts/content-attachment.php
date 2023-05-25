@@ -53,6 +53,8 @@ $attributes = array(
 
 		</div><!-- .entry-content -->
 
+		<a class="backlink" href="/">Return to homepage</a>
+
 		<footer class="entry-footer">
 			<?php our_forests_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
