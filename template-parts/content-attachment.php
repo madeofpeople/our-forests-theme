@@ -47,8 +47,9 @@ $attributes = array(
 				endif;
 				?>
 			</figure>
-
-			<?php the_content();?>
+			<div class="content">
+				<?php the_content();?>
+			</div>
 			<?php get_template_part( 'template-parts/components/share', 'links', array( 'attributes' => $attributes ) ); ?>
 
 		</div><!-- .entry-content -->

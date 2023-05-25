@@ -35,6 +35,8 @@
 	}
 
 	.post-image {
+		margin-bottom: 0;
+
 		img {
 			display: block;
 			width: 100%;
@@ -42,6 +44,13 @@
 		}
 	}
 
+	.entry-content {
+		.content {
+			padding: spacing(sm);
+			background-color: color(grey-dark);
+			color: white;
+		}
+	}
 	.wp-block-outermost-social-sharing {
 		list-style: none;
 		box-sizing: border-box;
