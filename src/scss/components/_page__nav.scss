@@ -27,11 +27,10 @@
 			max-width: 32%;
 
 			.wp-block-button__link {
-
 				background-color: transparent !important;
 				border-bottom: 0;
 				font-size: 16px;
-				padding: 0.25rem 0;
+				padding: 0.25rem 0.5rem;
 			}
 
 			@media (min-width: bp(md)) {
@@ -58,10 +57,16 @@
 		background-color: color('grey-dark');
 		box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
 
-		&.active {
 
-			background-color: color('white');
-			color: color(grey-dark);
+		a, {
+			color: white;
+			&:hover,
+			&:active,
+			&:focus,
+			&.active {
+				background-color: color('black') !important;
+				color: color(green-light);
+			}
 		}
 	}
 

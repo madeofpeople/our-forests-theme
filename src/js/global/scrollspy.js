@@ -1,32 +1,33 @@
 const options = {
-	threshold: 0.24,
+	threshold: 0.1,
 };
 
 const initScrollSpy = () => {
 	const selectors = '.entry-content > section:not(.social)';
 	const observedElements = document.querySelectorAll( selectors );
-	const pageNav = document.querySelector( '.page-nav' );
+	const pageNav = document.querySelector(
+		'.wp-block-site-functionality-page-nav'
+	);
 	let activeItem = null;
 
-	const updatePageNav = ( el ) => {
-		if ( activeItem ) {
-			activeItem.classList.remove( 'active' );
+	const updatePageNav = ( activeSection ) => {
+		const heading = activeSection.querySelector( 'h2' );
+		let headingId;
+		if ( heading && heading.id ) {
+			headingId = heading.id;
+
+			if (
+				! activeItem ||
+				headingId !==
+					activeItem.getAttribute( 'href' ).split( '#' )[ 1 ]
+			) {
+				if ( activeItem ) activeItem.classList.remove( 'active' );
+				activeItem = pageNav.querySelector(
+					`.wp-block-button__link[href="#${ headingId }"]`
+				);
+				activeItem.classList.add( 'active' );
+			}
 		}
-
-		if ( activeItem ) {
-			activeItem.classList.remove( 'active' );
-		}
-
-		const heading = el.querySelector( 'h2' );
-
-		if ( heading ) {
-			activeItem = pageNav.querySelector(
-				`.wp-block-tiptip-hyperlink-group-block[href="#${ heading.id }"]`
-			);
-			console.log( activeItem, heading.textContent );
-		}
-
-		if ( activeItem ) activeItem.classList.add( 'active' );
 	};
 
 	const inViewCallback = ( entries ) => {
@@ -34,7 +35,7 @@ const initScrollSpy = () => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				if ( pageNav ) updatePageNav( entry.target );
+				updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
