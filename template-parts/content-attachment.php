@@ -21,7 +21,7 @@ $attributes = array(
 	<article <?php \post_class( 'social-card__page' ); ?>>
 
 		<header class="entry-header">
-			<a class="backlink" href="/">Return to homepage</a>
+			<a class="backlink" href="<?php echo esc_url( get_home_url( null, '/' ) ); ?>"><?php esc_html_e( 'Return to homepage', 'our-forests' ); ?></a>
 			<?php \the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		</header><!-- .entry-header -->
 
@@ -52,12 +52,12 @@ $attributes = array(
 				<?php the_content();?>
 			</div>
 			<div class="share-block">
-				<h3>Share</h3>
+				<h3><?php esc_html_e( 'Share', 'our-forests' ); ?></h3>
 				<?php get_template_part( 'template-parts/components/share', 'links', array( 'attributes' => $attributes ) ); ?>
 			</div>
 		</div><!-- .entry-content -->
 
-		<a class="backlink" href="/">Return to homepage</a>
+		<a class="backlink" href="<?php echo esc_url( get_home_url( null, '/' ) ); ?>"><?php esc_html_e( 'Return to homepage', 'our-forests' ); ?></a>
 
 		<footer class="entry-footer">
 			<?php our_forests_entry_footer(); ?>
