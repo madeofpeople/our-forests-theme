@@ -50,11 +50,12 @@ $attributes = array(
 			<div class="content">
 				<?php the_content();?>
 			</div>
-			<?php get_template_part( 'template-parts/components/share', 'links', array( 'attributes' => $attributes ) ); ?>
-
+			<div class="share-block">
+				<h3>Share</h3>
+				<?php get_template_part( 'template-parts/components/share', 'links', array( 'attributes' => $attributes ) ); ?>
+			</div>
 		</div><!-- .entry-content -->
 
-		<h3>Share</a>
 		<a class="backlink" href="/">Return to homepage</a>
 
 		<footer class="entry-footer">
