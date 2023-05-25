@@ -1,0 +1,62 @@
+.social-card__page {
+	max-width: bp(lg);
+	margin: 0 auto;
+	color: white;
+
+	.backlink {
+		display: block;
+		color: white;
+		position: relative;
+		left: -1.5rem;
+		font-weight: bold;
+		text-decoration: none;
+		transition-property: left;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-out;
+		&::before {
+			content: '←';
+			margin-right: 0.5rem;
+			display: inline-block;
+			transition-property: margin-right;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-out;
+		}
+		&:hover {
+			left: -2rem;
+			text-decoration: underline;
+			&::before {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	.entry-title {
+		color: white;
+	}
+
+	.post-image {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.wp-block-outermost-social-sharing {
+
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		background-color: color('white');
+		padding:  spacing(sm);
+		border-radius: 0.25rem;
+		transition-property: bottom;
+		transition-duration: 0.325s;
+		transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+}

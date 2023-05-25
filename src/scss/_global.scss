@@ -4,6 +4,11 @@
 @import 'environment/typography';
 @import 'environment/a11y';
 @import 'environment/layout';
-
 @import 'components/button';
-@import 'components/social-grid';
+
+.site-title {
+	a {
+		color: color(white);
+		text-decoration: none;
+	}
+}
