@@ -7,7 +7,7 @@
  * @package Our Forests
  */
 $post_id = $post->ID;
-if( ! $attachment_id = Our_Forests\get_attachment_media_id( $post_id ) ) {
+if ( ! $attachment_id = Our_Forests\get_attachment_media_id( $post_id ) ) {
 	return;
 }
 $attributes = array(
@@ -38,15 +38,15 @@ $show_intro = Our_Forests\show_intro();
 			?>
 			<?php
 			$image_size = 'large';
-			if( $media_category = wp_get_post_terms( $attachment_id, 'media_category' ) ) {
+			if ( $media_category = wp_get_post_terms( $attachment_id, 'media_category' ) ) {
 				$media_category_slugs = wp_list_pluck( $media_category, 'slug' );
-				$image_size = sanitize_title_with_dashes( $media_category_slugs[0] . ' ' . $image_size );
+				$image_size           = sanitize_title_with_dashes( $media_category_slugs[0] . ' ' . $image_size );
 			}
 			?>
 			<figure class="post-image">
 				<?php echo \wp_get_attachment_image( $attachment_id, $image_size ); ?>
 				<?php
-				if( $attachment_caption = \wp_get_attachment_caption( $attachment_id ) ) :
+				if ( $attachment_caption = \wp_get_attachment_caption( $attachment_id ) ) :
 					?>
 					<figcaption>
 						<?php echo \wp_kses_post( $attachment_caption ); ?>
@@ -56,7 +56,7 @@ $show_intro = Our_Forests\show_intro();
 				?>
 			</figure>
 			<div class="content">
-				<?php the_content();?>
+				<?php the_content(); ?>
 			</div>
 			<div class="share-block">
 				<h3><?php esc_html_e( 'Share', 'our-forests' ); ?></h3>
