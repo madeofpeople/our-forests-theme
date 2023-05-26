@@ -1,7 +1,12 @@
+.attachment-template-default .site-title {
+	margin-bottom: spacing(md);
+}
+
 .social-card__page {
 	max-width: bp(lg);
 	margin: 0 auto;
 	color: white;
+
 
 	.backlink {
 		display: block;
@@ -32,6 +37,7 @@
 
 	.entry-title {
 		color: white;
+		font-size: fs(h5);
 	}
 
 	.post-image {
@@ -44,7 +50,12 @@
 		}
 	}
 
-	.entry-content {
+	.entry-header {
+		margin: 0 spacing(md);
+	}
+
+	.container {
+		margin: 0 spacing(md);
 		.content {
 			padding: spacing(sm);
 			background-color: color(grey-dark);
@@ -54,27 +65,51 @@
 
 	.share-block {
 		h3 {
-			margin-bottom: 0;
-		}
-	}
-
-	.wp-block-outermost-social-sharing {
-		list-style: none;
-		box-sizing: border-box;
-		display: inline-block;
-		justify-content: space-between;
-		background-color: color('white');
-		padding:  spacing(sm);
-		border-radius: 0.25rem;
-		transition-property: bottom;
-		transition-duration: 0.325s;
-		transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-		li {
 			display: inline-block;
+			margin-bottom: 0;
+			font-size: fs(h5);
 		}
-		svg {
-			width: 1.5rem;
-			height: 1.5rem;
+
+		.share-actions {
+			position: relative;
+			left: 0;
+			display: inline-block;
+			margin-left: spacing(sm);
+			transition-property: left;
+			transition-duration: 0.175s;
+			transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+			.wp-block-outermost-social-sharing {
+				list-style: none;
+				box-sizing: border-box;
+				display: inline-block;
+				justify-content: space-between;
+				background-color: color('white');
+				padding:  spacing(sm);
+				border-radius: 0.25rem;
+				li {
+					display: inline-block;
+					a {
+						svg {
+							width: 1.5rem;
+							height: 1.5rem;
+						}
+
+						&:hover {
+							svg {
+								path {
+									fill: color(green-mid);
+								}
+							}
+							opacity: 70%;
+						}
+
+					}
+				}
+			}
+		}
+		&:hover .share-actions {
+			left: 0.5rem;
 		}
 	}
 }
