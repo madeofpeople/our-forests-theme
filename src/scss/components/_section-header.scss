@@ -4,7 +4,7 @@ section {
 
 		background-color: color('black');
 
-		h2 {
+		.wp-block-heading {
 
 			color: color('white');
 			text-align: center;
@@ -16,7 +16,6 @@ section {
 			@media (min-width: bp(md)) {
 				font-size: fs(h2);
 				max-width: bp(md);
-				margin: 0 auto;
 				padding: spacing(lg) 0 spacing(md) 0;
 			}
 		}
