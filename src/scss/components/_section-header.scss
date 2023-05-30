@@ -1,18 +1,24 @@
 section {
-	.wp-block-cover__inner-container > h2.wp-block-heading,
-	> h2.wp-block-heading {
-		color: color('white');
-		background-color: color('black');
-		text-align: center;
-		width: 100%;
-		margin: 0;
-		padding: spacing(md);
-		font-size: fs(h4);
 
-		@media (min-width: bp(md)) {
-			font-size: fs(h2);
-			max-width: bp(md);
-			padding: spacing(lg) 0 spacing(md) 0;
+	.heading-wrapper {
+
+		background-color: color('black');
+
+		h2 {
+
+			color: color('white');
+			text-align: center;
+			width: 100%;
+			margin: 0;
+			padding: spacing(md);
+			font-size: fs(h4);
+
+			@media (min-width: bp(md)) {
+				font-size: fs(h2);
+				max-width: bp(md);
+				margin: 0 auto;
+				padding: spacing(lg) 0 spacing(md) 0;
+			}
 		}
 	}
 }
