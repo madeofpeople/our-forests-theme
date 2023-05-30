@@ -32,9 +32,9 @@
 
 body {
     background-color: color('grey-dark');
-	// main {
-	// 	@extend %breakpoint-indicator;
-	// }
+	main {
+		@extend %breakpoint-indicator;
+	}
 }
 
 

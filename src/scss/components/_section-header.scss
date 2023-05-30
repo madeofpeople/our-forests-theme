@@ -6,11 +6,13 @@ section {
 		text-align: center;
 		width: 100%;
 		margin: 0;
-		padding: spacing(lg) spacing(lg) spacing(md);
+		padding: spacing(md);
 		font-size: fs(h4);
 
 		@media (min-width: bp(md)) {
 			font-size: fs(h2);
+			max-width: bp(md);
+			padding: spacing(lg) 0 spacing(md) 0;
 		}
 	}
 }
