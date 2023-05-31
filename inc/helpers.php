@@ -159,3 +159,19 @@ function get_kses_svg_ruleset() {
 
 	return array_merge( $kses_defaults, $svg_args );
 }
+
+/**
+ * Show Intro
+ * Determine if media `intro_text` should be display on attachment template
+ *
+ * @param int $post_id
+ * @return bool
+ */
+function show_intro( $post_id = null ) {
+	global $post;
+	$post_id          = $post_id ? (int) $post_id : get_the_ID();
+	$show_categories  = get_option( 'options_categories' );
+	$media_categories = wp_get_post_terms( $post_id, 'media_category', array( 'fields' => 'ids' ) );
+	$matches          = ( ! empty( $show_categories ) ) ? array_intersect( $show_categories, $media_categories ) : array();
+	return empty( $show_categories ) || ( $show_categories && $matches );
+}

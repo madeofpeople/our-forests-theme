@@ -16,8 +16,10 @@ const mobileCheck = function () {
 
 const doMobileCheck = function () {
 	const isMobile = mobileCheck();
+	console.log( 'doMobileCheck' );
 	if ( isMobile ) {
 		document.body.classList.add( 'is-mobile' );
+		console.log( 'is mobile' );
 	}
 };
 

@@ -2,12 +2,58 @@
 	@extend %grid-three;
 }
 
+%share-actions {
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	max-height: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	.share-actions-rel-wrapper {
+		position: relative;
+	}
+
+	.wp-block-outermost-social-sharing {
+		position: absolute;
+		bottom: -12rem;
+		z-index:100;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		background-color: color('white');
+		padding:  spacing(sm);
+		border-radius: 0.25rem;
+		transition-property: bottom;
+		transition-duration: 0.325s;
+		transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		width: 80%;
+
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		@media ( min-width: bp(md) ) {
+			svg {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+}
+
 #social {
 
 	> .wp-block-group {
 
-		padding-left: spacing(md);
-		padding-right: spacing(md);
+		padding-left: spacing(xs);
+		padding-right: spacing(xs);
 
 		@media ( min-width: bp(sm) ) {
 
@@ -22,74 +68,45 @@
 		}
 
 		.social-post {
+
 			max-width: 100%;
 			position: relative;
-			height: 100%;
-			min-height: 100px;
+			// max-height: 256px;
 			aspect-ratio: 1/1;
 			background-color: color('black');
 			overflow: hidden;
+			cursor: pointer;
+			margin-bottom: spacing(sm);
+
+			@media ( min-width: bp(sm) ) {
+				margin-bottom: 0;
+			}
 
 			.image-group {
-				position: relative;
-				top: 50%;
-				left: 50%;
-				transform: translate3d(-50%, -50%, 0);
-
+				aspect-ratio: 1/1;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
 				img {
+					aspect-ratio: 1/1;
 					width: 100%;
 					height: auto;
 				}
-				.slick-arrow {
-					z-index: 10;
-					position: absolute;
-					top: 50%;
-
-					&.slick-next {
-						right: 1rem;
-					}
-
-					&.slick-prev {
-						left: 1rem;
-					}
-				}
 			}
 
-			.wp-block-outermost-social-sharing {
-				position: absolute;
-				bottom: -12rem;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 80%;
-				box-sizing: border-box;
-				display: flex;
-				justify-content: space-between;
-				background-color: color('white');
-				padding:  spacing(sm);
-				border-radius: 0.25rem;
-				transition-property: bottom;
-				transition-duration: 0.325s;
-				transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-
-				svg {
-					width: 1.5rem;
-					height: 1.5rem;
-				}
-
-				@media ( min-width: bp(md) ) {
-					svg {
-						width: 2rem;
-						height: 2rem;
-					}
-				}
+			.share-actions {
+				@extend %share-actions;
 			}
 
 			&:hover,
 			&:focus {
-				.wp-block-outermost-social-sharing {
-					bottom: -1.25rem;
+				.share-actions {
+					.wp-block-outermost-social-sharing {
+						bottom: -1.25rem;
+					}
 				}
 			}
 		}
 	}
 }
+

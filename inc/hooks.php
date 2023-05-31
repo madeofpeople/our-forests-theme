@@ -459,7 +459,7 @@ function getwid_get_template_part( $template ) {
 	}
 	return $template;
 }
-add_filter( 'getwid/core/get_template_part', __NAMESPACE__ . '\getwid_get_template_part' );
+// add_filter( 'getwid/core/get_template_part', __NAMESPACE__ . '\getwid_get_template_part' );
 
  /**
   * Filter services data
@@ -485,6 +485,18 @@ function social_block_services( array $services_data, string $service, int $post
 add_filter( 'site_functionality/social_block/services', __NAMESPACE__ . '\social_block_services', 10, 3 );
 
 /**
+ * Modify Checkbox Text
+ *
+ * @param string $checkbox_text
+ * @return string $checkbox_text
+ */
+function mailchimp_eu_compliance_text( $checkbox_text ) : string {
+	$checkbox_text = esc_html__( 'By checking this box I consent to the use of my information provided for email marketing purposes.', 'our-forests' );
+	return $checkbox_text;
+}
+add_filter( 'yikes-mailchimp-eu-compliance-checkbox-text', __NAMESPACE__ . '\mailchimp_eu_compliance_text' );
+
+/**
  * Enable for attachment pages
  *
  * @param array $post_types
@@ -498,6 +510,9 @@ add_filter( 'page-links-to-post-types', __NAMESPACE__ . '\add_page_links_to_supp
 
 /**
  * Modify image used for seo meta
+ * Image size to use for image metadata
+ *
+ * @link https://kb.theseoframework.com/kb/filter-reference-for-the-seo-framework/#image-related
  *
  * @param array  $params
  * @param array  $args
@@ -509,3 +524,33 @@ function seo_framework_image_params( $params, $args, $context ) : array {
 	return $params;
 }
 add_filter( 'the_seo_framework_image_generation_params', __NAMESPACE__ . '\seo_framework_image_params', 10, 3 );
+
+/**
+ * Modify description for attachment posts
+ *
+ * @link https://kb.theseoframework.com/kb/filter-reference-for-the-seo-framework/#description-related
+ *
+ * @param string $description
+ * @param array  $args
+ * @return string $description
+ */
+function seo_framework_attachment_description( $description, $args ) : string {
+	if ( is_singular( 'attachment' ) ) {
+		$post_id     = ! empty( $args ) && isset( $args['id'] ) ? $args['id'] : the_seo_framework()->get_the_real_ID();
+		$description = \wp_kses_post( \get_post_field( 'post_content', $post_id ) );
+	}
+	return $description;
+}
+add_filter( 'the_seo_framework_generated_description', __NAMESPACE__ . '\seo_framework_attachment_description', 10, 2 );
+
+/**
+ * Support attachments
+ *
+ * @param array $post_types
+ * @return array $post_types
+ */
+function seo_framework_attachment_support( $post_types ) : array {
+	$post_types[] = 'attachment';
+	return $post_types;
+}
+add_filter( 'the_seo_framework_sitemap_supported_post_types', __NAMESPACE__ . '\seo_framework_attachment_support', 10 );

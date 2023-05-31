@@ -1,18 +1,8 @@
-.single-social {
-
-	.section {
-		padding-left: spacing(md);
-		padding-right: spacing(md);
-		margin-bottom: spacing(lg);
-
-		> p {
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.social-image-grid {
-			margin-top: spacing(md);
-			margin-bottom: spacing(md);
-			@extend %grid-four;
-		}
+.social-card__page {
+	max-width: bp(lg);
+	margin: 0 auto;
+	.entry-title {
+		color: white;
 	}
+
 }

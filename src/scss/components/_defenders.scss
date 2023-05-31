@@ -101,6 +101,15 @@
 		padding: spacing(sm);
 		align-self: flex-start;
 
+		.wp-social-link {
+			span {
+				color: color(white);
+			}
+			svg path {
+				fill: color(white);
+			}
+		}
+
 		figure {
 			display: block;
 			width: 100%;
