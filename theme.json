@@ -82,20 +82,30 @@
 		"typography": {
 			"textTransform": true,
 			"dropCap": true,
-			"customFontSize": true,
-			"fontFamilies": [
+			"fontFamilies": false,
+			"customFontSize": false,
+			"fontSizes": [
 				{
-					"fontFamily": "Pragmatica, sans-serif",
-					"slug": "heading-secondary",
-					"name": "Secondary Heading"
+					"slug": "small",
+					"size": "0.875rem",
+					"name": "Small"
 				},
 				{
-					"fontFamily": "Source Sans Pro, sans-serif",
-					"slug": "body",
-					"name": "Body"
+					"slug": "regular",
+					"size": "1rem",
+					"name": "Regular"
+				},
+				{
+					"slug": "large",
+					"size": "1.5rem",
+					"name": "Large"
+				},
+				{
+					"slug": "x-large",
+					"size": "1.75rem",
+					"name": "Extra Large"
 				}
 			],
-			"fontSizes": true,
 			"fontStyle": true,
 			"fontWeight": false,
 			"letterSpacing": false,
@@ -106,17 +116,6 @@
 			"core/button": {
 				"border": {
 					"radius": false
-				},
-				"typography": {
-					"textTransform": true,
-					"customFontSize": false,
-					"fontSizes": [],
-					"fontStyle": false,
-					"fontWeight": false,
-					"letterSpacing": false,
-					"lineHeight": false,
-					"textDecoration": false,
-					"fontFamilies": []
 				}
 			}
 		}
