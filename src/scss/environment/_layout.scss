@@ -104,6 +104,9 @@ section p {
 		grid-auto-flow: column;
 		> .wp-block-columns {
 			height: 100%;
+			a {
+				height: 100%;
+			}
 		}
 	}
 
