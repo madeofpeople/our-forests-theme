@@ -95,7 +95,7 @@
 					"name": "Body"
 				}
 			],
-			"fontSizes": false,
+			"fontSizes": true,
 			"fontStyle": true,
 			"fontWeight": false,
 			"letterSpacing": false,
