@@ -7,34 +7,6 @@
 	margin: 0 auto;
 	color: white;
 
-
-	.backlink {
-		display: block;
-		color: white;
-		position: relative;
-		left: -1.5rem;
-		font-weight: bold;
-		text-decoration: none;
-		transition-property: left;
-		transition-duration: 0.2s;
-		transition-timing-function: ease-out;
-		&::before {
-			content: '←';
-			margin-right: 0.5rem;
-			display: inline-block;
-			transition-property: margin-right;
-			transition-duration: 0.2s;
-			transition-timing-function: ease-out;
-		}
-		&:hover {
-			left: -2rem;
-			text-decoration: underline;
-			&::before {
-				margin-right: 1rem;
-			}
-		}
-	}
-
 	.entry-title {
 		color: white;
 		font-size: fs(h5);

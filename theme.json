@@ -82,7 +82,7 @@
 		"typography": {
 			"textTransform": true,
 			"dropCap": true,
-			"customFontSize": false,
+			"customFontSize": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "Pragmatica, sans-serif",
