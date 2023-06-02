@@ -99,6 +99,12 @@ section p {
 	> .wp-block-columns {
 		padding: spacing(sm);
 		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: column;
+		> .wp-block-columns {
+			height: 100%;
+		}
 	}
 
 	.wp-block-tiptip-hyperlink-group-block {
