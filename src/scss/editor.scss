@@ -63,4 +63,13 @@
 			}
 		}
 	}
+
 }
+
+.drive-policy-change {
+	.content .rich-text:not(.wp-block-button__link) {
+		padding: 1rem;
+		background-color: rgba(white, 0.85);
+	}
+}
+
