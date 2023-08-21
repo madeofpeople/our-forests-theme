@@ -45,17 +45,51 @@ body {
 	}
 }
 
-.share-trailer {
-	margin-top: spacing(sm);
-	margin-bottom: spacing(sm);
-	.wp-social-link {
-		margin-left: 0.5rem;
-		background-color: color('white') !important;
-		border-radius: 50%;
-	}
-	svg {
-		path {
-			fill: black;
+.share-trailer-container {
+	p {
+		display: inline-block;
+		margin-right: 1.5rem;
+
+		ul.share-trailer {
+
+			margin-top: spacing(sm);
+			margin-bottom: spacing(sm);
+			display: inline-block;
+			position: relative;
+			top: 0.25rem;
+			border-bottom: 0px transparent solid;
+
+			.wp-social-link {
+				margin-left: 0.5rem;
+				background-color: color('white') !important;
+				border-radius: 50%;
+				width: 2rem;
+				height: 2rem;
+			}
+
+			li{
+				display: inline-block;
+			}
+
+			.wp-social-link {
+				margin: 0;
+				padding: 0;
+				background-color: color('white') !important;
+				border-radius: 50%;
+				width: 2.125rem;
+				height: 2.125rem;
+				line-height:1;
+				svg {
+					position: relative;
+					top: -0.07rem;
+					display: inline-block;
+					margin: 0 auto;
+					line-height:1;
+					path {
+						fill: black;
+					}
+				}
+			}
 		}
 	}
 }
