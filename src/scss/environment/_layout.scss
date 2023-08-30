@@ -159,10 +159,11 @@ section p {
 }
 
 #support,
-#drive,
-.act-and-protect {
+#drive {
+
 	padding: 0;
 	color: color(grey-dark);
+
 	.content {
 		margin: spacing(sm);
 		padding: spacing(md);
@@ -176,27 +177,9 @@ section p {
 	}
 }
 
-.act-and-protect {
-	.content {
-		@media (min-width: bp(md)) {
-			margin-top: 24rem;
-		}
-	}
+#support li {
+	font-weight: bold;
 }
-
-#support {
-	.content {
-		padding-bottom: 0;
-		section,
-		.yikes-mailchimp-container,
-		.yikes-easy-mc-form {
-			padding-bottom: 0;
-			margin-bottom: 0;
-		}
-
-	}
-}
-
 
 .svg-sprite-wrapper {
     overflow: hidden;
@@ -220,19 +203,53 @@ section p {
 	}
 }
 
-.wp-block-column ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	border-bottom: 2px color(grey-mid) solid;
+.wp-block-group.content,
+.wp-block-column {
 
-	li {
-		padding: 0.75rem 0;
-		border-top: 1px color(grey-mid) solid;
+	ul {
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 0.75rem 0;
+			border-top: 1px #aaa solid;
+		}
 	}
 }
 
+#support {
+	.wp-block-group.content {
+		@media screen and (min-width: bp(sm)) {
+			ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: 2rem;
+				grid-column-gap: 2rem;
+			}
+		}
+	}
 
+	.sign-up {
+		margin-top: 2rem;
+		padding: 2rem;
+		background-color: color('green-dark');
+		color: color('white');
+
+		h3 {
+			padding: 0;
+			margin-top: 0;
+		}
+
+		h3,
+		p,
+		label span,
+		.yikes-mailchimp-eu-compliance-text {
+			color: color('white');
+		}
+	}
+}
 
 
 .page-episodes {

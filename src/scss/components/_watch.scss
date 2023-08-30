@@ -21,8 +21,11 @@
 	}
 }
 
-.watch-button {
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
+.wp-block-buttons.watch-trailer {
+	.watch-button {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		white-space: nowrap;
+	}
 }

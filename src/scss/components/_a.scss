@@ -1,5 +1,8 @@
-p a {
-	color: color('green-mid');
+li,
+p {
+	a {
+		color: color('green-mid');
+	}
 }
 
 .site-footer a {
@@ -10,6 +13,7 @@ p a {
 .wp-block-outermost-social-sharing-link-anchor {
 	background-color: color('white');
 	border-radius: 50%;
+
 	svg path {
 		fill: color(green-mid);
 	}

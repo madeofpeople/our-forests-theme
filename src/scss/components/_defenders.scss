@@ -60,8 +60,8 @@
 		grid-row: 1;
 		padding: spacing(sm);
 		display: flex;
-		flex-wrap: nowrap !important;
-		flex-direction: column !important;
+		flex-wrap: nowrap;
+		flex-direction: column;
 
 		figure {
 			max-width: 200px;
@@ -71,7 +71,7 @@
 		}
 
 		@media screen and (min-width: bp(sm)) {
-			flex-direction: row !important;
+			flex-direction: row;
 			figure {
 				min-width: 12rem;
 				max-width: auto;
@@ -79,7 +79,7 @@
 		}
 		@media screen and (min-width: bp(md)) {
 
-			flex-direction: column !important;
+			flex-direction: column;
 			width: 300px;
 			padding: spacing(md);
 			flex-wrap: wrap;
