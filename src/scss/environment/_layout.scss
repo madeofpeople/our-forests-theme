@@ -304,6 +304,12 @@ section p {
 
 .page-episodes {
 
+
+	.entry-content {
+		padding: 0 0 3rem 0;
+		background-color: color('grey-dark');
+	}
+
 	.episodes {
 		display: grid;
 		grid-template-columns: 1fr;

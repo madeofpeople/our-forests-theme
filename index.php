@@ -44,10 +44,13 @@
 			</div>
 
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button active" href="/#amplify-voices">AMPLIFY VOICES</a>
+				<a class="wp-block-button__link wp-element-button" href="/#amplify-voices">AMPLIFY VOICES</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/#drive-policy-change">DRIVE</a>
+				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Defenders</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/#drive-policy-change">DRIVE Policy Change</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#support">Act and Protect</a>
