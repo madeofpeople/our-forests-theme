@@ -50,16 +50,19 @@
 				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Defenders</a>
 			</div>
 			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/episodes">episodes</a>
+			</div>
+			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#drive-policy-change">DRIVE Policy Change</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#support">Act and Protect</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="https://our-forests.local/resources/">Resources</a>
+				<a class="wp-block-button__link wp-element-button" href="/resources/">Resources</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="https://our-forests.local/partners/">Partners</a>
+				<a class="wp-block-button__link wp-element-button" href="/partners/">Partners</a>
 			</div>
 		</div>
 	</div>

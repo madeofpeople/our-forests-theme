@@ -251,7 +251,11 @@ section p {
 	}
 }
 
-
+.page-partners {
+	.wp-block-tiptip-hyperlink-group-block {
+		text-decoration: none;
+	}
+}
 .page-partners,
 .page-resources,
 .page-episodes {
@@ -295,6 +299,7 @@ section p {
 		p {
 
 			img {
+				float: left;
 				display: inline-block;
 				margin-right: 2rem;
 			}
