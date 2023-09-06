@@ -44,7 +44,7 @@
 			</div>
 
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/#amplify-voices">AMPLIFY VOICES</a>
+				<a class="wp-block-button__link wp-element-button" href="/#amplify">AMPLIFY VOICES</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Defenders</a>
@@ -53,16 +53,16 @@
 				<a class="wp-block-button__link wp-element-button" href="/episodes">episodes</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/#drive-policy-change">DRIVE Policy Change</a>
+				<a class="wp-block-button__link wp-element-button" href="/#drive">DRIVE Policy Change</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#support">Act and Protect</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/resources/">Resources</a>
+				<a class="wp-block-button__link wp-element-button" href="/resources">Resources</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/partners/">Partners</a>
+				<a class="wp-block-button__link wp-element-button" href="/partners">Partners</a>
 			</div>
 		</div>
 	</div>

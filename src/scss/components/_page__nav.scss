@@ -87,8 +87,11 @@
 
 			.wp-block-button:first-child {
 				width: auto;
-				padding-left: 0.5rem;
-				padding-right: 0.25rem;
+			}
+
+			.wp-block-button__link:first-child {
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
 				svg {
 					display: block;
 					margin: 0 auto;

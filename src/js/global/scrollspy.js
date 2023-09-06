@@ -1,45 +1,16 @@
-const options = {
-	threshold: 0,
-};
+let activeItem = null;
 
 const initScrollSpy = () => {
 	const selectors = '.entry-content > section:not(.social)';
 	const observedElements = document.querySelectorAll( selectors );
-	const pageNav = document.querySelector(
-		'.wp-block-site-functionality-page-nav'
-	);
-	let activeItem = null;
-
-	const updatePageNav = ( activeSection ) => {
-		const heading = activeSection.querySelector( 'h2' );
-		let headingId;
-		if ( heading && heading.id ) {
-			headingId = heading.id;
-
-			// if (
-			// 	! activeItem ||
-			// 	headingId !==
-			// 		activeItem.getAttribute( 'href' ).split( '#' )[ 1 ]
-			// ) {
-			if ( activeItem ) activeItem.classList.remove( 'active' );
-			activeItem = pageNav.querySelector(
-				`.wp-block-button__link[href="#${ headingId }"]`
-			);
-			if ( activeItem ) activeItem.classList.add( 'active' );
-		}
-	};
+	// console.log( '»»»»»»»»', observedElements );
+	initNav();
 
 	const inViewCallback = ( entries ) => {
 		entries.forEach( ( entry ) => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				if ( entry.target && entry.target.querySelector( 'h2' ) ) {
-					console.log(
-						'»»»»»»»',
-						entry.target.querySelector( 'h2' ).id
-					);
-				}
 				updatePageNav( entry.target );
 			} else {
 				entry.target.classList.remove( 'in-view' );
@@ -48,13 +19,65 @@ const initScrollSpy = () => {
 		} );
 	};
 
-	const observer = new IntersectionObserver( inViewCallback, options );
+	const observer = new IntersectionObserver( inViewCallback, {} );
+
 	observedElements.forEach( ( element ) => {
 		const dataDelay = element.getAttribute( 'data-delay' );
 		element.classList.add( 'out-of-view' );
 		element.style.transitionDelay = dataDelay + 'ms';
 		observer.observe( element );
 	} );
+};
+
+const updatePageNav = ( activeSection ) => {
+	const pageNav = document.querySelector( '.page-nav' );
+	const heading = activeSection.querySelector( 'h2' );
+	if ( activeItem ) activeItem.classList.remove( 'active' );
+	if ( heading && heading.id ) {
+		window.location.hash = '#' + heading.id;
+		// console.log( 'updatePageNav', hash, heading, heading.id );
+		activeItem = pageNav.querySelector( `a[href="/#${ heading.id }"]` );
+		// console.log( '\t\t\t', activeItem );
+		if ( activeItem ) activeItem.classList.add( 'active' );
+	}
+};
+
+const highlightNav = ( pathEnd ) => {
+	const navLinks = document.querySelectorAll( '.menu a' );
+	// console.log( '» pathEnd » ', pathEnd );
+	navLinks.forEach( ( link ) => {
+		const linkArr = link.getAttribute( 'href' ).split( '/' );
+		const linkEnd = linkArr[ linkArr.length - 1 ];
+		// console.log( pathEnd, linkEnd );
+		if ( linkEnd === pathEnd ) {
+			link.classList.add( 'active' );
+			// console.log( 'on page', pathEnd );
+		}
+	} );
+};
+
+const initNav = () => {
+	const path = window.location.pathname;
+	const hash = window.location.hash.split( '#' )[ 1 ];
+	const navLinks = document.querySelectorAll( '.menu a' );
+	const pathArr = path.split( '/' );
+	let pathEnd = pathArr[ pathArr.length - 1 ];
+	pathEnd = ''
+		? pathArr[ pathArr.length - 1 ]
+		: pathArr[ pathArr.length - 2 ];
+	if ( hash ) pathEnd = hash;
+	if ( path === '/' ) {
+		// console.log( navLinks[ 0 ], '!' );
+		navLinks[ 0 ].classList.add( 'active' );
+		if ( hash ) {
+			activeItem = document.querySelector(
+				`.wp-block-button__link[href="#${ hash }"]`
+			);
+			if ( activeItem ) activeItem.classList.add( 'active' );
+		}
+	} else {
+		highlightNav( pathEnd );
+	}
 };
 
 if (
