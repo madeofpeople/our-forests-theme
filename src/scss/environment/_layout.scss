@@ -256,6 +256,11 @@ section p {
 
 	.wp-block-tiptip-hyperlink-group-block {
 		text-decoration: none;
+		padding: 1rem;
+
+		&:hover {
+			box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+		}
 	}
 
 	.partner-grid {
