@@ -253,8 +253,32 @@ section p {
 }
 
 .page-partners {
+
 	.wp-block-tiptip-hyperlink-group-block {
 		text-decoration: none;
+	}
+
+	.partner-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 3rem;
+		grid-row-gap: 3rem;
+		margin-bottom: 3rem;
+
+		img {
+			display: block;
+			margin-bottom: 1rem;
+			height: 72px;
+			min-height: 72px;
+			width: auto;
+		}
+
+		@media screen and (min-width: bp(sm)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media screen and (min-width: bp(lg)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 }
 
@@ -299,14 +323,6 @@ section p {
 		}
 
 
-		p {
-
-			img {
-				float: left;
-				display: inline-block;
-				margin-right: 2rem;
-			}
-		}
 	}
 }
 
