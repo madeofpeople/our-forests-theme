@@ -261,6 +261,11 @@ section p {
 		&:hover {
 			box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
 		}
+
+		.with-the {
+			padding-left: 2rem;
+
+		}
 	}
 
 	.partner-grid {
@@ -337,7 +342,7 @@ section p {
 
 	.entry-content {
 		padding: 0 0 3rem 0;
-		background-color: color('grey-dark');
+		background-color: transparent;
 	}
 
 	.episodes {
