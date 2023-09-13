@@ -47,7 +47,7 @@
 				<a class="wp-block-button__link wp-element-button" href="/#amplify">Amplify Voices</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Guardians</a>
+				<a class="wp-block-button__link wp-element-button" href="/guardians">Meet the Guardians</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#drive">Drive Policy Change</a>
