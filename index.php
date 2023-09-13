@@ -24,6 +24,50 @@
 			<?php
 		endif;
 
+		?>
+<div class="page-nav">
+
+	<div class="nav-wrapper">
+
+		<a href="#" class="hamburger">
+			<span>☰</span>
+		</a>
+
+		<div class="wp-block-buttons menu is-layout-flex">
+
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/">
+					<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 18V7.975L0.9 9.575L0 8.375L3 6.1V3.25H4.5V4.95L11 0L22 8.4L21.1 9.575L19 7.975V18H3ZM4.5 16.5H10.25V12.5H11.75V16.5H17.5V6.825L11 1.875L4.5 6.825V16.5Z" fill="white"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/#amplify">Amplify Voices</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Guardians</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/#drive">Drive Policy Change</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/#support">Act and Protect the Forests</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/episodes">Episodes</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/resources">Resources</a>
+			</div>
+			<div class="wp-block-button menu-item">
+				<a class="wp-block-button__link wp-element-button" href="/partners">Partners</a>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();

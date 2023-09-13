@@ -4,6 +4,9 @@
 }
 
 .trailer {
+
+	padding-bottom: 3rem;
+
 	.wp-block-group {
 		padding: 0;
 	}
@@ -15,5 +18,14 @@
 		overflow: hidden;
 		top: 100vh;
 		left: 100vw;
+	}
+}
+
+.wp-block-buttons.watch-trailer {
+	.watch-button {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		white-space: nowrap;
 	}
 }

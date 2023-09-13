@@ -8,7 +8,7 @@
 	position: relative;
 	border: 2px #0af solid;
 	&::#{$beforeOrAfter} {
-		content: "i18n";
+		content: 'i18n';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -63,4 +63,18 @@
 			}
 		}
 	}
+
 }
+
+.support,
+.drive {
+	.content .rich-text:not(.wp-block-button__link) {
+		padding: 1rem;
+		background-color: rgba(white, 0.85);
+	}
+}
+
+// .wp-block-post-content {
+// 	border: 2px #fff solid;
+// 	background-color: white;
+// }

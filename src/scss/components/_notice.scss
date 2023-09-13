@@ -1,8 +1,10 @@
 .header-notice {
-	background-color: color('green-dark');
-	height: 3rem;
+	background-color: color('black');
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+	text-align: center;
+
 	h2 {
-		height: 100%;
 		vertical-align: middle;
 		letter-spacing: 1px;
 		text-align: center;
@@ -12,9 +14,8 @@
 		text-transform: unset;
 		padding-top: 0.275rem;
 		line-height: 1.75;
-		@media ( min-width: bp(xs) ) {
-		}
 	}
+
 	a {
 		text-decoration: none;
 		display: block;

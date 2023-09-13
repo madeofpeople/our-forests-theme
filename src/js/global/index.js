@@ -7,4 +7,5 @@
 import './mobile-detect';
 import './js-enabled';
 import './window-ready';
+import './mobile-menu';
 import './scrollspy';

@@ -1,20 +1,3 @@
-#support {
-
-	p {
-		margin-top: 0 !important;
-	}
-
-	padding-bottom: spacing(xs);
-
-	@media ( min-width: bp(sm) ) {
-		padding-bottom: spacing(sm);
-	}
-
-	@media ( min-width: bp(md) ) {
-		padding-bottom: spacing(md);
-	}
-}
-
 .yikes-mailchimp-container {
 
 	label span {
@@ -31,14 +14,24 @@
 	form {
 		.EMAIL-label,
 		.COUNTRY-label {
-			display: inline-block;
-			width:46%;
-			box-sizing: border-box;
+			@media (min-width: bp(md)) {
+				display: inline-block;
+				width:46%;
+				box-sizing: border-box;
+			}
 		}
 	}
+
+	.yikes-mailchimp-eu-compliance-text {
+		color: color('black');
+	}
+
 	.yikes-easy-mc-form input[type="email"],
 	.yikes-easy-mc-form select {
-		display: inline-block;
+
+		@media (min-width: bp(md)) {
+			display: inline-block;
+		}
 	}
 
 	input {
