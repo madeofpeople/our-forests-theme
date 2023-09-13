@@ -150,6 +150,8 @@ section p {
 
 	> .is-layout-constrained {
 		padding-top: spacing(md);
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 }
 
@@ -163,17 +165,17 @@ section p {
 
 #support-section,
 #drive-section {
-
-	padding: 0;
 	color: color(grey-dark);
+	padding: 0;
 	.content {
-		margin: spacing(sm);
+
+		margin: spacing(md);
 		padding: spacing(md);
 		background-color: rgba( #fff, 0.8) !important;
 		backdrop-filter: blur(spacing(xs));
 
 		@media (min-width: bp(md)) {
-			margin: spacing(lg) auto;
+			margin: spacing(lg);
 			padding: spacing(lg);
 		}
 	}
@@ -322,10 +324,10 @@ section p {
 
 
 .episodes-wrapper {
-	background-color: color('black');
-	padding: 2rem;
-	margin: 2rem 0 2rem 0;
-	width: 100%;
+	// background-color: color('black');
+	// padding: 2rem;
+	// margin: 2rem 0 2rem 0;
+	// width: 100%;
 
 	> p {
 		margin-bottom: 3rem;
