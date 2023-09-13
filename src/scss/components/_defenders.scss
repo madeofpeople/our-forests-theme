@@ -92,37 +92,38 @@
 		}
 	}
 
-	.defender__forest {
-		z-index: 10;
-		background-color: color('grey-dark');
-		color: color('white');
-		grid-row: 2;
-		padding: spacing(sm);
-		align-self: flex-start;
+}
 
-		.wp-social-link {
-			span {
-				color: color(white);
-			}
-			svg path {
-				fill: color(white);
-			}
+.defender__forest {
+	z-index: 10;
+	background-color: color('grey-dark');
+	color: color('white');
+	grid-row: 2;
+	padding: spacing(sm);
+	align-self: flex-start;
+
+	.wp-social-link {
+		span {
+			color: color(white);
 		}
+		svg path {
+			fill: color(white);
+		}
+	}
 
-		figure {
+	figure {
+		display: block;
+		width: 100%;
+		margin-bottom: 0.5rem;
+		img {
 			display: block;
 			width: 100%;
-			margin-bottom: 0.5rem;
-			img {
-				display: block;
-				width: 100%;
-			}
 		}
-
-		@media (min-width: bp(md)) {
-			padding: spacing(md);
-			max-width: 37.475rem;
-		}
-
 	}
+
+	@media (min-width: bp(md)) {
+		padding: spacing(md);
+		max-width: 37.475rem;
+	}
+
 }

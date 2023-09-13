@@ -44,10 +44,10 @@
 			</div>
 
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/#amplify">AMPLIFY VOICES</a>
+				<a class="wp-block-button__link wp-element-button" href="/#amplify">Amplify Voices</a>
 			</div>
 			<div class="wp-block-button menu-item">
-				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Defenders</a>
+				<a class="wp-block-button__link wp-element-button" href="/defenders">Meet the Guardians</a>
 			</div>
 			<div class="wp-block-button menu-item">
 				<a class="wp-block-button__link wp-element-button" href="/#drive">Drive Policy Change</a>

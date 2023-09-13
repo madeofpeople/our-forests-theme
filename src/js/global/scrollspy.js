@@ -34,7 +34,7 @@ const updatePageNav = ( activeSection ) => {
 	const heading = activeSection.querySelector( 'h2' );
 	if ( activeItem ) activeItem.classList.remove( 'active' );
 	if ( heading && heading.id ) {
-		window.location.hash = '#' + heading.id;
+		// window.location.hash = '#' + heading.id;
 		// console.log( 'updatePageNav', hash, heading, heading.id );
 		activeItem = pageNav.querySelector( `a[href="/#${ heading.id }"]` );
 		// console.log( '\t\t\t', activeItem );
