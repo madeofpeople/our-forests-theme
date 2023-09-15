@@ -20,7 +20,7 @@ const closeNav = ( nav, ham ) => {
 
 const initMobileMenu = () => {
 	const nav = document.querySelector( '.page-nav' );
-	const hamburger = nav.querySelector( '.hamburger' );
+	const hamburger = nav.querySelector( '.menu__toggle' );
 
 	hamburger.addEventListener( 'click', ( event ) => {
 		event.preventDefault();
@@ -30,8 +30,8 @@ const initMobileMenu = () => {
 	// handles clicks outside the menu
 	document.body.addEventListener( 'click', ( event ) => {
 		if (
-			! event.target.classList.contains( 'hamburger' ) &&
-			! event.target.closest( '.hamburger' ) &&
+			! event.target.classList.contains( 'menu__toggle' ) &&
+			! event.target.closest( '.menu__toggle' ) &&
 			! event.target.closest( '.menu' )
 		) {
 			closeNav( nav, hamburger );

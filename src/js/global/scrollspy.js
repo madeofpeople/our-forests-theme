@@ -32,19 +32,26 @@ const initScrollSpy = () => {
 const updatePageNav = ( activeSection ) => {
 	const pageNav = document.querySelector( '.page-nav' );
 	const heading = activeSection.querySelector( 'h2' );
+	const path = document.querySelector( '.site-main' ).dataset.path;
 	if ( activeItem ) activeItem.classList.remove( 'active' );
 	if ( heading && heading.id ) {
 		// window.location.hash = '#' + heading.id;
-		// console.log( 'updatePageNav', hash, heading, heading.id );
-		activeItem = pageNav.querySelector( `a[href="/#${ heading.id }"]` );
+		// console.log(
+		// 	'updatePageNav',
+		// 	heading,
+		// 	heading.id,
+		// 	document.querySelector( '.site-main' ).dataset.path
+		// );
+		activeItem = pageNav.querySelector(
+			`a[href="${ path }/#${ heading.id }"]`
+		);
 		// console.log( '\t\t\t', activeItem );
 		if ( activeItem ) activeItem.classList.add( 'active' );
 	}
 };
 
 const highlightNav = ( pathEnd ) => {
-	const navLinks = document.querySelectorAll( '.menu a' );
-	// console.log( '» pathEnd » ', pathEnd );
+	const navLinks = document.querySelectorAll( '.nav-wrapper a' );
 	navLinks.forEach( ( link ) => {
 		const linkArr = link.getAttribute( 'href' ).split( '/' );
 		const linkEnd = linkArr[ linkArr.length - 1 ];
@@ -59,7 +66,7 @@ const highlightNav = ( pathEnd ) => {
 const initNav = () => {
 	const path = window.location.pathname;
 	const hash = window.location.hash.split( '#' )[ 1 ];
-	const navLinks = document.querySelectorAll( '.menu a' );
+	const navLinks = document.querySelectorAll( '.nav-wrapper a' );
 	const pathArr = path.split( '/' );
 	let pathEnd = pathArr[ pathArr.length - 1 ];
 	pathEnd = ''
@@ -67,12 +74,10 @@ const initNav = () => {
 		: pathArr[ pathArr.length - 2 ];
 	if ( hash ) pathEnd = hash;
 	if ( path === '/' ) {
-		// console.log( navLinks[ 0 ], '!' );
+		console.log( navLinks[ 0 ], '!' );
 		navLinks[ 0 ].classList.add( 'active' );
 		if ( hash ) {
-			activeItem = document.querySelector(
-				`.wp-block-button__link[href="#${ hash }"]`
-			);
+			activeItem = document.querySelector( `a[href="#${ hash }"]` );
 			if ( activeItem ) activeItem.classList.add( 'active' );
 		}
 	} else {

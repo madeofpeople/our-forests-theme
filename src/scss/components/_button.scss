@@ -18,6 +18,7 @@
 .wp-block-button__link {
     border: none;
     outline: none;
+	text-decoration: none;
 	border-radius: 0.25rem;
 	letter-spacing: 1px;
     font-size: map.get($font-sizes, body);

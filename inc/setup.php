@@ -152,6 +152,7 @@ function our_forests_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
+		'primary' => esc_html__( 'Primary Menu', 'the-territory' ),
 		'header-notice' => esc_html__( 'Header Notice', 'our-forests' ),
 		'footer'        => esc_html__( 'Footer', 'our-forests' ),
 	);

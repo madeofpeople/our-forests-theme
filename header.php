@@ -18,101 +18,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 
 	<?php wp_body_open(); ?>
 
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'our-forests' ); ?></a>
 
-	<main id="main" class="container site-main">
-
-		<header class="site-header<?php echo ( is_active_sidebar( 'header-notice' ) ) ? ' has-notice' : ''; ?>">
-
-			<?php
-			if ( is_active_sidebar( 'header-notice' ) ) :
-				dynamic_sidebar( 'header-notice' );
-			endif;
-			?>
-
-			<div class="nav--primary">
-
-				<div class="site-branding">
-
-					<h1 class="site-title">
-						<?php
-						if( dynamic_sidebar( 'header-logo' ) ) :
-							?>
-
-							<?php dynamic_sidebar( 'header-logo' ); ?>
-
-							<?php
-						elseif( has_custom_logo() ) :
-							?>
-
-							<?php the_custom_logo(); ?>
-
-							<?php
-						else :
-							?>
-							<?php
-							if( is_front_page() && ! is_paged() ) :
-								?>
-								<?php echo esc_html( bloginfo( 'name' ) ); ?>
-								<?php
-							else :
-								?>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( bloginfo( 'name' ) ); ?></a>
-							<?php
-							endif;
-							?>
-							<div class="site-description"></div>
-
-							<?php
-						endif;
-						?>
-
-					</h1>
-
-					<?php
-	 					$description = get_bloginfo( 'description', 'display' );
-	 					if ( $description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo esc_html( $description ); ?></p>
-					<?php endif; ?>
-
-				</div><!-- .site-branding -->
-
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
-					<button type="button" class="menu__toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
-				<?php endif; ?>
-
-				<nav id="site-navigation" class="main-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Main Navigation', 'our-forests' ); ?>">
-					<button type="button" class="menu__inner-toggle" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open Menu', 'wd_s' ); ?>"></button>
-					<?php
-					wp_nav_menu(
-						array(
-							'fallback_cb'    => false,
-							'theme_location' => 'primary',
-							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'menu dropdown container',
-							'container'      => false,
-						)
-					);
-					?>
-				</nav><!-- #site-navigation-->
-
-				<div class="menu__underlay"></div>
-
-			</div><!-- .nav--primary -->
-
-			<?php
-			if ( \has_block( 'site-functionality/page-header' ) ) :
-				?>
-				<?php our_forests_header(); ?>
-				<?php
-			endif;
-			?>
-
-		</header><!-- .site-header-->
+	<main id="main" class="container site-main" data-path="<?php echo get_site_url(); ?>">
 
 		<?php do_action( 'after_header' ); ?>
